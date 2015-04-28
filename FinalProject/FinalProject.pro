@@ -12,7 +12,11 @@ SOURCES += main.cpp \
     termbucket.cpp \
     porter2_stemmer.cpp \
     pageinfo.cpp \
-    aprnsatpage.cpp
+    aprnsatpage.cpp \
+    avltreeindex.cpp \
+    avltreeinterface.cpp \
+    docparser.cpp
+
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -25,5 +29,8 @@ HEADERS += \
     termbucket.h \
     porter2_stemmer.h \
     pageinfo.h \
-    aprnsatpage.h
+    aprnsatpage.h \
+    avltreeindex.h \
+    avltreeinterface.h \
+    docparser.h
 
