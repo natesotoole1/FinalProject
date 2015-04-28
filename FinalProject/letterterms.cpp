@@ -10,27 +10,10 @@ LetterTerms::~LetterTerms()
 
 }
 
-void LetterTerms::add_valid_appearance(string term, string docTitle)
+void LetterTerms::add_valid_appearance(string term, int currID)
 {
-    // Call add_term for the corresponding bucket.  It will handle collisions.
-    buckets[hash_key(term)].add_term(term, docTitle);
-}
-
-void LetterTerms::add_all_stop_words()
-{
-    // Load the list of stop from the build directory.
-    ifstream ifs("StopWords.txt");
-
-    string word;
-    // For each line in the stop words file (there is only one
-    // word per line, add that word as if it were an appearance.
-    // This function will only be called by letters[0].
-    do
-    {
-        getline(ifs, word);
-        add_valid_appearance(word, "");
-        word.clear();
-    } while (getline(ifs, word));
+    // Call add_aprn for the corresponding bucket.  add_aprn will handle collisions.
+    buckets[hash_key(term)].add_aprn_at_term(term, currID);
 }
 
 int LetterTerms::hash_key(string key)
@@ -64,12 +47,6 @@ int LetterTerms::hash_key(string key)
     intIndex = intIndex % arrSize;
 
     return intIndex;
-}
-
-bool LetterTerms::is_stop_word(string term)
-{
-    if (buckets[hash_key(term)].has_word(term)) return true;
-    else return false;
 }
 
 void LetterTerms::print_sample(string term)

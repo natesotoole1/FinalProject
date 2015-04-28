@@ -1,9 +1,11 @@
 #ifndef HASHTABLEINDEX_H
 #define HASHTABLEINDEX_H
 
+#include "indexhandler.h"
 #include "indexinterface.h"
 #include "letterterms.h"
 #include "termbucket.h"
+
 
 #include "porter2_stemmer.h"
 

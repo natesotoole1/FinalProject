@@ -15,7 +15,8 @@ SOURCES += main.cpp \
     aprnsatpage.cpp \
     avltreeindex.cpp \
     avltreeinterface.cpp \
-    docparser.cpp
+    docparser.cpp \
+    indexhandler.cpp
 
 
 include(deployment.pri)
@@ -32,5 +33,6 @@ HEADERS += \
     aprnsatpage.h \
     avltreeindex.h \
     avltreeinterface.h \
-    docparser.h
+    docparser.h \
+    indexhandler.h
 

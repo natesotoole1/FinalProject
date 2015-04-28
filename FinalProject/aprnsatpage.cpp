@@ -1,43 +1,32 @@
-#include "aprnsatdoc.h"
+#include "aprnsatpage.h"
 
-AprnsAtDoc::AprnsAtDoc()
+AprnsAtPage::AprnsAtPage()
 {
-    docTitle = "";
-    freq = 0;
+    infoID = freq = 0;
 }
 
-AprnsAtDoc::AprnsAtDoc(string theDocTitle)
+AprnsAtPage::AprnsAtPage(int currID)
 {
-    docTitle = theDocTitle;
+    infoID = currID;
     freq = 1;
 }
 
-AprnsAtDoc::~AprnsAtDoc()
+AprnsAtPage::~AprnsAtPage()
 {
 
 }
 
-void AprnsAtDoc::incr_freq()
+void AprnsAtPage::incr_freq()
 {
     ++freq;
 }
 
-void AprnsAtDoc::set_next(AprnsAtDoc*theNext)
+int AprnsAtPage::get_infoID()
 {
-    next = theNext;
+    return infoID;
 }
 
-string AprnsAtDoc::get_doc_title()
+void AprnsAtPage::print()
 {
-    return docTitle;
-}
-
-AprnsAtDoc* AprnsAtDoc::get_next()
-{
-    return next;
-}
-
-void AprnsAtDoc::print()
-{
-    cout<<"On "<<docTitle<<" "<<freq<<" times.\n";
+    //cout<<"On "<<docTitle<<" "<<freq<<" times.\n";
 }

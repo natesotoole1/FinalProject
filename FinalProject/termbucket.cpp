@@ -10,17 +10,19 @@ TermBucket::~TermBucket()
 
 }
 
-void TermBucket::add_term(string term, string docTitle)
+void TermBucket::add_aprn_at_term(string term, int currID)
 {
-    Term* newTerm = new Term(term, docTitle);
+    Term* newTerm = new Term(term, currID);
+
+    // If there are no terms in the bucket, add the new term.
     if (!root) root = newTerm;
 
     else {
-
+        // Find the correct Term object to call add_aprn_at_page.
         Term* curr = root;
         if (curr->get_name().compare(term) == 0)
         {
-            curr->add_appearance_at_doc(docTitle);
+            curr->add_aprn_at_page(currID);
             return;
         }
         while (curr->get_next())
@@ -28,7 +30,7 @@ void TermBucket::add_term(string term, string docTitle)
             curr = curr->get_next();
             if (curr->get_name().compare(term) == 0)
             {
-                curr->add_appearance_at_doc(docTitle);
+                curr->add_aprn_at_page(currID);
                 return;
             }
         }
@@ -38,7 +40,7 @@ void TermBucket::add_term(string term, string docTitle)
         curr->set_next(newTerm);
     }
 
-    cout<<"Added "<<term<<" at "<<docTitle<<endl;
+    cout<<"Added "<<term<<" at "<<currID<<endl;
 }
 
 bool TermBucket::has_word(string term)

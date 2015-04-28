@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "hashtableindex.h"
+#include "indexhandler.h"
 #include "indexinterface.h"
 
 using namespace std;
@@ -15,10 +15,15 @@ int main()
     // Get the number of clicks already used by the program.
     start = clock();
 
-    // Create an empty InvertedIndex and traverse the WikiDump,
-    // inserting found words into the HashTableIndex.
-    IndexInterface* hti = new HashTableIndex;
-    hti->index_corpus();
+    IndexHandler* handler = new IndexHandler;
+
+    // Index the corpus into a HashTableIndex
+    handler->index_corpus(true);
+
+    cout<<"The inverted index has been loaded into a hash table by default.\n"<<
+          "To load it into an AVL tree, press 1.  Otherwise, press any key.\n";
+
+    // cin the input; call index_corpus(false) if it's 1.
 
     // Fetch some sample data from the inverted index.
     //hti->print_sample_data("carrots");

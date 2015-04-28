@@ -2,7 +2,7 @@
 
 HashTableIndex::HashTableIndex()
 {
-
+    letters = new LetterTerms[27];
 }
 
 HashTableIndex::~HashTableIndex()
@@ -10,14 +10,15 @@ HashTableIndex::~HashTableIndex()
 
 }
 
-void IndexInterface::add_appearance(int index, string term, string docTitle)
+void IndexInterface::add_appearance(int letterIndex, string term, int currID)
 {
     // If the new term is a stop word, forego adding it to the inverted index.
-    if (letters[0].is_stop_word(term)) return;
+    if (is_stop_word(term)) return;
 
     // The word is valid; stem it.
     Porter2Stemmer::stem(term);
 
+    // fix
     // Once stemmed, make new appearance at term.
-    letters[index].add_valid_appearance(term, docTitle);
+    letters[letterIndex].add_valid_appearance(term, currID);
 }

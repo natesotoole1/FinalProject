@@ -20,11 +20,7 @@ class LetterTerms
 public:
     LetterTerms();
     ~LetterTerms();
-    void add_valid_appearance(string term, string docTitle);
-
-    void add_all_stop_words();
-
-    bool is_stop_word(string term);
+    void add_valid_appearance(string term, int currID);
 
     int hash_key(string key);
 

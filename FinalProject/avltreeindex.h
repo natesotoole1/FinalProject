@@ -1,10 +1,12 @@
 #ifndef AVLTreeIndex_H
 #define AVLTreeIndex_H
+
 #include <iostream>
 #include <string>
 #include <cstdio>
 #include "indexinterface.h"
 #include "term.h"
+
 using namespace std;
 
 /*
@@ -28,7 +30,7 @@ struct AVL_Node
 /*
  * Class Declaration
  */
-class AVLTreeIndex
+class AVLTreeIndex : public IndexInterface
 {
     public:
         void insert(AVL_Node *, Term*);
@@ -41,10 +43,10 @@ class AVLTreeIndex
         void doubleRightChild(AVL_Node *);
         Term* find(AVL_Node *, Term*);
         void display(AVL_Node* , int );
-        AVLTreeIndex()
+        /*AVLTreeIndex()
         {
             root = NULL;
-        }
+        }*/
 };
 
 #endif // AVLTreeINDEX_H

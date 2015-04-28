@@ -1,22 +1,12 @@
 #ifndef INDEXINTERFACE_H
 #define INDEXINTERFACE_H
 
-// RapidXML includes
-#include <rapidxml.hpp>
-#include <rapidxml_print.hpp>
-#include <rapidxml_utils.hpp>
-// Apparently, including the header below creates problems.
-// #include <rapidxml_iterators.hpp>
-
 #include <fstream>
-#include <sstream>
-#include <iostream>
 #include <string>
+#include <vector>
 
 #include "letterterms.h"
-#include "pageinfo.h"
 
-using namespace rapidxml;
 using namespace std;
 
 class IndexInterface
@@ -25,39 +15,24 @@ public:
     IndexInterface();
     ~IndexInterface();
 
-    // HashTableIndex and AVLTreeIndex will handle new entries separately.
-    void index_corpus();
-    // Methods used inside index_doc
-    void check_for_children(xml_node<>* currNode);
-    void index_page(xml_node<>* currNode);
-    void index_attributes(xml_attribute<>* currAttr);
-    void index_text(xml_node<>* currNode, PageInfo* currInfo);
-
-    // For each node value (attributes included), find each term and
-    // add it to the appropriate letter term for either the
-    // HashTableIndex or the AVLTreeIndex.
-    void add_all_appearances_for_value(string val);
-
-    // Determine which LetterTerm should handle the appearance.
-    // Pass the first letter of the term.  Returns  0 if the term
-    // is a number, 1 for 'a', 2 for 'b', and so forth.
-    int index_for_letter(char letter);
+    int append_page_info(PageInfo* currInfo);
 
     // To be implemented separately in the HTI and ATI.
-    virtual void add_appearance(int index, string term, string docTitle);
+    virtual void add_appearance(int letterIndex, string term, int currID);
 
-    void print_sample_data(string term);
+    bool is_stop_word(string term);
+
 protected:
-    // For either the HTI or ATI, there will be 27 LetterTerms objects
-    // holding the appearances of all terms beginning with each letter in
-    // the alphabet.  letters[1] will hold all terms for words beginning
-    // with 'a' and so forth; letters[0] will hold the stop words.
+    // Only used for HashTableIndex.
     LetterTerms* letters;
 
-    vector<PageInfo> info;
+    // PageInfo will be passed by a pageID (int).
+    vector<PageInfo> infoForIDs;
 
-    // Not important.
-    int count;
+    int currID;
+
+    vector<string> stopWords;
+
 
     // take this out; just to prevent errors.
     string currDocTitle;

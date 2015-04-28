@@ -14,7 +14,7 @@ public:
     TermBucket();
     ~TermBucket();
 
-    void add_term(string term, string docTitle);
+    void add_aprn_at_term(string term, int currID);
 
     bool has_word(string term);
 

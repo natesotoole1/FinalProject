@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "aprnsatdoc.h"
+#include "aprnsatpage.h"
 
 using namespace std;
 
@@ -14,9 +14,9 @@ public:
     Term();
     ~Term();
 
-    Term(string name, string docTitle);
+    Term(string name, int currID);
 
-    void add_appearance_at_doc(string docTitle);
+    void add_aprn_at_page(int currID);
 
     string get_name();
     Term* get_next();
@@ -27,13 +27,14 @@ public:
 private:
     string name;
 
-    int totalAprns;
+    int totalFreq;
 
     // For the linked list functionality of each TermBucket.
+    // Only used in HashTableIndex.
     Term* next;
 
-    // For linked list functionality.
-    AprnsAtDoc* root;
+    // Holds the IDs of pages on which it appeared.
+    vector<AprnsAtPage> pagesAppearedOn;
 };
 
 #endif // TERM_H

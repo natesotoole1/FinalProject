@@ -1,5 +1,5 @@
-#ifndef APRNSATDOC_H
-#define APRNSATDOC_H
+#ifndef APRNSATPAGE_H
+#define APRNSATPAGE_H
 
 #include <string>
 #include <iostream>
@@ -8,29 +8,24 @@
 
 using namespace std;
 
-class AprnsAtDoc
+class AprnsAtPage
 {
 public:
-    AprnsAtDoc();
-    AprnsAtDoc(string theDocTitle);
-    ~AprnsAtDoc();
+    AprnsAtPage();
+    AprnsAtPage(int currID);
+    ~AprnsAtPage();
 
     void incr_freq();
-    void set_next(AprnsAtDoc* theNext);
 
-    string get_doc_title();
-    AprnsAtDoc* get_next();
+    int get_infoID();
 
     void print();
 private:
-    // The number of times the term has appeared on the document.
+    // The number of times the term has appeared on the page.
     int freq;
 
-    // The name of the document on which the term has appeared.
-    PageInfo* info;
-
-    // For the linked list functionality.
-    AprnsAtDoc* next;
+    // The corresponding ID number for the appearances.
+    int infoID;
 };
 
-#endif // APRNSATDOC_H
+#endif // APRNSATPAGE_H
