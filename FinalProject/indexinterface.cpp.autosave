@@ -70,38 +70,89 @@ void IndexInterface::index_corpus()
     letters[0].add_all_stop_words();
 
     // Use RapidXML's "parse" function to make all data
-    // accessible via nodes, attributes, values, etc.
-    file<> secFile("Order.xml");
-    xml_document<> secDoc;
-    secDoc.parse<0>(secFile.data());
+    // accessible via nodes and values.
+    file<> theFile("WikiBooks.xml");
+    xml_document<> doc;
+    doc.parse<0>(theFile.data());
 
-    // Index the root level of the WikiDump (this will fetch all terms).
-    xml_node<>* startNode = secDoc.first_node();
-    index_level(startNode);
-}
+    // Find the first node with name 'mediawiki'.
+    xml_node<>* currNode = doc.first_node();
 
-void IndexInterface::index_level(xml_node<>* currNode)
-{
-    // Index first node at this level,
-    index_node(currNode);
-    // Then recursively check its children if it has any.
-    check_for_children(currNode);
+    // Go to 'siteinfo'.
+    currNode = currNode->first_node();
 
-    // Index remaining nodes at this level.
+    // Go to the first 'page'.
+    currNode = currNode->next_sibling();
+
+    index_page(currNode);
+
     while (currNode->next_sibling())
     {
         currNode = currNode->next_sibling();
-        index_node(currNode);
-        check_for_children(currNode);
+        index_page(currNode);
     }
-    
-    // Not important.
-    cout<<"Fin "<<count<<endl;
-    ++count;
-    if (count == 16)
+
+}
+
+void IndexInterface::index_page(xml_node<>* currNode)
+{
+    PageInfo* currInfo = new PageInfo;
+    string currName;
+    string currValue;
+
+    // Get the page title.
+    currNode = currNode->first_node();
+    currValue = currNode->value();
+    currInfo->set_title(currValue);
+
+    // Get the timestamp.
+
+    // Go to 'revision' node.
+    currNode = currNode->next_sibling();
+    currName = currNode->name();
+    while (currName.compare("revision") != 0)
     {
-        cout<<"stop\n";
+        currNode = currNode->next_sibling();
+        currName = currNode->name();
     }
+    // Move one level inward.
+    currNode = currNode->first_node();
+    // Go to 'timestamp' node.
+    currName = currNode->name();
+    while (currName.compare("timestamp") != 0)
+    {
+        currNode = currNode->next_sibling();
+        currName = currNode->name();
+    }
+    currValue = currNode->value();
+    currInfo->set_timestamp(currValue);
+
+    // Get contributor name.
+
+    // Go to 'contributor' node.
+    currNode = currNode->next_sibling();
+    currName = currNode->name();
+    while (currName.compare("contributor") != 0)
+    {
+        currNode = currNode->next_sibling();
+        currName = currNode->name();
+    }
+    // Get contributor's username or IP.
+    currValue = currNode->first_node()->value();
+    currInfo->set_contributor(currValue);
+
+    // Go to 'text' node.
+    currNode = currNode->next_sibling();
+    currName = currNode->name();
+    while (currName.compare("text") != 0)
+    {
+        currNode = currNode->next_sibling();
+        currName = currNode->name();
+    }
+
+    // Pass the current node to index_text to find all terms in
+    // this page's text.
+    index_text(currNode, currInfo);
 }
 
 void IndexInterface::check_for_children(xml_node<>* currNode)
@@ -111,14 +162,14 @@ void IndexInterface::check_for_children(xml_node<>* currNode)
         // If the node one level deeper has a name (and is thus
         // worth checking), index_level for that deeper level.
         string nextName = currNode->first_node()->name();
-        if (nextName != "") index_level(currNode->first_node());
+        if (nextName != "") index_page(currNode->first_node());
     }
 }
 
 void IndexInterface::index_attributes(xml_attribute<>* currAttr)
 {
     // Can probably ignore attributes altogether.
-    
+
     /*
     // Index the first attribute.
     add_all_appearances_for_value(currAttr->value());
@@ -132,22 +183,45 @@ void IndexInterface::index_attributes(xml_attribute<>* currAttr)
     }*/
 }
 
-void IndexInterface::index_node(xml_node<>* currNode)
+void IndexInterface::index_text(xml_node<>* currNode, PageInfo *currInfo)
 {
-    // Check if the node has attributes and index them if so.
-    // if (currNode->first_attribute()) index_attributes(currNode->first_attribute());
+    string text = currNode->value();
 
-    // Find the info for PageInfo objects.
-    
-    string name = currNode->name();
-    if (name.compare("page") == 0)
+    // To save overhead.
+    int size = text.size();
+
+    // To store the current term to insert in the inverted index.
+    string currTerm = "";
+
+    // Iterate through each char in the value string.
+    for (int pos=0; pos < size; ++pos)
     {
-        currDocTitle = currNode->value();
-    }
+        // The value could contain several sentences, perhaps including many strange
+        // characters.  To find each valid "term" to push to the inverted index,
+        // find groups of adjacent chars that are all either letters or numbers.
+        // Ignore all other chars.
 
-    string value = currNode->value();
-    // Only do anyything if the value has contents.
-    if (value != "") add_all_appearances_for_value(value);
+        // Get the ascii value of the current char.
+        int ascii = (int)text.at(pos);
+
+        // If it's a letter, append it to newTerm.
+        if ((ascii > 64 && ascii < 91)
+                || (ascii > 96 && ascii < 123)
+                // Values for numbers, now ignored.
+                /* || (ascii > 47 && ascii < 58)*/) currTerm.append(text.substr(pos, 1));
+
+        // If it's a not a letter (i.e. it's a useless char),
+        // end the term if and insert it in the inverted index
+        // if newTerm has any chars in it.  Otherwise, ignore the char.
+        else if (currTerm.size())
+        {
+            add_appearance(index_for_letter(currTerm.front()), currTerm, currDocTitle);
+            currTerm.clear();
+        }
+    }
+    // If the end of the value string is reached and there's a new term to
+    // insert in the inverted index, do so.
+    if (currTerm.size()) add_appearance(index_for_letter(currTerm.front()), currTerm, currDocTitle);
 }
 
 

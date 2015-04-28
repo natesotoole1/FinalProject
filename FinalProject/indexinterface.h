@@ -14,6 +14,7 @@
 #include <string>
 
 #include "letterterms.h"
+#include "pageinfo.h"
 
 using namespace rapidxml;
 using namespace std;
@@ -28,9 +29,9 @@ public:
     void index_corpus();
     // Methods used inside index_doc
     void check_for_children(xml_node<>* currNode);
-    void index_level(xml_node<>* currNode);
+    void index_page(xml_node<>* currNode);
     void index_attributes(xml_attribute<>* currAttr);
-    void index_node(xml_node<>* currNode);
+    void index_text(xml_node<>* currNode, PageInfo* currInfo);
 
     // For each node value (attributes included), find each term and
     // add it to the appropriate letter term for either the
@@ -53,9 +54,13 @@ protected:
     // with 'a' and so forth; letters[0] will hold the stop words.
     LetterTerms* letters;
 
-    string currDocTitle;
+    vector<PageInfo> info;
 
+    // Not important.
     int count;
+
+    // take this out; just to prevent errors.
+    string currDocTitle;
 };
 
 #endif // INDEXINTERFACE_H

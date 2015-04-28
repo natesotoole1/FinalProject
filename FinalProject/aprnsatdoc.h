@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+#include "pageinfo.h"
+
 using namespace std;
 
 class AprnsAtDoc
@@ -25,7 +27,7 @@ private:
     int freq;
 
     // The name of the document on which the term has appeared.
-    string docTitle;
+    PageInfo* info;
 
     // For the linked list functionality.
     AprnsAtDoc* next;

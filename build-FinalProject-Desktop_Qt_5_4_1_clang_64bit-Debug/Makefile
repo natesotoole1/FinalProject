@@ -15,7 +15,7 @@ CXX           = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefau
 DEFINES       = 
 CFLAGS        = -pipe -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -mmacosx-version-min=10.7 -Wall -W -fPIE $(DEFINES)
 CXXFLAGS      = -pipe -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -mmacosx-version-min=10.7 -std=c++11 -stdlib=libc++ -Wall -W -fPIE $(DEFINES)
-INCPATH       = -I../FinalProject -I. -I../../../Qt/5.4/clang_64/mkspecs/macx-clang
+INCPATH       = -I../FinalProject -I. -I../../Qt/5.4/clang_64/mkspecs/macx-clang
 QMAKE         = /Users/nicholasearlwhiteley/Qt/5.4/clang_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = FinalProject1.0.0
-DISTDIR = /Users/nicholasearlwhiteley/KWhiteley/KWhiteley/FinalProject/.tmp/FinalProject1.0.0
+DISTDIR = /Users/nicholasearlwhiteley/FinalProject/FinalProject/.tmp/FinalProject1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -headerpad_max_install_names -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -mmacosx-version-min=10.7 -stdlib=libc++
 LIBS          = $(SUBLIBS)  
@@ -55,7 +55,8 @@ SOURCES       = ../FinalProject/main.cpp \
 		../FinalProject/term.cpp \
 		../FinalProject/aprnsatdoc.cpp \
 		../FinalProject/termbucket.cpp \
-		../FinalProject/porter2_stemmer.cpp 
+		../FinalProject/porter2_stemmer.cpp \
+		../FinalProject/pageinfo.cpp 
 OBJECTS       = main.o \
 		indexinterface.o \
 		hashtableindex.o \
@@ -63,145 +64,148 @@ OBJECTS       = main.o \
 		term.o \
 		aprnsatdoc.o \
 		termbucket.o \
-		porter2_stemmer.o
-DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
-		../../../Qt/5.4/clang_64/mkspecs/qdevice.pri \
-		../../../Qt/5.4/clang_64/mkspecs/features/device_config.prf \
-		../../../Qt/5.4/clang_64/mkspecs/common/shell-unix.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/unix.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/mac.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/macx.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/gcc-base.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/gcc-base-mac.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/clang.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/clang-mac.conf \
-		../../../Qt/5.4/clang_64/mkspecs/qconfig.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_clucene_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_platformsupport_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/features/qt_functions.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf \
-		../../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf \
-		../../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf \
+		porter2_stemmer.o \
+		pageinfo.o
+DIST          = ../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
+		../../Qt/5.4/clang_64/mkspecs/qdevice.pri \
+		../../Qt/5.4/clang_64/mkspecs/features/device_config.prf \
+		../../Qt/5.4/clang_64/mkspecs/common/shell-unix.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/unix.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/mac.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/macx.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/gcc-base.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/gcc-base-mac.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/clang.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/clang-mac.conf \
+		../../Qt/5.4/clang_64/mkspecs/qconfig.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_clucene_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_platformsupport_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/features/qt_functions.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf \
+		../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf \
+		../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf \
 		../FinalProject/.qmake.stash \
-		../../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf \
 		../FinalProject/deployment.pri \
-		../../../Qt/5.4/clang_64/mkspecs/features/resolve_config.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/default_post.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/sdk.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/default_post.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/objective_c.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/c++11.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/warn_on.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/rez.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/testcase_targets.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/exceptions.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/yacc.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/lex.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/resolve_config.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/default_post.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/sdk.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/default_post.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/objective_c.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/c++11.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/warn_on.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/rez.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/testcase_targets.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/exceptions.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/yacc.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/lex.prf \
 		../FinalProject/FinalProject.pro indexinterface.h \
 		hashtableindex.h \
 		letterterms.h \
 		term.h \
 		aprnsatdoc.h \
 		termbucket.h \
-		porter2_stemmer.h ../FinalProject/main.cpp \
+		porter2_stemmer.h \
+		pageinfo.h ../FinalProject/main.cpp \
 		../FinalProject/indexinterface.cpp \
 		../FinalProject/hashtableindex.cpp \
 		../FinalProject/letterterms.cpp \
 		../FinalProject/term.cpp \
 		../FinalProject/aprnsatdoc.cpp \
 		../FinalProject/termbucket.cpp \
-		../FinalProject/porter2_stemmer.cpp
+		../FinalProject/porter2_stemmer.cpp \
+		../FinalProject/pageinfo.cpp
 QMAKE_TARGET  = FinalProject
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = FinalProject
@@ -244,256 +248,256 @@ first: all
 $(TARGET):  $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
-Makefile: ../FinalProject/FinalProject.pro ../../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
-		../../../Qt/5.4/clang_64/mkspecs/qdevice.pri \
-		../../../Qt/5.4/clang_64/mkspecs/features/device_config.prf \
-		../../../Qt/5.4/clang_64/mkspecs/common/shell-unix.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/unix.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/mac.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/macx.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/gcc-base.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/gcc-base-mac.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/clang.conf \
-		../../../Qt/5.4/clang_64/mkspecs/common/clang-mac.conf \
-		../../../Qt/5.4/clang_64/mkspecs/qconfig.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_clucene_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_platformsupport_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
-		../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		../../../Qt/5.4/clang_64/mkspecs/features/qt_functions.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf \
-		../../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf \
-		../../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf \
+Makefile: ../FinalProject/FinalProject.pro ../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf ../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
+		../../Qt/5.4/clang_64/mkspecs/qdevice.pri \
+		../../Qt/5.4/clang_64/mkspecs/features/device_config.prf \
+		../../Qt/5.4/clang_64/mkspecs/common/shell-unix.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/unix.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/mac.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/macx.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/gcc-base.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/gcc-base-mac.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/clang.conf \
+		../../Qt/5.4/clang_64/mkspecs/common/clang-mac.conf \
+		../../Qt/5.4/clang_64/mkspecs/qconfig.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_clucene_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_platformsupport_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
+		../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
+		../../Qt/5.4/clang_64/mkspecs/features/qt_functions.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf \
+		../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf \
+		../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf \
 		.qmake.stash \
-		../../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf \
 		../FinalProject/deployment.pri \
-		../../../Qt/5.4/clang_64/mkspecs/features/resolve_config.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/default_post.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/sdk.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/default_post.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/objective_c.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/c++11.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/warn_on.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/mac/rez.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/testcase_targets.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/exceptions.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/yacc.prf \
-		../../../Qt/5.4/clang_64/mkspecs/features/lex.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/resolve_config.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/default_post.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/sdk.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/default_post.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/objective_c.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/c++11.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/warn_on.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/mac/rez.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/testcase_targets.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/exceptions.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/yacc.prf \
+		../../Qt/5.4/clang_64/mkspecs/features/lex.prf \
 		../FinalProject/FinalProject.pro
 	$(QMAKE) -spec macx-clang CONFIG+=debug CONFIG+=x86_64 -o Makefile ../FinalProject/FinalProject.pro
-../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf:
-../../../Qt/5.4/clang_64/mkspecs/qdevice.pri:
-../../../Qt/5.4/clang_64/mkspecs/features/device_config.prf:
-../../../Qt/5.4/clang_64/mkspecs/common/shell-unix.conf:
-../../../Qt/5.4/clang_64/mkspecs/common/unix.conf:
-../../../Qt/5.4/clang_64/mkspecs/common/mac.conf:
-../../../Qt/5.4/clang_64/mkspecs/common/macx.conf:
-../../../Qt/5.4/clang_64/mkspecs/common/gcc-base.conf:
-../../../Qt/5.4/clang_64/mkspecs/common/gcc-base-mac.conf:
-../../../Qt/5.4/clang_64/mkspecs/common/clang.conf:
-../../../Qt/5.4/clang_64/mkspecs/common/clang-mac.conf:
-../../../Qt/5.4/clang_64/mkspecs/qconfig.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_clucene_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designercomponents_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_platformsupport_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmldevtools_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickparticles_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns.pri:
-../../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
-../../../Qt/5.4/clang_64/mkspecs/features/qt_functions.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf:
-../../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf:
-../../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf:
+../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf:
+../../Qt/5.4/clang_64/mkspecs/qdevice.pri:
+../../Qt/5.4/clang_64/mkspecs/features/device_config.prf:
+../../Qt/5.4/clang_64/mkspecs/common/shell-unix.conf:
+../../Qt/5.4/clang_64/mkspecs/common/unix.conf:
+../../Qt/5.4/clang_64/mkspecs/common/mac.conf:
+../../Qt/5.4/clang_64/mkspecs/common/macx.conf:
+../../Qt/5.4/clang_64/mkspecs/common/gcc-base.conf:
+../../Qt/5.4/clang_64/mkspecs/common/gcc-base-mac.conf:
+../../Qt/5.4/clang_64/mkspecs/common/clang.conf:
+../../Qt/5.4/clang_64/mkspecs/common/clang-mac.conf:
+../../Qt/5.4/clang_64/mkspecs/qconfig.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_clucene_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_core_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_dbus_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_declarative_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designer_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_designercomponents_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_enginio_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_gui_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_help_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_location_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_macextras_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimedia_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_network_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_nfc_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_opengl_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_openglextensions_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_platformsupport_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_positioning_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qml_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmldevtools_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qmltest_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quick_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickparticles_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_script_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sensors_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_serialport_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_sql_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_svg_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_testlib_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_uitools_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webengine_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkit_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webkitwidgets_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_websockets_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_webview_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_widgets_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xml_private.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns.pri:
+../../Qt/5.4/clang_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
+../../Qt/5.4/clang_64/mkspecs/features/qt_functions.prf:
+../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf:
+../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf:
+../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf:
 .qmake.stash:
-../../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf:
+../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf:
+../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf:
+../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf:
 ../FinalProject/deployment.pri:
-../../../Qt/5.4/clang_64/mkspecs/features/resolve_config.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/default_post.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/mac/sdk.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/mac/default_post.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/mac/objective_c.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/c++11.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/warn_on.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/mac/rez.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/testcase_targets.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/exceptions.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/yacc.prf:
-../../../Qt/5.4/clang_64/mkspecs/features/lex.prf:
+../../Qt/5.4/clang_64/mkspecs/features/resolve_config.prf:
+../../Qt/5.4/clang_64/mkspecs/features/default_post.prf:
+../../Qt/5.4/clang_64/mkspecs/features/mac/sdk.prf:
+../../Qt/5.4/clang_64/mkspecs/features/mac/default_post.prf:
+../../Qt/5.4/clang_64/mkspecs/features/mac/objective_c.prf:
+../../Qt/5.4/clang_64/mkspecs/features/c++11.prf:
+../../Qt/5.4/clang_64/mkspecs/features/warn_on.prf:
+../../Qt/5.4/clang_64/mkspecs/features/mac/rez.prf:
+../../Qt/5.4/clang_64/mkspecs/features/testcase_targets.prf:
+../../Qt/5.4/clang_64/mkspecs/features/exceptions.prf:
+../../Qt/5.4/clang_64/mkspecs/features/yacc.prf:
+../../Qt/5.4/clang_64/mkspecs/features/lex.prf:
 ../FinalProject/FinalProject.pro:
 qmake: FORCE
 	@$(QMAKE) -spec macx-clang CONFIG+=debug CONFIG+=x86_64 -o Makefile ../FinalProject/FinalProject.pro
@@ -540,15 +544,16 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../FinalProject/main.cpp ../FinalProject/rapidxml.hpp \
+main.o: ../FinalProject/main.cpp ../FinalProject/hashtableindex.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/rapidxml.hpp \
 		../FinalProject/rapidxml_print.hpp \
 		../FinalProject/rapidxml_utils.hpp \
-		../FinalProject/hashtableindex.h \
-		../FinalProject/indexinterface.h \
 		../FinalProject/letterterms.h \
 		../FinalProject/term.h \
 		../FinalProject/aprnsatdoc.h \
 		../FinalProject/termbucket.h \
+		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../FinalProject/main.cpp
 
@@ -560,7 +565,7 @@ indexinterface.o: ../FinalProject/indexinterface.cpp ../FinalProject/indexinterf
 		../FinalProject/term.h \
 		../FinalProject/aprnsatdoc.h \
 		../FinalProject/termbucket.h \
-		../FinalProject/porter2_stemmer.h
+		../FinalProject/pageinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexinterface.o ../FinalProject/indexinterface.cpp
 
 hashtableindex.o: ../FinalProject/hashtableindex.cpp ../FinalProject/hashtableindex.h \
@@ -572,14 +577,14 @@ hashtableindex.o: ../FinalProject/hashtableindex.cpp ../FinalProject/hashtablein
 		../FinalProject/term.h \
 		../FinalProject/aprnsatdoc.h \
 		../FinalProject/termbucket.h \
+		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashtableindex.o ../FinalProject/hashtableindex.cpp
 
 letterterms.o: ../FinalProject/letterterms.cpp ../FinalProject/letterterms.h \
 		../FinalProject/term.h \
 		../FinalProject/aprnsatdoc.h \
-		../FinalProject/termbucket.h \
-		../FinalProject/porter2_stemmer.h
+		../FinalProject/termbucket.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o letterterms.o ../FinalProject/letterterms.cpp
 
 term.o: ../FinalProject/term.cpp ../FinalProject/term.h \
@@ -596,6 +601,9 @@ termbucket.o: ../FinalProject/termbucket.cpp ../FinalProject/termbucket.h \
 
 porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_stemmer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o porter2_stemmer.o ../FinalProject/porter2_stemmer.cpp
+
+pageinfo.o: ../FinalProject/pageinfo.cpp ../FinalProject/pageinfo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pageinfo.o ../FinalProject/pageinfo.cpp
 
 ####### Install
 

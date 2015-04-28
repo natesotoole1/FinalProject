@@ -21,7 +21,7 @@ int main()
     hti->index_corpus();
 
     // Fetch some sample data from the inverted index.
-    hti->print_sample_data("carrots");
+    //hti->print_sample_data("carrots");
 
     // Get the number of clicks used up to now.
     end = clock();
