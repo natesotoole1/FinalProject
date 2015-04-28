@@ -43,10 +43,10 @@ class AVLTreeIndex : public IndexInterface
         void doubleRightChild(AVL_Node *);
         Term* find(AVL_Node *, Term*);
         void display(AVL_Node* , int );
-        /*AVLTreeIndex()
+        AVLTreeIndex()
         {
             root = NULL;
-        }*/
+        }
 };
 
 #endif // AVLTreeINDEX_H

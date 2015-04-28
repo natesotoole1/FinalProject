@@ -7,19 +7,17 @@ DocParser::DocParser()
 
 void DocParser::index_corpus(bool asHashTable)
 {
-    IndexInterface* theIndex;
-
-    if (asHashTable) theIndex = new HashTableIndex;
-    else theIndex = new AVLTreeIndex;
+    /*if (asHashTable)*/ IndexInterface* theIndex = new HashTableIndex;
+    //else theIndex = new AVLTreeIndex;
 
     // Use RapidXML's "parse" function to make all data
     // accessible via nodes and values.
     file<> theFile("WikiBooks.xml");
-    xml_document<> doc;
-    doc.parse<0>(theFile.data());
+    xml_document<> theDoc;
+    theDoc.parse<0>(theFile.data());
 
     // Find the first node with name 'mediawiki'.
-    xml_node<>* currNode = doc.first_node();
+    xml_node<>* currNode = theDoc.first_node();
 
     // Go to 'siteinfo'.
     currNode = currNode->first_node();
@@ -29,13 +27,13 @@ void DocParser::index_corpus(bool asHashTable)
 
     index_page(currNode, theIndex);
 
-    /*
+
     // Index the remaining pages in the file.
     while (currNode->next_sibling())
     {
         currNode = currNode->next_sibling();
         index_page(currNode, theIndex);
-    }*/
+    }
 }
 
 int DocParser::index_for_letter(char letter)
@@ -115,6 +113,8 @@ void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
     // Pass the current node to index_text to find all terms in
     // this page's text.
     index_text(currNode, currID, theIndex);
+
+    theIndex->print_all();
 }
 
 void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* theIndex)

@@ -4,8 +4,6 @@
 #include <string>
 #include <iostream>
 
-#include "pageinfo.h"
-
 using namespace std;
 
 class AprnsAtPage
@@ -19,7 +17,7 @@ public:
 
     int get_infoID();
 
-    void print();
+    void print_info();
 private:
     // The number of times the term has appeared on the page.
     int freq;

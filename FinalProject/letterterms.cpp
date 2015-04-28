@@ -49,8 +49,11 @@ int LetterTerms::hash_key(string key)
     return intIndex;
 }
 
-void LetterTerms::print_sample(string term)
+void LetterTerms::print_all()
 {
     // Print all terms in the corresponding bucket.
-    buckets[hash_key(term)].print();
+    for (int i=0; i<1024; ++i)
+    {
+       buckets[i].print();
+    }
 }

@@ -26,7 +26,7 @@ int AprnsAtPage::get_infoID()
     return infoID;
 }
 
-void AprnsAtPage::print()
+void AprnsAtPage::print_info()
 {
-    //cout<<"On "<<docTitle<<" "<<freq<<" times.\n";
+    cout<<"On doc ID "<<infoID<<" "<<freq<<" times.\n";
 }

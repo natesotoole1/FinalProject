@@ -1,8 +1,8 @@
 #ifndef AVLTREEINTERFACE_H
 #define AVLTREEINTERFACE_H
 
-#include "indexhandler.h"
-#include "indexinterface.h"
+//#include "indexhandler.h"
+//#include "indexinterface.h"
 
 class AVLTreeInterface
 {

@@ -2,8 +2,6 @@
 #define INDEXHANDLER_H
 
 #include "docparser.h"
-#include "letterterms.h"
-#include "pageinfo.h"
 
 #include <vector>
 
@@ -15,9 +13,8 @@ public:
     IndexHandler();
     ~IndexHandler();
 
-
-
     void index_corpus(bool asHashTable);
+
 protected:
 
 

@@ -4,16 +4,11 @@
 #include "term.h"
 #include "termbucket.h"
 
-
-
 #include <string>
 #include <vector>
 #include <fstream>
-//#include <unordered_map>
 
 using namespace std;
-
-//typedef unordered_map<string, TermBucket> termMap;
 
 class LetterTerms
 {
@@ -24,7 +19,7 @@ public:
 
     int hash_key(string key);
 
-    void print_sample(string term);
+    void print_all();
 private:
     int arrSize = 1024;
     TermBucket* buckets;

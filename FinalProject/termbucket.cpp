@@ -68,13 +68,11 @@ void TermBucket::print()
 
     // Iterate through the linked list and print each term.
     Term* curr = root;
-    cout<<"Bucket term #1 is "<<curr->get_name()<<endl;
     curr->print_aprns();
     int count = 2;
     while (curr->get_next())
     {
         curr = curr->get_next();
-        cout<<"Bucket term #"<<count<<" is "<<curr->get_name()<<endl;
         curr->print_aprns();
         ++count;
     }

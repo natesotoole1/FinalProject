@@ -13,11 +13,9 @@
 #include <iostream>
 #include <string>
 
-#include "avltreeindex.h"
+//#include "avltreeindex.h"
 #include "hashtableindex.h"
 #include "indexinterface.h"
-#include "letterterms.h"
-#include "pageinfo.h"
 
 using namespace rapidxml;
 using namespace std;

@@ -5,9 +5,11 @@
 #include <string>
 #include <vector>
 
-#include "letterterms.h"
+#include "pageinfo.h"
 
 using namespace std;
+
+class LetterTerms;
 
 class IndexInterface
 {
@@ -19,6 +21,8 @@ public:
 
     // To be implemented separately in the HTI and ATI.
     virtual void add_appearance(int letterIndex, string term, int currID);
+
+    virtual void print_all();
 
     bool is_stop_word(string term);
 

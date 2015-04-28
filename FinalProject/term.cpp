@@ -62,13 +62,10 @@ void Term::set_next(Term* theNext)
 
 void Term::print_aprns()
 {
-    /*if (!root) return;
-
-    AprnsAtPage* curr = root;
-    curr->print();
-    while (curr->get_next())
+    cout<<"The term "<<name<<" appeared "<<totalFreq<<" times, on:\n";
+    int size = pagesAppearedOn.size();
+    for (int i=0; i<size; ++i)
     {
-        curr = curr->get_next();
-        curr->print();
-    }*/
+        pagesAppearedOn[i].print_info();
+    }
 }

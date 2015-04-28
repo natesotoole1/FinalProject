@@ -4,7 +4,6 @@
 #include <string>
 
 #include "indexhandler.h"
-#include "indexinterface.h"
 
 using namespace std;
 
