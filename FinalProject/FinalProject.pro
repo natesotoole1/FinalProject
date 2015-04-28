@@ -9,10 +9,10 @@ SOURCES += main.cpp \
     hashtableindex.cpp \
     letterterms.cpp \
     term.cpp \
-    aprnsatdoc.cpp \
     termbucket.cpp \
     porter2_stemmer.cpp \
-    pageinfo.cpp
+    pageinfo.cpp \
+    aprnsatpage.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -22,8 +22,8 @@ HEADERS += \
     hashtableindex.h \
     letterterms.h \
     term.h \
-    aprnsatdoc.h \
     termbucket.h \
     porter2_stemmer.h \
-    pageinfo.h
+    pageinfo.h \
+    aprnsatpage.h
 

@@ -1,0 +1,43 @@
+#include "aprnsatpage.h"
+
+AprnsAtPage::AprnsAtPage()
+{
+    docTitle = "";
+    freq = 0;
+}
+
+AprnsAtPage::AprnsAtPage(string theDocTitle)
+{
+    docTitle = theDocTitle;
+    freq = 1;
+}
+
+AprnsAtPage::~AprnsAtPage()
+{
+
+}
+
+void AprnsAtPage::incr_freq()
+{
+    ++freq;
+}
+
+void AprnsAtPage::set_next(AprnsAtPage*theNext)
+{
+    next = theNext;
+}
+
+string AprnsAtPage::get_doc_title()
+{
+    return docTitle;
+}
+
+AprnsAtPage* AprnsAtPage::get_next()
+{
+    return next;
+}
+
+void AprnsAtPage::print()
+{
+    cout<<"On "<<docTitle<<" "<<freq<<" times.\n";
+}
