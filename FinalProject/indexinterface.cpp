@@ -204,7 +204,7 @@ void IndexInterface::index_text(xml_node<>* currNode, PageInfo *currInfo)
         // Get the ascii value of the current char.
         int ascii = (int)text.at(pos);
 
-        // If it's a letter, push it back to newTerm.
+        // If it's a letter, append it to newTerm.
         if ((ascii > 64 && ascii < 91)
                 || (ascii > 96 && ascii < 123)
                 // Values for numbers, now ignored.
