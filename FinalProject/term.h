@@ -27,6 +27,8 @@ public:
 private:
     string name;
 
+    int totalAprns;
+
     // For the linked list functionality of each TermBucket.
     Term* next;
 

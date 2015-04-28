@@ -13,9 +13,10 @@ Term::~Term()
 
 Term::Term(string theName, string docTitle)
 {
+    name = theName;
+    totalAprns = 1;
     root = new AprnsAtDoc(docTitle);
     next = NULL;
-    name = theName;
 }
 
 void Term::add_appearance_at_doc(string docTitle)
@@ -23,9 +24,15 @@ void Term::add_appearance_at_doc(string docTitle)
     // If the term has already appeared on the current doc,
     // merely increment that AprnsAtDoc's frequency by 1.
 
-    // This shouldn't happen, but the check shouldn't incur much overhead.
     AprnsAtDoc* newAprn = new AprnsAtDoc(docTitle);
-    if (!root) root = newAprn;
+
+    if (!root)
+        // This shouldn't happen (because this can only be called by Term objects
+        // already constructed), but checking prevents potential errors.
+    {
+        root = newAprn;
+        totalAprns = 1;
+    }
 
     else
     {
@@ -37,6 +44,7 @@ void Term::add_appearance_at_doc(string docTitle)
         if (curr->get_doc_title().compare(docTitle) == 0)
         {
             curr->incr_freq();
+            ++totalAprns;
             return;
         }
         while (curr->get_next())
@@ -45,6 +53,7 @@ void Term::add_appearance_at_doc(string docTitle)
             if (curr->get_doc_title().compare(docTitle) == 0)
             {
                 curr->incr_freq();
+                ++totalAprns;
                 return;
             }
         }
@@ -52,6 +61,7 @@ void Term::add_appearance_at_doc(string docTitle)
         // By this point, the docTitle wasn't in the list, append a new AprnsAtDoc
         // object to the end of the list.
         curr->set_next(newAprn);
+        ++totalAprns;
     }
 
 
