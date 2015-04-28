@@ -11,7 +11,8 @@ SOURCES += main.cpp \
     term.cpp \
     aprnsatdoc.cpp \
     termbucket.cpp \
-    porter2_stemmer.cpp
+    porter2_stemmer.cpp \
+    pageinfo.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -23,5 +24,6 @@ HEADERS += \
     term.h \
     aprnsatdoc.h \
     termbucket.h \
-    porter2_stemmer.h
+    porter2_stemmer.h \
+    pageinfo.h
 
