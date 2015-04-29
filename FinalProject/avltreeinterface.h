@@ -8,8 +8,6 @@ class AVLTreeInterface
 {
 public:
     AVLTreeInterface();
-
-
 };
 
 #endif // AVLTREEINTERFACE_H

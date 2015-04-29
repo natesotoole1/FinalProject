@@ -135,14 +135,23 @@ void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* the
         // find groups of adjacent chars that are all either letters or numbers.
         // Ignore all other chars.
 
-        // Get the ascii value of the current char.
-        int ascii = (int)text.at(pos);
+        char currChar = text.at(pos);
 
-        // If it's a letter, append it to newTerm.
-        if ((ascii > 64 && ascii < 91)
-                || (ascii > 96 && ascii < 123)
-                // Values for numbers, now ignored.
-                /* || (ascii > 47 && ascii < 58)*/) currTerm.append(text.substr(pos, 1));
+        // Get the ascii value of the current char.
+        int ascii = (int)currChar;
+
+        // If the letter is uppercase...
+        if (ascii > 64 && ascii < 91)
+        {
+            // Increase its ascii value by 32 next conditional
+            // (which only accepts lowercase chars).
+            ascii += 32;
+            // Make it lowercase by converting the increased ascii value back to a char.
+            currChar = (char)ascii;
+        }
+
+        // If it's a letter (has to be lowercase), append it to newTerm.
+        if (ascii > 96 && ascii < 123) currTerm+=currChar;
 
         // If it's a not a letter (i.e. it's a useless char),
         // end the term if and insert it in the inverted index
