@@ -21,6 +21,16 @@ int main()
 
     cout<<"The inverted index has been loaded into a hash table by default.\n"<<
           "To load it into an AVL tree, press 1.  Otherwise, press any key.\n";
+    char choice;
+    cin>>choice;
+    if (choice == '1')
+    {
+        /**********load into AVL***********/
+    }
+
+    cout<<"What is your query?\n";
+    string query;
+
 
     // cin the input; call index_corpus(false) if it's 1.
 

@@ -16,7 +16,8 @@ SOURCES += main.cpp \
     avltreeindex.cpp \
     avltreeinterface.cpp \
     docparser.cpp \
-    indexhandler.cpp
+    indexhandler.cpp \
+    queryprocessor.cpp
 
 
 include(deployment.pri)
@@ -34,5 +35,6 @@ HEADERS += \
     avltreeindex.h \
     avltreeinterface.h \
     docparser.h \
-    indexhandler.h
+    indexhandler.h \
+    queryprocessor.h
 

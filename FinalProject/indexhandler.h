@@ -2,6 +2,7 @@
 #define INDEXHANDLER_H
 
 #include "docparser.h"
+#include "indexinterface.h"
 
 #include <vector>
 
@@ -12,11 +13,12 @@ class IndexHandler
 public:
     IndexHandler();
     ~IndexHandler();
+    IndexHandler(bool asHashTable);
 
     void index_corpus(bool asHashTable);
 
-protected:
-
+private:
+    IndexInterface* index;
 
 };
 
