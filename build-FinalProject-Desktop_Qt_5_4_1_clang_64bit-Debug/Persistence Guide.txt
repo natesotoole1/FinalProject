@@ -1,0 +1,7 @@
+All lines will have the form…
+<Term name> <totalFreq> <(docID, freq)> <(docID2, freq2)> …
+
+Example:
+carrots 8 (0, 4) (5, 2) (4, 2)
+
+There is one line for each term.

@@ -39,8 +39,6 @@ void TermBucket::add_aprn_at_term(string term, int currID)
         // make a new term.
         curr->set_next(newTerm);
     }
-
-    cout<<"Added "<<term<<" at "<<currID<<endl;
 }
 
 bool TermBucket::has_word(string term)
@@ -62,18 +60,16 @@ bool TermBucket::has_word(string term)
     return false;
 }
 
-void TermBucket::print()
+void TermBucket::write_term_bucket(ofstream &persistence)
 {
     if (!root) return;
 
     // Iterate through the linked list and print each term.
     Term* curr = root;
-    curr->print_aprns();
-    int count = 2;
+    curr->write_term(persistence);
     while (curr->get_next())
     {
         curr = curr->get_next();
-        curr->print_aprns();
-        ++count;
+        curr->write_term(persistence);
     }
 }

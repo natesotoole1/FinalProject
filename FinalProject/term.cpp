@@ -60,12 +60,13 @@ void Term::set_next(Term* theNext)
     next = theNext;
 }
 
-void Term::print_aprns()
+void Term::write_term(ofstream &persistence)
 {
-    cout<<"The term "<<name<<" appeared "<<totalFreq<<" times, on:\n";
+    persistence<<name<<" "<<totalFreq;
     int size = pagesAppearedOn.size();
     for (int i=0; i<size; ++i)
     {
-        pagesAppearedOn[i].print_info();
+        pagesAppearedOn[i].write_aprns(persistence);
     }
+    persistence<<endl;
 }

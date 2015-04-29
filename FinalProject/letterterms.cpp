@@ -49,11 +49,11 @@ int LetterTerms::hash_key(string key)
     return intIndex;
 }
 
-void LetterTerms::print_all()
+void LetterTerms::write_letter_terms(ofstream &persistence)
 {
-    // Print all terms in the corresponding bucket.
+    // Write all terms in the corresponding bucket.
     for (int i=0; i<1024; ++i)
     {
-       buckets[i].print();
+       buckets[i].write_term_bucket(persistence);
     }
 }

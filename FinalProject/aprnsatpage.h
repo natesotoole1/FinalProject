@@ -1,8 +1,9 @@
 #ifndef APRNSATPAGE_H
 #define APRNSATPAGE_H
 
-#include <string>
+#include <fstream>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ public:
 
     int get_infoID();
 
-    void print_info();
+    void write_aprns(ofstream& persistence);
 private:
     // The number of times the term has appeared on the page.
     int freq;

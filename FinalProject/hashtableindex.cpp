@@ -23,10 +23,13 @@ void IndexInterface::add_appearance(int letterIndex, string term, int currID)
     letters[letterIndex].add_valid_appearance(term, currID);
 }
 
-void IndexInterface::print_all()
+void IndexInterface::write_persistence()
 {
+    ofstream persistence;
+    persistence.open("Persistence.txt");
     for (int i=1; i<27; ++i)
     {
-        letters[i].print_all();
+        letters[i].write_letter_terms(persistence);
     }
+    persistence.close();
 }

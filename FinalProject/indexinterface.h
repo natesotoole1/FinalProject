@@ -22,7 +22,7 @@ public:
     // To be implemented separately in the HTI and ATI.
     virtual void add_appearance(int letterIndex, string term, int currID);
 
-    virtual void print_all();
+    virtual void write_persistence();
 
     bool is_stop_word(string term);
 

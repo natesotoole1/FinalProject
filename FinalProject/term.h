@@ -1,9 +1,10 @@
 #ifndef TERM_H
 #define TERM_H
 
+#include <fstream>
+#include <iostream>
 #include <string>
 #include <vector>
-#include <iostream>
 
 #include "aprnsatpage.h"
 
@@ -24,7 +25,7 @@ public:
 
     void set_next(Term* theNext);
 
-    void print_aprns();
+    void write_term(ofstream& persistence);
 private:
     string name;
 

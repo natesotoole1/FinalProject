@@ -34,6 +34,8 @@ void DocParser::index_corpus(bool asHashTable)
         currNode = currNode->next_sibling();
         index_page(currNode, theIndex);
     }
+
+    theIndex->write_persistence();
 }
 
 int DocParser::index_for_letter(char letter)
@@ -113,8 +115,6 @@ void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
     // Pass the current node to index_text to find all terms in
     // this page's text.
     index_text(currNode, currID, theIndex);
-
-    theIndex->print_all();
 }
 
 void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* theIndex)

@@ -26,7 +26,7 @@ int AprnsAtPage::get_infoID()
     return infoID;
 }
 
-void AprnsAtPage::print_info()
+void AprnsAtPage::write_aprns(ofstream &persistence)
 {
-    cout<<"On doc ID "<<infoID<<" "<<freq<<" times.\n";
+    persistence<<" ("<<infoID<<", "<<freq<<")";
 }

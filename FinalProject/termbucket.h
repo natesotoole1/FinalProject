@@ -3,6 +3,7 @@
 
 #include "term.h"
 
+#include <fstream>
 #include <iostream>
 #include <string>
 
@@ -18,7 +19,7 @@ public:
 
     bool has_word(string term);
 
-    void print();
+    void write_term_bucket(ofstream& persistence);
 private:
     Term* root;
 };

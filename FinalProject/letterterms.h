@@ -19,7 +19,7 @@ public:
 
     int hash_key(string key);
 
-    void print_all();
+    void write_letter_terms(ofstream& persistence);
 private:
     int arrSize = 1024;
     TermBucket* buckets;

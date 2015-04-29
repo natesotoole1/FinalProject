@@ -7,6 +7,7 @@
 
 #include "porter2_stemmer.h"
 
+#include <fstream>
 #include <iostream>
 #include <string>
 
