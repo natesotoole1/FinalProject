@@ -2,7 +2,7 @@
 
 IndexHandler::IndexHandler()
 {
-
+    index = new IndexInterface;
 }
 
 IndexHandler::~IndexHandler()
