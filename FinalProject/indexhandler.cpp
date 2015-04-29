@@ -13,11 +13,13 @@ IndexHandler::~IndexHandler()
 IndexHandler::IndexHandler(bool asHashTable)
 {
     if (asHashTable) index = new HashTableIndex;
-    // else index = new AVLTreeIndex;
+
+    /***** NEED TO CHANGE THIS TO AVLTreeIndex *******/
+    else index = new HashTableIndex;
 }
 
-void IndexHandler::index_corpus(bool asHashTable)
+void IndexHandler::index_corpus()
 {
     DocParser* parser = new DocParser;
-    parser->index_corpus(asHashTable);
+    parser->index_corpus(index);
 }

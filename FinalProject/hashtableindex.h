@@ -1,9 +1,9 @@
 #ifndef HASHTABLEINDEX_H
 #define HASHTABLEINDEX_H
 
-//#include "indexhandler.h"
 #include "indexinterface.h"
 #include "letterterms.h"
+#include "term.h"
 
 #include "porter2_stemmer.h"
 
@@ -24,6 +24,8 @@ class HashTableIndex : public IndexInterface
 public:
     HashTableIndex();
     ~HashTableIndex();
+
+    Term* find(string term);
 };
 
 #endif // HASHTABLEINDEX_H

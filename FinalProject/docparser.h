@@ -26,7 +26,7 @@ public:
     DocParser();
 
     // HashTableIndex and AVLTreeIndex will handle new entries separately.
-    void index_corpus(bool asHashTable);
+    void index_corpus(IndexInterface* index);
 
     // Determine which LetterTerm should handle the appearance.
     // Pass the first letter of the term.  Returns  0 if the term

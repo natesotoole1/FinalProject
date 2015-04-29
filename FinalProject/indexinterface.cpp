@@ -3,7 +3,6 @@
 IndexInterface::IndexInterface()
 {
     infoForIDs = vector<PageInfo>();
-    stopWords = vector<string>();
 
     // Add all stop words to stopWords.
 
@@ -17,9 +16,8 @@ IndexInterface::IndexInterface()
     do
     {
         getline(ifs, word);
-        stopWords.push_back(word);
-        word.clear();
-    } while (getline(ifs, word));
+        stopWords.emplace(word, word);
+    } while (!ifs.eof());
 
     // Probably don't need.
     currID = 0;
@@ -38,15 +36,14 @@ int IndexInterface::append_page_info(PageInfo* currInfo)
 
 bool IndexInterface::is_stop_word(string term)
 {
-    // To save overhead.
-    int size = stopWords.size();
-
-    // Check each index in stopWords to see if the passed term matches.
-    for (int i=0; i<size; ++i)
+    // Use term as the key and see if it is in the stopWordMap.
+    try
     {
-        if (term.compare(stopWords[i]) == 0) return true;
+        stopWords.at(term);
     }
-
-    // At this point, no match was found, so return false.
-    return false;
+    catch (const std::out_of_range& notAStopWord)
+    {
+        return false;
+    }
+    return true;
 }

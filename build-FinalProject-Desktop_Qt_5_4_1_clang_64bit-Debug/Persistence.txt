@@ -1,309 +1,261 @@
-an 3 (3, 3)
-at 3 (2, 2) (3, 1)
-ask 1 (3, 1)
-acid 3 (3, 1) (4, 2)
-abil 1 (3, 1)
-atom 3 (3, 1) (4, 2)
-alkan 2 (4, 2)
-align 5 (0, 5)
-along 1 (3, 1)
-addit 1 (3, 1)
-april 5 (4, 5)
-alway 2 (3, 2)
-allpag 1 (0, 1)
-answer 2 (3, 2)
-ancient 1 (3, 1)
-accomplish 1 (3, 1)
-be 2 (3, 2)
-br 2 (3, 2)
-by 5 (0, 2) (3, 3)
-big 8 (3, 8)
-bodi 1 (3, 1)
-base 4 (3, 2) (4, 2)
-bond 3 (3, 1) (4, 2)
-book 4 (0, 3) (3, 1)
-burn 1 (3, 1)
-build 2 (3, 1) (4, 1)
-bring 1 (3, 1)
-brows 1 (0, 1)
-border 1 (0, 1)
-biolog 1 (3, 1)
-bartel 1 (1, 1)
-benutz 1 (2, 1)
-bombard 1 (3, 1)
-bookcat 2 (3, 1) (4, 1)
-between 1 (3, 1)
-brought 1 (3, 1)
-background 3 (0, 3)
-can 4 (0, 1) (3, 3)
-card 1 (0, 1)
-cram 1 (3, 1)
-clear 2 (0, 2)
-coval 1 (3, 1)
-close 1 (3, 1)
-color 3 (0, 3)
-cours 3 (3, 3)
-critic 1 (3, 1)
-carbon 1 (3, 1)
-condit 1 (3, 1)
-center 4 (0, 2) (3, 2)
-comput 3 (0, 2) (3, 1)
-cellpad 1 (3, 1)
-complic 1 (3, 1)
-catalog 1 (0, 1)
-collect 1 (0, 1)
-conveni 1 (3, 1)
-chapter 1 (3, 1)
-concept 10 (3, 1) (4, 9)
-complet 1 (3, 1)
-content 6 (0, 3) (3, 2) (4, 1)
-chemist 1 (3, 1)
-context 1 (3, 1)
-categori 1 (0, 1)
-compound 2 (3, 2)
-concentr 1 (3, 1)
-chemistri 42 (3, 17) (4, 25)
-contribut 1 (0, 1)
-comprehens 1 (3, 1)
-d 1 (3, 1)
-div 24 (0, 24)
-dot 2 (4, 2)
-daili 3 (3, 3)
-daunt 1 (3, 1)
-devot 1 (3, 1)
-ddddff 3 (0, 3)
-differ 1 (3, 1)
-em 6 (0, 6)
-etc 1 (3, 1)
-edit 1 (0, 1)
-ethan 1 (3, 1)
-engin 2 (0, 2)
-earth 1 (3, 1)
-equat 1 (3, 1)
-ecolog 1 (3, 1)
-easier 1 (3, 1)
-experi 1 (2, 1)
-explain 1 (3, 1)
-electron 2 (4, 2)
-electroneg 2 (4, 2)
-for 2 (3, 1) (4, 1)
-free 1 (3, 1)
-find 2 (3, 2)
-food 1 (3, 1)
-from 4 (3, 3) (4, 1)
-form 1 (3, 1)
-font 5 (0, 5)
-field 1 (3, 1)
-fulli 1 (3, 1)
-found 1 (3, 1)
-float 4 (0, 4)
-figur 1 (3, 1)
-first 1 (3, 1)
-featur 1 (0, 1)
-formula 1 (3, 1)
-foundat 11 (3, 1) (4, 10)
-freshman 1 (4, 1)
-factious 1 (3, 1)
-foremost 1 (3, 1)
-formatnum 1 (0, 1)
-go 3 (3, 2) (4, 1)
-get 1 (3, 1)
-good 1 (3, 1)
-gain 1 (3, 1)
-glanc 1 (3, 1)
-german 1 (2, 1)
-geolog 1 (3, 1)
-general 3 (3, 2) (4, 1)
-generat 1 (3, 1)
-how 1 (3, 1)
-here 1 (2, 1)
-have 4 (3, 4)
-help 6 (0, 3) (3, 3)
-http 2 (1, 1) (2, 1)
-hous 1 (3, 1)
-human 2 (0, 2)
-habit 1 (3, 1)
-histori 2 (4, 2)
-id 3 (0, 3)
-in 9 (2, 1) (3, 7) (4, 1)
-it 7 (3, 7)
-idea 1 (3, 1)
-imag 2 (3, 1) (4, 1)
-intend 1 (3, 1)
-import 1 (3, 1)
-interest 1 (2, 1)
-industri 1 (3, 1)
-jan 2 (4, 2)
-key 1 (3, 1)
-kind 1 (3, 1)
-know 2 (3, 2)
-knowledg 4 (3, 4)
-let 1 (3, 1)
-life 3 (3, 3)
-line 1 (3, 1)
-less 1 (3, 1)
-list 1 (3, 1)
-learn 1 (3, 1)
-light 1 (3, 1)
-languag 3 (0, 2) (2, 1)
-m 1 (1, 1)
-mf 1 (0, 1)
-mp 1 (0, 1)
-may 2 (3, 2)
-made 1 (2, 1)
-make 1 (3, 1)
-mean 1 (3, 1)
-main 6 (0, 5) (2, 1)
-more 2 (3, 2)
-model 1 (3, 1)
-mdash 2 (3, 2)
-memor 2 (3, 2)
-mechan 1 (3, 1)
-margin 4 (0, 4)
-materi 1 (3, 1)
-michael 1 (3, 1)
-medicin 1 (3, 1)
-molecul 1 (3, 1)
-million 1 (3, 1)
-mysteri 1 (3, 1)
-mathemat 2 (0, 2)
-miscellan 2 (0, 2)
-molecular 1 (3, 1)
-no 1 (3, 1)
-new 2 (3, 2)
-nov 1 (4, 1)
-need 2 (3, 2)
-nbsp 3 (3, 3)
-night 1 (3, 1)
-natur 1 (2, 1)
-novemb 1 (4, 1)
-noinclud 2 (3, 2)
-nomenclatur 2 (4, 2)
-numberofbook 1 (0, 1)
-numberofarticl 1 (0, 1)
-on 4 (3, 4)
-one 1 (3, 1)
-org 1 (2, 1)
-own 1 (3, 1)
-out 2 (3, 2)
-open 2 (0, 1) (3, 1)
-offic 1 (0, 1)
-organ 34 (3, 11) (4, 23)
-order 1 (3, 1)
-onlin 1 (3, 1)
-orbit 1 (3, 1)
-overview 2 (0, 2)
-px 15 (0, 15)
-pad 6 (0, 6)
-pka 1 (3, 1)
-png 2 (3, 1) (4, 1)
-per 1 (3, 1)
-page 6 (0, 6)
-play 1 (3, 1)
-pass 1 (3, 1)
-past 1 (3, 1)
-place 1 (3, 1)
-prior 2 (2, 1) (3, 1)
-print 1 (3, 1)
-period 1 (3, 1)
-physic 1 (3, 1)
-purpos 1 (4, 1)
-product 1 (3, 1)
-properti 1 (3, 1)
-persever 1 (3, 1)
-primarili 1 (3, 1)
-pagecount 1 (0, 1)
-particular 1 (3, 1)
-question 5 (0, 1) (3, 4)
-read 1 (0, 1)
-role 1 (3, 1)
-room 1 (0, 1)
-recip 1 (0, 1)
-right 4 (0, 4)
-reson 2 (4, 2)
-replac 1 (3, 1)
-rather 1 (3, 1)
-review 1 (4, 1)
-reaction 2 (3, 2)
-s 1 (3, 1)
-seem 1 (3, 1)
-size 5 (0, 5)
-serv 1 (3, 1)
-space 1 (0, 1)
-stage 9 (4, 9)
-solid 1 (3, 1)
-studi 2 (3, 1) (4, 1)
-style 15 (0, 15)
-start 1 (3, 1)
-short 9 (4, 9)
-solut 1 (3, 1)
-scienc 6 (0, 4) (2, 1) (3, 1)
-social 2 (0, 2)
-sister 1 (0, 1)
-succeed 1 (3, 1)
-special 1 (0, 1)
-subject 18 (0, 13) (3, 5)
-schewek 2 (2, 2)
-struggl 1 (3, 1)
-success 1 (3, 1)
-section 1 (4, 1)
-student 3 (3, 3)
-substanc 1 (3, 1)
-superior 1 (3, 1)
-structur 4 (4, 4)
-superstit 2 (3, 2)
-to 27 (0, 1) (3, 24) (4, 2)
-tri 2 (3, 2)
-too 1 (3, 1)
-take 1 (3, 1)
-tabl 2 (3, 2)
-tobi 1 (1, 1)
-that 4 (0, 1) (3, 3)
-this 8 (3, 7) (4, 1)
-they 1 (3, 1)
-test 2 (3, 2)
-text 3 (0, 2) (3, 1)
-trend 1 (3, 1)
-topic 1 (4, 1)
-typic 2 (3, 2)
-thing 3 (3, 3)
-treat 1 (3, 1)
-think 1 (3, 1)
-truth 1 (3, 1)
-theori 1 (3, 1)
-through 3 (3, 3)
-thorough 1 (3, 1)
-textbook 3 (0, 1) (2, 1) (3, 1)
-transport 1 (3, 1)
-tobybartel 1 (1, 1)
-up 1 (3, 1)
-us 1 (3, 1)
-use 2 (0, 1) (3, 1)
-under 1 (3, 1)
-ultim 1 (3, 1)
-uniqu 1 (3, 1)
-unknown 1 (3, 1)
-understand 3 (3, 3)
-vis 2 (3, 2)
-vari 1 (3, 1)
-valu 1 (3, 1)
-vsepr 1 (3, 1)
-vertic 3 (0, 3)
-visual 2 (4, 2)
-various 1 (3, 1)
-we 6 (3, 6)
-web 1 (3, 1)
-whi 1 (3, 1)
-wiki 3 (2, 3)
-with 4 (0, 1) (3, 3)
-which 2 (3, 2)
-world 1 (3, 1)
-width 10 (0, 10)
-wherea 1 (3, 1)
-welcom 4 (0, 3) (3, 1)
-wikibook 8 (0, 8)
-wikipedia 2 (2, 2)
-wikijunior 1 (0, 1)
-x 1 (3, 1)
-y 1 (3, 1)
-your 1 (3, 1)
+ask 1 1@3
+acid 3 1@3 2@4
+abil 1 1@3
+atom 3 1@3 2@4
+alkan 2 2@4
+align 5 5@0
+addit 1 1@3
+april 5 5@4
+allpag 1 1@0
+answer 2 2@3
+ancient 1 1@3
+accomplish 1 1@3
+br 2 2@3
+big 8 8@3
+bodi 1 1@3
+base 4 2@3 2@4
+bond 3 1@3 2@4
+book 4 3@0 1@3
+burn 1 1@3
+build 2 1@3 1@4
+bring 1 1@3
+brows 1 1@0
+border 1 1@0
+biolog 1 1@3
+bartel 1 1@1
+benutz 1 1@2
+bombard 1 1@3
+bookcat 2 1@3 1@4
+brought 1 1@3
+background 3 3@0
+card 1 1@0
+cram 1 1@3
+clear 2 2@0
+coval 1 1@3
+close 1 1@3
+color 3 3@0
+cours 3 3@3
+critic 1 1@3
+carbon 1 1@3
+condit 1 1@3
+center 4 2@0 2@3
+comput 3 2@0 1@3
+cellpad 1 1@3
+complic 1 1@3
+catalog 1 1@0
+collect 1 1@0
+conveni 1 1@3
+chapter 1 1@3
+concept 10 1@3 9@4
+complet 1 1@3
+content 6 3@0 2@3 1@4
+chemist 1 1@3
+context 1 1@3
+categori 1 1@0
+compound 2 2@3
+concentr 1 1@3
+chemistri 42 17@3 25@4
+contribut 1 1@0
+comprehens 1 1@3
+d 1 1@3
+div 24 24@0
+dot 2 2@4
+daili 3 3@3
+daunt 1 1@3
+devot 1 1@3
+ddddff 3 3@0
+differ 1 1@3
+em 6 6@0
+edit 1 1@0
+ethan 1 1@3
+engin 2 2@0
+earth 1 1@3
+equat 1 1@3
+ecolog 1 1@3
+easier 1 1@3
+experi 1 1@2
+explain 1 1@3
+electron 2 2@4
+electroneg 2 2@4
+free 1 1@3
+food 1 1@3
+form 1 1@3
+font 5 5@0
+field 1 1@3
+fulli 1 1@3
+float 4 4@0
+figur 1 1@3
+featur 1 1@0
+formula 1 1@3
+foundat 11 1@3 10@4
+freshman 1 1@4
+factious 1 1@3
+foremost 1 1@3
+formatnum 1 1@0
+good 1 1@3
+gain 1 1@3
+glanc 1 1@3
+german 1 1@2
+geolog 1 1@3
+general 3 2@3 1@4
+generat 1 1@3
+help 6 3@0 3@3
+http 2 1@1 1@2
+hous 1 1@3
+human 2 2@0
+habit 1 1@3
+histori 2 2@4
+id 3 3@0
+idea 1 1@3
+imag 2 1@3 1@4
+intend 1 1@3
+import 1 1@3
+interest 1 1@2
+industri 1 1@3
+jan 2 2@4
+key 1 1@3
+kind 1 1@3
+know 2 2@3
+knowledg 4 4@3
+let 1 1@3
+life 3 3@3
+line 1 1@3
+list 1 1@3
+learn 1 1@3
+light 1 1@3
+languag 3 2@0 1@2
+m 1 1@1
+mf 1 1@0
+mp 1 1@0
+make 1 1@3
+mean 1 1@3
+main 6 5@0 1@2
+model 1 1@3
+mdash 2 2@3
+memor 2 2@3
+mechan 1 1@3
+margin 4 4@0
+materi 1 1@3
+michael 1 1@3
+medicin 1 1@3
+molecul 1 1@3
+million 1 1@3
+mysteri 1 1@3
+mathemat 2 2@0
+miscellan 2 2@0
+molecular 1 1@3
+new 2 2@3
+nov 1 1@4
+need 2 2@3
+nbsp 3 3@3
+night 1 1@3
+natur 1 1@2
+novemb 1 1@4
+noinclud 2 2@3
+nomenclatur 2 2@4
+numberofbook 1 1@0
+numberofarticl 1 1@0
+org 1 1@2
+open 2 1@0 1@3
+offic 1 1@0
+organ 34 11@3 23@4
+order 1 1@3
+onlin 1 1@3
+orbit 1 1@3
+overview 2 2@0
+px 15 15@0
+pad 6 6@0
+pka 1 1@3
+png 2 1@3 1@4
+page 6 6@0
+play 1 1@3
+pass 1 1@3
+past 1 1@3
+place 1 1@3
+prior 2 1@2 1@3
+print 1 1@3
+period 1 1@3
+physic 1 1@3
+purpos 1 1@4
+product 1 1@3
+properti 1 1@3
+persever 1 1@3
+primarili 1 1@3
+pagecount 1 1@0
+particular 1 1@3
+question 5 1@0 4@3
+read 1 1@0
+role 1 1@3
+room 1 1@0
+recip 1 1@0
+right 4 4@0
+reson 2 2@4
+replac 1 1@3
+review 1 1@4
+reaction 2 2@3
+s 1 1@3
+size 5 5@0
+serv 1 1@3
+space 1 1@0
+stage 9 9@4
+solid 1 1@3
+studi 2 1@3 1@4
+style 15 15@0
+start 1 1@3
+short 9 9@4
+solut 1 1@3
+scienc 6 4@0 1@2 1@3
+social 2 2@0
+sister 1 1@0
+succeed 1 1@3
+special 1 1@0
+subject 18 13@0 5@3
+schewek 2 2@2
+struggl 1 1@3
+success 1 1@3
+section 1 1@4
+student 3 3@3
+substanc 1 1@3
+superior 1 1@3
+structur 4 4@4
+superstit 2 2@3
+tri 2 2@3
+take 1 1@3
+tabl 2 2@3
+tobi 1 1@1
+test 2 2@3
+text 3 2@0 1@3
+trend 1 1@3
+topic 1 1@4
+typic 2 2@3
+thing 3 3@3
+treat 1 1@3
+think 1 1@3
+truth 1 1@3
+theori 1 1@3
+thorough 1 1@3
+textbook 3 1@0 1@2 1@3
+transport 1 1@3
+tobybartel 1 1@1
+use 2 1@0 1@3
+ultim 1 1@3
+uniqu 1 1@3
+unknown 1 1@3
+understand 3 3@3
+vis 2 2@3
+vari 1 1@3
+valu 1 1@3
+vsepr 1 1@3
+vertic 3 3@0
+visual 2 2@4
+various 1 1@3
+web 1 1@3
+wiki 3 3@2
+world 1 1@3
+width 10 10@0
+welcom 4 3@0 1@3
+wikibook 8 8@0
+wikipedia 2 2@2
+wikijunior 1 1@0
+x 1 1@3
+y 1 1@3

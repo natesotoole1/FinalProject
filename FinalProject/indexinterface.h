@@ -4,12 +4,15 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 #include "pageinfo.h"
 
 using namespace std;
 
 class LetterTerms;
+
+typedef unordered_map<string, string> stopWordMap;
 
 class IndexInterface
 {
@@ -19,9 +22,8 @@ public:
 
     int append_page_info(PageInfo* currInfo);
 
-    // To be implemented separately in the HTI and ATI.
+    // Virtual functions
     virtual void add_appearance(int letterIndex, string term, int currID);
-
     virtual void write_persistence();
 
     bool is_stop_word(string term);
@@ -33,13 +35,10 @@ protected:
     // PageInfo will be passed by a pageID (int).
     vector<PageInfo> infoForIDs;
 
+    /**** can probably take this out****/
     int currID;
 
-    vector<string> stopWords;
-
-
-    // take this out; just to prevent errors.
-    string currDocTitle;
+    stopWordMap stopWords;
 };
 
 #endif // INDEXINTERFACE_H

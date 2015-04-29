@@ -5,11 +5,8 @@ DocParser::DocParser()
 
 }
 
-void DocParser::index_corpus(bool asHashTable)
+void DocParser::index_corpus(IndexInterface* index)
 {
-    /*if (asHashTable)*/ IndexInterface* theIndex = new HashTableIndex;
-    //else theIndex = new AVLTreeIndex;
-
     // Use RapidXML's "parse" function to make all data
     // accessible via nodes and values.
     file<> theFile("WikiBooks.xml");
@@ -25,17 +22,17 @@ void DocParser::index_corpus(bool asHashTable)
     // Go to the first 'page'.
     currNode = currNode->next_sibling();
 
-    index_page(currNode, theIndex);
+    index_page(currNode, index);
 
 
     // Index the remaining pages in the file.
     while (currNode->next_sibling())
     {
         currNode = currNode->next_sibling();
-        index_page(currNode, theIndex);
+        index_page(currNode, index);
     }
 
-    theIndex->write_persistence();
+    index->write_persistence();
 }
 
 int DocParser::index_for_letter(char letter)

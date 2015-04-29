@@ -28,5 +28,5 @@ int AprnsAtPage::get_infoID()
 
 void AprnsAtPage::write_aprns(ofstream &persistence)
 {
-    persistence<<" ("<<infoID<<", "<<freq<<")";
+    persistence<<" "<<freq<<"@"<<infoID;
 }

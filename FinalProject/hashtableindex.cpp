@@ -10,6 +10,11 @@ HashTableIndex::~HashTableIndex()
 
 }
 
+Term* HashTableIndex::find(string term)
+{
+
+}
+
 void IndexInterface::add_appearance(int letterIndex, string term, int currID)
 {
     // If the new term is a stop word, forego adding it to the inverted index.
