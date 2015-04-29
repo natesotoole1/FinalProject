@@ -18,19 +18,19 @@ int main()
     // Index the corpus into a HashTableIndex.
     IndexHandler* handler = new IndexHandler(true);
     handler->index_corpus();
-
+/*
     cout<<"The inverted index has been loaded into a hash table by default.\n"<<
           "To load it into an AVL tree, press 1.  Otherwise, press any key.\n";
     char choice;
     cin>>choice;
     if (choice == '1')
     {
-        /**********load into AVL***********/
+        // load into AVL
     }
 
     QueryProcessor* processor = new QueryProcessor;
     //Results* rankedResults;
-
+*/
     // Get the number of clicks used up to now.
     end = clock();
 

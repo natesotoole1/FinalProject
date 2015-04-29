@@ -15,10 +15,10 @@ class LetterTerms
 public:
     LetterTerms();
     ~LetterTerms();
+
     void add_valid_appearance(string term, int currID);
-
+    Term* find(string term);
     int hash_key(string key);
-
     void write_letter_terms(ofstream& persistence);
 private:
     int arrSize = 1024;

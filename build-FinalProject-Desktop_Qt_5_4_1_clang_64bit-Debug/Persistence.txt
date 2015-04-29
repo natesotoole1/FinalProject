@@ -1,261 +1,267 @@
-ask 1 1@3
-acid 3 1@3 2@4
-abil 1 1@3
-atom 3 1@3 2@4
-alkan 2 2@4
-align 5 5@0
-addit 1 1@3
-april 5 5@4
-allpag 1 1@0
-answer 2 2@3
-ancient 1 1@3
-accomplish 1 1@3
-br 2 2@3
-big 8 8@3
-bodi 1 1@3
-base 4 2@3 2@4
-bond 3 1@3 2@4
-book 4 3@0 1@3
-burn 1 1@3
-build 2 1@3 1@4
-bring 1 1@3
-brows 1 1@0
-border 1 1@0
-biolog 1 1@3
-bartel 1 1@1
-benutz 1 1@2
-bombard 1 1@3
-bookcat 2 1@3 1@4
-brought 1 1@3
-background 3 3@0
-card 1 1@0
-cram 1 1@3
-clear 2 2@0
-coval 1 1@3
-close 1 1@3
-color 3 3@0
-cours 3 3@3
-critic 1 1@3
-carbon 1 1@3
-condit 1 1@3
-center 4 2@0 2@3
-comput 3 2@0 1@3
-cellpad 1 1@3
-complic 1 1@3
-catalog 1 1@0
-collect 1 1@0
-conveni 1 1@3
-chapter 1 1@3
-concept 10 1@3 9@4
-complet 1 1@3
-content 6 3@0 2@3 1@4
-chemist 1 1@3
-context 1 1@3
-categori 1 1@0
-compound 2 2@3
-concentr 1 1@3
-chemistri 42 17@3 25@4
-contribut 1 1@0
-comprehens 1 1@3
-d 1 1@3
-div 24 24@0
-dot 2 2@4
-daili 3 3@3
-daunt 1 1@3
-devot 1 1@3
-ddddff 3 3@0
-differ 1 1@3
-em 6 6@0
-edit 1 1@0
-ethan 1 1@3
-engin 2 2@0
-earth 1 1@3
-equat 1 1@3
-ecolog 1 1@3
-easier 1 1@3
-experi 1 1@2
-explain 1 1@3
-electron 2 2@4
-electroneg 2 2@4
-free 1 1@3
-food 1 1@3
-form 1 1@3
-font 5 5@0
-field 1 1@3
-fulli 1 1@3
-float 4 4@0
-figur 1 1@3
-featur 1 1@0
-formula 1 1@3
-foundat 11 1@3 10@4
-freshman 1 1@4
-factious 1 1@3
-foremost 1 1@3
-formatnum 1 1@0
-good 1 1@3
-gain 1 1@3
-glanc 1 1@3
-german 1 1@2
-geolog 1 1@3
-general 3 2@3 1@4
-generat 1 1@3
-help 6 3@0 3@3
-http 2 1@1 1@2
-hous 1 1@3
-human 2 2@0
-habit 1 1@3
-histori 2 2@4
-id 3 3@0
-idea 1 1@3
-imag 2 1@3 1@4
-intend 1 1@3
-import 1 1@3
-interest 1 1@2
-industri 1 1@3
-jan 2 2@4
-key 1 1@3
-kind 1 1@3
-know 2 2@3
-knowledg 4 4@3
-let 1 1@3
-life 3 3@3
-line 1 1@3
-list 1 1@3
-learn 1 1@3
-light 1 1@3
-languag 3 2@0 1@2
-m 1 1@1
-mf 1 1@0
-mp 1 1@0
-make 1 1@3
-mean 1 1@3
-main 6 5@0 1@2
-model 1 1@3
-mdash 2 2@3
-memor 2 2@3
-mechan 1 1@3
-margin 4 4@0
-materi 1 1@3
-michael 1 1@3
-medicin 1 1@3
-molecul 1 1@3
-million 1 1@3
-mysteri 1 1@3
-mathemat 2 2@0
-miscellan 2 2@0
-molecular 1 1@3
-new 2 2@3
-nov 1 1@4
-need 2 2@3
-nbsp 3 3@3
-night 1 1@3
-natur 1 1@2
-novemb 1 1@4
-noinclud 2 2@3
-nomenclatur 2 2@4
-numberofbook 1 1@0
-numberofarticl 1 1@0
-org 1 1@2
-open 2 1@0 1@3
-offic 1 1@0
-organ 34 11@3 23@4
-order 1 1@3
-onlin 1 1@3
-orbit 1 1@3
-overview 2 2@0
-px 15 15@0
-pad 6 6@0
-pka 1 1@3
-png 2 1@3 1@4
-page 6 6@0
-play 1 1@3
-pass 1 1@3
-past 1 1@3
-place 1 1@3
-prior 2 1@2 1@3
-print 1 1@3
-period 1 1@3
-physic 1 1@3
-purpos 1 1@4
-product 1 1@3
-properti 1 1@3
-persever 1 1@3
-primarili 1 1@3
-pagecount 1 1@0
-particular 1 1@3
-question 5 1@0 4@3
-read 1 1@0
-role 1 1@3
-room 1 1@0
-recip 1 1@0
-right 4 4@0
-reson 2 2@4
-replac 1 1@3
-review 1 1@4
-reaction 2 2@3
-s 1 1@3
-size 5 5@0
-serv 1 1@3
-space 1 1@0
-stage 9 9@4
-solid 1 1@3
-studi 2 1@3 1@4
-style 15 15@0
-start 1 1@3
-short 9 9@4
-solut 1 1@3
-scienc 6 4@0 1@2 1@3
-social 2 2@0
-sister 1 1@0
-succeed 1 1@3
-special 1 1@0
-subject 18 13@0 5@3
-schewek 2 2@2
-struggl 1 1@3
-success 1 1@3
-section 1 1@4
-student 3 3@3
-substanc 1 1@3
-superior 1 1@3
-structur 4 4@4
-superstit 2 2@3
-tri 2 2@3
-take 1 1@3
-tabl 2 2@3
-tobi 1 1@1
-test 2 2@3
-text 3 2@0 1@3
-trend 1 1@3
-topic 1 1@4
-typic 2 2@3
-thing 3 3@3
-treat 1 1@3
-think 1 1@3
-truth 1 1@3
-theori 1 1@3
-thorough 1 1@3
-textbook 3 1@0 1@2 1@3
-transport 1 1@3
-tobybartel 1 1@1
-use 2 1@0 1@3
-ultim 1 1@3
-uniqu 1 1@3
-unknown 1 1@3
-understand 3 3@3
-vis 2 2@3
-vari 1 1@3
-valu 1 1@3
-vsepr 1 1@3
-vertic 3 3@0
-visual 2 2@4
-various 1 1@3
-web 1 1@3
-wiki 3 3@2
-world 1 1@3
-width 10 10@0
-welcom 4 3@0 1@3
-wikibook 8 8@0
-wikipedia 2 2@2
-wikijunior 1 1@0
-x 1 1@3
-y 1 1@3
+ask 1~1 1@3
+acid 3~2 1@3 2@4
+abil 1~1 1@3
+atom 3~2 1@3 2@4
+alkan 2~1 2@4
+align 5~1 5@0
+addit 1~1 1@3
+april 5~1 5@4
+alway 2~1 2@3
+anyon 1~1 1@0
+allpag 1~1 1@0
+answer 2~1 2@3
+alreadi 1~1 1@3
+ancient 1~1 1@3
+accomplish 1~1 1@3
+br 2~1 2@3
+big 8~1 8@3
+bodi 1~1 1@3
+base 4~2 2@3 2@4
+bond 3~2 1@3 2@4
+book 4~2 3@0 1@3
+burn 1~1 1@3
+build 2~2 1@3 1@4
+becom 1~1 1@3
+bring 1~1 1@3
+befor 2~1 2@3
+brows 1~1 1@0
+border 1~1 1@0
+biolog 1~1 1@3
+bartel 1~1 1@1
+benutz 1~1 1@2
+bombard 1~1 1@3
+bookcat 2~2 1@3 1@4
+brought 1~1 1@3
+background 3~1 3@0
+card 1~1 1@0
+cram 1~1 1@3
+clear 2~1 2@0
+coval 1~1 1@3
+close 1~1 1@3
+color 3~1 3@0
+cours 3~1 3@3
+critic 1~1 1@3
+carbon 1~1 1@3
+condit 1~1 1@3
+center 4~2 2@0 2@3
+comput 3~2 2@0 1@3
+cellpad 1~1 1@3
+complic 1~1 1@3
+catalog 1~1 1@0
+collect 1~1 1@0
+conveni 1~1 1@3
+chapter 1~1 1@3
+concept 10~2 1@3 9@4
+complet 1~1 1@3
+content 6~3 3@0 2@3 1@4
+chemist 1~1 1@3
+context 1~1 1@3
+categori 1~1 1@0
+compound 2~1 2@3
+concentr 1~1 1@3
+chemistri 42~2 17@3 25@4
+contribut 1~1 1@0
+comprehens 1~1 1@3
+d 1~1 1@3
+div 24~1 24@0
+dot 2~1 2@4
+daili 3~1 3@3
+daunt 1~1 1@3
+devot 1~1 1@3
+ddddff 3~1 3@0
+differ 1~1 1@3
+em 6~1 6@0
+edit 1~1 1@0
+ethan 1~1 1@3
+engin 2~1 2@0
+earth 1~1 1@3
+equat 1~1 1@3
+ecolog 1~1 1@3
+easier 1~1 1@3
+experi 1~1 1@2
+explain 1~1 1@3
+electron 2~1 2@4
+electroneg 2~1 2@4
+free 1~1 1@3
+food 1~1 1@3
+form 1~1 1@3
+font 5~1 5@0
+field 1~1 1@3
+fulli 1~1 1@3
+float 4~1 4@0
+figur 1~1 1@3
+featur 1~1 1@0
+formula 1~1 1@3
+foundat 11~2 1@3 10@4
+freshman 1~1 1@4
+factious 1~1 1@3
+foremost 1~1 1@3
+formatnum 1~1 1@0
+good 1~1 1@3
+gain 1~1 1@3
+glanc 1~1 1@3
+german 1~1 1@2
+geolog 1~1 1@3
+general 3~2 2@3 1@4
+generat 1~1 1@3
+help 6~2 3@0 3@3
+http 2~2 1@1 1@2
+hous 1~1 1@3
+human 2~1 2@0
+habit 1~1 1@3
+histori 2~1 2@4
+id 3~1 3@0
+idea 1~1 1@3
+imag 2~2 1@3 1@4
+intend 1~1 1@3
+import 1~1 1@3
+industri 1~1 1@3
+jan 2~1 2@4
+key 1~1 1@3
+kind 1~1 1@3
+know 2~1 2@3
+knowledg 4~1 4@3
+let 1~1 1@3
+life 3~1 3@3
+line 1~1 1@3
+list 1~1 1@3
+learn 1~1 1@3
+light 1~1 1@3
+languag 3~2 2@0 1@2
+m 1~1 1@1
+mf 1~1 1@0
+mp 1~1 1@0
+make 1~1 1@3
+mean 1~1 1@3
+main 6~2 5@0 1@2
+model 1~1 1@3
+mdash 2~1 2@3
+memor 2~1 2@3
+mechan 1~1 1@3
+margin 4~1 4@0
+materi 1~1 1@3
+michael 1~1 1@3
+medicin 1~1 1@3
+molecul 1~1 1@3
+million 1~1 1@3
+mysteri 1~1 1@3
+mathemat 2~1 2@0
+miscellan 2~1 2@0
+molecular 1~1 1@3
+new 2~1 2@3
+nov 1~1 1@4
+need 2~1 2@3
+nbsp 3~1 3@3
+night 1~1 1@3
+natur 1~1 1@2
+novemb 1~1 1@4
+noinclud 2~1 2@3
+nomenclatur 2~1 2@4
+numberofbook 1~1 1@0
+numberofarticl 1~1 1@0
+org 1~1 1@2
+open 2~2 1@0 1@3
+offic 1~1 1@0
+organ 34~2 11@3 23@4
+order 1~1 1@3
+onlin 1~1 1@3
+orbit 1~1 1@3
+ourselv 1~1 1@3
+overview 2~1 2@0
+px 15~1 15@0
+pad 6~1 6@0
+pka 1~1 1@3
+png 2~2 1@3 1@4
+page 6~1 6@0
+play 1~1 1@3
+pass 1~1 1@3
+past 1~1 1@3
+place 1~1 1@3
+prior 2~2 1@2 1@3
+print 1~1 1@3
+period 1~1 1@3
+physic 1~1 1@3
+purpos 1~1 1@4
+product 1~1 1@3
+properti 1~1 1@3
+persever 1~1 1@3
+primarili 1~1 1@3
+pagecount 1~1 1@0
+particular 1~1 1@3
+question 5~2 1@0 4@3
+read 1~1 1@0
+role 1~1 1@3
+room 1~1 1@0
+recip 1~1 1@0
+right 4~1 4@0
+reson 2~1 2@4
+replac 1~1 1@3
+review 1~1 1@4
+reaction 2~1 2@3
+s 1~1 1@3
+size 5~1 5@0
+serv 1~1 1@3
+space 1~1 1@0
+stage 9~1 9@4
+solid 1~1 1@3
+studi 2~2 1@3 1@4
+style 15~1 15@0
+start 1~1 1@3
+short 9~1 9@4
+solut 1~1 1@3
+scienc 6~3 4@0 1@2 1@3
+social 2~1 2@0
+sister 1~1 1@0
+succeed 1~1 1@3
+special 1~1 1@0
+subject 18~2 13@0 5@3
+schewek 2~1 2@2
+struggl 1~1 1@3
+success 1~1 1@3
+section 1~1 1@4
+student 3~1 3@3
+substanc 1~1 1@3
+superior 1~1 1@3
+structur 4~1 4@4
+superstit 2~1 2@3
+tri 2~1 2@3
+tabl 2~1 2@3
+tobi 1~1 1@1
+test 2~1 2@3
+text 3~2 2@0 1@3
+trend 1~1 1@3
+topic 1~1 1@4
+typic 2~1 2@3
+thing 3~1 3@3
+treat 1~1 1@3
+think 1~1 1@3
+truth 1~1 1@3
+theori 1~1 1@3
+thorough 1~1 1@3
+textbook 3~3 1@0 1@2 1@3
+transport 1~1 1@3
+tobybartel 1~1 1@1
+use 2~2 1@0 1@3
+ultim 1~1 1@3
+uniqu 1~1 1@3
+unknown 1~1 1@3
+understand 3~1 3@3
+vis 2~1 2@3
+vari 1~1 1@3
+valu 1~1 1@3
+vsepr 1~1 1@3
+vertic 3~1 3@0
+visual 2~1 2@4
+various 1~1 1@3
+web 1~1 1@3
+whi 1~1 1@3
+wiki 3~1 3@2
+world 1~1 1@3
+width 10~1 10@0
+wherea 1~1 1@3
+welcom 4~2 3@0 1@3
+wikibook 8~1 8@0
+wikipedia 2~1 2@2
+wikijunior 1~1 1@0
+x 1~1 1@3
+y 1~1 1@3

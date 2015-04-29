@@ -41,6 +41,21 @@ void TermBucket::add_aprn_at_term(string term, int currID)
     }
 }
 
+Term* TermBucket::find(string term)
+{
+    if (!root) return NULL;
+
+    Term* curr = root;
+    if (curr->get_name().compare(term) == 0) return curr;
+    while (curr->get_next())
+    {
+        curr = curr->get_next();
+        if (curr->get_name().compare(term) == 0) return curr;
+    }
+
+    return NULL;
+}
+
 bool TermBucket::has_word(string term)
 {
     if (!root) return false;

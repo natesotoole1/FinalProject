@@ -29,11 +29,14 @@ public:
 private:
     string name;
 
-    int totalFreq;
-
     // For the linked list functionality of each TermBucket.
     // Only used in HashTableIndex.
     Term* next;
+
+    // The number of unique documents on which the term has appeared.
+    int spread;
+
+    int totalFreq;
 
     // Holds the IDs of pages on which it appeared.
     vector<AprnsAtPage> pagesAppearedOn;

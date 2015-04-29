@@ -26,28 +26,16 @@ void DocParser::index_corpus(IndexInterface* index)
 
 
     // Index the remaining pages in the file.
+    //int count = 1;
     while (currNode->next_sibling())
     {
         currNode = currNode->next_sibling();
         index_page(currNode, index);
+        //++count;
+        //if (count == 10000) break;
     }
 
     index->write_persistence();
-}
-
-int DocParser::index_for_letter(char letter)
-{
-    // Get the raw ASCII value of the letter.
-    int ascii = (int)letter;
-
-    // If the letter is uppercase, get the lowercase equivalent
-    // by increasing its ASCII value by 32.
-    if (ascii > 64 && ascii < 91) ascii += 32;
-
-    // a's ASCII value is 97; b's is 98, and so on...
-    // To get the return value, subtract 96.
-    ascii -= 96;
-    return ascii;
 }
 
 void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)

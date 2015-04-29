@@ -20,7 +20,7 @@
 using namespace rapidxml;
 using namespace std;
 
-class DocParser
+class DocParser : public IndexInterface
 {
 public:
     DocParser();
@@ -28,10 +28,7 @@ public:
     // HashTableIndex and AVLTreeIndex will handle new entries separately.
     void index_corpus(IndexInterface* index);
 
-    // Determine which LetterTerm should handle the appearance.
-    // Pass the first letter of the term.  Returns  0 if the term
-    // is a number, 1 for 'a', 2 for 'b', and so forth.
-    int index_for_letter(char letter);
+
 
     void index_page(xml_node<>* currNode, IndexInterface* theIndex);
     void index_text(xml_node<>* currNode, int currID, IndexInterface* theIndex);

@@ -67,7 +67,7 @@ void Porter2Stemmer::stem(string & word)
                 || (last3.compare("ied") == 0)) word = word.substr(0, size-3);
     }
     return;
-*/
+    */
 
     // special case short words or sentence tags
     if(word.size() <= 2 || word == "<s>" || word == "</s>")
@@ -104,7 +104,6 @@ void Porter2Stemmer::stem(string & word)
 
     std::replace(word.begin(), word.end(), 'Y', 'y');
     return;
-
 }
 
 void Porter2Stemmer::trim(string & word)

@@ -12,18 +12,16 @@ HashTableIndex::~HashTableIndex()
 
 Term* HashTableIndex::find(string term)
 {
-
+    return letters[index_for_letter(term.front())].find(term);
 }
 
 void IndexInterface::add_appearance(int letterIndex, string term, int currID)
 {
+    Porter2Stemmer::stem(term);
+
     // If the new term is a stop word, forego adding it to the inverted index.
     if (is_stop_word(term)) return;
 
-    // The word is valid; stem it.
-    Porter2Stemmer::stem(term);
-
-    // fix
     // Once stemmed, make new appearance at term.
     letters[letterIndex].add_valid_appearance(term, currID);
 }

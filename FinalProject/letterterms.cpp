@@ -16,6 +16,11 @@ void LetterTerms::add_valid_appearance(string term, int currID)
     buckets[hash_key(term)].add_aprn_at_term(term, currID);
 }
 
+Term* LetterTerms::find(string term)
+{
+    return buckets[hash_key(term)].find(term);
+}
+
 int LetterTerms::hash_key(string key)
 {
     // To save overhead.

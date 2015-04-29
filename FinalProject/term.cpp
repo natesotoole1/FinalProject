@@ -62,7 +62,9 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
-    persistence<<name<<" "<<totalFreq;
+    spread = pagesAppearedOn.size();
+
+    persistence<<name<<" "<<totalFreq<<"~"<<spread;
     int size = pagesAppearedOn.size();
     for (int i=0; i<size; ++i)
     {
