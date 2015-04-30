@@ -41,9 +41,9 @@ public:
     void index_corpus(IndexInterface* index);
 
     void index_page(xml_node<>* currNode, IndexInterface* theIndex);
-    void index_text(xml_node<>* currNode, int currID, IndexInterface* theIndex);
+    void index_text(xml_node<>* currNode, int currID);
 
-    bool is_letter(char c);
+    bool should_remove(char c);
 
 private:
     termMap allTerms;

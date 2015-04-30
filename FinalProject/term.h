@@ -12,8 +12,6 @@
 
 using namespace std;
 
-typedef pair<int, int> pageAprns;
-
 class Term
 {
 public:
@@ -43,7 +41,7 @@ private:
     int totalFreq;
 
     // Holds the IDs of pages on which it appeared.
-    unordered_map<int, pageAprns> pagesAppearedOn;
+    unordered_map<int, pair<int, int>> pagesAppearedOn;
 };
 
 #endif // TERM_H
