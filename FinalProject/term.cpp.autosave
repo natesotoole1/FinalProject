@@ -2,7 +2,7 @@
 
 Term::Term()
 {
-    pagesAppearedOn = vector<AprnsAtPage>();
+    //pagesAppearedOn = vector<AprnsAtPage>();
 
     name = "";
     next = NULL;

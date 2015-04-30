@@ -36,7 +36,7 @@ public:
     virtual unordered_map<string, int> searchWord(string);
     virtual void clear();
     virtual void load_persistence();
-
+    //a
 
 
 protected:
