@@ -2,15 +2,29 @@
 #include <time.h>
 #include <iostream>
 #include <string>
-#include <unordered_map>
 
 #include "indexhandler.h"
 #include "queryprocessor.h"
 
 using namespace std;
 
+typedef unordered_map<int, int> pageMap;
+
+typedef unordered_map<string, pageMap> termMap;
+
 int main()
 {
+    /*termMap terms;
+
+    pageMap p;
+    p.insert(make_pair(1,8));
+
+    terms.emplace("newTerm", p);
+
+    cout<<"IT IS "<<terms.at("newTerm").at(1)<<endl;
+    // prints 8.
+*/
+
     // Use clock_t objects to track the program's total runtime.
     clock_t start, end;
     // Get the number of clicks already used by the program.
@@ -19,7 +33,7 @@ int main()
     // Index the corpus into a HashTableIndex.
     IndexHandler* handler = new IndexHandler(true);
     handler->index_corpus();
-/*
+    /*
     cout<<"The inverted index has been loaded into a hash table by default.\n"<<
           "To load it into an AVL tree, press 1.  Otherwise, press any key.\n";
     char choice;

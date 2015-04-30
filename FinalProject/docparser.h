@@ -27,13 +27,15 @@ typedef unordered_map<int, int> pageMap;
 
 typedef unordered_map<string, pageMap> termMap;
 
-class DocParser : public IndexInterface
+class DocParser // : public IndexInterface
 {
 public:
     DocParser();
     ~DocParser();
 
     string clean_term(string term);
+
+    void add_appearance(string currTerm, int currID);
 
     // HashTableIndex and AVLTreeIndex will handle new entries separately.
     void index_corpus(IndexInterface* index);

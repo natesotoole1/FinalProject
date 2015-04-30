@@ -2,11 +2,31 @@
 
 DocParser::DocParser()
 {
-
+    allTerms;
 }
 
 DocParser::~DocParser()
 {
+
+}
+
+void DocParser::add_appearance(string currTerm, int currID)
+{
+    // Check if currID is already in currTerm's pageMap.
+    try
+    {
+        allTerms.at(currTerm).at(currID);
+    }
+
+    // This means currID wasn't already in the pageMap, so emplace it.
+    catch (const out_of_range& notInAllTerms)
+    {
+        allTerms.at(currTerm).insert(make_pair(currID, 1));
+    }
+
+    // At this point, currID was already in the pageMap,
+    // so increase the frequency by 1.
+    allTerms.at(currTerm).at(currID)++;
 
 }
 
@@ -145,9 +165,14 @@ void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* the
         // This means the term wasn't already in allTerms, so emplace it.
         catch (const out_of_range& notInAllTerms)
         {
-            //allTerms.emplace(make_pair(currTerm, pageMap(currID, 1)));
+            pageMap pMap;
+            pMap.insert(make_pair(currID, 1));
+            allTerms.emplace(make_pair(currTerm, pMap));
         }
 
+        // This point will only be reached if
+        // the term is already in allTerms.
+        add_appearance(currTerm, currID);
     }
 }
 
