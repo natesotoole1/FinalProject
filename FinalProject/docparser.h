@@ -13,6 +13,8 @@
 #include <sstream>
 #include <iostream>
 #include <string>
+#include <unordered_map>
+#include <utility>
 
 //#include "avltreeindex.h"
 #include "hashtableinterface.h"
@@ -21,6 +23,10 @@
 
 using namespace rapidxml;
 using namespace std;
+
+typedef unordered_map<int, int> pageMap;
+
+typedef unordered_map<string, pageMap> termMap;
 
 class DocParser : public IndexInterface
 {
@@ -33,14 +39,13 @@ public:
     // HashTableIndex and AVLTreeIndex will handle new entries separately.
     void index_corpus(IndexInterface* index);
 
-
-
     void index_page(xml_node<>* currNode, IndexInterface* theIndex);
     void index_text(xml_node<>* currNode, int currID, IndexInterface* theIndex);
 
-
     bool is_letter(char c);
 
+private:
+    termMap allTerms;
 };
 
 #endif // DOCPARSER_H

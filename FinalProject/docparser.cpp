@@ -132,54 +132,23 @@ void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* the
 
     while (stream >> currTerm)
     {
-        // Loads whatever characters are between each pair of whitespaces.
+        // Loads whatever characters are between each pair of whitespaces,
+        // so clean it.
+        currTerm = clean_term(currTerm);
 
-    }
-
-    // To save overhead.
-    int size = text.size();
-
-
-
-    // Iterate through each char in the value string.
-    for (int pos=0; pos < size; ++pos)
-    {
-        // The value could contain several sentences, perhaps including many strange
-        // characters.  To find each valid "term" to push to the inverted index,
-        // find groups of adjacent chars that are all either letters or numbers.
-        // Ignore all other chars.
-
-        char currChar = text.at(pos);
-
-        // Get the ascii value of the current char.
-        int ascii = (int)currChar;
-
-        // If the letter is uppercase...
-        if (ascii > 64 && ascii < 91)
+        // See if currTerm is already in allTerms;
+        try
         {
-            // Increase its ascii value by 32 next conditional
-            // (which only accepts lowercase chars).
-            ascii += 32;
-            // Make it lowercase by converting the increased ascii value back to a char.
-            currChar = (char)ascii;
+            allTerms.at(currTerm);
         }
 
-        // If it's a letter (has to be lowercase), append it to newTerm.
-        if (ascii > 96 && ascii < 123) currTerm+=currChar;
-
-        // If it's a not a letter (i.e. it's a useless char),
-        // end the term if and insert it in the inverted index
-        // if newTerm has any chars in it.  Otherwise, ignore the char.
-        else if (currTerm.size())
+        // This means the term wasn't already in allTerms, so emplace it.
+        catch (const out_of_range& notInAllTerms)
         {
-            theIndex->add_appearance(index_for_letter(currTerm.front()), currTerm, currID);
-            currTerm.clear();
+            allTerms.emplace(make_pair(currTerm, pageMap(currID, 1)));
         }
-    }
 
-    // If the end of the value string is reached and there's a new term to
-    // insert in the inverted index, do so.
-    if (currTerm.size()) theIndex->add_appearance(index_for_letter(currTerm.front()), currTerm, currID);
+    }
 }
 
 bool DocParser::is_letter(char curr)
