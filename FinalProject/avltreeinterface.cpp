@@ -26,8 +26,8 @@ void AVLTreeInterface::clear(){
 
 }
 unordered_map<string, int> AVLTreeInterface::searchForWord(string w){
-
-
+    
+    
 }
 void AVLTreeInterface::write_persistence(){
 
