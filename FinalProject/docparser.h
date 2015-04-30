@@ -10,6 +10,7 @@
 
 #include <algorithm>
 #include <cctype>
+#include <chrono>
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -55,6 +56,9 @@ private:
     termMap allTerms;
 
     stopWordMap stopWords;
+
+    int count = 0;
+    // trivial
 };
 
 inline int is_not_alpha(char c)
