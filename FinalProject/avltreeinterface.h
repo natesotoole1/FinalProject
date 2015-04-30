@@ -8,25 +8,22 @@
 #include <string>
 #include <sstream>
 
+using namespace std;
+
+typedef unordered_map<int, int> pageMap;
 
 class AVLTreeInterface : public IndexInterface
 {
 public:
     AVLTreeInterface();
     ~AVLTreeInterface();
-    void add_word(string, int, int);
-    void clear();
-    unordered_map<string, int> searchForWord(string);
-    void write_persistence();
-    void load_persistence();
+
     void createLetters();
 
     void display_AVL();
 private:
     AVLTreeIndex* avlTrees;
     const int numLetters = 26;
-
-
 };
 
 #endif // AVLTREEINTERFACE_H

@@ -103,7 +103,7 @@ Term* AVLTreeIndex::find (AVL_Node* ptr, Term* value){
     AVL_Node* temp = ptr;
     string word = value->get_name();
     string word2 = root->data->get_name();
-    Term* noWord = new Term("No Word", -1, -1);
+    //Term* noWord = new Term("No Word", -1, -1);
     if (word.substr(1,1).compare(word2.substr(1,1)) < 0){
         temp = root->left;
         find(temp, value);
@@ -113,7 +113,7 @@ Term* AVLTreeIndex::find (AVL_Node* ptr, Term* value){
     }else if(word.compare(word2) == 0){
         return value;
     }
-    return noWord;
+    //return noWord;
 }
 
 

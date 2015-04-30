@@ -1,12 +1,12 @@
 #include "avltreeinterface.h"
 
-AVLTreeInterface::AVLTreeInterface() : IndexInterface()
+AVLTreeInterface::AVLTreeInterface()
 {
     avlTrees = new AVLTreeIndex[numLetters];
 }
 
 AVLTreeInterface::~AVLTreeInterface(){
-    clear();
+    //clear();
 }
 
 void AVLTreeInterface::display_AVL()
@@ -17,30 +17,35 @@ void AVLTreeInterface::display_AVL()
     }
 }
 
-void AVLTreeInterface::add_word(string w, int id, int freq){
-   for(int i = 0; i < numLetters; i++){
+void IndexInterface::add_term_to_ii(int letterIndex, string term, pageMap aprns)
+{
+   /*for(int i = 0; i < numLetters; i++){
        if(avlTrees[i].getLetter() == w.substr(0)){
            Term* currWord = new Term(w, id, freq);
            // put this back
            //avlTrees[i].insert(&avlTrees[i], currWord);
        }
-   }
+   }*/
 }
 
-void AVLTreeInterface::clear(){
-    for(int i = 0; i < numLetters; i++){
+void IndexInterface::clear()
+{
+    /*for(int i = 0; i < numLetters; i++){
         avlTrees[i].clearTree(avlTrees[i].getRoot());
     }
+*/
+}
+
+unordered_map<string, int> IndexInterface::search_word(string w)
+{
 
 }
-unordered_map<string, int> AVLTreeInterface::searchForWord(string w){
-    
-    
-}
-void AVLTreeInterface::write_persistence(){
+void IndexInterface::write_persistence()
+{
 
 }
-void AVLTreeInterface::load_persistence(){
+void IndexInterface::load_persistence()
+{
 
 }
 

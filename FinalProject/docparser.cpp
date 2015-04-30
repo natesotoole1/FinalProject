@@ -11,12 +11,11 @@ DocParser::DocParser()
     // For each line in the stop words file (there is only one
     // word per line, add that word as if it were an appearance.
     // This function will only be called by letters[0].
-    do
+    while (ifs >> word)
     {
-        getline(ifs, word);
         word = clean_term(word);
-        stopWords.emplace(word, word);
-    } while (!ifs.eof());
+        stopWords.emplace(make_pair(word, word));
+    }
 }
 
 DocParser::~DocParser()
@@ -36,6 +35,7 @@ void DocParser::add_appearance(string currTerm, int currID)
     catch (const out_of_range& notInAllTerms)
     {
         allTerms.at(currTerm).insert(make_pair(currID, 1));
+        return;
     }
 
     // At this point, currID was already in the pageMap,
@@ -87,7 +87,44 @@ void DocParser::index_corpus(IndexInterface* index)
         //if (count == 10000) break;
     }
 
-    index->write_persistence();
+    // Iterate through allTerms and create a new Term object
+    // using the data from each value.
+    for (auto& value : allTerms)
+    {
+        cout<<value.first<<": ";
+        for (auto val : allTerms.at(value.first))
+        {
+            cout<<val.second<<"@"<<val.first<<" ";
+        }
+        cout<<endl;
+    }
+
+    // By this point, allTerms contains all the info for
+    // the inverted index.  Add each term to the inverted index.
+    for (auto& term : allTerms)
+    {
+        index->add_term_to_ii(
+                    index_for_letter(term.first.front()),
+                    term.first,
+                    term.second);
+    }
+
+    //index->write_persistence();
+}
+
+int DocParser::index_for_letter(char letter)
+{
+    // Get the raw ASCII value of the letter.
+    int ascii = (int)letter;
+
+    // If the letter is uppercase, get the lowercase equivalent
+    // by increasing its ASCII value by 32.
+    if (ascii > 64 && ascii < 91) ascii += 32;
+
+    // a's ASCII value is 97; b's is 98, and so on...
+    // To get the return value, subtract 96.
+    ascii -= 97;
+    return ascii;
 }
 
 void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
@@ -153,32 +190,6 @@ void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
     // this page's text.
     index_text(currNode, currID);
 
-    // Iterate through allTerms and create a new Term object
-    // using the data from each value.
-    for (auto value : allTerms)
-    {
-        cout<<value.first<<": ";
-        for (auto val : allTerms.at(value.first))
-        {
-            cout<<val.second<<"@"<<val.first<<" ";
-        }
-        cout<<endl;
-    }
-
-    // By this point, allTerms contains all the info for
-    // the inverted index.
-    for (auto value : allTerms)
-    {
-        theIndex->add_word();
-        cout<<value.first<<": ";
-        for (auto val : allTerms.at(value.first))
-        {
-            cout<<val.second<<"@"<<val.first<<" ";
-        }
-        cout<<endl;
-    }
-
-
 }
 
 void DocParser::index_text(xml_node<>* currNode, int currID)
@@ -189,7 +200,9 @@ void DocParser::index_text(xml_node<>* currNode, int currID)
     // Got from http://stackoverflow.com/questions/5540008/need-a-regular-expression-
     // to-extract-only-letters-and-whitespace-from-a-string
     replace_if(text.begin(), text.end(),
-                    not1(ptr_fun<int,int>(&isalpha)), ' ');
+                        is_not_alpha,
+                        ' '
+                        );
 
     istringstream stream(text);
 
@@ -215,8 +228,9 @@ void DocParser::index_text(xml_node<>* currNode, int currID)
         catch (const out_of_range& notInAllTerms)
         {
             pageMap pMap;
-            pMap.insert(make_pair(currID, 1));
+            pMap.emplace(make_pair(currID, 1));
             allTerms.emplace(make_pair(currTerm, pMap));
+            continue;
         }
 
         // This point will only be reached if
@@ -232,7 +246,7 @@ bool DocParser::is_stop_word(string term)
     {
         stopWords.at(term);
     }
-    catch (const std::out_of_range& notAStopWord)
+    catch (const out_of_range& notAStopWord)
     {
         return false;
     }

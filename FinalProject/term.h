@@ -20,11 +20,7 @@ public:
     Term();
     ~Term();
 
-    Term(string name, int currID);
-
-    Term(string name, int, int);
-
-    void add_aprn_at_page(int currID);
+    Term(string theName, pageMap theAprns);
 
     string get_name();
     Term* get_next();
@@ -45,7 +41,7 @@ private:
     int totalFreq;
 
     // Holds the IDs of pages on which it appeared.
-    pageMap pagesAppearedOn;
+    pageMap aprns;
 };
 
 #endif // TERM_H

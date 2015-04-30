@@ -2,10 +2,8 @@
 
 Term::Term()
 {
-    /*pagesAppearedOn = vector<AprnsAtPage>();
-
     name = "";
-    next = NULL;*/
+    next = NULL;
 }
 
 Term::~Term()
@@ -13,42 +11,18 @@ Term::~Term()
 
 }
 
-Term::Term(string theName, int currID)
+Term::Term(string theName, pageMap theAprns)
 {
-    /*name = theName;
-    totalFreq = 1;
-    AprnsAtPage* firstAprn = new AprnsAtPage(currID);
-    pagesAppearedOn.push_back(*firstAprn);
-    next = NULL;*/
-}
-
-Term::Term(string name, int, int)
-{
-
-}
-
-void Term::add_aprn_at_page(int currID)
-{
-    /*
-    // Check if currID is already in pagesAppearedOn.
-    int size = pagesAppearedOn.size();
-    for (int i=0; i<size; ++i)
+    next = NULL;
+    name = theName;
+    spread = theAprns.size();
+    totalFreq = 0;
+    for (auto& aprn : theAprns)
     {
-        // If the term has already appeared on the current doc,
-        // merely increment that AprnsAtDoc's frequency by 1.
-        if (pagesAppearedOn[i].get_infoID() == currID)
-        {
-            pagesAppearedOn[i].incr_freq();
-            ++totalFreq;
-            return;
-        }
+        // First is the docID, second is the frequency.
+        aprns.emplace(make_pair(aprn.first, aprn.second));
+        totalFreq += aprn.second;
     }
-
-    // By this point, currID wasn't pagesAppearedOn,
-    // so append the new AprnsAtDoc object to the end of the list.
-    AprnsAtPage* newAprn = new AprnsAtPage(currID);
-    pagesAppearedOn.push_back(*newAprn);
-    ++totalFreq;*/
 }
 
 string Term::get_name()
@@ -68,13 +42,18 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
-    /*spread = pagesAppearedOn.size();
-
+    /*
     persistence<<name<<" "<<totalFreq<<"~"<<spread;
-    int size = pagesAppearedOn.size();
-    for (int i=0; i<size; ++i)
+    for (auto aprn : aprns)
     {
-        pagesAppearedOn[i].write_aprns(persistence);
+        persistence<<aprn.second<<"@"<<aprn.first;
     }
     persistence<<endl;*/
+
+    cout<<name<<" "<<totalFreq<<"~"<<spread;
+    for (auto& aprn : aprns)
+    {
+        cout<<aprn.second<<"@"<<aprn.first;
+    }
+    cout<<endl;
 }

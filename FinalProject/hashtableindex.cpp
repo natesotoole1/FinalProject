@@ -10,10 +10,10 @@ HashTableIndex::~HashTableIndex()
 
 }
 
-void HashTableIndex::add_valid_appearance(string term, int currID)
+void HashTableIndex::add_term_to_ht_index(string term, pageMap aprns)
 {
     // Call add_aprn for the corresponding bucket.  add_aprn will handle collisions.
-    buckets[hash_key(term)].add_aprn_at_term(term, currID);
+    buckets[hash_key(term)].add_term_to_bucket(term, aprns);
 }
 
 Term* HashTableIndex::find(string term)
@@ -54,7 +54,7 @@ int HashTableIndex::hash_key(string key)
     return intIndex;
 }
 
-void HashTableIndex::write_letter_terms(ofstream &persistence)
+void HashTableIndex::write_hti(ofstream &persistence)
 {
     // Write all terms in the corresponding bucket.
     for (int i=0; i<1024; ++i)
