@@ -1,8 +1,8 @@
 #ifndef HASHTABLEINTERFACE_H
 #define HASHTABLEINTERFACE_H
 
-#include "indexinterface.h"
 #include "hashtableindex.h"
+#include "indexinterface.h"
 #include "term.h"
 
 #include <fstream>

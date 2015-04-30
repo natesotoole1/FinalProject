@@ -13,7 +13,7 @@ DocParser::~DocParser()
 string DocParser::clean_term(string term)
 {
     // Remove all non-letter chars from term.
-    term.erase(remove_if(term.begin(), term.end(), is_letter(term)), term.end());
+    //term.erase(remove_if(term.begin(), term.end(), is_letter(term)), term.end());
 
     // Remove all uppercase letter from term.
     Porter2Stemmer::trim(term);
@@ -145,7 +145,7 @@ void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* the
         // This means the term wasn't already in allTerms, so emplace it.
         catch (const out_of_range& notInAllTerms)
         {
-            allTerms.emplace(make_pair(currTerm, pageMap(currID, 1)));
+            //allTerms.emplace(make_pair(currTerm, pageMap(currID, 1)));
         }
 
     }

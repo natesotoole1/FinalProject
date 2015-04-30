@@ -17,7 +17,6 @@
 #include <utility>
 
 //#include "avltreeindex.h"
-#include "hashtableinterface.h"
 #include "indexinterface.h"
 #include "porter2_stemmer.h"
 

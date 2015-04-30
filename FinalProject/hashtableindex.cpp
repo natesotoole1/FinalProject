@@ -1,4 +1,4 @@
-#include "HashTableIndex.h"
+#include "hashtableindex.h"
 
 HashTableIndex::HashTableIndex()
 {

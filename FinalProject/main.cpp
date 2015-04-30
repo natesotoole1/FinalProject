@@ -2,6 +2,7 @@
 #include <time.h>
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 #include "indexhandler.h"
 #include "queryprocessor.h"
