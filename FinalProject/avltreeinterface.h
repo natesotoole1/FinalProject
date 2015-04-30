@@ -19,8 +19,13 @@ public:
     ~AVLTreeInterface();
 
     void createLetters();
-
     void display_AVL();
+
+    void add_term_to_ii(int letterIndex, string term, pageMap aprns);
+    void clear();
+    void load_persistence();
+    unordered_map<string, int> search_word(string term);
+    void write_persistence();
 private:
     AVLTreeIndex* avlTrees;
     const int numLetters = 26;
