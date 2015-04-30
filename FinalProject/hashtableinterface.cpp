@@ -1,23 +1,22 @@
-#include "hashtableindex.h"
+#include "hashtableinterface.h"
 
-HashTableIndex::HashTableIndex()
+HashTableInterface::HashTableInterface()
 {
     letters = new LetterTerms[27];
 }
 
-HashTableIndex::~HashTableIndex()
+HashTableInterface::~HashTableInterface()
 {
 
 }
 
-Term* HashTableIndex::find(string term)
+Term* HashTableInterface::find(string term)
 {
     return letters[index_for_letter(term.front())].find(term);
 }
 
 void IndexInterface::add_appearance(int letterIndex, string term, int currID)
 {
-    Porter2Stemmer::stem(term);
 
     // If the new term is a stop word, forego adding it to the inverted index.
     if (is_stop_word(term)) return;

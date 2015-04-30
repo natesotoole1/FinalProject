@@ -13,9 +13,9 @@ QueryProcessor::~QueryProcessor()
 void QueryProcessor::find_results_for_query(string query)
 {
     string word;
-    istringstream iss(query);
+    istringstream stream(query);
 
-    while (iss >> word)
+    while (stream >> word)
     {
         // Make the word lowercase.
         transform(word.begin(), word.end(), word.begin(), ::tolower);

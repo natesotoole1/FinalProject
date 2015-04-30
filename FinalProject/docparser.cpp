@@ -5,6 +5,25 @@ DocParser::DocParser()
 
 }
 
+DocParser::~DocParser()
+{
+
+}
+
+string DocParser::clean_term(string term)
+{
+    // Remove all non-letter chars from term.
+    term.erase(remove_if(term.begin(), term.end(), is_letter(term)), term.end());
+
+    // Remove all uppercase letter from term.
+    Porter2Stemmer::trim(term);
+
+    // Stem term.
+    Porter2Stemmer::stem(term);
+
+    return term;
+}
+
 void DocParser::index_corpus(IndexInterface* index)
 {
     // Use RapidXML's "parse" function to make all data
@@ -106,11 +125,21 @@ void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* the
 {
     string text = currNode->value();
 
-    // To save overhead.
-    int size = text.size();
+    istringstream stream(text);
 
     // To store the current term to insert in the inverted index.
     string currTerm = "";
+
+    while (stream >> currTerm)
+    {
+        // Loads whatever characters are between each pair of whitespaces.
+
+    }
+
+    // To save overhead.
+    int size = text.size();
+
+
 
     // Iterate through each char in the value string.
     for (int pos=0; pos < size; ++pos)
@@ -151,4 +180,14 @@ void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* the
     // If the end of the value string is reached and there's a new term to
     // insert in the inverted index, do so.
     if (currTerm.size()) theIndex->add_appearance(index_for_letter(currTerm.front()), currTerm, currID);
+}
+
+bool DocParser::is_letter(char curr)
+{
+    int ascii = (int)curr;
+
+    if ((ascii > 64 && ascii < 91)
+            || (ascii > 96 && ascii < 123)) return true;
+
+    return false;
 }

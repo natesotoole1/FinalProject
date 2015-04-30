@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< HEAD
-<!-- Written by QtCreator 3.3.2, 2015-04-29T11:34:50. -->
-=======
-<!-- Written by QtCreator 3.3.2, 2015-04-29T04:59:44. -->
->>>>>>> a5bda1d88f713b91db143d61d18b59bfe1b4d08c
+<!-- Written by QtCreator 3.3.2, 2015-04-29T11:41:41. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -129,7 +125,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/NateOToole/Downloads/KWhiteley/build-FinalProject-Desktop_Qt_5_4_0_clang_64bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/nicholasearlwhiteley/KWhiteley/FinalProject/build-FinalProject-Desktop_Qt_5_4_1_clang_64bit-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>

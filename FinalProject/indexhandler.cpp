@@ -12,10 +12,10 @@ IndexHandler::~IndexHandler()
 
 IndexHandler::IndexHandler(bool asHashTable)
 {
-    if (asHashTable) index = new HashTableIndex;
+    if (asHashTable) index = new HashTableInterface;
 
     /***** NEED TO CHANGE THIS TO AVLTreeIndex *******/
-    else index = new HashTableIndex;
+    else index = new HashTableInterface;
 }
 
 void IndexHandler::index_corpus()

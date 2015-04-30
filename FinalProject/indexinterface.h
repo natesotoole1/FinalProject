@@ -27,6 +27,7 @@ public:
     // is a number, 1 for 'a', 2 for 'b', and so forth.
     int index_for_letter(char letter);
 
+
     bool is_stop_word(string term);
 
     // Virtual functions

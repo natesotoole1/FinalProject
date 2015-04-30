@@ -19,7 +19,6 @@ public:
 
 private:
     IndexInterface* index;
-
 };
 
 #endif // INDEXHANDLER_H

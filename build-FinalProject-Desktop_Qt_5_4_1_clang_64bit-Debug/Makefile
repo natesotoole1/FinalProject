@@ -50,7 +50,6 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../FinalProject/main.cpp \
 		../FinalProject/indexinterface.cpp \
-		../FinalProject/hashtableindex.cpp \
 		../FinalProject/letterterms.cpp \
 		../FinalProject/term.cpp \
 		../FinalProject/termbucket.cpp \
@@ -61,10 +60,10 @@ SOURCES       = ../FinalProject/main.cpp \
 		../FinalProject/avltreeinterface.cpp \
 		../FinalProject/docparser.cpp \
 		../FinalProject/indexhandler.cpp \
-		../FinalProject/queryprocessor.cpp 
+		../FinalProject/queryprocessor.cpp \
+		../FinalProject/hashtableinterface.cpp 
 OBJECTS       = main.o \
 		indexinterface.o \
-		hashtableindex.o \
 		letterterms.o \
 		term.o \
 		termbucket.o \
@@ -75,7 +74,8 @@ OBJECTS       = main.o \
 		avltreeinterface.o \
 		docparser.o \
 		indexhandler.o \
-		queryprocessor.o
+		queryprocessor.o \
+		hashtableinterface.o
 DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.4/clang_64/mkspecs/qdevice.pri \
 		../../../Qt/5.4/clang_64/mkspecs/features/device_config.prf \
@@ -201,7 +201,6 @@ DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/yacc.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/lex.prf \
 		../FinalProject/FinalProject.pro indexinterface.h \
-		hashtableindex.h \
 		letterterms.h \
 		term.h \
 		termbucket.h \
@@ -212,9 +211,9 @@ DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		avltreeinterface.h \
 		docparser.h \
 		indexhandler.h \
-		queryprocessor.h ../FinalProject/main.cpp \
+		queryprocessor.h \
+		hashtableinterface.h ../FinalProject/main.cpp \
 		../FinalProject/indexinterface.cpp \
-		../FinalProject/hashtableindex.cpp \
 		../FinalProject/letterterms.cpp \
 		../FinalProject/term.cpp \
 		../FinalProject/termbucket.cpp \
@@ -225,7 +224,8 @@ DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		../FinalProject/avltreeinterface.cpp \
 		../FinalProject/docparser.cpp \
 		../FinalProject/indexhandler.cpp \
-		../FinalProject/queryprocessor.cpp
+		../FinalProject/queryprocessor.cpp \
+		../FinalProject/hashtableinterface.cpp
 QMAKE_TARGET  = FinalProject
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = FinalProject
@@ -569,7 +569,7 @@ main.o: ../FinalProject/main.cpp ../FinalProject/indexhandler.h \
 		../FinalProject/rapidxml.hpp \
 		../FinalProject/rapidxml_print.hpp \
 		../FinalProject/rapidxml_utils.hpp \
-		../FinalProject/hashtableindex.h \
+		../FinalProject/hashtableinterface.h \
 		../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h \
 		../FinalProject/letterterms.h \
@@ -583,19 +583,6 @@ main.o: ../FinalProject/main.cpp ../FinalProject/indexhandler.h \
 indexinterface.o: ../FinalProject/indexinterface.cpp ../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexinterface.o ../FinalProject/indexinterface.cpp
-
-hashtableindex.o: ../FinalProject/hashtableindex.cpp ../FinalProject/hashtableindex.h \
-		../FinalProject/indexinterface.h \
-		../FinalProject/pageinfo.h \
-		../FinalProject/letterterms.h \
-		../FinalProject/term.h \
-		../FinalProject/aprnsatpage.h \
-		../FinalProject/termbucket.h \
-		../FinalProject/porter2_stemmer.h \
-		../FinalProject/rapidxml.hpp \
-		../FinalProject/rapidxml_print.hpp \
-		../FinalProject/rapidxml_utils.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashtableindex.o ../FinalProject/hashtableindex.cpp
 
 letterterms.o: ../FinalProject/letterterms.cpp ../FinalProject/letterterms.h \
 		../FinalProject/term.h \
@@ -635,7 +622,7 @@ docparser.o: ../FinalProject/docparser.cpp ../FinalProject/docparser.h \
 		../FinalProject/rapidxml.hpp \
 		../FinalProject/rapidxml_print.hpp \
 		../FinalProject/rapidxml_utils.hpp \
-		../FinalProject/hashtableindex.h \
+		../FinalProject/hashtableinterface.h \
 		../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h \
 		../FinalProject/letterterms.h \
@@ -650,7 +637,7 @@ indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h 
 		../FinalProject/rapidxml.hpp \
 		../FinalProject/rapidxml_print.hpp \
 		../FinalProject/rapidxml_utils.hpp \
-		../FinalProject/hashtableindex.h \
+		../FinalProject/hashtableinterface.h \
 		../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h \
 		../FinalProject/letterterms.h \
@@ -664,6 +651,18 @@ queryprocessor.o: ../FinalProject/queryprocessor.cpp ../FinalProject/queryproces
 		../FinalProject/term.h \
 		../FinalProject/aprnsatpage.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o queryprocessor.o ../FinalProject/queryprocessor.cpp
+
+hashtableinterface.o: ../FinalProject/hashtableinterface.cpp ../FinalProject/hashtableinterface.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/pageinfo.h \
+		../FinalProject/letterterms.h \
+		../FinalProject/term.h \
+		../FinalProject/aprnsatpage.h \
+		../FinalProject/termbucket.h \
+		../FinalProject/rapidxml.hpp \
+		../FinalProject/rapidxml_print.hpp \
+		../FinalProject/rapidxml_utils.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashtableinterface.o ../FinalProject/hashtableinterface.cpp
 
 ####### Install
 

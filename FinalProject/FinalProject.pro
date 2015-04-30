@@ -6,7 +6,6 @@ CONFIG += C++11
 
 SOURCES += main.cpp \
     indexinterface.cpp \
-    hashtableindex.cpp \
     letterterms.cpp \
     term.cpp \
     termbucket.cpp \
@@ -17,7 +16,8 @@ SOURCES += main.cpp \
     avltreeinterface.cpp \
     docparser.cpp \
     indexhandler.cpp \
-    queryprocessor.cpp
+    queryprocessor.cpp \
+    hashtableinterface.cpp
 
 
 include(deployment.pri)
@@ -25,7 +25,6 @@ qtcAddDeployment()
 
 HEADERS += \
     indexinterface.h \
-    hashtableindex.h \
     letterterms.h \
     term.h \
     termbucket.h \
@@ -36,5 +35,6 @@ HEADERS += \
     avltreeinterface.h \
     docparser.h \
     indexhandler.h \
-    queryprocessor.h
+    queryprocessor.h \
+    hashtableinterface.h
 

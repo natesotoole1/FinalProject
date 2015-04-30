@@ -49,6 +49,8 @@ int IndexInterface::index_for_letter(char letter)
     return ascii;
 }
 
+
+
 bool IndexInterface::is_stop_word(string term)
 {
     // Use term as the key and see if it is in the stopWordMap.

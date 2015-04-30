@@ -1,11 +1,9 @@
-#ifndef HASHTABLEINDEX_H
-#define HASHTABLEINDEX_H
+#ifndef HASHTABLEINTERFACE_H
+#define HASHTABLEINTERFACE_H
 
 #include "indexinterface.h"
 #include "letterterms.h"
 #include "term.h"
-
-#include "porter2_stemmer.h"
 
 #include <fstream>
 #include <iostream>
@@ -19,13 +17,13 @@
 using namespace rapidxml;
 using namespace std;
 
-class HashTableIndex : public IndexInterface
+class HashTableInterface : public IndexInterface
 {
 public:
-    HashTableIndex();
-    ~HashTableIndex();
+    HashTableInterface();
+    ~HashTableInterface();
 
     Term* find(string term);
 };
 
-#endif // HASHTABLEINDEX_H
+#endif // HASHTABLEINTERFACE_H
