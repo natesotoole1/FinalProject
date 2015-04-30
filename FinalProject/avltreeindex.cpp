@@ -1,32 +1,37 @@
 #include "AVLTreeIndex.h"
 
+AVLTreeIndex::AVLTreeIndex(){
+    letter = "";
+    root = NULL;
 
-/*
- * Insert Element into the tree
- */
-void AVLTreeIndex::insert(AVL_Node *root, Term* value)
+}
+
+void AVLTreeIndex::insert(AVL_Node* t, Term* value)
 {
     AVL_Node* temp = root;
-    if (root == NULL){
-        root = new AVL_Node(value, NULL, NULL);
+    if (t == NULL){
+        t = new AVL_Node(value, NULL, NULL);
         //return root;
     }
 
-    else if (value < root->data){
-        insert(root->left, value);
-        balance (root);
+    else if (value < t->data){
+        insert(t->left, value);
+        balance(root);
     }
 
     else if (value >= root->data){
         insert(root->right, value);
-        balance (root);
+        balance(root);
     }
     //return root;
+
 }
+
+
 /*
  * Balancing AVL Tree
  */
-void AVLTreeIndex::balance(AVL_Node *temp){
+void AVLTreeIndex::balance(AVL_Node* temp){
     int bal_factor = diff (temp);
     if (bal_factor > 1){
         if (diff (temp->left) > 0){
@@ -44,7 +49,16 @@ void AVLTreeIndex::balance(AVL_Node *temp){
     }
 
 }
+/*
+ * Height Difference
+ */
 
+int AVLTreeIndex::diff(AVL_Node *temp){
+    int l_height = height (temp->left);
+    int r_height = height (temp->right);
+    int b_factor= l_height - r_height;
+    return b_factor;
+}
 int AVLTreeIndex::height(AVL_Node *temp){
     if (temp != NULL){
         int l_height = height (temp->left);
@@ -55,15 +69,6 @@ int AVLTreeIndex::height(AVL_Node *temp){
     return temp->height;
 }
 
-/*
- * Height Difference
- */
-int AVLTreeIndex::diff(AVL_Node *temp){
-    int l_height = height (temp->left);
-    int r_height = height (temp->right);
-    int b_factor= l_height - r_height;
-    return b_factor;
-}
 
 /*
  * Right- Right Rotation
@@ -83,7 +88,6 @@ void AVLTreeIndex::rotateLeftChild(AVL_Node *parent){
     temp = parent->left;
     parent->left = temp->right;
     temp->right = parent;
-    parent = temp;
 }
 
 /*
@@ -102,10 +106,11 @@ void AVLTreeIndex::doubleRightChild(AVL_Node *parent){
     rotateRightChild (parent);
 }
 
-Term* AVLTreeIndex::find (AVL_Node* root, Term* value){
-    AVL_Node* temp;
+Term* AVLTreeIndex::find (AVL_Node* ptr, Term* value){
+    AVL_Node* temp = ptr;
     string word = value->get_name();
     string word2 = root->data->get_name();
+    Term* noWord = new Term("No Word", -1, -1);
     if (word.substr(1,1).compare(word2.substr(1,1)) < 0){
         temp = root->left;
         find(temp, value);
@@ -115,6 +120,7 @@ Term* AVLTreeIndex::find (AVL_Node* root, Term* value){
     }else if(word.compare(word2) == 0){
         return value;
     }
+    return noWord;
 }
 
 
@@ -131,6 +137,30 @@ void AVLTreeIndex::display(AVL_Node *ptr, int level)
         display(ptr->left, level + 1);
     }
 }
+
+void AVLTreeIndex::clearTree(AVL_Node* r){
+    if (r != NULL){
+        clearTree(r->left);
+        clearTree(r->right);
+        delete r;
+    }
+    r = NULL;
+}
+
+AVL_Node* AVLTreeIndex::getRoot(){
+    return root;
+}
+
+string AVLTreeIndex::getLetter(){
+    return letter;
+}
+
+void AVLTreeIndex::setLetter(string l){
+    letter = l;
+}
+
+
+
 //void IndexInterface::addAppearance(int index, string term){
 //    // If the new term is a stop word, forego adding it to the inverted index.
 //    if (letters[0].is_stop_word(term)) return;

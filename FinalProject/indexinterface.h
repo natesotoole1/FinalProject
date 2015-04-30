@@ -32,6 +32,10 @@ public:
     // Virtual functions
     virtual void add_appearance(int letterIndex, string term, int currID);
     virtual void write_persistence();
+    virtual void addWord(string, string, int);
+    virtual unordered_map<string, int> searchWord(string);
+    virtual void clear();
+    virtual void load_persistence();
 
 
 

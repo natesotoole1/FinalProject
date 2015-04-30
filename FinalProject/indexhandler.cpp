@@ -23,3 +23,5 @@ void IndexHandler::index_corpus()
     DocParser* parser = new DocParser;
     parser->index_corpus(index);
 }
+
+

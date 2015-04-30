@@ -25,16 +25,17 @@ struct AVL_Node
        right = rt;
        height = 0;
     }
-}*root;
+};
 
 /*
  * Class Declaration
  */
-class AVLTreeIndex : public IndexInterface
+class AVLTreeIndex
 {
     public:
-        void insert(AVL_Node *, Term*);
-        void balance(AVL_Node *);
+
+        void insert(AVL_Node* ,Term*);
+        void balance(AVL_Node*);
         int height(AVL_Node *);
         int diff(AVL_Node *);
         void rotateRightChild(AVL_Node *);
@@ -43,10 +44,20 @@ class AVLTreeIndex : public IndexInterface
         void doubleRightChild(AVL_Node *);
         Term* find(AVL_Node *, Term*);
         void display(AVL_Node* , int );
-        AVLTreeIndex()
-        {
-            root = NULL;
-        }
+        AVLTreeIndex();
+        AVLTreeIndex(string, int);
+
+        string getLetter();
+        void setLetter(string);
+        void clearTree(AVL_Node*);
+        AVL_Node* getRoot();
+
+   private:
+        string letter;
+        AVL_Node* root;
+
 };
+
+
 
 #endif // AVLTreeINDEX_H
