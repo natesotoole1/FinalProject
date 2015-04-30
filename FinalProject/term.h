@@ -4,11 +4,15 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <unordered_map>
+#include <utility>
 #include <vector>
 
 #include "aprnsatpage.h"
 
 using namespace std;
+
+typedef pair<int, int> pageAprns;
 
 class Term
 {
@@ -39,7 +43,7 @@ private:
     int totalFreq;
 
     // Holds the IDs of pages on which it appeared.
-    vector<AprnsAtPage> pagesAppearedOn;
+    unordered_map<int, pageAprns> pagesAppearedOn;
 };
 
 #endif // TERM_H
