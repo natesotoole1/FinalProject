@@ -13,13 +13,18 @@ Term::~Term()
 
 }
 
-Term::Term(string theName, int currID, int freq)
+Term::Term(string theName, int currID)
 {
     /*name = theName;
     totalFreq = 1;
     AprnsAtPage* firstAprn = new AprnsAtPage(currID);
     pagesAppearedOn.push_back(*firstAprn);
     next = NULL;*/
+}
+
+Term::Term(string name, int, int)
+{
+
 }
 
 void Term::add_aprn_at_page(int currID)

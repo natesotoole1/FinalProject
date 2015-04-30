@@ -20,6 +20,8 @@ public:
 
     Term(string name, int currID);
 
+    Term(string name, int, int);
+
     void add_aprn_at_page(int currID);
 
     string get_name();

@@ -14,17 +14,6 @@ typedef unordered_map<string, pageMap> termMap;
 
 int main()
 {
-    /*termMap terms;
-
-    pageMap p;
-    p.insert(make_pair(1,8));
-
-    terms.emplace("newTerm", p);
-
-    cout<<"IT IS "<<terms.at("newTerm").at(1)<<endl;
-    // prints 8.
-*/
-
     // Use clock_t objects to track the program's total runtime.
     clock_t start, end;
     // Get the number of clicks already used by the program.

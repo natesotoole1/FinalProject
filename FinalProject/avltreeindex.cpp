@@ -28,9 +28,8 @@ void AVLTreeIndex::insert(AVL_Node* t, Term* value)
 }
 
 
-/*
- * Balancing AVL Tree
- */
+
+// Balancing AVL Tree
 void AVLTreeIndex::balance(AVL_Node* temp){
     int bal_factor = diff (temp);
     if (bal_factor > 1){
@@ -49,9 +48,7 @@ void AVLTreeIndex::balance(AVL_Node* temp){
     }
 
 }
-/*
- * Height Difference
- */
+// Height Difference
 
 int AVLTreeIndex::diff(AVL_Node *temp){
     int l_height = height (temp->left);
@@ -70,9 +67,8 @@ int AVLTreeIndex::height(AVL_Node *temp){
 }
 
 
-/*
- * Right- Right Rotation
- */
+
+// Right- Right Rotation
 void AVLTreeIndex::rotateRightChild(AVL_Node *parent){
     AVL_Node *temp;
     temp = parent->right;
@@ -80,9 +76,8 @@ void AVLTreeIndex::rotateRightChild(AVL_Node *parent){
     temp->left = parent;
     parent = temp;
 }
-/*
- * Left- Left Rotation
- */
+
+// Left- Left Rotation
 void AVLTreeIndex::rotateLeftChild(AVL_Node *parent){
     AVL_Node *temp;
     temp = parent->left;
@@ -90,17 +85,15 @@ void AVLTreeIndex::rotateLeftChild(AVL_Node *parent){
     temp->right = parent;
 }
 
-/*
- * Left - Right Rotation
- */
+
+// Left - Right Rotation
+
 void AVLTreeIndex::doubleLeftChild(AVL_Node *parent){
     rotateRightChild(parent->left);
     rotateLeftChild (parent);
 }
 
-/*
- * Right- Left Rotation
- */
+// Right- Left Rotation
 void AVLTreeIndex::doubleRightChild(AVL_Node *parent){
     rotateLeftChild (parent->right);
     rotateRightChild (parent);
@@ -127,9 +120,7 @@ Term* AVLTreeIndex::find (AVL_Node* ptr, Term* value){
 
 
 
-/*
- * Display AVL Tree
- */
+// Display AVL Tree
 void AVLTreeIndex::display(AVL_Node *ptr, int level)
 {
     if (ptr!=NULL)

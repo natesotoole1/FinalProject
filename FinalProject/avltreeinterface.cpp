@@ -2,19 +2,27 @@
 
 AVLTreeInterface::AVLTreeInterface() : IndexInterface()
 {
-    avlTrees = new AVLTreeIndex[numLetters - 1];
+    avlTrees = new AVLTreeIndex[numLetters];
 }
 
 AVLTreeInterface::~AVLTreeInterface(){
     clear();
 }
 
+void AVLTreeInterface::displayAVL()
+{
+    for (int i=0; i<numLetters; ++i)
+    {
+        avlTrees[i].display(avlTrees[i].getRoot(), 0);
+    }
+}
 
-void AVLTreeInterface::addWord(string w, int id, int freq){
+void AVLTreeInterface::add_word(string w, int id, int freq){
    for(int i = 0; i < numLetters; i++){
        if(avlTrees[i].getLetter() == w.substr(0)){
-           Term currWord = new Term(w, id, freq);
-           avlTrees[i].insert(avlTree[i], currWord);
+           Term* currWord = new Term(w, id, freq);
+           // put this back
+           //avlTrees[i].insert(&avlTrees[i], currWord);
        }
    }
 }
@@ -64,9 +72,5 @@ void AVLTreeInterface::createLetters(){
     avlTrees[24].setLetter("y");
     avlTrees[25].setLetter("z");
 }
-
-
-
-
 
 

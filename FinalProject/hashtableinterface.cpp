@@ -35,3 +35,23 @@ void IndexInterface::write_persistence()
     }
     persistence.close();
 }
+
+void IndexInterface::add_word(string, string, int)
+{
+
+}
+
+unordered_map<string, int> IndexInterface::search_word(string)
+{
+
+}
+
+void IndexInterface::clear()
+{
+
+}
+
+void IndexInterface::load_persistence()
+{
+
+}

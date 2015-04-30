@@ -1,6 +1,7 @@
 #ifndef INDEXHANDLER_H
 #define INDEXHANDLER_H
 
+#include "avltreeinterface.h"
 #include "docparser.h"
 #include "hashtableindex.h"
 #include "hashtableinterface.h"
