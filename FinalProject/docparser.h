@@ -17,7 +17,6 @@
 #include <utility>
 
 //#include "avltreeindex.h"
-#include "hashtableinterface.h"
 #include "indexinterface.h"
 #include "porter2_stemmer.h"
 
@@ -28,7 +27,7 @@ typedef unordered_map<int, int> pageMap;
 
 typedef unordered_map<string, pageMap> termMap;
 
-class DocParser : public IndexInterface
+class DocParser // : public IndexInterface
 {
 public:
     DocParser();
@@ -36,13 +35,15 @@ public:
 
     string clean_term(string term);
 
+    void add_appearance(string currTerm, int currID);
+
     // HashTableIndex and AVLTreeIndex will handle new entries separately.
     void index_corpus(IndexInterface* index);
 
     void index_page(xml_node<>* currNode, IndexInterface* theIndex);
-    void index_text(xml_node<>* currNode, int currID, IndexInterface* theIndex);
+    void index_text(xml_node<>* currNode, int currID);
 
-    bool is_letter(char c);
+    bool should_remove(char c);
 
 private:
     termMap allTerms;

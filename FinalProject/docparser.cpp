@@ -10,10 +10,30 @@ DocParser::~DocParser()
 
 }
 
+void DocParser::add_appearance(string currTerm, int currID)
+{
+    // Check if currID is already in currTerm's pageMap.
+    try
+    {
+        allTerms.at(currTerm).at(currID);
+    }
+
+    // This means currID wasn't already in the pageMap, so emplace it.
+    catch (const out_of_range& notInAllTerms)
+    {
+        allTerms.at(currTerm).insert(make_pair(currID, 1));
+    }
+
+    // At this point, currID was already in the pageMap,
+    // so increase the frequency by 1.
+    allTerms.at(currTerm).at(currID)++;
+
+}
+
 string DocParser::clean_term(string term)
 {
     // Remove all non-letter chars from term.
-    term.erase(remove_if(term.begin(), term.end(), is_letter(term)), term.end());
+    term.erase(remove_if(term.begin(), term.end(), (int(*)(int))(isalpha)), term.end());
 
     // Remove all uppercase letter from term.
     Porter2Stemmer::trim(term);
@@ -118,10 +138,22 @@ void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
 
     // Pass the current node to index_text to find all terms in
     // this page's text.
-    index_text(currNode, currID, theIndex);
+    index_text(currNode, currID);
+
+    // Iterate through allTerms and create a new Term object
+    // using the data from each value.
+    for (auto value : allTerms)
+    {
+        cout<<"Term "<<value.first<<" :";
+        for (auto val : allTerms.at(value.first))
+        {
+            cout<<val.second<<"@"<<val.first<<" ";
+        }
+        cout<<endl;
+    }
 }
 
-void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* theIndex)
+void DocParser::index_text(xml_node<>* currNode, int currID)
 {
     string text = currNode->value();
 
@@ -145,18 +177,23 @@ void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface* the
         // This means the term wasn't already in allTerms, so emplace it.
         catch (const out_of_range& notInAllTerms)
         {
-            allTerms.emplace(make_pair(currTerm, pageMap(currID, 1)));
+            pageMap pMap;
+            pMap.insert(make_pair(currID, 1));
+            allTerms.emplace(make_pair(currTerm, pMap));
         }
 
+        // This point will only be reached if
+        // the term is already in allTerms.
+        add_appearance(currTerm, currID);
     }
 }
 
-bool DocParser::is_letter(char curr)
+bool DocParser::should_remove(char curr)
 {
     int ascii = (int)curr;
 
     if ((ascii > 64 && ascii < 91)
-            || (ascii > 96 && ascii < 123)) return true;
+            || (ascii > 96 && ascii < 123)) return false;
 
-    return false;
+    return true;
 }

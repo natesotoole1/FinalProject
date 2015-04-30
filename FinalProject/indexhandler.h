@@ -2,6 +2,8 @@
 #define INDEXHANDLER_H
 
 #include "docparser.h"
+#include "hashtableindex.h"
+#include "hashtableinterface.h"
 #include "indexinterface.h"
 
 #include <vector>

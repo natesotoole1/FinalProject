@@ -2,10 +2,10 @@
 
 Term::Term()
 {
-    pagesAppearedOn = vector<AprnsAtPage>();
+    /*pagesAppearedOn = vector<AprnsAtPage>();
 
     name = "";
-    next = NULL;
+    next = NULL;*/
 }
 
 Term::~Term()
@@ -15,15 +15,16 @@ Term::~Term()
 
 Term::Term(string theName, int currID, int freq)
 {
-    name = theName;
+    /*name = theName;
     totalFreq = 1;
     AprnsAtPage* firstAprn = new AprnsAtPage(currID);
     pagesAppearedOn.push_back(*firstAprn);
-    next = NULL;
+    next = NULL;*/
 }
 
 void Term::add_aprn_at_page(int currID)
 {
+    /*
     // Check if currID is already in pagesAppearedOn.
     int size = pagesAppearedOn.size();
     for (int i=0; i<size; ++i)
@@ -42,7 +43,7 @@ void Term::add_aprn_at_page(int currID)
     // so append the new AprnsAtDoc object to the end of the list.
     AprnsAtPage* newAprn = new AprnsAtPage(currID);
     pagesAppearedOn.push_back(*newAprn);
-    ++totalFreq;
+    ++totalFreq;*/
 }
 
 string Term::get_name()
@@ -62,7 +63,7 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
-    spread = pagesAppearedOn.size();
+    /*spread = pagesAppearedOn.size();
 
     persistence<<name<<" "<<totalFreq<<"~"<<spread;
     int size = pagesAppearedOn.size();
@@ -70,5 +71,5 @@ void Term::write_term(ofstream &persistence)
     {
         pagesAppearedOn[i].write_aprns(persistence);
     }
-    persistence<<endl;
+    persistence<<endl;*/
 }
