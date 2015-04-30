@@ -109,7 +109,7 @@ void DocParser::index_corpus(IndexInterface* index)
                     term.second);
     }
 
-    //index->write_persistence();
+    index->write_persistence();
 }
 
 int DocParser::index_for_letter(char letter)

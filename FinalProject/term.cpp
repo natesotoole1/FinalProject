@@ -2,8 +2,7 @@
 
 Term::Term()
 {
-    name = "";
-    next = NULL;
+
 }
 
 Term::~Term()
@@ -42,18 +41,19 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
-    /*
+
     persistence<<name<<" "<<totalFreq<<"~"<<spread;
-    for (auto aprn : aprns)
+    for (auto& aprn : aprns)
     {
         persistence<<aprn.second<<"@"<<aprn.first;
     }
-    persistence<<endl;*/
-
+    persistence<<endl;
+/*
+    cout<<"NEW TERM\n";
     cout<<name<<" "<<totalFreq<<"~"<<spread;
-    for (auto& aprn : aprns)
+    for (pageMap::iterator it = aprns.begin(); it != aprns.end(); ++it)
     {
-        cout<<aprn.second<<"@"<<aprn.first;
+        cout<<" "<<it->second<<"@"<<it->first;
     }
-    cout<<endl;
+    cout<<endl;*/
 }

@@ -18,6 +18,7 @@
 
 //#include "avltreeindex.h"
 #include "indexinterface.h"
+#include "pageinfo.h"
 #include "porter2_stemmer.h"
 
 using namespace rapidxml;
