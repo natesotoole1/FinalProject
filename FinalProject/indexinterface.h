@@ -12,7 +12,7 @@ using namespace std;
 
 class HashTableIndex;
 
-typedef unordered_map<string, string> stopWordMap;
+typedef unordered_map<int, int> pageMap;
 
 class IndexInterface
 {
@@ -27,12 +27,11 @@ public:
     // is a number, 1 for 'a', 2 for 'b', and so forth.
     int index_for_letter(char letter);
 
-    bool is_stop_word(string term);
-
-    // Virtual functions
+    // probably don't need anymore.
     virtual void add_appearance(int letterIndex, string term, int currID);
+
     virtual void write_persistence();
-    virtual void add_word(string, string, int);
+    virtual void add_word(int letterIndex, string term, pageMap aprns);
     virtual unordered_map<string, int> search_word(string);
     virtual void clear();
     virtual void load_persistence();
@@ -46,8 +45,6 @@ protected:
 
     /**** can probably take this out****/
     int currID;
-
-    stopWordMap stopWords;
 };
 
 #endif // INDEXINTERFACE_H

@@ -36,9 +36,9 @@ void IndexInterface::write_persistence()
     persistence.close();
 }
 
-void IndexInterface::add_word(string, string, int)
+void IndexInterface::add_word(int letterIndex, string term, pageMap aprns)
 {
-
+    letters[letterIndex].add_valid_appearance(term, currID);
 }
 
 unordered_map<string, int> IndexInterface::search_word(string)

@@ -9,6 +9,7 @@
 // #include <rapidxml_iterators.hpp>
 
 #include <algorithm>
+#include <cctype>
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -24,7 +25,7 @@ using namespace rapidxml;
 using namespace std;
 
 typedef unordered_map<int, int> pageMap;
-
+typedef unordered_map<string, string> stopWordMap;
 typedef unordered_map<string, pageMap> termMap;
 
 class DocParser // : public IndexInterface
@@ -43,10 +44,12 @@ public:
     void index_page(xml_node<>* currNode, IndexInterface* theIndex);
     void index_text(xml_node<>* currNode, int currID);
 
-    bool should_remove(char c);
+    bool is_stop_word(string term);
 
 private:
     termMap allTerms;
+
+    stopWordMap stopWords;
 };
 
 #endif // DOCPARSER_H

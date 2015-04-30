@@ -21,7 +21,7 @@ public:
     void load_persistence();
     void createLetters();
 
-    void displayAVL();
+    void display_AVL();
 private:
     AVLTreeIndex* avlTrees;
     const int numLetters = 26;

@@ -9,7 +9,7 @@ AVLTreeInterface::~AVLTreeInterface(){
     clear();
 }
 
-void AVLTreeInterface::displayAVL()
+void AVLTreeInterface::display_AVL()
 {
     for (int i=0; i<numLetters; ++i)
     {

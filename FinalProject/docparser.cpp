@@ -2,7 +2,21 @@
 
 DocParser::DocParser()
 {
+    // Add all stop words to stopWords.
 
+    // Load the list of stop from the build directory.
+    ifstream ifs("StopWords.txt");
+
+    string word;
+    // For each line in the stop words file (there is only one
+    // word per line, add that word as if it were an appearance.
+    // This function will only be called by letters[0].
+    do
+    {
+        getline(ifs, word);
+        word = clean_term(word);
+        stopWords.emplace(word, word);
+    } while (!ifs.eof());
 }
 
 DocParser::~DocParser()
@@ -32,14 +46,13 @@ void DocParser::add_appearance(string currTerm, int currID)
 
 string DocParser::clean_term(string term)
 {
-    // Remove all non-letter chars from term.
-    term.erase(remove_if(term.begin(), term.end(), (int(*)(int))(isalpha)), term.end());
+    // Stem term.
+    Porter2Stemmer::stem(term);
 
     // Remove all uppercase letter from term.
     Porter2Stemmer::trim(term);
 
-    // Stem term.
-    Porter2Stemmer::stem(term);
+
 
     return term;
 }
@@ -144,18 +157,39 @@ void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
     // using the data from each value.
     for (auto value : allTerms)
     {
-        cout<<"Term "<<value.first<<" :";
+        cout<<value.first<<": ";
         for (auto val : allTerms.at(value.first))
         {
             cout<<val.second<<"@"<<val.first<<" ";
         }
         cout<<endl;
     }
+
+    // By this point, allTerms contains all the info for
+    // the inverted index.
+    for (auto value : allTerms)
+    {
+        theIndex->add_word();
+        cout<<value.first<<": ";
+        for (auto val : allTerms.at(value.first))
+        {
+            cout<<val.second<<"@"<<val.first<<" ";
+        }
+        cout<<endl;
+    }
+
+
 }
 
 void DocParser::index_text(xml_node<>* currNode, int currID)
 {
     string text = currNode->value();
+
+    // Replace all non-letters with whitespace char.
+    // Got from http://stackoverflow.com/questions/5540008/need-a-regular-expression-
+    // to-extract-only-letters-and-whitespace-from-a-string
+    replace_if(text.begin(), text.end(),
+                    not1(ptr_fun<int,int>(&isalpha)), ' ');
 
     istringstream stream(text);
 
@@ -167,6 +201,9 @@ void DocParser::index_text(xml_node<>* currNode, int currID)
         // Loads whatever characters are between each pair of whitespaces,
         // so clean it.
         currTerm = clean_term(currTerm);
+
+        // If the currTerm a stop word, forego adding it to allTerms.
+        if (is_stop_word(currTerm)) continue;
 
         // See if currTerm is already in allTerms;
         try
@@ -188,12 +225,16 @@ void DocParser::index_text(xml_node<>* currNode, int currID)
     }
 }
 
-bool DocParser::should_remove(char curr)
+bool DocParser::is_stop_word(string term)
 {
-    int ascii = (int)curr;
-
-    if ((ascii > 64 && ascii < 91)
-            || (ascii > 96 && ascii < 123)) return false;
-
+    // Use term as the key and see if it is in the stopWordMap.
+    try
+    {
+        stopWords.at(term);
+    }
+    catch (const std::out_of_range& notAStopWord)
+    {
+        return false;
+    }
     return true;
 }
