@@ -2,7 +2,7 @@
 #define HASHTABLEINTERFACE_H
 
 #include "indexinterface.h"
-#include "letterterms.h"
+#include "hashtableindex.h"
 #include "term.h"
 
 #include <fstream>

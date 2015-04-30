@@ -1,27 +1,27 @@
-#include "letterterms.h"
+#include "HashTableIndex.h"
 
-LetterTerms::LetterTerms()
+HashTableIndex::HashTableIndex()
 {
     buckets = new TermBucket[arrSize];
 }
 
-LetterTerms::~LetterTerms()
+HashTableIndex::~HashTableIndex()
 {
 
 }
 
-void LetterTerms::add_valid_appearance(string term, int currID)
+void HashTableIndex::add_valid_appearance(string term, int currID)
 {
     // Call add_aprn for the corresponding bucket.  add_aprn will handle collisions.
     buckets[hash_key(term)].add_aprn_at_term(term, currID);
 }
 
-Term* LetterTerms::find(string term)
+Term* HashTableIndex::find(string term)
 {
     return buckets[hash_key(term)].find(term);
 }
 
-int LetterTerms::hash_key(string key)
+int HashTableIndex::hash_key(string key)
 {
     // To save overhead.
     int size = key.size();
@@ -54,7 +54,7 @@ int LetterTerms::hash_key(string key)
     return intIndex;
 }
 
-void LetterTerms::write_letter_terms(ofstream &persistence)
+void HashTableIndex::write_letter_terms(ofstream &persistence)
 {
     // Write all terms in the corresponding bucket.
     for (int i=0; i<1024; ++i)

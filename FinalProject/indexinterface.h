@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class LetterTerms;
+class HashTableIndex;
 
 typedef unordered_map<string, string> stopWordMap;
 
@@ -38,7 +38,7 @@ public:
 
 protected:
     // Only used for HashTableIndex.
-    LetterTerms* letters;
+    HashTableIndex* letters;
 
     // PageInfo will be passed by a pageID (int).
     vector<PageInfo> infoForIDs;

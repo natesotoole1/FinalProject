@@ -1,5 +1,5 @@
-#ifndef LETTERTERMS_H
-#define LETTERTERMS_H
+#ifndef HASHTABLEINDEX_H
+#define HASHTABLEINDEX_H
 
 #include "term.h"
 #include "termbucket.h"
@@ -10,11 +10,11 @@
 
 using namespace std;
 
-class LetterTerms
+class HashTableIndex
 {
 public:
-    LetterTerms();
-    ~LetterTerms();
+    HashTableIndex();
+    ~HashTableIndex();
 
     void add_valid_appearance(string term, int currID);
     Term* find(string term);
@@ -25,4 +25,4 @@ private:
     TermBucket* buckets;
 };
 
-#endif // LETTERTERMS_H
+#endif // HASHTABLEINDEX_H

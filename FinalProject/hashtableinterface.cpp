@@ -2,7 +2,7 @@
 
 HashTableInterface::HashTableInterface()
 {
-    letters = new LetterTerms[27];
+    letters = new HashTableIndex[27];
 }
 
 HashTableInterface::~HashTableInterface()

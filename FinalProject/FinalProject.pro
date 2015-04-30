@@ -6,7 +6,6 @@ CONFIG += C++11
 
 SOURCES += main.cpp \
     indexinterface.cpp \
-    letterterms.cpp \
     term.cpp \
     termbucket.cpp \
     porter2_stemmer.cpp \
@@ -17,7 +16,8 @@ SOURCES += main.cpp \
     docparser.cpp \
     indexhandler.cpp \
     queryprocessor.cpp \
-    hashtableinterface.cpp
+    hashtableinterface.cpp \
+    hashtableindex.cpp
 
 
 include(deployment.pri)
@@ -25,7 +25,6 @@ qtcAddDeployment()
 
 HEADERS += \
     indexinterface.h \
-    letterterms.h \
     term.h \
     termbucket.h \
     porter2_stemmer.h \
@@ -36,5 +35,6 @@ HEADERS += \
     docparser.h \
     indexhandler.h \
     queryprocessor.h \
-    hashtableinterface.h
+    hashtableinterface.h \
+    hashtableindex.h
 
