@@ -33,7 +33,7 @@ void DocParser::add_appearance(string currTerm, int currID)
 string DocParser::clean_term(string term)
 {
     // Remove all non-letter chars from term.
-    term.erase(remove_if(term.begin(), term.end(), (int(*)(int))(!isalpha)), term.end());
+    term.erase(remove_if(term.begin(), term.end(), (int(*)(int))(isalpha)), term.end());
 
     // Remove all uppercase letter from term.
     Porter2Stemmer::trim(term);
