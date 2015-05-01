@@ -10,35 +10,21 @@ TermBucket::~TermBucket()
 
 }
 
-void TermBucket::add_aprn_at_term(string term, int currID)
+void TermBucket::add_term_to_bucket(string term, pageMap aprns)
 {
-    Term* newTerm = new Term(term, currID);
+    Term* newTerm = new Term(term, aprns);
 
-    // If there are no terms in the bucket, add the new term.
-    if (!root) root = newTerm;
-
-    else {
-        // Find the correct Term object to call add_aprn_at_page.
-        Term* curr = root;
-        if (curr->get_name().compare(term) == 0)
-        {
-            curr->add_aprn_at_page(currID);
-            return;
-        }
-        while (curr->get_next())
-        {
-            curr = curr->get_next();
-            if (curr->get_name().compare(term) == 0)
-            {
-                curr->add_aprn_at_page(currID);
-                return;
-            }
-        }
-
-        // By this point, the term hasn't already appeared so
-        // make a new term.
-        curr->set_next(newTerm);
+    // If there are no terms in the bucket, set root to newTerm.
+    if (!root)
+    {
+        root = newTerm;
+        return;
     }
+
+    // Otherwise, insert newTerm at the end of the linked list.
+    Term* curr = root;
+    while (curr->get_next()) curr = curr->get_next();
+    curr->set_next(newTerm);
 }
 
 Term* TermBucket::find(string term)
@@ -52,7 +38,6 @@ Term* TermBucket::find(string term)
         curr = curr->get_next();
         if (curr->get_name().compare(term) == 0) return curr;
     }
-
     return NULL;
 }
 

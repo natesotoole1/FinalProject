@@ -15,7 +15,11 @@ IndexHandler::IndexHandler(bool asHashTable)
     if (asHashTable) index = new HashTableInterface;
 
     /***** NEED TO CHANGE THIS TO AVLTreeIndex *******/
-    else index = new HashTableInterface;
+    else
+    {
+        cout<<"here";
+        index = new AVLTreeInterface;
+    }
 }
 
 void IndexHandler::index_corpus()

@@ -9,9 +9,7 @@
 // git
 using namespace std;
 
-/*
- * Node Declaration
- */
+// Node declaration
 struct AVL_Node
 {
     Term* data;
@@ -27,9 +25,7 @@ struct AVL_Node
     }
 };
 
-/*
- * Class Declaration
- */
+// Class declaration
 class AVLTreeIndex
 {
     public:

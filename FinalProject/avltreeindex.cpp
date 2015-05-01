@@ -28,9 +28,8 @@ void AVLTreeIndex::insert(AVL_Node* t, Term* value)
 }
 
 
-/*
- * Balancing AVL Tree
- */
+
+// Balancing AVL Tree
 void AVLTreeIndex::balance(AVL_Node* temp){
     int bal_factor = diff (temp);
     if (bal_factor > 1){
@@ -49,9 +48,7 @@ void AVLTreeIndex::balance(AVL_Node* temp){
     }
 
 }
-/*
- * Height Difference
- */
+// Height Difference
 
 int AVLTreeIndex::diff(AVL_Node *temp){
     int l_height = height (temp->left);
@@ -70,9 +67,8 @@ int AVLTreeIndex::height(AVL_Node *temp){
 }
 
 
-/*
- * Right- Right Rotation
- */
+
+// Right- Right Rotation
 void AVLTreeIndex::rotateRightChild(AVL_Node *parent){
     AVL_Node *temp;
     temp = parent->right;
@@ -80,9 +76,8 @@ void AVLTreeIndex::rotateRightChild(AVL_Node *parent){
     temp->left = parent;
     parent = temp;
 }
-/*
- * Left- Left Rotation
- */
+
+// Left- Left Rotation
 void AVLTreeIndex::rotateLeftChild(AVL_Node *parent){
     AVL_Node *temp;
     temp = parent->left;
@@ -90,17 +85,15 @@ void AVLTreeIndex::rotateLeftChild(AVL_Node *parent){
     temp->right = parent;
 }
 
-/*
- * Left - Right Rotation
- */
+
+// Left - Right Rotation
+
 void AVLTreeIndex::doubleLeftChild(AVL_Node *parent){
     rotateRightChild(parent->left);
     rotateLeftChild (parent);
 }
 
-/*
- * Right- Left Rotation
- */
+// Right- Left Rotation
 void AVLTreeIndex::doubleRightChild(AVL_Node *parent){
     rotateLeftChild (parent->right);
     rotateRightChild (parent);
@@ -110,7 +103,7 @@ Term* AVLTreeIndex::find (AVL_Node* ptr, Term* value){
     AVL_Node* temp = ptr;
     string word = value->get_name();
     string word2 = root->data->get_name();
-    Term* noWord = new Term("No Word", -1, -1);
+    //Term* noWord = new Term("No Word", -1, -1);
     if (word.substr(1,1).compare(word2.substr(1,1)) < 0){
         temp = root->left;
         find(temp, value);
@@ -120,16 +113,14 @@ Term* AVLTreeIndex::find (AVL_Node* ptr, Term* value){
     }else if(word.compare(word2) == 0){
         return value;
     }
-    return noWord;
+    //return noWord;
 }
 
 
 
 
 
-/*
- * Display AVL Tree
- */
+// Display AVL Tree
 void AVLTreeIndex::display(AVL_Node *ptr, int level)
 {
     if (ptr!=NULL)

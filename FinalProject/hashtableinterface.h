@@ -1,6 +1,7 @@
 #ifndef HASHTABLEINTERFACE_H
 #define HASHTABLEINTERFACE_H
 
+#include "docparser.h"
 #include "hashtableindex.h"
 #include "indexinterface.h"
 #include "term.h"
@@ -8,16 +9,13 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
-// RapidXML includes
-#include <rapidxml.hpp>
-#include <rapidxml_print.hpp>
-#include <rapidxml_utils.hpp>
-
-using namespace rapidxml;
 using namespace std;
 
-class HashTableInterface : public IndexInterface
+typedef unordered_map<int, int> pageMap;
+
+class HashTableInterface : public IndexInterface, public DocParser
 {
 public:
     HashTableInterface();

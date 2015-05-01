@@ -8,9 +8,9 @@
 #include <utility>
 #include <vector>
 
-#include "aprnsatpage.h"
-
 using namespace std;
+
+typedef unordered_map<int, int> pageMap;
 
 class Term
 {
@@ -18,9 +18,7 @@ public:
     Term();
     ~Term();
 
-    Term(string name, int currID);
-
-    void add_aprn_at_page(int currID);
+    Term(string theName, pageMap theAprns);
 
     string get_name();
     Term* get_next();
@@ -41,7 +39,7 @@ private:
     int totalFreq;
 
     // Holds the IDs of pages on which it appeared.
-    unordered_map<int, pair<int, int>> pagesAppearedOn;
+    pageMap aprns;
 };
 
 #endif // TERM_H

@@ -2,7 +2,20 @@
 
 DocParser::DocParser()
 {
+    // Add all stop words to stopWords.
 
+    // Load the list of stop from the build directory.
+    ifstream ifs("StopWords.txt");
+
+    string word;
+    // For each line in the stop words file (there is only one
+    // word per line, add that word as if it were an appearance.
+    // This function will only be called by letters[0].
+    while (ifs >> word)
+    {
+        word = clean_term(word);
+        stopWords.emplace(make_pair(word, word));
+    }
 }
 
 DocParser::~DocParser()
@@ -22,6 +35,7 @@ void DocParser::add_appearance(string currTerm, int currID)
     catch (const out_of_range& notInAllTerms)
     {
         allTerms.at(currTerm).insert(make_pair(currID, 1));
+        return;
     }
 
     // At this point, currID was already in the pageMap,
@@ -32,14 +46,13 @@ void DocParser::add_appearance(string currTerm, int currID)
 
 string DocParser::clean_term(string term)
 {
-    // Remove all non-letter chars from term.
-    term.erase(remove_if(term.begin(), term.end(), (int(*)(int))(isalpha)), term.end());
+    // Stem term.
+    Porter2Stemmer::stem(term);
 
     // Remove all uppercase letter from term.
     Porter2Stemmer::trim(term);
 
-    // Stem term.
-    Porter2Stemmer::stem(term);
+
 
     return term;
 }
@@ -74,7 +87,44 @@ void DocParser::index_corpus(IndexInterface* index)
         //if (count == 10000) break;
     }
 
+    // Iterate through allTerms and create a new Term object
+    // using the data from each value.
+    /*for (auto& value : allTerms)
+    {
+        cout<<value.first<<": ";
+        for (auto val : allTerms.at(value.first))
+        {
+            cout<<val.second<<"@"<<val.first<<" ";
+        }
+        cout<<endl;
+    }*/
+
+    // By this point, allTerms contains all the info for
+    // the inverted index.  Add each term to the inverted index.
+    for (auto& term : allTerms)
+    {
+        index->add_term_to_ii(
+                    index_for_letter(term.first.front()),
+                    term.first,
+                    term.second);
+    }
+
     index->write_persistence();
+}
+
+int DocParser::index_for_letter(char letter)
+{
+    // Get the raw ASCII value of the letter.
+    int ascii = (int)letter;
+
+    // If the letter is uppercase, get the lowercase equivalent
+    // by increasing its ASCII value by 32.
+    if (ascii > 64 && ascii < 91) ascii += 32;
+
+    // a's ASCII value is 97; b's is 98, and so on...
+    // To get the return value, subtract 96.
+    ascii -= 97;
+    return ascii;
 }
 
 void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
@@ -140,22 +190,19 @@ void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
     // this page's text.
     index_text(currNode, currID);
 
-    // Iterate through allTerms and create a new Term object
-    // using the data from each value.
-    for (auto value : allTerms)
-    {
-        cout<<"Term "<<value.first<<" :";
-        for (auto val : allTerms.at(value.first))
-        {
-            cout<<val.second<<"@"<<val.first<<" ";
-        }
-        cout<<endl;
-    }
 }
 
 void DocParser::index_text(xml_node<>* currNode, int currID)
 {
     string text = currNode->value();
+
+    // Replace all non-letters with whitespace char.
+    // Got from http://stackoverflow.com/questions/5540008/need-a-regular-expression-
+    // to-extract-only-letters-and-whitespace-from-a-string
+    replace_if(text.begin(), text.end(),
+                        is_not_alpha,
+                        ' '
+                        );
 
     istringstream stream(text);
 
@@ -168,6 +215,9 @@ void DocParser::index_text(xml_node<>* currNode, int currID)
         // so clean it.
         currTerm = clean_term(currTerm);
 
+        // If the currTerm a stop word, forego adding it to allTerms.
+        if (is_stop_word(currTerm)) continue;
+
         // See if currTerm is already in allTerms;
         try
         {
@@ -178,8 +228,9 @@ void DocParser::index_text(xml_node<>* currNode, int currID)
         catch (const out_of_range& notInAllTerms)
         {
             pageMap pMap;
-            pMap.insert(make_pair(currID, 1));
+            pMap.emplace(make_pair(currID, 1));
             allTerms.emplace(make_pair(currTerm, pMap));
+            continue;
         }
 
         // This point will only be reached if
@@ -188,12 +239,16 @@ void DocParser::index_text(xml_node<>* currNode, int currID)
     }
 }
 
-bool DocParser::should_remove(char curr)
+bool DocParser::is_stop_word(string term)
 {
-    int ascii = (int)curr;
-
-    if ((ascii > 64 && ascii < 91)
-            || (ascii > 96 && ascii < 123)) return false;
-
+    // Use term as the key and see if it is in the stopWordMap.
+    try
+    {
+        stopWords.at(term);
+    }
+    catch (const out_of_range& notAStopWord)
+    {
+        return false;
+    }
     return true;
 }

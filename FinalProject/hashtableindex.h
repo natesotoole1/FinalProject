@@ -11,16 +11,18 @@
 
 using namespace std;
 
+typedef unordered_map<int, int> pageMap;
+
 class HashTableIndex
 {
 public:
     HashTableIndex();
     ~HashTableIndex();
 
-    void add_valid_appearance(string term, int currID);
+    void add_term_to_ht_index(string term, pageMap aprns);
     Term* find(string term);
     int hash_key(string key);
-    void write_letter_terms(ofstream& persistence);
+    void write_hti(ofstream& persistence);
 private:
     int arrSize = 1024;
     TermBucket* buckets;

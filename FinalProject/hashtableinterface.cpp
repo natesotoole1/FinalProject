@@ -2,7 +2,7 @@
 
 HashTableInterface::HashTableInterface()
 {
-    letters = new HashTableIndex[27];
+    letters = new HashTableIndex[26];
 }
 
 HashTableInterface::~HashTableInterface()
@@ -15,23 +15,33 @@ Term* HashTableInterface::find(string term)
     return letters[index_for_letter(term.front())].find(term);
 }
 
-void IndexInterface::add_appearance(int letterIndex, string term, int currID)
-{
-
-    // If the new term is a stop word, forego adding it to the inverted index.
-    if (is_stop_word(term)) return;
-
-    // Once stemmed, make new appearance at term.
-    letters[letterIndex].add_valid_appearance(term, currID);
-}
-
 void IndexInterface::write_persistence()
 {
     ofstream persistence;
     persistence.open("Persistence.txt");
     for (int i=1; i<27; ++i)
     {
-        letters[i].write_letter_terms(persistence);
+        letters[i].write_hti(persistence);
     }
     persistence.close();
+}
+
+void IndexInterface::add_term_to_ii(int letterIndex, string term, pageMap aprns)
+{
+    letters[letterIndex].add_term_to_ht_index(term, aprns);
+}
+
+unordered_map<string, int> IndexInterface::search_word(string)
+{
+
+}
+
+void IndexInterface::clear()
+{
+
+}
+
+void IndexInterface::load_persistence()
+{
+
 }

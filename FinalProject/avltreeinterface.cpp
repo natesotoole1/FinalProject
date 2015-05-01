@@ -1,42 +1,53 @@
 #include "avltreeinterface.h"
 
-AVLTreeInterface::AVLTreeInterface() : IndexInterface()
+AVLTreeInterface::AVLTreeInterface()
 {
-    avlTrees = new AVLTreeIndex[numLetters - 1];
+    avlTrees = new AVLTreeIndex[numLetters];
 }
 
 AVLTreeInterface::~AVLTreeInterface(){
-    clear();
+    //clear();
 }
 
+void AVLTreeInterface::display_AVL()
+{
+    for (int i=0; i<numLetters; ++i)
+    {
+        avlTrees[i].display(avlTrees[i].getRoot(), 0);
+    }
+}
 
-void AVLTreeInterface::addWord(string w, int id, int freq){
-   for(int i = 0; i < numLetters; i++){
-       if(avlTrees[i].getLetter() == w.substr(0)){
-           Term currWord = new Term(w, id, freq);
-           avlTrees[i].insert(avlTree[i], currWord);
+void AVLTreeInterface::add_term_to_ii(int letterIndex, string w, pageMap aprns)
+{
+       if(avlTrees[letterIndex].getLetter() == w.substr(0)){
+           Term* currWord = new Term(w, aprns);
+           avlTrees[letterIndex].insert(avlTrees[letterIndex].getRoot(), currWord);
        }
-   }
 }
 
-void AVLTreeInterface::clear(){
-    for(int i = 0; i < numLetters; i++){
+void AVLTreeInterface::clear()
+{
+    /*for(int i = 0; i < numLetters; i++){
         avlTrees[i].clearTree(avlTrees[i].getRoot());
     }
-
-}
-unordered_map<string, int> AVLTreeInterface::searchForWord(string w){
-    
-    
-}
-void AVLTreeInterface::write_persistence(){
-
-}
-void AVLTreeInterface::load_persistence(){
-
+*/
 }
 
-void AVLTreeInterface::createLetters(){
+unordered_map<string, int> AVLTreeInterface::search_word(string w)
+{
+
+}
+void AVLTreeInterface::write_persistence()
+{
+
+}
+void AVLTreeInterface::load_persistence()
+{
+
+}
+
+void AVLTreeInterface::createLetters()
+{
     avlTrees[0].setLetter("a");
     avlTrees[1].setLetter("b");
     avlTrees[2].setLetter("c");
@@ -64,9 +75,5 @@ void AVLTreeInterface::createLetters(){
     avlTrees[24].setLetter("y");
     avlTrees[25].setLetter("z");
 }
-
-
-
-
 
 

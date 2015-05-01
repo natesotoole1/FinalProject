@@ -9,13 +9,15 @@
 
 using namespace std;
 
+typedef unordered_map<int, int> pageMap;
+
 class TermBucket
 {
 public:
     TermBucket();
     ~TermBucket();
 
-    void add_aprn_at_term(string term, int currID);
+    void add_term_to_bucket(string term, pageMap aprns);
     Term* find(string term);
     bool has_word(string term);
     void write_term_bucket(ofstream& persistence);
