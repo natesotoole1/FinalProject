@@ -54,7 +54,6 @@ SOURCES       = ../FinalProject/main.cpp \
 		../FinalProject/termbucket.cpp \
 		../FinalProject/porter2_stemmer.cpp \
 		../FinalProject/pageinfo.cpp \
-		../FinalProject/aprnsatpage.cpp \
 		../FinalProject/avltreeindex.cpp \
 		../FinalProject/avltreeinterface.cpp \
 		../FinalProject/docparser.cpp \
@@ -68,7 +67,6 @@ OBJECTS       = main.o \
 		termbucket.o \
 		porter2_stemmer.o \
 		pageinfo.o \
-		aprnsatpage.o \
 		avltreeindex.o \
 		avltreeinterface.o \
 		docparser.o \
@@ -205,7 +203,6 @@ DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		termbucket.h \
 		porter2_stemmer.h \
 		pageinfo.h \
-		aprnsatpage.h \
 		avltreeindex.h \
 		avltreeinterface.h \
 		docparser.h \
@@ -218,7 +215,6 @@ DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		../FinalProject/termbucket.cpp \
 		../FinalProject/porter2_stemmer.cpp \
 		../FinalProject/pageinfo.cpp \
-		../FinalProject/aprnsatpage.cpp \
 		../FinalProject/avltreeindex.cpp \
 		../FinalProject/avltreeinterface.cpp \
 		../FinalProject/docparser.cpp \
@@ -565,29 +561,31 @@ compiler_clean:
 ####### Compile
 
 main.o: ../FinalProject/main.cpp ../FinalProject/indexhandler.h \
+		../FinalProject/avltreeinterface.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/pageinfo.h \
+		../FinalProject/avltreeindex.h \
+		../FinalProject/term.h \
 		../FinalProject/docparser.h \
 		../FinalProject/rapidxml.hpp \
 		../FinalProject/rapidxml_print.hpp \
 		../FinalProject/rapidxml_utils.hpp \
-		../FinalProject/indexinterface.h \
-		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h \
-		../FinalProject/queryprocessor.h \
-		../FinalProject/term.h \
-		../FinalProject/aprnsatpage.h
+		../FinalProject/hashtableindex.h \
+		../FinalProject/termbucket.h \
+		../FinalProject/hashtableinterface.h \
+		../FinalProject/queryprocessor.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../FinalProject/main.cpp
 
 indexinterface.o: ../FinalProject/indexinterface.cpp ../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexinterface.o ../FinalProject/indexinterface.cpp
 
-term.o: ../FinalProject/term.cpp ../FinalProject/term.h \
-		../FinalProject/aprnsatpage.h
+term.o: ../FinalProject/term.cpp ../FinalProject/term.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o term.o ../FinalProject/term.cpp
 
 termbucket.o: ../FinalProject/termbucket.cpp ../FinalProject/termbucket.h \
-		../FinalProject/term.h \
-		../FinalProject/aprnsatpage.h
+		../FinalProject/term.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o termbucket.o ../FinalProject/termbucket.cpp
 
 porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_stemmer.h
@@ -596,17 +594,26 @@ porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_s
 pageinfo.o: ../FinalProject/pageinfo.cpp ../FinalProject/pageinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pageinfo.o ../FinalProject/pageinfo.cpp
 
-aprnsatpage.o: ../FinalProject/aprnsatpage.cpp ../FinalProject/aprnsatpage.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o aprnsatpage.o ../FinalProject/aprnsatpage.cpp
-
 avltreeindex.o: ../FinalProject/avltreeindex.cpp ../FinalProject/avltreeindex.h \
 		../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h \
-		../FinalProject/term.h \
-		../FinalProject/aprnsatpage.h
+		../FinalProject/term.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o avltreeindex.o ../FinalProject/avltreeindex.cpp
 
-avltreeinterface.o: ../FinalProject/avltreeinterface.cpp ../FinalProject/avltreeinterface.h
+avltreeinterface.o: ../FinalProject/avltreeinterface.cpp ../FinalProject/avltreeinterface.h \
+		../FinalProject/indexhandler.h \
+		../FinalProject/docparser.h \
+		../FinalProject/rapidxml.hpp \
+		../FinalProject/rapidxml_print.hpp \
+		../FinalProject/rapidxml_utils.hpp \
+		../FinalProject/indexinterface.h \
+		../FinalProject/pageinfo.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/hashtableindex.h \
+		../FinalProject/term.h \
+		../FinalProject/termbucket.h \
+		../FinalProject/hashtableinterface.h \
+		../FinalProject/avltreeindex.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o avltreeinterface.o ../FinalProject/avltreeinterface.cpp
 
 docparser.o: ../FinalProject/docparser.cpp ../FinalProject/docparser.h \
@@ -619,34 +626,41 @@ docparser.o: ../FinalProject/docparser.cpp ../FinalProject/docparser.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o docparser.o ../FinalProject/docparser.cpp
 
 indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h \
+		../FinalProject/avltreeinterface.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/pageinfo.h \
+		../FinalProject/avltreeindex.h \
+		../FinalProject/term.h \
+		../FinalProject/docparser.h \
+		../FinalProject/rapidxml.hpp \
+		../FinalProject/rapidxml_print.hpp \
+		../FinalProject/rapidxml_utils.hpp \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/hashtableindex.h \
+		../FinalProject/termbucket.h \
+		../FinalProject/hashtableinterface.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexhandler.o ../FinalProject/indexhandler.cpp
+
+queryprocessor.o: ../FinalProject/queryprocessor.cpp ../FinalProject/queryprocessor.h \
+		../FinalProject/term.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o queryprocessor.o ../FinalProject/queryprocessor.cpp
+
+hashtableindex.o: ../FinalProject/hashtableindex.cpp ../FinalProject/hashtableindex.h \
+		../FinalProject/term.h \
+		../FinalProject/termbucket.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashtableindex.o ../FinalProject/hashtableindex.cpp
+
+hashtableinterface.o: ../FinalProject/hashtableinterface.cpp ../FinalProject/hashtableinterface.h \
 		../FinalProject/docparser.h \
 		../FinalProject/rapidxml.hpp \
 		../FinalProject/rapidxml_print.hpp \
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h \
-		../FinalProject/porter2_stemmer.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexhandler.o ../FinalProject/indexhandler.cpp
-
-queryprocessor.o: ../FinalProject/queryprocessor.cpp ../FinalProject/queryprocessor.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/hashtableindex.h \
 		../FinalProject/term.h \
-		../FinalProject/aprnsatpage.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o queryprocessor.o ../FinalProject/queryprocessor.cpp
-
-hashtableindex.o: ../FinalProject/hashtableindex.cpp ../FinalProject/hashtableindex.h \
-		../FinalProject/term.h \
-		../FinalProject/aprnsatpage.h \
 		../FinalProject/termbucket.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashtableindex.o ../FinalProject/hashtableindex.cpp
-
-hashtableinterface.o: ../FinalProject/hashtableinterface.cpp ../FinalProject/hashtableinterface.h \
-		../FinalProject/indexinterface.h \
-		../FinalProject/pageinfo.h \
-		../FinalProject/term.h \
-		../FinalProject/aprnsatpage.h \
-		../FinalProject/rapidxml.hpp \
-		../FinalProject/rapidxml_print.hpp \
-		../FinalProject/rapidxml_utils.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashtableinterface.o ../FinalProject/hashtableinterface.cpp
 
 ####### Install

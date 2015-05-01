@@ -17,15 +17,14 @@ void AVLTreeInterface::display_AVL()
     }
 }
 
-void AVLTreeInterface::add_term_to_ii(int letterIndex, string term, pageMap aprns)
+void AVLTreeInterface::add_term_to_ii(int letterIndex, string w, pageMap aprns)
 {
-   /*for(int i = 0; i < numLetters; i++){
+   for(int i = 0; i < numLetters; i++){
        if(avlTrees[i].getLetter() == w.substr(0)){
            Term* currWord = new Term(w, id, freq);
-           // put this back
-           //avlTrees[i].insert(&avlTrees[i], currWord);
+           avlTrees[i].insert(&avlTrees[i], currWord);
        }
-   }*/
+   }
 }
 
 void AVLTreeInterface::clear()

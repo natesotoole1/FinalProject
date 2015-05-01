@@ -8,8 +8,6 @@
 #include <utility>
 #include <vector>
 
-#include "aprnsatpage.h"
-
 using namespace std;
 
 typedef unordered_map<int, int> pageMap;
