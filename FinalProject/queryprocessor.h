@@ -4,22 +4,28 @@
 #include <algorithm>
 #include <iostream>
 #include <sstream>
+#include <string>
 #include <unordered_map>
 #include <vector>
 
+#include "docparser.h"
+#include "porter2_stemmer.h"
 #include "term.h"
 
 typedef unordered_map<string, Term*> resultsMap;
 
-class QueryProcessor
+class QueryProcessor : public DocParser
 {
 public:
     QueryProcessor();
     ~QueryProcessor();
 
-    void find_results_for_query(string query);
+    resultsMap answer_query_AND(IndexInterface* index, istringstream& query);
+    resultsMap answer_query_OR(IndexInterface* index, istringstream& query);
+    resultsMap answer_query_REG(IndexInterface* index, istringstream& query);
+
+    void initiate_query(IndexInterface* index, string query);
 private:
-    resultsMap results;
 };
 
 #endif // QUERYPROCESSOR_H
