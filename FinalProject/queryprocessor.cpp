@@ -16,11 +16,28 @@ resultsMap QueryProcessor::answer_query_AND(IndexInterface* index, istringstream
     Term* foundTerm;
     resultsMap results;
     // Find the intersection of all queried terms.
-    // The keyword "not" deletes that term from results.
+
+    // Add functioanlity for NOT
+    query >> currTerm;
 
     // Put the first queried term into results.
-    query >> currTerm;
+
     foundTerm = index->find_term(currTerm);
+
+    results.emplace(make_pair(foundTerm->get_name(), foundTerm));
+
+    while (query >> currTerm)
+    {
+        Porter2Stemmer::trim(currTerm);
+        if (currTerm.compare("not") == 0)
+        {
+            // Get the next word.
+            query >> currTerm;
+
+            // For docID in currTerm's pageMap,
+        }
+    }
+
 
 
 }
@@ -29,7 +46,6 @@ resultsMap QueryProcessor::answer_query_OR(IndexInterface* index, istringstream&
 {
     string currTerm;
     // Find the union of all queried terms.
-    // The keyword "not" deletes that term from results.
 }
 
 resultsMap QueryProcessor::answer_query_REG(IndexInterface* index, istringstream& query)
@@ -47,16 +63,14 @@ void QueryProcessor::initiate_query(IndexInterface* index, string query)
     string fullQuery = query;
 
     // Remove all non-letters from the query.
-    replace_if(query.begin(), query.end(),
-               is_not_alpha,
-               ' '
-               );
+    replace_if(query.begin(), query.end(), is_not_alpha, ' ');
 
     istringstream stream(query);
 
     // Initiate the proper kind of query.
     string mode;
     stream >> mode;
+    Porter2Stemmer::trim(mode);
 
     if (mode.compare("and") == 0) answer_query_AND(index, stream);
     else if (mode.compare("or") == 0) answer_query_OR(index, stream);
