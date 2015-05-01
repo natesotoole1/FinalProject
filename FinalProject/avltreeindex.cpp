@@ -8,7 +8,7 @@ AVLTreeIndex::AVLTreeIndex(){
 
 void AVLTreeIndex::insert(AVL_Node* root, Term* value)
 {
-
+/*
 
     if (root == NULL){
         root = new AVL_Node;
@@ -30,7 +30,7 @@ void AVLTreeIndex::insert(AVL_Node* root, Term* value)
         return;
     }
     //return root;
-
+*/
 }
 
 

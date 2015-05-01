@@ -20,7 +20,7 @@ int main()
     start = clock();
 
     // Index the corpus into a HashTableIndex.
-    IndexHandler* handler = new IndexHandler(false);
+    IndexHandler* handler = new IndexHandler(true);
     handler->index_corpus();
     /*
     cout<<"The inverted index has been loaded into a hash table by default.\n"<<

@@ -14,6 +14,7 @@ Term::~Term()
 
 Term::Term(string theName, pageMap theAprns)
 {
+    totalFreq = 0;
     next = NULL;
     name = theName;
     for (auto& aprn : theAprns)
@@ -40,18 +41,24 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
+    spread = aprns.size();
+    for (auto& aprn : aprns)
+    {
+        totalFreq+=aprn.second;
+    }
+
+    persistence<<"\""<<name<<"\" appeared "<<totalFreq<<" times across "<<spread<<" documents:";
+    for (auto& aprn : aprns)
+    {
+        persistence<<" "<<aprn.second<<" times at doc id "<<aprn.first<<";";
+    }
+    persistence<<endl;
+
+    /*
     persistence<<name<<" "<<totalFreq<<"~"<<spread;
     for (auto& aprn : aprns)
     {
         persistence<<aprn.second<<"@"<<aprn.first;
     }
-    persistence<<endl;
-/*
-    cout<<"NEW TERM\n";
-    cout<<name<<" "<<totalFreq<<"~"<<spread;
-    for (pageMap::iterator it = aprns.begin(); it != aprns.end(); ++it)
-    {
-        cout<<" "<<it->second<<"@"<<it->first;
-    }
-    cout<<endl;*/
+    persistence<<endl;*/
 }
