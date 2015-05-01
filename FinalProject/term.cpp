@@ -2,7 +2,9 @@
 
 Term::Term()
 {
-
+    totalFreq = 0;
+    spread = 0;
+    name = "a";
 }
 
 Term::~Term()
@@ -14,13 +16,10 @@ Term::Term(string theName, pageMap theAprns)
 {
     next = NULL;
     name = theName;
-    spread = theAprns.size();
-    totalFreq = 0;
     for (auto& aprn : theAprns)
     {
         // First is the docID, second is the frequency.
         aprns.emplace(make_pair(aprn.first, aprn.second));
-        totalFreq += aprn.second;
     }
 }
 

@@ -5,6 +5,7 @@
 #include "indexinterface.h"
 #include "avltreeindex.h"
 #include "term.h"
+#include <fstream>
 #include <string>
 #include <sstream>
 
@@ -19,7 +20,6 @@ public:
     ~AVLTreeInterface();
 
     void createLetters();
-    void display_AVL();
 
     void add_term_to_ii(int letterIndex, string term, pageMap aprns);
     void clear();
