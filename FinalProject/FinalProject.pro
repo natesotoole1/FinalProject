@@ -10,7 +10,6 @@ SOURCES += main.cpp \
     termbucket.cpp \
     porter2_stemmer.cpp \
     pageinfo.cpp \
-    aprnsatpage.cpp \
     avltreeindex.cpp \
     avltreeinterface.cpp \
     docparser.cpp \
@@ -29,7 +28,6 @@ HEADERS += \
     termbucket.h \
     porter2_stemmer.h \
     pageinfo.h \
-    aprnsatpage.h \
     avltreeindex.h \
     avltreeinterface.h \
     docparser.h \

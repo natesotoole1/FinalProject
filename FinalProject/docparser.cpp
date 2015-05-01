@@ -89,7 +89,7 @@ void DocParser::index_corpus(IndexInterface* index)
 
     // Iterate through allTerms and create a new Term object
     // using the data from each value.
-    for (auto& value : allTerms)
+    /*for (auto& value : allTerms)
     {
         cout<<value.first<<": ";
         for (auto val : allTerms.at(value.first))
@@ -97,7 +97,7 @@ void DocParser::index_corpus(IndexInterface* index)
             cout<<val.second<<"@"<<val.first<<" ";
         }
         cout<<endl;
-    }
+    }*/
 
     // By this point, allTerms contains all the info for
     // the inverted index.  Add each term to the inverted index.
