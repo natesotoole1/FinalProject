@@ -19,7 +19,7 @@ void IndexInterface::write_persistence()
 {
     ofstream persistence;
     persistence.open("Persistence.txt");
-    for (int i=1; i<27; ++i)
+    for (int i=0; i<26; ++i)
     {
         letters[i].write_hti(persistence);
     }

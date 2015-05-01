@@ -6,22 +6,28 @@ AVLTreeIndex::AVLTreeIndex(){
 
 }
 
-void AVLTreeIndex::insert(AVL_Node* t, Term* value)
+void AVLTreeIndex::insert(AVL_Node* root, Term* value)
 {
-    AVL_Node* temp = root;
-    if (t == NULL){
-        t = new AVL_Node(value, NULL, NULL);
-        //return root;
+
+
+    if (root == NULL){
+        root = new AVL_Node;
+        root->data = value;
+        root->left = NULL;
+        root->right = NULL;
+        return ;
+    }
+    else if (value->get_name().compare(root->data->get_name()) < 0){
+        root->left = insert(root->left, value);
+        root = balance(root);
     }
 
-    else if (value < t->data){
-        insert(t->left, value);
-        balance(root);
+    else if (value->get_name().compare(root->data->get_name()) > 0){
+        root->right = insert(root->right, value);
+        root = balance(root);
     }
-
-    else if (value >= root->data){
-        insert(root->right, value);
-        balance(root);
+    else if(value->get_name().compare(root->data->get_name()) == 0 ){
+        return;
     }
     //return root;
 
@@ -62,8 +68,9 @@ int AVLTreeIndex::height(AVL_Node *temp){
         int r_height = height (temp->right);
         int max_height = max (l_height, r_height);
         temp->height = max_height + 1;
+        return temp->height;
     }
-    return temp->height;
+    return 0;
 }
 
 
@@ -121,13 +128,13 @@ Term* AVLTreeIndex::find (AVL_Node* ptr, Term* value){
 
 
 // Display AVL Tree
-void AVLTreeIndex::display(AVL_Node *ptr, int level)
+void AVLTreeIndex::display(AVL_Node *ptr, int level, ofstream &persistence)
 {
     if (ptr!=NULL)
     {
-        display(ptr->right, level + 1);
-        cout<<ptr->data<< endl;
-        display(ptr->left, level + 1);
+        display(ptr->right, level + 1, persistence);
+        ptr->data->write_term(persistence);
+        display(ptr->left, level + 1, persistence);
     }
 }
 
