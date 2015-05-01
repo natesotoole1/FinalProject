@@ -22,6 +22,8 @@ int main()
     // Index the corpus into a HashTableIndex.
     IndexHandler* handler = new IndexHandler(true);
     handler->index_corpus();
+
+    handler->run_queries();
     /*
     cout<<"The inverted index has been loaded into a hash table by default.\n"<<
           "To load it into an AVL tree, press 1.  Otherwise, press any key.\n";

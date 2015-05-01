@@ -29,3 +29,18 @@ void IndexHandler::index_corpus()
 }
 
 
+void IndexHandler::run_queries()
+{
+    QueryProcessor processor = QueryProcessor();
+
+    cout << "Enter your query:";
+    string input;
+    cin >> input;
+
+    string query;
+    getline(cin, query);
+
+    query = input += query;
+
+    processor.initiate_query(index, query);
+}

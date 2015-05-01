@@ -7,6 +7,7 @@
 #include <unordered_map>
 
 #include "pageinfo.h"
+#include "term.h"
 
 using namespace std;
 
@@ -25,8 +26,10 @@ public:
     virtual void add_term_to_ii(int letterIndex, string term, pageMap aprns);
     virtual void clear();
     virtual void load_persistence();
-    virtual unordered_map<string, int> search_word(string term);
+    virtual Term* find_term(string term);
     virtual void write_persistence();
+
+    int index_for_letter(char letter);
 
 protected:
     // Only used for HashTableIndex.

@@ -10,10 +10,6 @@ HashTableInterface::~HashTableInterface()
 
 }
 
-Term* HashTableInterface::find(string term)
-{
-    return letters[index_for_letter(term.front())].find(term);
-}
 
 void IndexInterface::write_persistence()
 {
@@ -31,8 +27,9 @@ void IndexInterface::add_term_to_ii(int letterIndex, string term, pageMap aprns)
     letters[letterIndex].add_term_to_ht_index(term, aprns);
 }
 
-unordered_map<string, int> IndexInterface::search_word(string)
+Term *IndexInterface::find_term(string term)
 {
+    return letters[index_for_letter(term.front())].find(term);
 
 }
 

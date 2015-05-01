@@ -25,7 +25,7 @@ void AVLTreeInterface::clear()
 */
 }
 
-unordered_map<string, int> AVLTreeInterface::search_word(string w)
+Term *AVLTreeInterface::find_term(string w)
 {
 
 }

@@ -20,7 +20,8 @@ resultsMap QueryProcessor::answer_query_AND(IndexInterface* index, istringstream
 
     // Put the first queried term into results.
     query >> currTerm;
-    //foundTerm = index->find_term(currTerm);
+    foundTerm = index->find_term(currTerm);
+
 
 }
 
@@ -50,8 +51,6 @@ void QueryProcessor::initiate_query(IndexInterface* index, string query)
                is_not_alpha,
                ' '
                );
-
-    Porter2Stemmer::trim(query);
 
     istringstream stream(query);
 

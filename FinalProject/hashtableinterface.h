@@ -21,7 +21,6 @@ public:
     HashTableInterface();
     ~HashTableInterface();
 
-    Term* find(string term);
 };
 
 #endif // HASHTABLEINTERFACE_H

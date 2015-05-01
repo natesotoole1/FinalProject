@@ -6,6 +6,7 @@
 #include "hashtableindex.h"
 #include "hashtableinterface.h"
 #include "indexinterface.h"
+#include "queryprocessor.h"
 
 #include <vector>
 
@@ -19,6 +20,8 @@ public:
     IndexHandler(bool asHashTable);
 
     void index_corpus();
+
+    void run_queries();
 
 private:
     IndexInterface* index;
