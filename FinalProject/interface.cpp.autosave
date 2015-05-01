@@ -1,0 +1,42 @@
+#include "interface.h"
+
+Interface::Interface()
+{
+
+}
+
+void command(){
+    
+}
+
+void search(string){
+    
+}
+
+void runAVL(){
+    
+}
+
+void runHash(){
+    
+}
+
+void runMaintenance(){
+    
+}
+
+void setMode(){
+    
+}
+
+void addFileToIndex(){
+    
+}
+
+void clearIndex(){
+    
+}
+
+void toLowerCase(){
+    
+}

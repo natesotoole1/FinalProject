@@ -16,7 +16,8 @@ SOURCES += main.cpp \
     indexhandler.cpp \
     queryprocessor.cpp \
     hashtableindex.cpp \
-    hashtableinterface.cpp
+    hashtableinterface.cpp \
+    interface.cpp
 
 
 include(deployment.pri)
@@ -34,5 +35,6 @@ HEADERS += \
     indexhandler.h \
     queryprocessor.h \
     hashtableindex.h \
-    hashtableinterface.h
+    hashtableinterface.h \
+    interface.h
 

@@ -1,0 +1,27 @@
+#ifndef INTERFACE_H
+#define INTERFACE_H
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <queryprocessor.h>
+
+class Interface
+{
+public:
+    Interface();
+    void command();
+    void search(string);
+    void runAVL();
+    void runHash();
+    void runMaintenance();
+    void setMode();
+    void addFileToIndex();
+    void clearIndex();
+    void toLowerCase();
+private:
+    int mode;
+    bool built;
+    QueryProcessor currQuery;
+};
+
+#endif // INTERFACE_H
