@@ -2,6 +2,7 @@
 #define INDEXINTERFACE_H
 
 #include <fstream>
+#include <iostream>
 #include <math.h>
 #include <sstream>
 #include <string>
@@ -27,6 +28,7 @@ public:
     //void add_term_to_persistence(Term* term);
     int append_page_info(PageInfo* currInfo);
     double calc_tdidf(int pageID, int freq, int spread);
+    void display_result(int rank, int pageID, double tdidf);
     void incr_total_words_on_page(int currID);
     void load_persistence();
 

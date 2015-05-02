@@ -16,6 +16,8 @@
 using namespace std;
 
 // First = pageID; total = TD-IDF across all queried terms.
+typedef pair<int, double> resultPair;
+
 typedef unordered_map<int, double> relevancyMap;
 
 class QueryProcessor : public DocParser
@@ -26,18 +28,23 @@ public:
 
     void answer_query(IndexInterface* index, istringstream& query, bool intersection);
 
+    void display_best_five_results(IndexInterface* index);
+
+
+
+    void initiate_query(IndexInterface* index, string query);
+
     void init_relev_map(Term* term);
     void intersection_incr_relev_map(IndexInterface* index, Term* term);
     void union_incr_relev_map(Term* term);
 
-
+    void sort_results();
 
     // write this
-    void display_results();
 
-    void initiate_query(IndexInterface* index, string query);
 private:
     relevancyMap results;
+    vector<resultPair> sortedResults;
 };
 
 #endif // QUERYPROCESSOR_H

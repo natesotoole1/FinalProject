@@ -114,8 +114,7 @@ void DocParser::index_corpus(IndexInterface* index)
         if (fraction > 0.01) continue;
 
         Term* aTerm = new Term(term.first, term.second);
-        index->add_term_to_ii(
-                    index_for_letter(term.first.front()), aTerm);
+        index->add_term_to_ii(index_for_letter(term.first.front()), aTerm);
     }
 
     index->write_persistence();

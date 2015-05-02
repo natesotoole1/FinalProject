@@ -2,12 +2,24 @@
 
 QueryProcessor::QueryProcessor()
 {
-
+    sortedResults = vector<resultPair>();
 }
 
 QueryProcessor::~QueryProcessor()
 {
 
+}
+
+void QueryProcessor::display_best_five_results(IndexInterface* index)
+{
+    int max;
+    if (sortedResults.size() < 5) max = sortedResults.size();
+    else max = 5;
+
+    for (int i=0; i<max; ++i)
+    {
+        index->display_result(i, sortedResults.at(i).first, sortedResults.at(i).second);
+    }
 }
 
 void QueryProcessor::init_relev_map(Term* term)
@@ -134,6 +146,8 @@ void QueryProcessor::answer_query(IndexInterface* index, istringstream& query, b
             }
         }
     }
+
+    display_best_five_results(index);
 }
 
 void QueryProcessor::initiate_query(IndexInterface* index, string query)
@@ -162,5 +176,39 @@ void QueryProcessor::initiate_query(IndexInterface* index, string query)
     {
         stream = istringstream(fullQuery);
         answer_query(index, stream, true);
+    }
+}
+
+void QueryProcessor::sort_results()
+{
+    while (results.size() != 0 && sortedResults.size() < 6)
+    {
+        int maxKey = 0;
+        // Make sure that key is in the results.
+        bool isInResults = false;
+        while (!isInResults)
+        {
+            try
+            {
+                results.at(maxKey);
+            }
+            catch (const out_of_range& notInResults)
+            {
+                ++maxKey;
+                continue;
+            }
+            // If it reaches here, the key was in results,
+            // so set isInResults to true.
+            isInResults = true;
+        }
+
+        // Find the maximum TD/IDF in results and emplace it
+        // in sortedResults.
+        for (auto& result : results)
+        {
+            if (result.second > results.at(maxKey)) maxKey = result.first;
+        }
+        sortedResults.push_back(make_pair(maxKey, results.at(maxKey)));
+        results.erase(maxKey);
     }
 }
