@@ -5,33 +5,33 @@
 #include <string>
 #include <queryprocessor.h>
 #include "indexhandler.h"
-#include "hashtableinterface.h"
-#include "avltreeinterface.h"
 
-using namespace std;
 class Interface
 {
 public:
     Interface();
-    void command();
-    void search(string);
+    void command(string, string);
+    void search();
     void runAVL();
     void runHash();
     void runMaintenance();
     void setMode();
     void addFileToIndex(string);
     void clearIndex();
-    void lowerCase(string);
+    string toLowerCase(string);
     void options();
     void quit();
+    void permissionDenied(string);
+    void getCommand();
+    void reCommand();
+    
 private:
     int mode;
     bool built;
     QueryProcessor currQuery;
-    IndexHandler* index;
-    bool endPro = false;
-    string strMode;
-
+    bool endSearch;
+    string modeStr;
+    IndexHandler index;
 };
 
 #endif // INTERFACE_H
