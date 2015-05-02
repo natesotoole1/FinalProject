@@ -41,24 +41,26 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
+    /*
     spread = aprns.size();
     for (auto& aprn : aprns)
     {
         totalFreq+=aprn.second;
     }
-
+    */
+/*
     persistence<<"\""<<name<<"\" appeared "<<totalFreq<<" times across "<<spread<<" documents:";
     for (auto& aprn : aprns)
     {
         persistence<<" "<<aprn.second<<" times at doc id "<<aprn.first<<";";
     }
     persistence<<endl;
+*/
 
-    /*
-    persistence<<name<<" "<<totalFreq<<"~"<<spread;
+    persistence<<"! "<<name;
     for (auto& aprn : aprns)
     {
-        persistence<<aprn.second<<"@"<<aprn.first;
+        persistence<<" "<<aprn.second<<" "<<aprn.first;
     }
-    persistence<<endl;*/
+    persistence<<endl;
 }

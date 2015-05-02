@@ -23,6 +23,7 @@ public:
 
     int append_page_info(PageInfo* currInfo);
 
+
     virtual void add_term_to_ii(int letterIndex, string term, pageMap aprns);
     virtual void clear();
     virtual void load_persistence();

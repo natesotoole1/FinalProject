@@ -27,7 +27,6 @@ public:
 
     void initiate_query(IndexInterface* index, string query);
 private:
-    resultsMap results;
 };
 
 #endif // QUERYPROCESSOR_H

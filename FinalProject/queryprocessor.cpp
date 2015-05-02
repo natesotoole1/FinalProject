@@ -15,26 +15,30 @@ resultsMap QueryProcessor::answer_query_AND(IndexInterface* index, istringstream
     string currTerm;
     Term* foundTerm;
     resultsMap results;
+
     // Find the intersection of all queried terms.
 
     // Add functioanlity for NOT
-    query >> currTerm;
 
     // Put the first queried term into results.
-
+    query >> currTerm;
+    Porter2Stemmer::stem(currTerm);
     foundTerm = index->find_term(currTerm);
-
     results.emplace(make_pair(foundTerm->get_name(), foundTerm));
 
     while (query >> currTerm)
     {
-        Porter2Stemmer::trim(currTerm);
         if (currTerm.compare("not") == 0)
         {
             // Get the next word.
             query >> currTerm;
+            Porter2Stemmer::stem(currTerm);
 
             // For docID in currTerm's pageMap,
+        }
+        else
+        {
+            // For each subsequent term,
         }
     }
 
@@ -65,16 +69,20 @@ void QueryProcessor::initiate_query(IndexInterface* index, string query)
     // Remove all non-letters from the query.
     replace_if(query.begin(), query.end(), is_not_alpha, ' ');
 
+    // Make all letters lowercase.
+    transform(word.begin(), word.end(), word.begin(), ::tolower);
+
+
     istringstream stream(query);
 
     // Initiate the proper kind of query.
     string mode;
     stream >> mode;
-    Porter2Stemmer::trim(mode);
 
     if (mode.compare("and") == 0) answer_query_AND(index, stream);
     else if (mode.compare("or") == 0) answer_query_OR(index, stream);
     else
+        // Regular query.
     {
         stream = istringstream(fullQuery);
         answer_query_REG(index, stream);
