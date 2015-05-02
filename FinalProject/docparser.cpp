@@ -41,7 +41,6 @@ void DocParser::add_appearance(string currTerm, int currID)
     // At this point, currID was already in the pageMap,
     // so increase the frequency by 1.
     allTerms.at(currTerm).at(currID)++;
-
 }
 
 string DocParser::clean_term(string term)
@@ -51,8 +50,6 @@ string DocParser::clean_term(string term)
 
     // Remove all uppercase letter from term.
     Porter2Stemmer::trim(term);
-
-
 
     return term;
 }
@@ -103,12 +100,10 @@ void DocParser::index_corpus(IndexInterface* index)
     // the inverted index.  Add each term to the inverted index.
     for (auto& term : allTerms)
     {
+        Term* aTerm = new Term(term.first, term.second);
         index->add_term_to_ii(
-                    index_for_letter(term.first.front()),
-                    term.first,
-                    term.second);
+                    index_for_letter(term.first.front()), aTerm);
     }
-
     index->write_persistence();
 }
 

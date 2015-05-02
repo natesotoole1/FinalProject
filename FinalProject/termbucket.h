@@ -17,7 +17,7 @@ public:
     TermBucket();
     ~TermBucket();
 
-    void add_term_to_bucket(string term, pageMap aprns);
+    void add_term_to_bucket(Term* term);
     Term* find(string term);
     bool has_word(string term);
     void write_term_bucket(ofstream& persistence);

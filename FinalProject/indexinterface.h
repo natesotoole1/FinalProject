@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <math.h>
+#include <sstream>
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -23,13 +24,16 @@ public:
     IndexInterface();
     ~IndexInterface();
 
+    //void add_term_to_persistence(Term* term);
     int append_page_info(PageInfo* currInfo);
     double calc_tdidf(int pageID, int freq, int spread);
     void incr_total_words_on_page(int currID);
+    void load_persistence();
 
-    virtual void add_term_to_ii(int letterIndex, string term, pageMap aprns);
+
+    virtual void add_term_to_ii(int letterIndex, Term* term);
     virtual void clear();
-    virtual void load_persistence();
+
     virtual Term* find_term(string term);
     virtual void write_persistence();
 
@@ -41,6 +45,8 @@ protected:
 
     // PageInfo will be passed by a pageID (int).
     vector<PageInfo> infoForIDs;
+
+    //persistenceMap persistence;
 };
 
 #endif // INDEXINTERFACE_H

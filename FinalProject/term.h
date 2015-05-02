@@ -23,10 +23,16 @@ public:
     Term();
     ~Term();
 
+    Term(string theName);
     Term(string theName, pageMap theAprns);
+
+    void add_pageAprn(int freq, int pageID);
+
 
     void init_spread_and_totalFreq();
     void init_tdidfs(IndexInterface* index);
+
+
 
 
     pageMap get_pageAprns();
@@ -57,8 +63,6 @@ private:
     tdidfMap tdidfs;
 
     int totalFreq;
-
-
 };
 
 #endif // TERM_H

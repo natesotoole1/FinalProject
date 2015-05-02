@@ -19,7 +19,7 @@ public:
     HashTableIndex();
     ~HashTableIndex();
 
-    void add_term_to_ht_index(string term, pageMap aprns);
+    void add_term_to_ht_index(Term* term);
     Term* find(string term);
     int hash_key(string key);
     void write_hti(ofstream& persistence);

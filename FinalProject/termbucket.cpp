@@ -10,21 +10,20 @@ TermBucket::~TermBucket()
 
 }
 
-void TermBucket::add_term_to_bucket(string term, pageMap aprns)
+void TermBucket::add_term_to_bucket(Term* term)
 {
-    Term* newTerm = new Term(term, aprns);
 
     // If there are no terms in the bucket, set root to newTerm.
     if (!root)
     {
-        root = newTerm;
+        root = term;
         return;
     }
 
     // Otherwise, insert newTerm at the end of the linked list.
     Term* curr = root;
     while (curr->get_next()) curr = curr->get_next();
-    curr->set_next(newTerm);
+    curr->set_next(term);
 }
 
 Term* TermBucket::find(string term)

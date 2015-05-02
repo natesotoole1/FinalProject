@@ -3,7 +3,7 @@
 AVLTreeInterface::AVLTreeInterface()
 {
     avlTrees = new AVLTreeIndex[numLetters];
-
+    load_persistence();
 }
 
 AVLTreeInterface::~AVLTreeInterface(){
@@ -11,10 +11,9 @@ AVLTreeInterface::~AVLTreeInterface(){
 }
 
 
-void AVLTreeInterface::add_term_to_ii(int letterIndex, string w, pageMap aprns)
+void AVLTreeInterface::add_term_to_ii(int letterIndex, Term *term)
 {
-    Term* currWord = new Term(w, aprns);
-    avlTrees[letterIndex].insert(avlTrees[letterIndex].getRoot(), currWord);
+    avlTrees[letterIndex].insert(avlTrees[letterIndex].getRoot(), term);
 }
 
 void AVLTreeInterface::clear()
@@ -38,10 +37,6 @@ void AVLTreeInterface::write_persistence()
         avlTrees[i].display(avlTrees[i].getRoot(), 0, persistence);
     }
     persistence.close();
-}
-void AVLTreeInterface::load_persistence()
-{
-
 }
 
 void AVLTreeInterface::createLetters()

@@ -10,11 +10,18 @@ IndexInterface::~IndexInterface()
 
 }
 
+//void IndexInterface::add_term_to_persistence(Term* term)
+//{
+//    persistence.emplace(make_pair(term, term));
+//}
+
 int IndexInterface::append_page_info(PageInfo* currInfo)
 {
     infoForIDs.push_back(*currInfo);
     return infoForIDs.size()-1;
 }
+
+
 
 int IndexInterface::index_for_letter(char letter)
 {
@@ -47,4 +54,37 @@ double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
 void IndexInterface::incr_total_words_on_page(int currID)
 {
 
+}
+
+void IndexInterface::load_persistence()
+{
+    ifstream ifs("Persistence.txt");
+
+    // Load two words at a time.
+    string word1;
+    string word2;
+
+    ifs >> word1;
+    ifs >> word2;
+
+    while (!ifs.eof())
+    {
+        // For each new term, extract two words at a time until
+        // another exclamation point is reached.
+        if (word1.compare("!") == 0)
+        {
+            pageMap pageAprns;
+            string name = word2;
+            ifs >> word1;
+            ifs >> word2;
+            pageAprns.emplace(make_pair(stoi(word1), stoi(word2)));
+            while (word1.compare("!") != 0)
+            {
+                pageAprns.emplace(make_pair(stoi(word1), stoi(word2)));
+                ifs >> word1;
+                ifs >> word2;
+            }
+            add_term_to_ii(index_for_letter(name.front()), new Term(name, pageAprns));
+        }
+    }
 }

@@ -21,9 +21,8 @@ public:
 
     void createLetters();
 
-    void add_term_to_ii(int letterIndex, string term, pageMap aprns);
+    void add_term_to_ii(int letterIndex, Term* term);
     void clear();
-    void load_persistence();
     Term* find_term(string term);
     void write_persistence();
 private:

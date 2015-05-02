@@ -12,6 +12,13 @@ Term::~Term()
 
 }
 
+Term::Term(string theName)
+{
+    name = theName;
+    totalFreq = 0;
+    spread = 0;
+}
+
 Term::Term(string theName, pageMap theAprns)
 {
     totalFreq = 0;
@@ -22,6 +29,11 @@ Term::Term(string theName, pageMap theAprns)
         // First is the pageID, second is the frequency.
         pageAprns.emplace(make_pair(aprn.first, aprn.second));
     }
+}
+
+void Term::add_pageAprn(int freq, int pageID)
+{
+    pageAprns.emplace(make_pair(pageID, freq));
 }
 
 void Term::init_spread_and_totalFreq()
@@ -83,10 +95,12 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
+
     persistence<<"! "<<name;
-    for (auto& aprn : pageAprns)
+    for (auto& page : pageAprns)
     {
-        persistence<<" "<<aprn.second<<" "<<aprn.first;
+        persistence<<" "<<page.first<<" "<<page.second;
     }
     persistence<<endl;
+
 }

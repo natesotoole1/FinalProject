@@ -10,10 +10,10 @@ HashTableIndex::~HashTableIndex()
 
 }
 
-void HashTableIndex::add_term_to_ht_index(string term, pageMap aprns)
+void HashTableIndex::add_term_to_ht_index(Term *term)
 {
     // Call add_aprn for the corresponding bucket.  add_aprn will handle collisions.
-    buckets[hash_key(term)].add_term_to_bucket(term, aprns);
+    buckets[hash_key(term->get_name())].add_term_to_bucket(term);
 }
 
 Term* HashTableIndex::find(string term)

@@ -22,9 +22,9 @@ void IndexInterface::write_persistence()
     persistence.close();
 }
 
-void IndexInterface::add_term_to_ii(int letterIndex, string term, pageMap aprns)
+void IndexInterface::add_term_to_ii(int letterIndex, Term *term)
 {
-    letters[letterIndex].add_term_to_ht_index(term, aprns);
+    letters[letterIndex].add_term_to_ht_index(term);
 }
 
 Term *IndexInterface::find_term(string term)
@@ -33,11 +33,6 @@ Term *IndexInterface::find_term(string term)
 }
 
 void IndexInterface::clear()
-{
-
-}
-
-void IndexInterface::load_persistence()
 {
 
 }
