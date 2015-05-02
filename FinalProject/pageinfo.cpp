@@ -2,7 +2,7 @@
 
 PageInfo::PageInfo()
 {
-
+    totalWords = 0;
 }
 
 PageInfo::~PageInfo()
@@ -38,4 +38,9 @@ void PageInfo::set_timestamp(string theTimestamp)
 void PageInfo::set_title(string theTitle)
 {
     title = theTitle;
+}
+
+void PageInfo::incr_total_words()
+{
+    ++totalWords;
 }

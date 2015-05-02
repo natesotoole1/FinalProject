@@ -70,7 +70,7 @@ void QueryProcessor::initiate_query(IndexInterface* index, string query)
     replace_if(query.begin(), query.end(), is_not_alpha, ' ');
 
     // Make all letters lowercase.
-    transform(word.begin(), word.end(), word.begin(), ::tolower);
+    transform(query.begin(), query.end(), query.begin(), ::tolower);
 
 
     istringstream stream(query);

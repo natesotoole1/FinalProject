@@ -20,10 +20,13 @@ public:
     void set_contributor(string theInfo);
     void set_timestamp(string theTimestamp);
     void set_title(string theTitle);
+
+    void incr_total_words();
 private:
     string contributorNameOrIP;
     string timestamp;
     string title;
+    int totalWords;
 };
 
 #endif // PAGEINFO_H

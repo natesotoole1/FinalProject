@@ -30,3 +30,8 @@ int IndexInterface::index_for_letter(char letter)
     ascii -= 97;
     return ascii;
 }
+
+void IndexInterface::incr_total_words_on_page(int currID)
+{
+
+}

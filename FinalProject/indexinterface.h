@@ -22,7 +22,7 @@ public:
     ~IndexInterface();
 
     int append_page_info(PageInfo* currInfo);
-
+    void incr_total_words_on_page(int currID);
 
     virtual void add_term_to_ii(int letterIndex, string term, pageMap aprns);
     virtual void clear();

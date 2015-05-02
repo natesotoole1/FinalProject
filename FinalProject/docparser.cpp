@@ -127,7 +127,7 @@ int DocParser::index_for_letter(char letter)
     return ascii;
 }
 
-void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
+void DocParser::index_page(xml_node<>* currNode, IndexInterface* index)
 {
     PageInfo* currInfo = new PageInfo;
     string currName;
@@ -184,15 +184,15 @@ void DocParser::index_page(xml_node<>* currNode, IndexInterface* theIndex)
     }
 
     // Add the PageInfo to 'infoForID' vector.
-    int currID = theIndex->append_page_info(currInfo);
+    int currID = index->append_page_info(currInfo);
 
     // Pass the current node to index_text to find all terms in
     // this page's text.
-    index_text(currNode, currID);
+    index_text(currNode, currID, index);
 
 }
 
-void DocParser::index_text(xml_node<>* currNode, int currID)
+void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface *index)
 {
     string text = currNode->value();
 
@@ -217,6 +217,9 @@ void DocParser::index_text(xml_node<>* currNode, int currID)
 
         // If the currTerm a stop word, forego adding it to allTerms.
         if (is_stop_word(currTerm)) continue;
+
+        // Increment this PageInfo's totalWords by 1.
+        index->incr_total_words_on_page(currID);
 
         // See if currTerm is already in allTerms;
         try

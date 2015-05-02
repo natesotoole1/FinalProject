@@ -47,8 +47,8 @@ public:
     // is a number, 1 for 'a', 2 for 'b', and so forth.
     int index_for_letter(char letter);
 
-    void index_page(xml_node<>* currNode, IndexInterface* theIndex);
-    void index_text(xml_node<>* currNode, int currID);
+    void index_page(xml_node<>* currNode, IndexInterface* index);
+    void index_text(xml_node<>* currNode, int currID, IndexInterface* index);
 
     bool is_stop_word(string term);
 
