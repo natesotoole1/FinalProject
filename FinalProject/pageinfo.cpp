@@ -27,7 +27,7 @@ string PageInfo::get_title()
 
 int PageInfo::get_totalWords()
 {
-
+    return totalWords;
 }
 
 void PageInfo::set_contributor(string theInfo)
@@ -45,7 +45,7 @@ void PageInfo::set_title(string theTitle)
     title = theTitle;
 }
 
-void PageInfo::incr_total_words()
+void PageInfo::incr_totalWords()
 {
     ++totalWords;
 }

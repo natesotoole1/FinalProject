@@ -98,12 +98,26 @@ void DocParser::index_corpus(IndexInterface* index)
 
     // By this point, allTerms contains all the info for
     // the inverted index.  Add each term to the inverted index.
+
+    int totalWordsInCorpus = index->get_total_words_in_corpus();
+
     for (auto& term : allTerms)
     {
+        // If the word is longer than 12 characters, skip it.
+        if (term.first.length() > 12) continue;
+
+        // If the word accounts for more than 1% of the total words
+        // in the corpus, skip it.
+        int totalAprns = 0;
+        for (auto& page : allTerms.at(term.first)) totalAprns += page.second;
+        double fraction = (double)totalAprns/totalWordsInCorpus;
+        if (fraction > 0.01) continue;
+
         Term* aTerm = new Term(term.first, term.second);
         index->add_term_to_ii(
                     index_for_letter(term.first.front()), aTerm);
     }
+
     index->write_persistence();
 }
 

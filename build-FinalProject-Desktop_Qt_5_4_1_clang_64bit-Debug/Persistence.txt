@@ -1,1 +1,251 @@
-0x7fecd040a8c0 0x7fecd05068a0 0x7fecd0608600 0x7fecd07030d0 0x7fecd0506a40 0x7fecd040f5d0 0x7fecd040de70 0x7fecd05054a0 0x7fecd0701fb0 0x7fecd07001a0 0x7fecd040eb20 0x7fecd0505ce0 0x7fecd040d380 0x7fecd040cbd0 0x7fecd0703d20 0x7fecd0410310 0x7fecd0608580 0x7fecd0507420 0x7fecd040e6b0 0x7fecd040f410 0x7fecd040dd60 0x7fecd0700de0 0x7fecd0507ca0 0x7fecd05057e0 0x7fecd040edb0 0x7fecd0506430 0x7fecd040c5e0 0x7fecd040be10 0x7fecd040a830 0x7fecd07027d0 0x7fecd0700c80 0x7fecd040cd70 0x7fecd0504a10 0x7fecd040f340 0x7fecd040fa00 0x7fecd040ff00 0x7fecd07023c0 0x7fecd0700af0 0x7fecd040cca0 0x7fecd040d520 0x7fecd040ce40 0x7fecd0506be0 0x7fecd0504fc0 0x7fecd040f770 0x7fecd0603250 0x7fecd05074f0 0x7fecd0703f90 0x7fecd0703910 0x7fecd040ffd0 0x7fecd0504d50 0x7fecd0410cf0 0x7fecd0507010 0x7fecd0702560 0x7fecd0506500 0x7fecd0506360 0x7fecd040f930 0x7fecd0506970 0x7fecd05053d0 0x7fecd040b4f0 0x7fecd040d950 0x7fecd0701930 0x7fecd040d450 0x7fecd0506d80 0x7fecd040c100 0x7fecd0410c20 0x7fecd0504390 0x7fecd040ee60 0x7fecd040c1d0 0x7fecd0702150 0x7fecd040f520 0x7fecd0702e60 0x7fecd0506020 0x7fecd040daf0 0x7fecd0504bb0 0x7fecd0506290 0x7fecd0702db0 0x7fecd0410b50 0x7fecd0702f30 0x7fecd040cf10 0x7fecd0700510 0x7fecd0700640 0x7fecd0608710 0x7fecd0703ec0 0x7fecd0501c60 0x7fecd0507830 0x7fecd040b780 0x7fecd04104b0 0x7fecd040e870 0x7fecd07016b0 0x7fecd040dbc0 0x7fecd0702ca0 0x7fecd0505160 0x7fecd0504530 0x7fecd0703840 0x7fecd040dc90 0x7fecd040c440 0x7fecd0703450 0x7fecd040fc70 0x7fecd0505b40 0x7fecd040c850 0x7fecd0608960 0x7fecd0505f50 0x7fecd040f0d0 0x7fecd07011f0 0x7fecd040fd40 0x7fecd0410720 0x7fecd040da20 0x7fecd04103e0 0x7fecd07012c0 0x7fecd05047a0 0x7fecd040fad0 0x7fecd0505e80 0x7fecd0507b90 0x7fecd0507280 0x7fecd0702630 0x7fecd0505db0 0x7fecd07007b0 0x7fecd07035d0 0x7fecd0507350 0x7fecd0504ef0 0x7fecd05070e0 0x7fecd0701a00 0x7fecd0505570 0x7fecd0504460 0x7fecd0701860 0x7fecd0703ab0 0x7fecd040bf80 0x7fecd040e1d0 0x7fecd040cb20 0x7fecd040e2c0 0x7fecd040c780 0x7fecd0505710 0x7fecd040c510 0x7fecd0410830 0x7fecd040bea0 0x7fecd0701e10 0x7fecd06087c0 0x7fecd0504600 0x7fecd0507ac0 0x7fecd040f880 0x7fecd040df20 0x7fecd07031a0 0x7fecd040f270 0x7fecd040c2a0 0x7fecd0505300 0x7fecd0701390 0x7fecd04100a0 0x7fecd040c370 0x7fecd0702490 0x7fecd040f6a0 0x7fecd0700020 0x7fecd040e7c0 0x7fecd0507e40 0x7fecd0703770 0x7fecd0507d90 0x7fecd0700440 0x7fecd0410170 0x7fecd0700280 0x7fecd040d5f0 0x7fecd0410580 0x7fecd040ebd0 0x7fecd0507760 0x7fecd040d790 0x7fecd0505980 0x7fecd0701790 0x7fecd0505230 0x7fecd07022f0 0x7fecd040f000 0x7fecd040e0c0 0x7fecd05071b0 0x7fecd040f1a0 0x7fecd0703000 0x7fecd0608a30 0x7fecd040ea10 0x7fecd040c960 0x7fecd040fe50 0x7fecd0700f80 0x7fecd05061c0 0x7fecd040b6b0 0x7fecd040b850 0x7fecd0506f60 0x7fecd0701ad0 0x7fecd0505c10 0x7fecd0507a10 0x7fecd0504c80 0x7fecd0505a90 0x7fecd040d2b0 0x7fecd040b600 0x7fecd040e440 0x7fecd07028a0 0x7fecd040b9e0 0x7fecd0505090 0x7fecd0506730 0x7fecd05066a0 0x7fecd040baf0 0x7fecd040d6c0 0x7fecd0700380 0x7fecd05067d0 0x7fecd0701ee0 0x7fecd05060f0 0x7fecd040e940 0x7fecd0410eb0 0x7fecd05046d0 0x7fecd0504940 0x7fecd0700a20 0x7fecd0701530 0x7fecd0506e50 0x7fecd040fba0 0x7fecd0701600 0x7fecd0700950 0x7fecd0504870 0x7fecd040bc70 0x7fecd040e370 0x7fecd040d210 0x7fecd040aa60 0x7fecd040d180 0x7fecd040ca10 0x7fecd040c030 0x7fecd0703270 0x7fecd04108e0 0x7fecd0410650 0x7fecd0410e00 0x7fecd0703df0 0x7fecd05058b0 0x7fecd0700710 0x7fecd0701120 0x7fecd05042c0 0x7fecd0505640 0x7fecd040b930 0x7fecd0507900 0x7fecd0504ae0 0x7fecd07036a0 0x7fecd0703340 0x7fecd0700bb0 0x7fecd0701ba0 0x7fecd0504e20 0x7fecd0410240 0x7fecd0703c50 0x7fecd0410a80 0x7fecd0701050 0x7fecd0702220 0x7fecd0700d30 0x7fecd040cfe0 0x7fecd0700eb0 0x7fecd040e5e0 0x7fecd040e510 0x7fecd0703500 0x7fecd040dff0 0x7fecd0506cb0 0x7fecd0701460 0x7fecd07039e0 0x7fecd0701d40 0x7fecd0506b10 0x7fecd0701c70 0x7fecd0702080 0x7fecd0507690 0x7fecd0700880 0x7fecd040c6b0 0x7fecd0702700 0x7fecd040ef30 0x7fecd0608890 0x7fecd040d8a0 0x7fecd040eca0 0x7fecd05075c0 0x7fecd040a9a0 0x7fecd040bba0 0x7fecd04109b0 0x7fecd0703b80 
+! are 3 2 2 1
+! ask 3 1
+! acid 4 2 3 1
+! abil 3 1
+! atom 3 1
+! align 0 5
+! addit 3 1
+! april 4 5
+! alway 3 2
+! alkane 4 2
+! atomic 4 2
+! answer 3 2
+! allpage 0 1
+! ancient 3 1
+! accomplish 3 1
+! br 3 2
+! bodi 3 1
+! base 4 2 3 2
+! bond 4 2 3 1
+! book 3 1 0 3
+! burn 3 1
+! build 4 1 3 1
+! bring 3 1
+! brows 0 1
+! biolog 3 1
+! border 0 1
+! bartel 1 1
+! benutz 2 1
+! bombard 3 1
+! bookcat 4 1 3 1
+! brought 3 1
+! background 0 3
+! card 0 1
+! cram 3 1
+! clear 0 2
+! coval 3 1
+! close 3 1
+! color 0 3
+! cours 3 3
+! critic 3 1
+! carbon 3 1
+! condit 3 1
+! center 3 2 0 2
+! cellpad 3 1
+! complic 3 1
+! catalog 0 1
+! collect 0 1
+! conveni 3 1
+! chapter 3 1
+! complet 3 1
+! chemist 3 1
+! content 4 1 3 2 0 3
+! context 3 1
+! categori 0 1
+! compound 3 2
+! concentr 3 1
+! contribut 0 1
+! comprehens 3 1
+! d 3 1
+! dot 4 2
+! daili 3 3
+! daunt 3 1
+! devot 3 1
+! ddddff 0 3
+! differ 3 1
+! em 0 6
+! edit 0 1
+! earth 3 1
+! equat 3 1
+! ethane 3 1
+! ecolog 3 1
+! easier 3 1
+! experi 2 1
+! explain 3 1
+! engineer 0 2
+! electron 4 2
+! electroneg 4 2
+! free 3 1
+! food 3 1
+! form 3 1
+! font 0 5
+! field 3 1
+! fulli 3 1
+! float 0 4
+! figur 3 1
+! featur 0 1
+! formula 3 1
+! freshman 4 1
+! factious 3 1
+! foremost 3 1
+! formatnum 0 1
+! good 3 1
+! gain 3 1
+! glanc 3 1
+! gener 4 1 3 1
+! german 2 1
+! geolog 3 1
+! general 3 1
+! generat 3 1
+! help 3 3 0 3
+! http 2 1 1 1
+! hous 3 1
+! human 0 2
+! habit 3 1
+! histori 4 2
+! id 0 3
+! idea 3 1
+! image 4 1 3 1
+! intend 3 1
+! import 3 1
+! industri 3 1
+! jan 4 2
+! key 3 1
+! kind 3 1
+! know 3 2
+! knowledg 3 4
+! let 3 1
+! life 3 3
+! line 3 1
+! list 3 1
+! learn 3 1
+! light 3 1
+! languag 2 1 0 2
+! m 1 1
+! mf 0 1
+! mp 0 1
+! may 3 2
+! make 3 1
+! mean 3 1
+! main 2 1 0 5
+! model 3 1
+! mdash 3 2
+! memor 3 2
+! mechan 3 1
+! margin 0 4
+! materi 3 1
+! michael 3 1
+! medicin 3 1
+! molecul 3 1
+! million 3 1
+! mysteri 3 1
+! mathemat 0 2
+! miscellan 0 2
+! molecular 3 1
+! new 3 2
+! nov 4 1
+! need 3 2
+! nbsp 3 3
+! night 3 1
+! natur 2 1
+! novemb 4 1
+! noinclud 3 2
+! nomenclatur 4 2
+! one 3 1
+! org 2 1
+! open 3 1 0 1
+! order 3 1
+! onlin 3 1
+! orbit 3 1
+! office 0 1
+! overview 0 2
+! pad 0 6
+! pka 3 1
+! png 4 1 3 1
+! page 0 6
+! play 3 1
+! past 3 1
+! pass 3 1
+! place 3 1
+! prior 3 1 2 1
+! print 3 1
+! period 3 1
+! physic 3 1
+! purpos 4 1
+! product 3 1
+! persever 3 1
+! properti 3 1
+! primarili 3 1
+! pagecount 0 1
+! particular 3 1
+! question 3 4 0 1
+! read 0 1
+! role 3 1
+! room 0 1
+! recip 0 1
+! right 0 4
+! reson 4 2
+! replac 3 1
+! review 4 1
+! reaction 3 2
+! s 3 1
+! size 0 5
+! serv 3 1
+! space 0 1
+! solid 3 1
+! studi 4 1 3 1
+! start 3 1
+! solut 3 1
+! scienc 3 1 2 1 0 4
+! social 0 2
+! sister 0 1
+! succeed 3 1
+! special 0 1
+! schewek 2 2
+! struggl 3 1
+! success 3 1
+! section 4 1
+! student 3 3
+! substanc 3 1
+! superior 3 1
+! structur 4 4
+! superstit 3 2
+! tri 3 2
+! tabl 3 2
+! tobi 1 1
+! they 3 1
+! test 3 2
+! text 3 1 0 2
+! topic 4 1
+! trend 3 1
+! typic 3 2
+! thing 3 3
+! treat 3 1
+! think 3 1
+! truth 3 1
+! theori 3 1
+! thorough 3 1
+! textbook 3 1 2 1 0 1
+! transport 3 1
+! tobybartel 1 1
+! use 3 1
+! using 0 1
+! ultim 3 1
+! uniqu 3 1
+! unknown 3 1
+! understand 3 3
+! vis 3 2
+! vari 3 1
+! valu 3 1
+! vsepr 3 1
+! vertic 0 3
+! visual 4 2
+! various 3 1
+! web 3 1
+! wiki 2 3
+! world 3 1
+! welcom 3 1 0 3
+! wikipedia 2 2
+! wikijunior 0 1
+! x 3 1
+! y 3 1

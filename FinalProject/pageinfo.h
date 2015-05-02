@@ -22,7 +22,7 @@ public:
     void set_timestamp(string theTimestamp);
     void set_title(string theTitle);
 
-    void incr_total_words();
+    void incr_totalWords();
 private:
     string contributorNameOrIP;
     string timestamp;

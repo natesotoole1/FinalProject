@@ -21,8 +21,6 @@ int IndexInterface::append_page_info(PageInfo* currInfo)
     return infoForIDs.size()-1;
 }
 
-
-
 int IndexInterface::index_for_letter(char letter)
 {
     // Get the raw ASCII value of the letter.
@@ -53,7 +51,7 @@ double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
 
 void IndexInterface::incr_total_words_on_page(int currID)
 {
-
+    infoForIDs.at(currID).incr_totalWords();
 }
 
 void IndexInterface::load_persistence()
@@ -87,4 +85,11 @@ void IndexInterface::load_persistence()
             add_term_to_ii(index_for_letter(name.front()), new Term(name, pageAprns));
         }
     }
+}
+
+int IndexInterface::get_total_words_in_corpus()
+{
+    int total = 0;
+    for (int i=0; i<infoForIDs.size(); ++i) total += infoForIDs.at(i).get_totalWords();
+    return total;
 }

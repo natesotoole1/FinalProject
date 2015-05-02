@@ -30,7 +30,6 @@ public:
     void incr_total_words_on_page(int currID);
     void load_persistence();
 
-
     virtual void add_term_to_ii(int letterIndex, Term* term);
     virtual void clear();
 
@@ -38,6 +37,8 @@ public:
     virtual void write_persistence();
 
     int index_for_letter(char letter);
+
+    int get_total_words_in_corpus();
 
 protected:
     // Only used for HashTableIndex.
