@@ -30,7 +30,6 @@ void IndexInterface::add_term_to_ii(int letterIndex, string term, pageMap aprns)
 Term *IndexInterface::find_term(string term)
 {
     return letters[index_for_letter(term.front())].find(term);
-
 }
 
 void IndexInterface::clear()

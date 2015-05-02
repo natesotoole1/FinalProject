@@ -2,6 +2,7 @@
 #define INDEXINTERFACE_H
 
 #include <fstream>
+#include <math.h>
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -12,6 +13,7 @@
 using namespace std;
 
 class HashTableIndex;
+class Term;
 
 typedef unordered_map<int, int> pageMap;
 
@@ -22,6 +24,7 @@ public:
     ~IndexInterface();
 
     int append_page_info(PageInfo* currInfo);
+    double calc_tdidf(int pageID, int freq, int spread);
     void incr_total_words_on_page(int currID);
 
     virtual void add_term_to_ii(int letterIndex, string term, pageMap aprns);

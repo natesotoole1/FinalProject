@@ -19,9 +19,51 @@ Term::Term(string theName, pageMap theAprns)
     name = theName;
     for (auto& aprn : theAprns)
     {
-        // First is the docID, second is the frequency.
-        aprns.emplace(make_pair(aprn.first, aprn.second));
+        // First is the pageID, second is the frequency.
+        pageAprns.emplace(make_pair(aprn.first, aprn.second));
     }
+}
+
+void Term::init_spread_and_totalFreq()
+{
+    spread = pageAprns.size();
+    totalFreq = 0; // Just in case this gets called twice.
+    for (auto& aprn : pageAprns)
+    {
+        totalFreq+=aprn.second;
+    }
+
+}
+
+void Term::init_tdidfs(IndexInterface *index)
+{
+    init_spread_and_totalFreq();
+    for (auto& page : pageAprns)
+    {
+        // First = pageID, second = freq.
+        double tdidf = index->calc_tdidf(page.first, page.second, spread);
+        tdidfs.emplace(make_pair(page.first, tdidf));
+    }
+}
+
+int Term::get_spread()
+{
+    return spread;
+}
+
+double Term::get_tdidf_for_page(int pageID)
+{
+    return tdidfs.at(pageID);
+}
+
+int Term::get_totalFreq()
+{
+    return totalFreq;
+}
+
+pageMap Term::get_pageAprns()
+{
+    return pageAprns;
 }
 
 string Term::get_name()
@@ -41,24 +83,8 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
-    /*
-    spread = aprns.size();
-    for (auto& aprn : aprns)
-    {
-        totalFreq+=aprn.second;
-    }
-    */
-/*
-    persistence<<"\""<<name<<"\" appeared "<<totalFreq<<" times across "<<spread<<" documents:";
-    for (auto& aprn : aprns)
-    {
-        persistence<<" "<<aprn.second<<" times at doc id "<<aprn.first<<";";
-    }
-    persistence<<endl;
-*/
-
     persistence<<"! "<<name;
-    for (auto& aprn : aprns)
+    for (auto& aprn : pageAprns)
     {
         persistence<<" "<<aprn.second<<" "<<aprn.first;
     }

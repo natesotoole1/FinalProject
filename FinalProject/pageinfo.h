@@ -15,6 +15,7 @@ public:
     string get_contributor();
     string get_timestamp();
     string get_title();
+    int get_totalWords();
 
     // Setters.
     void set_contributor(string theInfo);

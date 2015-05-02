@@ -31,6 +31,19 @@ int IndexInterface::index_for_letter(char letter)
     return ascii;
 }
 
+double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
+{
+    // Calculate TF value.
+    int totalWords = infoForIDs.at(pageID).get_totalWords();
+    double tf = (double)freq/totalWords;
+
+    // Calculate IDF value.
+    int totalDocsInCorpus = infoForIDs.size();
+    double idf = log((double)totalDocsInCorpus/spread);
+
+    return tf*idf;
+}
+
 void IndexInterface::incr_total_words_on_page(int currID)
 {
 

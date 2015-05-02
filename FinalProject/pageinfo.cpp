@@ -25,6 +25,11 @@ string PageInfo::get_title()
     return title;
 }
 
+int PageInfo::get_totalWords()
+{
+
+}
+
 void PageInfo::set_contributor(string theInfo)
 {
     contributorNameOrIP = theInfo;
