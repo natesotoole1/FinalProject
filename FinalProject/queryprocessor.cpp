@@ -4,6 +4,7 @@
  * Nate O'Toole
  * Kiko Whiteley
  **/
+
 #include "queryprocessor.h"
 
 QueryProcessor::QueryProcessor()
@@ -47,7 +48,10 @@ void QueryProcessor::display_best_five_results()
     if (input.compare("no") == 0) return;
     else
     {
-        if (numResults == 1) index->display_page_content(sortedResults.at(0).first);
+        if (numResults == 1){
+            index->display_page_content(sortedResults.at(0).first);
+            return;
+        }
         cout<<"Which document?  Enter a rank #\n";
         cin>>input;
         int numInput = stoi(input);

@@ -7,17 +7,9 @@
 
 #include "interface.h"
 
-//Interface::Interface()
-//{
-
-//}
-
-Interface::Interface(IndexHandler& theHandler) : handler(theHandler)
+Interface::Interface()
+    : built(false), endProgram(false), mode(0), wikiPath("WikiBooks.xml")
 {
-    //handler = theHandler;
-    built = false;
-    mode = 0;
-    endProgram = false;
     cout << "\nWelcome to KITESearch!\n" << endl;
     choose_structure();
 }
@@ -28,7 +20,7 @@ void Interface::choose_structure(){
     cout<< "HashTable or AVLTree" <<endl;
     cout<< "Choice: ";
     cin >> ds;
-    toLowerCase(ds);
+    ds = toLowerCase(ds);
     cout << "Your choice was " << ds << endl;
 
     while (!built){
@@ -81,9 +73,7 @@ void Interface::set_mode(){
     }
 }
 void Interface::get_command(){
-    string cmd = "";
-    string asr = "";
-    
+
     cout<< "Enter command: ";
     cin >> cmd;
     cmd = toLowerCase(cmd);
@@ -91,7 +81,12 @@ void Interface::get_command(){
     cout << "correct? (yes or no)" << endl;
     cin >> asr;
     asr = toLowerCase(asr);
-    command(cmd,asr);
+    if (asr == "no") re_command();
+    else if (asr == "yes") command(cmd,asr);
+    else {
+        cout<<"Invalid answer\n";
+        get_command();
+    }
 }
 
 void Interface::command(string cmd, string asr){
@@ -110,11 +105,57 @@ void Interface::command(string cmd, string asr){
                 }else if(cmd == "setmode"){
                     set_mode();
                 }else if (cmd == "runavl"){
-                    run_AVL();
-                    re_command();
+                    if (dsBuilt == "AVL Tree")
+                    {
+                        cout << "AVL is already built.  Would you like to add a file to\nthis index? (yes or no) \n";
+                        cin >> asr;
+                        asr = toLowerCase(asr);
+                        while (!((asr == "yes") || (asr == "no")))
+                        {
+                            cout<<"Invalid command.  Reenter \"yes\" or \"no\"\n";
+                            cin >> asr;
+                            asr = toLowerCase(asr);
+                        }
+                        if (asr == "yes")
+                        {
+                            cout<<"Please provide the file path\n";
+                            cin >> asr;
+                            add_file_to_index(asr);
+                            re_command();
+                        }
+                    }
+                    else if (dsBuilt == "Hash Table")
+                    {
+                        cout<< "switch index from Hash Table to AVL Tree" <<endl;
+                        clear_index();
+                        run_AVL();
+                    }
                 }else if(cmd == "runhash"){
-                    run_hash();
-                    re_command();
+                    if (dsBuilt == "Hash Table")
+                    {
+                        cout << "Hash Table is already built.  Would you like to add a file to\nthis index? (yes or no) \n";
+                        cin >> asr;
+                        asr = toLowerCase(asr);
+                        while (!((asr == "yes") || (asr == "no")))
+                        {
+                            cout<<"Invalid command.  Reenter \"yes\" or \"no\"\n";
+                            cin >> asr;
+                            asr = toLowerCase(asr);
+                        }
+                        if (asr == "yes")
+                        {
+                            cout<<"Please provide the file path\n";
+                            cin >> asr;
+                            add_file_to_index(asr);
+                            re_command();
+                        }
+                    }
+                    else if (dsBuilt == "AVL Tree")
+                    {
+                        cout<< "switch index from Hash Table to AVL Tree" <<endl;
+                        clear_index();
+                        run_hash();
+                    }
                 }else if(cmd == "addfile"){
                     permissionDenied(cmd);
                 }else if (cmd == "clearindex"){
@@ -159,7 +200,7 @@ void Interface::command(string cmd, string asr){
             }
         }else if (asr == "no"){
             cout << "returning" <<endl;
-            get_command();
+            re_command();
         }else {
             cout<< "I did not understand '"<< asr << "'"<< endl;
             cout << "Your command was " << cmd << endl;
@@ -215,7 +256,8 @@ void Interface::run_AVL(){
     }
     cout<< "Building AVL Tree" << endl;
     cout<< "Building..." << endl;
-    handler = new IndexHandler(false);
+    handler = IndexHandler(false);
+    handler.read_file(wikiPath);
     cout<< "AVL Tree Built" << endl;
     built = true;
     dsBuilt = "AVL Tree";
@@ -227,14 +269,14 @@ void Interface::run_hash(){
     }
     cout<< "Building Hash Tree" << endl;
     cout<< "Building..." << endl;
-    handler = new IndexHandler(true);
+    handler = IndexHandler(true);
+    handler.read_file(wikiPath);
     cout<< "Hash Table Built" << endl;
     built = true;
     dsBuilt = "Hash Table";
 }
 void Interface::add_file_to_index(string path){
-    
-    
+    handler.read_file(path);
 }
 void Interface::permissionDenied(string w){
     string asr = "";
@@ -318,6 +360,7 @@ void Interface::clear_index(){
         built = false;
     }
     cout << "the index is empty" << endl;
+    dsBuilt = "";
 
 }
 
@@ -325,6 +368,7 @@ void Interface::clear_index(){
 void Interface::quit(){
     cout<<"Thank you very much for using KITESearch!" << endl;
     endProgram = true;
+    exit(1);
 }
 
 string Interface::toLowerCase(string w){

@@ -14,7 +14,7 @@ using namespace std;
 class IndexHandler
 {
 public:
-    //IndexHandler();
+    IndexHandler();
     ~IndexHandler();
     IndexHandler(bool asHashTable);
 

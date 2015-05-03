@@ -8,6 +8,7 @@
 #include <string>
 #include <sstream>
 #include <stdexcept>
+#include <stdlib.h>
 
 #include "indexhandler.h"
 #include "queryprocessor.h"
@@ -18,8 +19,7 @@ class Interface
 {
 public:
 
-//    Interface();
-    Interface(IndexHandler& theHandler);
+    Interface();
 
     void command(string, string);
     void search();
@@ -37,17 +37,17 @@ public:
     void re_command();
     void choose_structure();
 
+    string get_filePath();
 
 private:
-
+    const string wikiPath;
     int mode;
     bool built;
     QueryProcessor currQuery;
     bool endSearch;
     bool endProgram;
-    string dsBuilt;
-    string modeStr;
-    IndexHandler& handler;
+    string dsBuilt, modeStr, cmd, asr;
+    IndexHandler handler;
 };
 
 

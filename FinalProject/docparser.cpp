@@ -188,6 +188,7 @@ void DocParser::push_allTerms_to_ii()
 
         index.add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second));
     }
+    index.write_persistence_file();
 }
 
 void DocParser::read_file(string filePath)
@@ -213,7 +214,6 @@ void DocParser::read_file(string filePath)
         index.read_persistence_file(allTerms);
     }
     else init_file_page_infos(currNode, true);
-
     push_allTerms_to_ii();
 }
 

@@ -160,9 +160,10 @@ void AVLTreeIndex::createPersistence(AVL_Node*& ptr, int level, ofstream &persis
 {
     if (ptr!=NULL)
     {
-        createPersistence(ptr->right, level + 1, persistence);
-        ptr->data->write_term(persistence);
         createPersistence(ptr->left, level + 1, persistence);
+        ptr->data->write_term(persistence);
+        createPersistence(ptr->right, level + 1, persistence);
+
     }
 }
 

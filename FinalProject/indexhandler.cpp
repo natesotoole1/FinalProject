@@ -6,10 +6,10 @@
  **/
 #include "indexhandler.h"
 
-/*IndexHandler::IndexHandler() : index(*(new IndexInterface))
+IndexHandler::IndexHandler()
 {
 
-}*/
+}
 
 IndexHandler::~IndexHandler()
 {
@@ -34,4 +34,5 @@ void IndexHandler::run_queries(string query)
 }
 void IndexHandler::clear_index(){
     index->clear();
+    delete index;
 }
