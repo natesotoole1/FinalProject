@@ -10,7 +10,6 @@
 #include <sstream>
 
 using namespace std;
-
 typedef unordered_map<int, int> pageMap;
 
 class AVLTreeInterface : public IndexInterface
@@ -18,9 +17,7 @@ class AVLTreeInterface : public IndexInterface
 public:
     AVLTreeInterface();
     ~AVLTreeInterface();
-
-    void createLetters();
-
+    
     void add_term_to_ii(int letterIndex, Term* term);
     void clear();
     Term* find_term(string term);
