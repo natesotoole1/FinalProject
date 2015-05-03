@@ -1,3 +1,9 @@
+/* Search Engine Project
+ * CSE 2341: Data Stuctures
+ * 05/03/2015
+ * Nate O'Toole
+ * Kiko Whiteley
+ **/
 #include "interface.h"
 
 Interface::Interface()

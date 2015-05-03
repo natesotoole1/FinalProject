@@ -1,3 +1,13 @@
+/* Search Engine Project
+ * CSE 2341: Data Stuctures
+ * 05/03/2015
+ * Nate O'Toole
+ **/
+
+/* contributor for Avl Tree
+* http://www.sanfoundry.com/cpp-program-implement-avl-trees/
+*/
+
 #include "AVLTreeIndex.h"
 
 AVLTreeIndex::AVLTreeIndex(){

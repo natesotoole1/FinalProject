@@ -1,3 +1,9 @@
+/* Search Engine Project
+ * CSE 2341: Data Stuctures
+ * 05/03/2015
+ * Nate O'Toole
+ * Kiko Whiteley
+ **/
 #include "docparser.h"
 
 DocParser::DocParser()
@@ -175,7 +181,7 @@ void DocParser::push_allTerms_to_ii()
         // Calculate (increment) totalWords for each PageInfo object.
 
 
-        index->add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second);
+        index->add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second));
     }
 }
 

@@ -18,7 +18,7 @@ public:
     ~IndexHandler();
     IndexHandler(bool asHashTable);
 
-    void index_document(string filePath);
+
 
     // Inits all PageInfo objects from the current file.  Since the persistence
     // file has already been written, if the filePath is "WikiBooks.xml", it will

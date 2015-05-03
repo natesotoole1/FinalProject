@@ -1,3 +1,9 @@
+/* Search Engine Project
+ * CSE 2341: Data Stuctures
+ * 05/03/2015
+ * Nate O'Toole
+ * Kiko Whiteley
+ **/
 #include "indexhandler.h"
 
 IndexHandler::IndexHandler()
@@ -12,13 +18,12 @@ IndexHandler::~IndexHandler()
 
 IndexHandler::IndexHandler(bool asHashTable)
 {
-    if (asHashTable) index = new HashTableInterface;
-    else index = new AVLTreeInterface;
-}
-
-void IndexHandler::index_document(string filePath)
-{
-    parser->index_document(index, filePath);
+    if (asHashTable) {
+        index = new HashTableInterface;
+    }
+    else{
+        index = new AVLTreeInterface;
+    }
 }
 
 void IndexHandler::read_file(string filePath)

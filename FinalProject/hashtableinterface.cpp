@@ -1,3 +1,8 @@
+/* Search Engine Project
+ * CSE 2341: Data Stuctures
+ * 05/03/2015
+ * Kiko Whiteley
+ **/
 #include "hashtableinterface.h"
 
 HashTableInterface::HashTableInterface()

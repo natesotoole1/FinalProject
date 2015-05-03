@@ -9,7 +9,6 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-
 #include "docparser.h"
 #include "pageinfo.h"
 #include "term.h"

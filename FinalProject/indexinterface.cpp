@@ -1,3 +1,9 @@
+/* Search Engine Project
+ * CSE 2341: Data Stuctures
+ * 05/03/2015
+ * Nate O'Toole
+ * Kiko Whiteley
+ **/
 #include "indexinterface.h"
 
 IndexInterface::IndexInterface()
@@ -133,6 +139,9 @@ void IndexInterface::write_persistence_file()
     }
     */
     persistence.close();
+}
+int IndexInterface::get_totalPages(){
+    return totalPages;
 }
 
 int IndexInterface::get_totalWordsInCorpus()
