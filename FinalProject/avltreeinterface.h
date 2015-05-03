@@ -22,6 +22,7 @@ public:
     void clear();
     Term* find_term(string term);
     void write_persistence_terms(ofstream& persistence);
+
 private:
     AVLTreeIndex* avlTrees;
     const int numLetters = 26;

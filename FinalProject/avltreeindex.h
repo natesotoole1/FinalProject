@@ -33,30 +33,28 @@ struct AVL_Node
 class AVLTreeIndex
 {
 public:
+    AVLTreeIndex();
+    AVLTreeIndex(string, int);
     void insert(Term*);
-    
     AVL_Node* balance(AVL_Node*&);
     int height(AVL_Node *&);
     int diff(AVL_Node *&);
+    int max(int, int);
     AVL_Node* rotateRightChild(AVL_Node*&);
     AVL_Node* rotateLeftChild(AVL_Node*&);
     AVL_Node* doubleLeftChild(AVL_Node*&);
-    AVL_Node* doubleRightChild(AVL_Node*&);
-    int max(int, int);
-    
+    AVL_Node* doubleRightChild(AVL_Node*&);   
+
     Term* find(string);
-    void display(int, ofstream&);
-    
-    AVLTreeIndex();
-    AVLTreeIndex(string, int);
-    bool Found(string x);
-    void clearTree(AVL_Node*);
+    void createPersistence(int, ofstream&);
+    void clearTree();
+
 private:
     AVL_Node* root;
-    void display(AVL_Node*& , int, ofstream&);
     void insert(AVL_Node*& ,Term*);
-    Term* find(AVL_Node *, string);
+    void createPersistence(AVL_Node*& , int, ofstream&);
     void continue_search(AVL_Node*& curr, string word);
+    void clearTree(AVL_Node*);
 };
 
 

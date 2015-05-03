@@ -5,38 +5,42 @@
  **/
 #include "avltreeinterface.h"
 
+//creates 26 avl trees
 AVLTreeInterface::AVLTreeInterface()
 {
     avlTrees = new AVLTreeIndex[numLetters];
-    
-    //load_persistence();
+
 }
 
 AVLTreeInterface::~AVLTreeInterface(){
-    //clear();
+    clear();
 }
 
-
+//adds terms to each the avl tree of the letter index
 void AVLTreeInterface::add_term_to_ii(int letterIndex, Term *term)
 {
     avlTrees[letterIndex].insert(term);
 }
 
+//clears each avl tree
 void AVLTreeInterface::clear()
 {
-    
+    for(int i = 0; i < numLetters; i++){
+        avlTrees[i].clearTree();
+    }
 }
-
+//searches for terms
 Term *AVLTreeInterface::find_term(string w)
 {
     int letterIndex = index_for_letter(w.front());
     return avlTrees[letterIndex].find(w);
 }
+//creates persistence
 void AVLTreeInterface::write_persistence_terms(ofstream &persistence)
 {
     for (int i=0; i<26; ++i)
     {
-        avlTrees[i].display(0, persistence);
+        avlTrees[i].createPersistence(0, persistence);
     }
 }
 
