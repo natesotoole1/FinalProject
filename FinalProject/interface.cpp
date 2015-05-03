@@ -4,6 +4,7 @@
  * Nate O'Toole
  * Kiko Whiteley
  **/
+
 #include "interface.h"
 
 Interface::Interface()
@@ -178,8 +179,8 @@ void Interface::search(){
     cout << "Please enter your query here: " << endl;
     cin >> input;
     getline(cin, sQuery);
-    input +=  sQuery ;
-    cout << input << endl;
+    sQuery = input +=  sQuery ;
+    handler->run_queries(sQuery);
     
     re_command();
 }

@@ -1,17 +1,11 @@
-/* Search Engine Project
- * CSE 2341: Data Stuctures
- * 05/03/2015
- * Nate O'Toole
- * Kiko Whiteley
- **/
 #include "docparser.h"
 
-DocParser::DocParser()
+DocParser::DocParser() : index(*(new IndexInterface))
 {
-
+    cout<<"this\n";
 }
 
-DocParser::DocParser(IndexInterface* theIndex)
+DocParser::DocParser(IndexInterface& theIndex) : index(theIndex)
 {
     // Add all stop words to stopWords.
 
@@ -27,8 +21,6 @@ DocParser::DocParser(IndexInterface* theIndex)
         word = clean_term(word);
         stopWords.emplace(make_pair(word, word));
     }
-
-    index = theIndex;
 }
 
 DocParser::~DocParser()
@@ -95,7 +87,7 @@ void DocParser::read_page(xml_node<>* currNode, bool readText)
 
     // Having found all info for this page, push back a new
     // PageInfo object to the index's infoForIDs.
-    index->append_page_info(new PageInfo(
+    index.append_page_info(new PageInfo(
                                 currContent, currContributorNameOrIP, currTimestamp, currTitle));
 
     // If text should be read (i.e. it's a new file),
@@ -105,7 +97,7 @@ void DocParser::read_page(xml_node<>* currNode, bool readText)
 
 void DocParser::read_text(xml_node<>* currNode)
 {
-    int currID = index->get_totalPages();
+    int currID = index.get_totalPages()-1;
     currContent = currNode->value();
 
     // Replace all non-letters with whitespace char.
@@ -146,6 +138,15 @@ void DocParser::read_text(xml_node<>* currNode)
 
         // This point will only be reached if
         // the term is already in allTerms.
+        try
+        {
+            allTerms.at(currWord).at(currID);
+        }
+        catch (const out_of_range& notInPageMap)
+        {
+            allTerms.at(currWord).emplace(make_pair(currID, 1));
+            continue;
+        }
         allTerms.at(currWord).at(currID)++;
     }
 }
@@ -179,9 +180,13 @@ void DocParser::push_allTerms_to_ii()
         */
 
         // Calculate (increment) totalWords for each PageInfo object.
+        for (auto & page : term.second)
+        {
+            index.incr_total_words_on_page(page.first, page.second);
+        }
 
 
-        index->add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second));
+        index.add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second));
     }
 }
 
@@ -202,9 +207,14 @@ void DocParser::read_file(string filePath)
     // Go to the first 'page'.
     currNode = currNode->next_sibling();
 
-    if (filePath.compare("Wikibooks.xml") == 0) init_file_page_infos(currNode, false);
-
+    if (filePath.compare("WikiBooks.xml") == 0)
+    {
+        init_file_page_infos(currNode, false);
+        index.read_persistence_file(allTerms);
+    }
     else init_file_page_infos(currNode, true);
+
+    push_allTerms_to_ii();
 }
 
 bool DocParser::is_stop_word(string term)

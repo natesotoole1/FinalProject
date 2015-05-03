@@ -16,7 +16,12 @@ QueryProcessor::~QueryProcessor()
 
 }
 
-void QueryProcessor::display_best_five_results(IndexInterface* index)
+QueryProcessor::QueryProcessor(IndexInterface*& theIndex)
+{
+    index = theIndex;
+}
+
+void QueryProcessor::display_best_five_results()
 {
     int max;
     int numResults = sortedResults.size();
@@ -66,7 +71,7 @@ void QueryProcessor::init_relev_map(Term* term)
     }
 }
 
-void QueryProcessor::intersection_incr_relev_map(IndexInterface* index, Term* term)
+void QueryProcessor::intersection_incr_relev_map(Term* term)
 {
     // Make a new relevancy map to store the insersection of
     // pageIDs and TD/IDFs with incremented TD/IDF values from the
@@ -118,7 +123,7 @@ void QueryProcessor::union_incr_relev_map(Term* term)
     }
 }
 
-void QueryProcessor::answer_query(IndexInterface* index, istringstream& query, bool intersection)
+void QueryProcessor::answer_query(istringstream& query, bool intersection)
 {
     string currTerm;
 
@@ -177,16 +182,16 @@ void QueryProcessor::answer_query(IndexInterface* index, istringstream& query, b
             else
             {
                 foundTerm->init_tdidfs(index);
-                if (intersection) intersection_incr_relev_map(index, foundTerm);
+                if (intersection) intersection_incr_relev_map(foundTerm);
                 else union_incr_relev_map(foundTerm);
             }
         }
     }
     sort_results();
-    display_best_five_results(index);
+    display_best_five_results();
 }
 
-void QueryProcessor::initiate_query(IndexInterface* index, string query)
+void QueryProcessor::initiate_query(string query)
 {
     // Used later to remake the stream with the first word added back in.
     string fullQuery = query;
@@ -204,14 +209,14 @@ void QueryProcessor::initiate_query(IndexInterface* index, string query)
     string mode;
     stream >> mode;
 
-    if (mode.compare("and") == 0) answer_query(index, stream, true);
-    else if (mode.compare("or") == 0) answer_query(index, stream, false);
+    if (mode.compare("and") == 0) answer_query(stream, true);
+    else if (mode.compare("or") == 0) answer_query(stream, false);
     else
         // Regular query.  Treat is as an AND query because
         // the section where the instersection variable matters will never be reached.
     {
         stream = istringstream(fullQuery);
-        answer_query(index, stream, true);
+        answer_query(stream, true);
     }
 }
 

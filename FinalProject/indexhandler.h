@@ -14,7 +14,7 @@ using namespace std;
 class IndexHandler
 {
 public:
-    IndexHandler();
+    //IndexHandler();
     ~IndexHandler();
     IndexHandler(bool asHashTable);
 
@@ -25,10 +25,10 @@ public:
     // instead load data for each term from the persistence file.
     void read_file(string filePath);
 
-    void run_queries();
+    void run_queries(string query);
 
 private:
-    IndexInterface* index;
+    IndexInterface index;
 };
 
 #endif // INDEXHANDLER_H

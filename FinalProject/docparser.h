@@ -34,7 +34,7 @@ class DocParser // : public IndexInterface
 public:
     DocParser();
     ~DocParser();
-    DocParser(IndexInterface* theIndex);
+    DocParser(IndexInterface& theIndex);
 
     string clean_term(string term);
 
@@ -57,7 +57,7 @@ public:
 private:
     termMap allTerms;
 
-    IndexInterface* index;
+    IndexInterface& index;
 
     stopWordMap stopWords;
 

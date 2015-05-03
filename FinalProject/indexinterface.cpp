@@ -11,7 +11,7 @@ IndexInterface::IndexInterface()
     totalPages = 0;
     totalWordsInCorpus = 0;
     infoForIDs = vector<PageInfo*>();
-    parser = new DocParser(this);
+    parser = new DocParser;
 }
 
 IndexInterface::~IndexInterface()
@@ -110,17 +110,17 @@ void IndexInterface::read_persistence_file(termMap& allTerms)
 
             // For each subsequent pageID-frequency pair, add that to pageAprns
             // and increment that pageID's totalWords.
-            while (word1.compare("!") != 0)
+            while ((word1.compare("!") != 0) && (!ifs.eof()))
             {
                 int num1 = stoi(word1);
                 int num2 = stoi(word2);
 
                 pageAprns.emplace(make_pair(num1, num2));
-                infoForIDs.at(num1)->incr_totalWords(num2);
                 ifs >> word1;
                 ifs >> word2;
             }
-            allTerms.emplace(make_pair(word2, pageAprns));
+
+            allTerms.emplace(make_pair(name, pageAprns));
         }
     }
 }

@@ -25,17 +25,18 @@ class QueryProcessor : public DocParser
 public:
     QueryProcessor();
     ~QueryProcessor();
+    QueryProcessor(IndexInterface*& theIndex);
 
-    void answer_query(IndexInterface* index, istringstream& query, bool intersection);
+    void answer_query(istringstream& query, bool intersection);
 
-    void display_best_five_results(IndexInterface* index);
+    void display_best_five_results();
 
 
 
-    void initiate_query(IndexInterface* index, string query);
+    void initiate_query(string query);
 
     void init_relev_map(Term* term);
-    void intersection_incr_relev_map(IndexInterface* index, Term* term);
+    void intersection_incr_relev_map(Term* term);
     void union_incr_relev_map(Term* term);
 
     void sort_results();
@@ -45,6 +46,8 @@ public:
 private:
     relevancyMap results;
     vector<resultPair> sortedResults;
+
+    IndexInterface* index;
 };
 
 #endif // QUERYPROCESSOR_H

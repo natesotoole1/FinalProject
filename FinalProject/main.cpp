@@ -25,8 +25,6 @@ int main()
     handler->read_file("WikiBooks.xml");
 
 
-
-
     Interface ui = Interface(handler);
 
     // Init page infos for WikiBooks.xml.

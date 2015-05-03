@@ -6,10 +6,10 @@
  **/
 #include "indexhandler.h"
 
-IndexHandler::IndexHandler()
+/*IndexHandler::IndexHandler() : index(*(new IndexInterface))
 {
-    index = new IndexInterface;
-}
+
+}*/
 
 IndexHandler::~IndexHandler()
 {
@@ -18,12 +18,8 @@ IndexHandler::~IndexHandler()
 
 IndexHandler::IndexHandler(bool asHashTable)
 {
-    if (asHashTable) {
-        index = new HashTableInterface;
-    }
-    else{
-        index = new AVLTreeInterface;
-    }
+    if (asHashTable) index = HashTableInterface();
+    else index = AVLTreeInterface();
 }
 
 void IndexHandler::read_file(string filePath)
@@ -31,19 +27,8 @@ void IndexHandler::read_file(string filePath)
     index->read_file(filePath);
 }
 
-
-void IndexHandler::run_queries()
+void IndexHandler::run_queries(string query)
 {
     QueryProcessor processor = QueryProcessor();
-
-    cout << "Enter your query:\n";
-    string input;
-    cin >> input;
-
-    string query;
-    getline(cin, query);
-
-    query = input += query;
-
-    processor.initiate_query(index, query);
+    processor.initiate_query(query);
 }
