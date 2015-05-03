@@ -25,10 +25,16 @@ void IndexInterface::display_result(int rank, int pageID, double tdidf)
 {
     PageInfo resultInfo = infoForIDs.at(pageID);
     cout<<"Result rank #"<<rank<<": \n";
-    cout<<"\tTDF/IDF value of "<<tdidf<<endl;
+    cout<<"\tTotal TDF/IDF value: "<<tdidf<<endl;
     cout<<"\tPage name: "<<resultInfo.get_title()<<endl;
     cout<<"\tTimestamp: "<<resultInfo.get_timestamp()<<endl;
     cout<<"\tContributor name or IP Address: "<<resultInfo.get_contributor()<<endl;
+}
+
+void IndexInterface::display_page_content(int pageID)
+{
+    cout<<"Here is the text\n";
+    cout<<infoForIDs.at(pageID).get_content()<<endl;
 }
 
 

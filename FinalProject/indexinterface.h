@@ -1,6 +1,7 @@
 #ifndef INDEXINTERFACE_H
 #define INDEXINTERFACE_H
 
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <math.h>
@@ -29,6 +30,7 @@ public:
     int append_page_info(PageInfo* currInfo);
     double calc_tdidf(int pageID, int freq, int spread);
     void display_result(int rank, int pageID, double tdidf);
+    void display_page_content(int pageID);
     void incr_total_words_on_page(int currID);
     void load_persistence();
 

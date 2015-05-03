@@ -3,11 +3,17 @@
 PageInfo::PageInfo()
 {
     totalWords = 0;
+    content = "";
 }
 
 PageInfo::~PageInfo()
 {
 
+}
+
+string PageInfo::get_content()
+{
+    return content;
 }
 
 string PageInfo::get_contributor()
@@ -28,6 +34,11 @@ string PageInfo::get_title()
 int PageInfo::get_totalWords()
 {
     return totalWords;
+}
+
+void PageInfo::set_content (string theContent)
+{
+    content = theContent;
 }
 
 void PageInfo::set_contributor(string theInfo)

@@ -191,6 +191,9 @@ void DocParser::index_page(xml_node<>* currNode, IndexInterface* index)
         currName = currNode->name();
     }
 
+    string text = currNode->value();
+    currInfo->set_content(text);
+
     // Add the PageInfo to 'infoForID' vector.
     int currID = index->append_page_info(currInfo);
 

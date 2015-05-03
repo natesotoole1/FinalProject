@@ -30,12 +30,13 @@ void QueryProcessor::display_best_five_results(IndexInterface* index)
           && (input.compare("no") != 0))
     {
         cout<<"Invalid command\n";
-        cout<<"Would you like to read the text of one of the results?\n";
+        cout<<"Would you like to read the text of (one of) the result(s)?\n";
         cin >> input;
     }
     if (input.compare("no") == 0) return;
     else
-    {
+    {)
+        if (numResults == 1) index->display_page_content();
         cout<<"Which document?  Enter a rank #\n";
         cin>>input;
         int numInput = stoi(input);
