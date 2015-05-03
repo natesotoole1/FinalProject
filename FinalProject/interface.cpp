@@ -5,14 +5,13 @@ Interface::Interface()
 
 }
 
-Interface::Interface(IndexHandler* theHandler)
+Interface::Interface(IndexHandler*& theHandler)
 {
     handler = theHandler;
     built = false;
     mode = 0;
     endSearch = false;
-    cout<< "Starting wikiSearch" << endl;
-    cout << "Welcome to KiteSearch!" << endl;
+    cout << "Welcome to KITESearch!\n" << endl;
     setMode();
 }
 

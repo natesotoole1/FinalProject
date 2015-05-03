@@ -1,17 +1,25 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
+#include <chrono>
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <queryprocessor.h>
+#include <sstream>
+#include <stdexcept>
+
 #include "indexhandler.h"
+#include "queryprocessor.h"
+
+using namespace std;
 
 class Interface
 {
 public:
+
     Interface();
-    Interface(IndexHandler* theHandler);
+    Interface(IndexHandler*& theHandler);
+
     void command(string, string);
     void search();
     void runAVL();
@@ -26,14 +34,19 @@ public:
     void permissionDenied(string);
     void getCommand();
     void reCommand();
-    
+
 private:
+
     int mode;
     bool built;
     QueryProcessor currQuery;
     bool endSearch;
     string modeStr;
-    IndexHandler handler;
+    IndexHandler* handler;
 };
+
+
+
+
 
 #endif // INTERFACE_H
