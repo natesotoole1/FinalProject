@@ -19,12 +19,13 @@ public:
     ~IndexHandler();
     IndexHandler(bool asHashTable);
 
-    void index_corpus(bool);
+    void index_document(string filePath);
 
     void run_queries();
 
 private:
     IndexInterface* index;
+    DocParser* parser;
 };
 
 #endif // INDEXHANDLER_H

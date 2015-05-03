@@ -4,13 +4,9 @@
 #include <string>
 
 #include "indexhandler.h"
-#include "queryprocessor.h"
+#include "interface.h"
 
 using namespace std;
-
-typedef unordered_map<int, int> pageMap;
-
-typedef unordered_map<string, pageMap> termMap;
 
 int main()
 {
@@ -19,24 +15,25 @@ int main()
     // Get the number of clicks already used by the program.
     start = clock();
 
-    // Index the corpus into a HashTableIndex.
-    IndexHandler* handler = new IndexHandler(false);
-    handler->index_corpus(true);
+    // Before activating the interface, read the WikiBooks file into a hash
+    // table to write the persistence file.
+    IndexHandler* handler = new IndexHandler(true);
+    handler->index_document("WikiBooks.xml");
+
+    Interface* ui = new Interface(handler);
 
     handler->run_queries();
-    /*
-    cout<<"The inverted index has been loaded into a hash table by default.\n"<<
-          "To load it into an AVL tree, press 1.  Otherwise, press any key.\n";
-    char choice;
-    cin>>choice;
-    if (choice == '1')
-    {
-        // load into AVL
-    }
 
-    QueryProcessor* processor = new QueryProcessor;
-    //Results* rankedResults;
-*/
+
+
+
+
+
+
+
+
+
+
     // Get the number of clicks used up to now.
     end = clock();
 

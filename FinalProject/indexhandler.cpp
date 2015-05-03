@@ -12,21 +12,14 @@ IndexHandler::~IndexHandler()
 
 IndexHandler::IndexHandler(bool asHashTable)
 {
+    parser = new DocParser;
     if (asHashTable) index = new HashTableInterface;
-
     else index = new AVLTreeInterface;
 }
 
-void IndexHandler::index_corpus(bool t)
+void IndexHandler::index_document(string filePath)
 {
-    DocParser* parser = new DocParser;
-    if (t == true){
-        string filePath = "WikiBooks.xml";
-        parser->index_document(index, filePath);
-    }else{
-        string filePath = "";
-        parser->index_document(index, filePath);
-    }
+    parser->index_document(index, filePath);
 }
 
 

@@ -14,7 +14,7 @@ HashTableInterface::~HashTableInterface()
 void IndexInterface::write_persistence()
 {
     ofstream persistence;
-    persistence.open("Persistence.txt");
+    persistence.open("Persistence.txt", ofstream::out | ofstream::trunc);
     for (int i=0; i<26; ++i)
     {
         letters[i].write_hti(persistence);

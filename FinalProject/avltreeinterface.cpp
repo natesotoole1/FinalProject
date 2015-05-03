@@ -30,7 +30,7 @@ Term *AVLTreeInterface::find_term(string w)
 void AVLTreeInterface::write_persistence()
 {
     ofstream persistence;
-    persistence.open("Persistence.txt");
+    persistence.open("Persistence.txt", ofstream::out | ofstream::trunc);
     for (int i=0; i<26; ++i)
     {
         avlTrees[i].display(0, persistence);

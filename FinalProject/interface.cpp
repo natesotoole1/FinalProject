@@ -2,12 +2,18 @@
 
 Interface::Interface()
 {
-    cout<< "Starting wikiSearch" << endl;
-    cout << "Welcome to KiteSearch!" << endl;
-    setMode();
+
+}
+
+Interface::Interface(IndexHandler* theHandler)
+{
+    handler = theHandler;
     built = false;
     mode = 0;
     endSearch = false;
+    cout<< "Starting wikiSearch" << endl;
+    cout << "Welcome to KiteSearch!" << endl;
+    setMode();
 }
 
 void Interface::setMode(){

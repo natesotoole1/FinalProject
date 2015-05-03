@@ -1,5 +1,6 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
+
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -10,6 +11,7 @@ class Interface
 {
 public:
     Interface();
+    Interface(IndexHandler* theHandler);
     void command(string, string);
     void search();
     void runAVL();
@@ -31,7 +33,7 @@ private:
     QueryProcessor currQuery;
     bool endSearch;
     string modeStr;
-    IndexHandler index;
+    IndexHandler handler;
 };
 
 #endif // INTERFACE_H

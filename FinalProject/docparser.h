@@ -17,7 +17,6 @@
 #include <string>
 #include <unordered_map>
 
-//#include "avltreeindex.h"
 #include "indexinterface.h"
 #include "pageinfo.h"
 #include "porter2_stemmer.h"
