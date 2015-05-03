@@ -19,7 +19,7 @@ public:
     ~IndexHandler();
     IndexHandler(bool asHashTable);
 
-    void index_corpus();
+    void index_corpus(bool);
 
     void run_queries();
 

@@ -110,24 +110,34 @@ AVL_Node* AVLTreeIndex::doubleRightChild(AVL_Node *&parent){
     parent->right = rotateLeftChild (parent->right);
     return rotateRightChild (parent);
 }
-Term* AVLTreeIndex::find (string w){
-    
+Term* AVLTreeIndex::find (string word){
+    AVL_Node* foundNode = root;
+    string word2 = root->data->get_name();
+    if ((word < word2) && (root->left)){
+        foundNode = foundNode->left;
+        continue_search(foundNode, word);
+    }else if((word > word2) && (root->right)){
+        foundNode = foundNode->right;
+        continue_search(foundNode, word);
+    }else if(word == word2){
+        return foundNode->data;
+    }
+    if (foundNode) return foundNode->data;
+    return NULL;
 }
 
-Term* AVLTreeIndex::find (AVL_Node*& ptr, string word){
-    AVL_Node* temp = ptr;
-    string word2 = root->data->get_name();
-    //Term* noWord = new Term("No Word", -1, -1);
-    if (word.substr(1,1).compare(word2.substr(1,1)) < 0){
-        temp = root->left;
-        find(temp, word);
-    }else if(word.substr(1,1).compare(word2.substr(1,1)) > 0){
-        temp = root->right;
-        find(temp, word);
-    }else if(word.compare(word2) == 0){
-        return temp->data;
-    }
-    //return noWord;
+void AVLTreeIndex::continue_search(AVL_Node*& curr, string word){
+    string word2 = curr->data->get_name();
+
+    if ((word < word2) && (curr->left)){
+        curr = curr->left;
+        continue_search(curr, word);
+    }else if((word > word2) && (curr->right)){
+        curr = curr->right;
+        continue_search(curr, word);
+    }else if(word == word2){
+        return;
+    } else curr = NULL;
 }
 
 

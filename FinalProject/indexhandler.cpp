@@ -17,13 +17,15 @@ IndexHandler::IndexHandler(bool asHashTable)
     else index = new AVLTreeInterface;
 }
 
-void IndexHandler::index_corpus()
+void IndexHandler::index_corpus(bool t)
 {
     DocParser* parser = new DocParser;
     if (t == true){
-        parser->index_document(index, string);
+        string filePath = "WikiBooks.xml";
+        parser->index_document(index, filePath);
     }else{
-        parser->index_document(index, string);
+        string filePath = "";
+        parser->index_document(index, filePath);
     }
 }
 

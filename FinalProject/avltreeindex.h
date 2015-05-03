@@ -54,7 +54,8 @@ private:
     AVL_Node* root;
     void display(AVL_Node*& , int, ofstream&);
     void insert(AVL_Node*& ,Term*);
-    Term* find(AVL_Node*&, string);
+    Term* find(AVL_Node *, string);
+    void continue_search(AVL_Node*& curr, string word);
 };
 
 

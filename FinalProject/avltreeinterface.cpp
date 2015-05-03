@@ -25,7 +25,7 @@ void AVLTreeInterface::clear()
 Term *AVLTreeInterface::find_term(string w)
 {
     int letterIndex = index_for_letter(w.front());
-    avlTrees[letterIndex].find(w);
+    return avlTrees[letterIndex].find(w);
 }
 void AVLTreeInterface::write_persistence()
 {
