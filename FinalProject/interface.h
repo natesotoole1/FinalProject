@@ -33,8 +33,8 @@ public:
     void run_interactive();
     void quit();
     void permissionDenied(string);
-    void getCommand();
-    void reCommand();
+    void get_command();
+    void re_command();
 
 private:
 
@@ -42,6 +42,7 @@ private:
     bool built;
     QueryProcessor currQuery;
     bool endSearch;
+    bool endProgram;
     string modeStr;
     IndexHandler* handler;
 };
