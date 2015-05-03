@@ -2,7 +2,9 @@
 
 IndexInterface::IndexInterface()
 {
-    infoForIDs = vector<PageInfo>();
+    totalPages = 0;
+    infoForIDs = vector<PageInfo*>();
+    parser = new DocParser(this);
 }
 
 IndexInterface::~IndexInterface()
@@ -10,31 +12,26 @@ IndexInterface::~IndexInterface()
 
 }
 
-//void IndexInterface::add_term_to_persistence(Term* term)
-//{
-//    persistence.emplace(make_pair(term, term));
-//}
-
-int IndexInterface::append_page_info(PageInfo* currInfo)
+void IndexInterface::append_page_info(PageInfo* currInfo)
 {
-    infoForIDs.push_back(*currInfo);
-    return infoForIDs.size()-1;
+    ++totalPages;
+    infoForIDs.push_back(currInfo);
 }
 
 void IndexInterface::display_result(int rank, int pageID, double tdidf)
 {
-    PageInfo resultInfo = infoForIDs.at(pageID);
+    PageInfo* resultInfo = infoForIDs.at(pageID);
     cout<<"Result rank #"<<rank<<": \n";
     cout<<"\tTotal TDF/IDF value: "<<tdidf<<endl;
-    cout<<"\tPage name: "<<resultInfo.get_title()<<endl;
-    cout<<"\tTimestamp: "<<resultInfo.get_timestamp()<<endl;
-    cout<<"\tContributor name or IP Address: "<<resultInfo.get_contributor()<<endl;
+    cout<<"\tPage name: "<<resultInfo->get_title()<<endl;
+    cout<<"\tTimestamp: "<<resultInfo->get_timestamp()<<endl;
+    cout<<"\tContributor name or IP Address: "<<resultInfo->get_contributor()<<endl;
 }
 
 void IndexInterface::display_page_content(int pageID)
 {
     cout<<"Here is the text\n";
-    cout<<infoForIDs.at(pageID).get_content()<<endl;
+    cout<<infoForIDs.at(pageID)->get_content()<<endl;
 }
 
 
@@ -53,10 +50,20 @@ int IndexInterface::index_for_letter(char letter)
     return ascii;
 }
 
+PageInfo* IndexInterface::info_for_pageID(int pageID)
+{
+    return infoForIDs.at(pageID);
+}
+
+void IndexInterface::read_file(string filePath)
+{
+    parser->read_file(filePath);
+}
+
 double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
 {
     // Calculate TF value.
-    int totalWords = infoForIDs.at(pageID).get_totalWords();
+    int totalWords = infoForIDs.at(pageID)->get_totalWords();
     double tf = (double)freq/totalWords;
 
     // Calculate IDF value.
@@ -66,12 +73,12 @@ double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
     return tf*idf;
 }
 
-void IndexInterface::incr_total_words_on_page(int currID)
+void IndexInterface::incr_total_words_on_page(int currID, int incr)
 {
-    infoForIDs.at(currID).incr_totalWords();
+    infoForIDs.at(currID)->incr_totalWords(incr);
 }
 
-void IndexInterface::load_persistence()
+void IndexInterface::read_persistence_file(termMap& allTerms)
 {
     ifstream ifs("Persistence.txt");
 
@@ -90,23 +97,47 @@ void IndexInterface::load_persistence()
         {
             pageMap pageAprns;
             string name = word2;
+
             ifs >> word1;
             ifs >> word2;
-            pageAprns.emplace(make_pair(stoi(word1), stoi(word2)));
+
+            // For each subsequent pageID-frequency pair, add that to pageAprns
+            // and increment that pageID's totalWords.
             while (word1.compare("!") != 0)
             {
-                pageAprns.emplace(make_pair(stoi(word1), stoi(word2)));
+                int num1 = stoi(word1);
+                int num2 = stoi(word2);
+
+                pageAprns.emplace(make_pair(num1, num2));
+                infoForIDs.at(num1)->incr_totalWords(num2);
                 ifs >> word1;
                 ifs >> word2;
             }
+            allTerms.emplace(make_pair(word2, pageAprns));
             add_term_to_ii(index_for_letter(name.front()), new Term(name, pageAprns));
         }
     }
 }
 
+void IndexInterface::write_persistence_file()
+{
+    ofstream persistence;
+    persistence.open("Persistence.txt", ofstream::out | ofstream::trunc);
+
+    write_persistence_terms(persistence);
+    /*
+    // Write the totals for each pageID to file.
+    for (int i=0; i<totalPages; ++i)
+    {
+        persistence<<infoForIDs.at(i)->get_totalWords(i)<<" ";
+    }
+    */
+    persistence.close();
+}
+
 int IndexInterface::get_total_words_in_corpus()
 {
     int total = 0;
-    for (int i=0; i<infoForIDs.size(); ++i) total += infoForIDs.at(i).get_totalWords();
+    for (int i=0; i<infoForIDs.size(); ++i) total += infoForIDs.at(i)->get_totalWords();
     return total;
 }

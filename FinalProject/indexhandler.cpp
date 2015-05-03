@@ -12,7 +12,6 @@ IndexHandler::~IndexHandler()
 
 IndexHandler::IndexHandler(bool asHashTable)
 {
-    parser = new DocParser;
     if (asHashTable) index = new HashTableInterface;
     else index = new AVLTreeInterface;
 }
@@ -20,6 +19,11 @@ IndexHandler::IndexHandler(bool asHashTable)
 void IndexHandler::index_document(string filePath)
 {
     parser->index_document(index, filePath);
+}
+
+void IndexHandler::read_file(string filePath)
+{
+    index->read_file(filePath);
 }
 
 

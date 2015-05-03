@@ -10,13 +10,33 @@ int main()
     /*clock_t start, end;
     // Get the number of clicks already used by the program.
     start = clock();
-*/
+    */
+
+    IndexHandler* handler = new IndexHandler(false);
+
+    // Only happens when the persistence index needs to be written
+    // or rewritten (for add_file).  This takes about 30 minutes.
+    handler->read_file("WikiBooks.xml");
+
+
+
+
+    Interface ui = Interface(handler);
+
+    // Init page infos for WikiBooks.xml.
+
+
+    // To write the persistence index.
+    // handler->index_document("WikiBooks.xml");
+
+    // It is assumed that the WikiBooks are written to a persistence file
+    // before the program ever starts for the user.
+
+    // The PageInfo objects still must be written, however, containing
+    // all the page information and associated text.
+
     // Before activating the interface, read the WikiBooks file into a hash
     // table to write the persistence file.
-    IndexHandler* handler = new IndexHandler(true);
-    handler->index_document("WikiBooks.xml");
-
-    Interface* ui = new Interface(handler);
 
 
 

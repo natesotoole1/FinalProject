@@ -10,15 +10,18 @@
 #include <vector>
 #include <unordered_map>
 
+#include "docparser.h"
 #include "pageinfo.h"
 #include "term.h"
 
 using namespace std;
 
+class DocParser;
 class HashTableIndex;
 class Term;
 
 typedef unordered_map<int, int> pageMap;
+typedef unordered_map<string, pageMap> termMap;
 
 class IndexInterface
 {
@@ -27,31 +30,37 @@ public:
     ~IndexInterface();
 
     //void add_term_to_persistence(Term* term);
-    int append_page_info(PageInfo* currInfo);
+    void append_page_info(PageInfo* currInfo);
     double calc_tdidf(int pageID, int freq, int spread);
     void display_result(int rank, int pageID, double tdidf);
     void display_page_content(int pageID);
-    void incr_total_words_on_page(int currID);
-    void load_persistence();
+    void incr_total_words_on_page(int currID, int incr);
+    void read_file(string filePath);
+    void read_persistence_file(termMap& allTerms);
 
     virtual void add_term_to_ii(int letterIndex, Term* term);
     virtual void clear();
 
     virtual Term* find_term(string term);
-    virtual void write_persistence();
+    virtual void write_persistence_terms(ofstream& persistence);
+    void write_persistence_file();
 
     int index_for_letter(char letter);
+    PageInfo* info_for_pageID(int pageID);
 
     int get_total_words_in_corpus();
+    int get_total_pages();
 
 protected:
     // Only used for HashTableIndex.
     HashTableIndex* letters;
 
     // PageInfo will be passed by a pageID (int).
-    vector<PageInfo> infoForIDs;
+    vector<PageInfo*> infoForIDs;
 
-    //persistenceMap persistence;
+    DocParser* parser;
+
+    int totalPages;
 };
 
 #endif // INDEXINTERFACE_H

@@ -11,15 +11,12 @@ HashTableInterface::~HashTableInterface()
 }
 
 
-void IndexInterface::write_persistence()
+void IndexInterface::write_persistence_terms(ofstream &persistence)
 {
-    ofstream persistence;
-    persistence.open("Persistence.txt", ofstream::out | ofstream::trunc);
     for (int i=0; i<26; ++i)
     {
         letters[i].write_hti(persistence);
     }
-    persistence.close();
 }
 
 void IndexInterface::add_term_to_ii(int letterIndex, Term *term)

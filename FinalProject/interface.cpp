@@ -287,7 +287,7 @@ void Interface::clear_index(){
 
 
 void Interface::quit(){
-    cout<<"Thank you very much for using Kite Search" << endl;
+    cout<<"Thank you very much for using KITESearch!" << endl;
     endProgram = true;
 }
 

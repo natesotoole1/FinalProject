@@ -2,13 +2,21 @@
 
 PageInfo::PageInfo()
 {
-    totalWords = 0;
-    content = "";
+
 }
 
 PageInfo::~PageInfo()
 {
 
+}
+
+PageInfo::PageInfo(string theContent, string theContributor, string theTimestamp, string theTitle)
+{
+    totalWords = 0;
+    content = theContent;
+    contributorNameOrIP = theContributor;
+    timestamp = theTimestamp;
+    title = theTitle;
 }
 
 string PageInfo::get_content()
@@ -51,12 +59,17 @@ void PageInfo::set_timestamp(string theTimestamp)
     timestamp = theTimestamp;
 }
 
+void PageInfo::incr_totalWords(int incr)
+{
+    totalWords += incr;
+}
+
 void PageInfo::set_title(string theTitle)
 {
     title = theTitle;
 }
 
-void PageInfo::incr_totalWords()
+void PageInfo::set_totalWords(int theTotal)
 {
-    ++totalWords;
+    totalWords = theTotal;
 }

@@ -2,6 +2,11 @@
 
 DocParser::DocParser()
 {
+
+}
+
+DocParser::DocParser(IndexInterface* theIndex)
+{
     // Add all stop words to stopWords.
 
     // Load the list of stop from the build directory.
@@ -16,6 +21,8 @@ DocParser::DocParser()
         word = clean_term(word);
         stopWords.emplace(make_pair(word, word));
     }
+
+    index = theIndex;
 }
 
 DocParser::~DocParser()
@@ -71,7 +78,7 @@ void DocParser::index_document(IndexInterface* index, string filePath)
     // Go to the first 'page'.
     currNode = currNode->next_sibling();
 
-    index_page(currNode, index);
+    init_info_at_page(currNode, index);
 
 
     // Index the remaining pages in the file.
@@ -79,7 +86,7 @@ void DocParser::index_document(IndexInterface* index, string filePath)
     while (currNode->next_sibling())
     {
         currNode = currNode->next_sibling();
-        index_page(currNode, index);
+        init_info_at_page(currNode, index);
         //++count;
         //if (count == 10000) break;
     }
@@ -117,7 +124,7 @@ void DocParser::index_document(IndexInterface* index, string filePath)
         index->add_term_to_ii(index_for_letter(term.first.front()), aTerm);
     }
 
-    index->write_persistence();
+
 }
 
 int DocParser::index_for_letter(char letter)
@@ -135,107 +142,76 @@ int DocParser::index_for_letter(char letter)
     return ascii;
 }
 
-void DocParser::index_page(xml_node<>* currNode, IndexInterface* index)
+void DocParser::read_page(xml_node<>* currNode, bool readText)
 {
-    PageInfo* currInfo = new PageInfo;
-    string currName;
-    string currValue;
+    // Regardless, init the pageInfo for this page.
 
     // Get the page title.
+
     currNode = currNode->first_node();
-    currValue = currNode->value();
-    currInfo->set_title(currValue);
+    currTitle = currNode->value();
 
     // Get the timestamp.
 
     // Go to 'revision' node.
-    currNode = currNode->next_sibling();
-    currName = currNode->name();
-    while (currName.compare("revision") != 0)
-    {
-        currNode = currNode->next_sibling();
-        currName = currNode->name();
-    }
+    currNode = currNode->next_sibling("revision");
+
     // Move one level inward.
     currNode = currNode->first_node();
-    // Go to 'timestamp' node.
-    currName = currNode->name();
-    while (currName.compare("timestamp") != 0)
-    {
-        currNode = currNode->next_sibling();
-        currName = currNode->name();
-    }
-    currValue = currNode->value();
-    currInfo->set_timestamp(currValue);
 
-    // Get contributor name.
+    // Get timestamp.
+    currNode = currNode->next_sibling("timestamp");
+    currTimestamp = currNode->value();
 
-    // Go to 'contributor' node.
-    currNode = currNode->next_sibling();
-    currName = currNode->name();
-    while (currName.compare("contributor") != 0)
-    {
-        currNode = currNode->next_sibling();
-        currName = currNode->name();
-    }
-    // Get contributor's username or IP.
-    currValue = currNode->first_node()->value();
-    currInfo->set_contributor(currValue);
+    // Get contributor or IP address.
+    currNode = currNode->next_sibling("contributor");
+    currContributorNameOrIP = currNode->value();
 
     // Go to 'text' node.
-    currNode = currNode->next_sibling();
-    currName = currNode->name();
-    while (currName.compare("text") != 0)
-    {
-        currNode = currNode->next_sibling();
-        currName = currNode->name();
-    }
+    currNode = currNode->next_sibling("text");
+    currContent = currNode->value();
 
-    string text = currNode->value();
-    currInfo->set_content(text);
+    // Having found all info for this page, push back a new
+    // PageInfo object to the index's infoForIDs.
+    index->append_page_info(new PageInfo(
+                                currContent, currContributorNameOrIP, currTimestamp, currTitle));
 
-    // Add the PageInfo to 'infoForID' vector.
-    int currID = index->append_page_info(currInfo);
-
-    // Pass the current node to index_text to find all terms in
-    // this page's text.
-    index_text(currNode, currID, index);
-
+    // If text should be read (i.e. it's a new file),
+    // call read_text.
+    if (readText) read_text(currNode);
 }
 
-void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface *index)
+void DocParser::read_text(xml_node<>* currNode)
 {
-    string text = currNode->value();
+    currContent = currNode->value();
 
     // Replace all non-letters with whitespace char.
     // Got from http://stackoverflow.com/questions/5540008/need-a-regular-expression-
     // to-extract-only-letters-and-whitespace-from-a-string
-    replace_if(text.begin(), text.end(),
-                        is_not_alpha,
-                        ' '
-                        );
+    replace_if(currContent.begin(), currContent.end(),
+               is_not_alpha,
+               ' '
+               );
 
-    istringstream stream(text);
+    istringstream stream(currContent);
 
-    // To store the current term to insert in the inverted index.
-    string currTerm = "";
+    int totalWordsOnPage = 0;
 
-    while (stream >> currTerm)
+    while (stream >> currWord)
     {
         // Loads whatever characters are between each pair of whitespaces,
         // so clean it.
-        currTerm = clean_term(currTerm);
+        currWord = clean_term(currWord);
 
         // If the currTerm a stop word, forego adding it to allTerms.
-        if (is_stop_word(currTerm)) continue;
+        if (is_stop_word(currWord)) continue;
 
-        // Increment this PageInfo's totalWords by 1.
-        index->incr_total_words_on_page(currID);
+        ++totalWordsOnPage;
 
         // See if currTerm is already in allTerms;
         try
         {
-            allTerms.at(currTerm);
+            allTerms.at(currWord);
         }
 
         // This means the term wasn't already in allTerms, so emplace it.
@@ -243,14 +219,58 @@ void DocParser::index_text(xml_node<>* currNode, int currID, IndexInterface *ind
         {
             pageMap pMap;
             pMap.emplace(make_pair(currID, 1));
-            allTerms.emplace(make_pair(currTerm, pMap));
+            allTerms.emplace(make_pair(currWord, pMap));
             continue;
+
         }
 
         // This point will only be reached if
         // the term is already in allTerms.
-        add_appearance(currTerm, currID);
+        add_appearance(currWord, currID);
     }
+    index->info_for_pageID(currID)->set_totalWords(totalWordsOnPage);
+}
+
+void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
+{
+    read_page(currNode, readText);
+    // Index the remaining pages in the file.
+    //int count = 1;
+    while (currNode->next_sibling())
+    {
+
+        currNode = currNode->next_sibling();
+        read_page(currNode, readText);
+        //++count;
+        //if (count == 10000) break;
+    }
+}
+
+void DocParser::read_file(string filePath)
+{
+    // Use RapidXML's "parse" function to make all data
+    // accessible via nodes and values.
+    file<> theFile(filePath.c_str());
+    xml_document<> theDoc;
+    theDoc.parse<0>(theFile.data());
+
+    // Find the first node with name 'mediawiki'.
+    xml_node<>* currNode = theDoc.first_node();
+
+    // Go to 'siteinfo'.
+    currNode = currNode->first_node();
+
+    // Go to the first 'page'.
+    currNode = currNode->next_sibling();
+
+    if (filePath.compare("Wikibooks.xml") == 0)
+    {
+        index->read_persistence_file(allTerms);
+        init_file_page_infos(currNode, false);
+        return;
+    }
+
+    init_file_page_infos(currNode, true);
 }
 
 bool DocParser::is_stop_word(string term)
