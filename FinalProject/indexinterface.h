@@ -3,8 +3,10 @@
 
 #include <algorithm>
 #include <fstream>
+#include <functional>
 #include <iostream>
 #include <math.h>
+#include <pthread.h>
 #include <sstream>
 #include <string>
 #include <thread>
@@ -15,7 +17,6 @@
 #include "pageinfo.h"
 #include "term.h"
 
-using namespace std;
 
 class DocParser;
 class HashTableIndex;
@@ -24,9 +25,18 @@ class Term;
 typedef unordered_map<int, int> pageMap;
 typedef unordered_map<string, pageMap> termMap;
 
+struct threadArgData
+{
+    int index;
+    termMap& allTerms;
+};
+
+using namespace std;
+
 class IndexInterface
 {
 public:
+
     IndexInterface();
     ~IndexInterface();
 
@@ -38,7 +48,7 @@ public:
     void incr_total_words_on_page(int currID, int incr);
     void read_file(string filePath);
     void read_persistence_files(termMap& allTerms);
-    void read_pers_file(int index, termMap& allTerms);
+    void *read_pers_file(void* threadArgs);
 
     virtual void add_term_to_ii(int letterIndex, Term* term);
     virtual void clear();
@@ -53,6 +63,7 @@ public:
     int get_totalPages();
 
 protected:
+
     // Only used for HashTableIndex.
     HashTableIndex* letters;
 

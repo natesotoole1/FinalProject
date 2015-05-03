@@ -6,6 +6,8 @@
  **/
 #include "indexinterface.h"
 
+struct threadArgData;
+
 IndexInterface::IndexInterface() : parser(*(new DocParser(*this)))
 {
     totalPages = 0;
@@ -84,12 +86,18 @@ void IndexInterface::incr_total_words_on_page(int currID, int incr)
     infoForIDs.at(currID)->incr_totalWords(incr);
 }
 
-void IndexInterface::read_pers_file(int index, termMap &allTerms)
+void *IndexInterface::read_pers_file(void *threadArgs)
 {
+    struct threadArgData* args;
+
+    args = (struct threadArgData *) threadArgs;
+    int index = args->index;
+    termMap allTerms = args->allTerms;
+
     ifstream ifs;
     string ext = ".txt";
     string filePath = to_string(index) + ext;
-    ifs.open(filePath, ofstream::out | ofstream::trunc);
+    ifs.open(filePath);
 
     // Load two words at a time.
     string word1;
@@ -121,20 +129,25 @@ void IndexInterface::read_pers_file(int index, termMap &allTerms)
                 ifs >> word1;
                 ifs >> word2;
             }
-
             allTerms.emplace(make_pair(name, pageAprns));
         }
     }
-
     ifs.close();
+
+    pthread_exit(NULL);
 }
 
 void IndexInterface::read_persistence_files(termMap& allTerms)
 {
-    vector<thread> threads;
+    pthread_t threads[26];
+    vector<threadArgData> td[26] td;
+
+    int rc;
+
     for (int i=0; i<26; ++i)
     {
-        //threads.push_back(thread(read_pers_file, i, ref(allTerms)));
+
+        rc = pthread_create(&threads[i], NULL, read_pers_file, (void *)&td[i]);
     }
 }
 
