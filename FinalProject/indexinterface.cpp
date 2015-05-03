@@ -28,7 +28,7 @@ void IndexInterface::display_result(int rank, int pageID, double tdidf)
     cout<<"\tTDF/IDF value of "<<tdidf<<endl;
     cout<<"\tPage name: "<<resultInfo.get_title()<<endl;
     cout<<"\tTimestamp: "<<resultInfo.get_timestamp()<<endl;
-    cout<<"\tContributor name or IP Address: "<<resultInfo.get_contributor();
+    cout<<"\tContributor name or IP Address: "<<resultInfo.get_contributor()<<endl;
 }
 
 

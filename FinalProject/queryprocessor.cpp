@@ -16,9 +16,9 @@ void QueryProcessor::display_best_five_results(IndexInterface* index)
     if (sortedResults.size() < 5) max = sortedResults.size();
     else max = 5;
 
-    for (int i=0; i<max; ++i)
+    for (int i=1; i<=max; ++i)
     {
-        index->display_result(i, sortedResults.at(i).first, sortedResults.at(i).second);
+        index->display_result(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second);
     }
 }
 
@@ -146,7 +146,7 @@ void QueryProcessor::answer_query(IndexInterface* index, istringstream& query, b
             }
         }
     }
-
+    sort_results();
     display_best_five_results(index);
 }
 
