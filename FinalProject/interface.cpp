@@ -11,11 +11,11 @@ Interface::Interface(IndexHandler*& theHandler)
     built = false;
     mode = 0;
     endSearch = false;
-    cout << "Welcome to KITESearch!\n" << endl;
-    setMode();
+    cout << "\nWelcome to KITESearch!\n" << endl;
+    set_mode();
 }
 
-void Interface::setMode(){
+void Interface::set_mode(){
     while(!endSearch){
         cout<< "\nEnter the Mode" << endl;
         cout<< "=> Interactive" << endl;
@@ -29,16 +29,16 @@ void Interface::setMode(){
                 cout << " You have selected " << modeStr <<endl;
                 mode = 1;
                 modeStr= "";
-                options();
+                run_interactive();
             }
             else if (modeStr == "maintenance"){
                 cout << " You have selected " << modeStr <<endl;
                 mode = 2;
                 modeStr = "";
-                runMaintenance();
+                run_maintenance();
             }
             else{
-                cout<< "I did not understand '"<< modeStr << "'"<< endl;
+                cout<< "Invalid command \""<< modeStr << "\""<< endl;
                 cout<< "\nEnter the Mode" << endl;
                 cout<< "=> Interactive" << endl;
                 cout<< "=> Maintenance" << endl;
@@ -70,19 +70,19 @@ void Interface::command(string cmd, string asr){
             if(mode == 1){
                 if (cmd == ""){
                     cout << "There was no command" << endl;
-                    options();
+                    run_interactive();
                 }else if(cmd == "search"){
                     search();
                     
                 }else if(cmd == "options"){
-                    options();
+                    run_interactive();
                 }else if(cmd == "setmode"){
-                    setMode();
+                    set_mode();
                 }else if (cmd == "runavl"){
-                    runAVL();
+                    run_AVL();
                     reCommand();
                 }else if(cmd == "runhash"){
-                    runHash();
+                    run_hash();
                     reCommand();
                 }else if(cmd == "addFile"){
                     permissionDenied(cmd);
@@ -93,7 +93,7 @@ void Interface::command(string cmd, string asr){
                 }
             }else if (mode == 2){
                 if(cmd == "clearindex"){
-                    clearIndex();
+                    clear_index();
                     reCommand();
                 }else if(cmd == "addfile"){
                     string path;
@@ -103,14 +103,14 @@ void Interface::command(string cmd, string asr){
                     cin >> path;
                     if (path != "back"){
                         cout << "File Path = "<< path <<endl;
-                        addFileToIndex(path);
+                        add_file_to_index(path);
                         cout<<"file added"<<endl;
                         reCommand();
                     }else{
-                        runMaintenance();
+                        run_maintenance();
                     }
                 }else if(cmd == "setMode"){
-                    setMode();
+                    set_mode();
                 }else if(cmd == "search"){
                     permissionDenied(cmd);
                 }else if (cmd == "runavl"){
@@ -118,12 +118,12 @@ void Interface::command(string cmd, string asr){
                 }else if(cmd == "runhash"){
                     permissionDenied(cmd);
                 }else if(cmd == "options"){
-                    options();
+                    run_interactive();
                 }else if(cmd == "quit"){
                     quit();
                 }else{
                     cout<<"I did not understand that command" << endl;
-                    options();
+                    run_interactive();
                 }
             }
         }else if (asr == "no"){
@@ -139,7 +139,7 @@ void Interface::command(string cmd, string asr){
     }
 }
 
-void Interface::options(){
+void Interface::run_interactive(){
     cout << " \nInteractive Mode" << endl;
     cout << "Here are the commands we have available" << endl;
     cout << "   => setMode" <<endl;
@@ -150,7 +150,7 @@ void Interface::options(){
     getCommand();
 }
 
-void Interface::runMaintenance(){
+void Interface::run_maintenance(){
     cout << "Maintenance Mode:" <<endl;
     cout << "Here are the commands we have available" << endl;
     cout << "   => setMode" <<endl;
@@ -179,9 +179,9 @@ void Interface::search(){
     reCommand();
 }
 
-void Interface::runAVL(){
+void Interface::run_AVL(){
     if(built == true){
-        clearIndex();
+        clear_index();
     }
     cout<< "Building AVL Tree" << endl;
     cout<< "Building..." << endl;
@@ -190,9 +190,9 @@ void Interface::runAVL(){
     built = true;
 }
 
-void Interface::runHash(){
+void Interface::run_hash(){
     if(built == true){
-        clearIndex();
+        clear_index();
     }
     cout<< "Building Hash Tree" << endl;
     cout<< "Building..." << endl;
@@ -200,7 +200,7 @@ void Interface::runHash(){
     cout<< "Hash Table Built" << endl;
     built = true;
 }
-void Interface::addFileToIndex(string path){
+void Interface::add_file_to_index(string path){
     
     
 }
@@ -220,7 +220,7 @@ void Interface::permissionDenied(string w){
                 command(w, "yes");
             }else if (asr == "no"){
                 t = true;
-                options();
+                run_interactive();
             }else{
                 cout<< "I did not understand '"<< asr << "'"<< endl;
                 t = true;
@@ -240,7 +240,7 @@ void Interface::permissionDenied(string w){
                 command(w, "yes");
             }else if (asr == "no"){
                 t = true;
-                runMaintenance();
+                run_maintenance();
             }else{
                 cout<< "I did not understand '"<< asr << "'"<< endl;
                 t = true;
@@ -260,9 +260,9 @@ void Interface::reCommand(){
     while (!t){
         if(asr == "yes"){
             if (mode == 1){
-                options();
+                run_interactive();
             }else if (mode == 2){
-                runMaintenance();
+                run_maintenance();
             }
         }else if(asr == "no"){
             quit();
@@ -275,7 +275,7 @@ void Interface::reCommand(){
     }
 }
 
-void Interface::clearIndex(){
+void Interface::clear_index(){
     if (built == true){
         
     }

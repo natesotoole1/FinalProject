@@ -1,6 +1,7 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
+#include <algorithm>
 #include <chrono>
 #include <fstream>
 #include <iostream>
@@ -22,14 +23,14 @@ public:
 
     void command(string, string);
     void search();
-    void runAVL();
-    void runHash();
-    void runMaintenance();
-    void setMode();
-    void addFileToIndex(string);
-    void clearIndex();
+    void run_AVL();
+    void run_hash();
+    void run_maintenance();
+    void set_mode();
+    void add_file_to_index(string);
+    void clear_index();
     string toLowerCase(string);
-    void options();
+    void run_interactive();
     void quit();
     void permissionDenied(string);
     void getCommand();
