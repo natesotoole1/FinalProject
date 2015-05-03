@@ -1,0 +1,7 @@
+! d 3 1
+! daili 3 3
+! daunt 3 1
+! ddddff 0 3
+! devot 3 1
+! differ 3 1
+! dot 4 2

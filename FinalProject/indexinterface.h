@@ -7,7 +7,9 @@
 #include <math.h>
 #include <sstream>
 #include <string>
+#include <thread>
 #include <vector>
+
 #include <unordered_map>
 #include "docparser.h"
 #include "pageinfo.h"
@@ -35,14 +37,14 @@ public:
     void display_page_content(int pageID);
     void incr_total_words_on_page(int currID, int incr);
     void read_file(string filePath);
-    void read_persistence_file(termMap& allTerms);
+    void read_persistence_files(termMap& allTerms);
+    void read_pers_file(int index, termMap& allTerms);
 
     virtual void add_term_to_ii(int letterIndex, Term* term);
     virtual void clear();
 
     virtual Term* find_term(string term);
-    virtual void write_persistence_terms(ofstream& persistence);
-    void write_persistence_file();
+    virtual void write_persistence_files();
 
     int index_for_letter(char letter);
     PageInfo* info_for_pageID(int pageID);

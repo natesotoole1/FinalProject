@@ -84,9 +84,12 @@ void IndexInterface::incr_total_words_on_page(int currID, int incr)
     infoForIDs.at(currID)->incr_totalWords(incr);
 }
 
-void IndexInterface::read_persistence_file(termMap& allTerms)
+void IndexInterface::read_pers_file(int index, termMap &allTerms)
 {
-    ifstream ifs("Persistence.txt");
+    ifstream ifs;
+    string ext = ".txt";
+    string filePath = to_string(index) + ext;
+    ifs.open(filePath, ofstream::out | ofstream::trunc);
 
     // Load two words at a time.
     string word1;
@@ -122,23 +125,19 @@ void IndexInterface::read_persistence_file(termMap& allTerms)
             allTerms.emplace(make_pair(name, pageAprns));
         }
     }
+
+    ifs.close();
 }
 
-void IndexInterface::write_persistence_file()
+void IndexInterface::read_persistence_files(termMap& allTerms)
 {
-    ofstream persistence;
-    persistence.open("Persistence.txt", ofstream::out | ofstream::trunc);
-
-    write_persistence_terms(persistence);
-    /*
-    // Write the totals for each pageID to file.
-    for (int i=0; i<totalPages; ++i)
+    vector<thread> threads;
+    for (int i=0; i<26; ++i)
     {
-        persistence<<infoForIDs.at(i)->get_totalWords(i)<<" ";
+        //threads.push_back(thread(read_pers_file, i, ref(allTerms)));
     }
-    */
-    persistence.close();
 }
+
 int IndexInterface::get_totalPages(){
     return totalPages;
 }

@@ -36,11 +36,16 @@ Term *AVLTreeInterface::find_term(string w)
     return avlTrees[letterIndex].find(w);
 }
 //creates persistence
-void AVLTreeInterface::write_persistence_terms(ofstream &persistence)
+void AVLTreeInterface::write_persistence_files()
 {
     for (int i=0; i<26; ++i)
     {
+        ofstream persistence;
+        string ext = ".txt";
+        string filePath = to_string(i) + ext;
+        persistence.open(filePath, ofstream::out | ofstream::trunc);
         avlTrees[i].createPersistence(0, persistence);
+        persistence.close();
     }
 }
 

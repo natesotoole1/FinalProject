@@ -1,0 +1,6 @@
+! web 3 1
+! welcom 3 1 0 3
+! wiki 2 3
+! wikijunior 0 1
+! wikipedia 2 2
+! world 3 1

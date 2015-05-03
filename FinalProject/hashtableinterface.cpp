@@ -16,11 +16,17 @@ HashTableInterface::~HashTableInterface()
 }
 
 
-void IndexInterface::write_persistence_terms(ofstream &persistence)
+void IndexInterface::write_persistence_files()
 {
+    // To check if we can do threading.
     for (int i=0; i<26; ++i)
     {
+        ofstream persistence;
+        string ext = ".txt";
+        string filePath = to_string(i) + ext;
+        persistence.open(filePath, ofstream::out | ofstream::trunc);
         letters[i].write_hti(persistence);
+        persistence.close();
     }
 }
 

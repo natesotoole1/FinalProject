@@ -16,9 +16,11 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
+
 #include "indexinterface.h"
 #include "pageinfo.h"
 #include "porter2_stemmer.h"
+#include "timer.h"
 
 class IndexInterface;
 

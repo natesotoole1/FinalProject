@@ -188,7 +188,7 @@ void DocParser::push_allTerms_to_ii()
 
         index.add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second));
     }
-    index.write_persistence_file();
+    index.write_persistence_files();
 }
 
 void DocParser::read_file(string filePath)
@@ -211,7 +211,7 @@ void DocParser::read_file(string filePath)
     if (filePath.compare("WikiBooks.xml") == 0)
     {
         init_file_page_infos(currNode, false);
-        index.read_persistence_file(allTerms);
+        index.read_persistence_files(allTerms);
     }
     else init_file_page_infos(currNode, true);
     push_allTerms_to_ii();

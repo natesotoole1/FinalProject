@@ -21,7 +21,7 @@ public:
     void add_term_to_ii(int letterIndex, Term* term);
     void clear();
     Term* find_term(string term);
-    void write_persistence_terms(ofstream& persistence);
+    void write_persistence_files();
 
 private:
     AVLTreeIndex* avlTrees;

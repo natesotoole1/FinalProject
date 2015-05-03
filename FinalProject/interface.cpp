@@ -359,7 +359,7 @@ void Interface::clear_index(){
         handler.clear_index();
         built = false;
     }
-    cout << "the index is empty" << endl;
+    cout <<"The Index has been emptied\n" << endl;
     dsBuilt = "";
 
 }
@@ -367,7 +367,7 @@ void Interface::clear_index(){
 
 void Interface::quit(){
     cout<<"Thank you very much for using KITESearch!" << endl;
-    endProgram = true;
+    clear_index();
     exit(1);
 }
 
