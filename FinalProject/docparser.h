@@ -40,7 +40,7 @@ public:
     void add_appearance(string currTerm, int currID);
 
     // HashTableIndex and AVLTreeIndex will handle new entries separately.
-    void index_corpus(IndexInterface* index);
+    void index_document(IndexInterface* index, string filePath);
 
     // Determine which LetterTerm should handle the appearance.
     // Pass the first letter of the term.  Returns  0 if the term

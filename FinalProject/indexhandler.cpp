@@ -20,7 +20,11 @@ IndexHandler::IndexHandler(bool asHashTable)
 void IndexHandler::index_corpus()
 {
     DocParser* parser = new DocParser;
-    parser->index_corpus(index);
+    if (t == true){
+        parser->index_document(index, string);
+    }else{
+        parser->index_document(index, string);
+    }
 }
 
 
@@ -28,7 +32,7 @@ void IndexHandler::run_queries()
 {
     QueryProcessor processor = QueryProcessor();
 
-    cout << "Enter your query:";
+    cout << "Enter your query:\n";
     string input;
     cin >> input;
 

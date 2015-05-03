@@ -54,11 +54,11 @@ string DocParser::clean_term(string term)
     return term;
 }
 
-void DocParser::index_corpus(IndexInterface* index)
+void DocParser::index_document(IndexInterface* index, string filePath)
 {
     // Use RapidXML's "parse" function to make all data
     // accessible via nodes and values.
-    file<> theFile("WikiBooks.xml");
+    file<> theFile(filePath.c_str());
     xml_document<> theDoc;
     theDoc.parse<0>(theFile.data());
 
