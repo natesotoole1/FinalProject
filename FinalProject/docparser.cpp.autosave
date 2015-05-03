@@ -161,24 +161,19 @@ void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
 
 void DocParser::push_allTerms_to_ii()
 {
-    int totalWordsInCorpus = index->get_totalWordsInCorpus();
-
     for (auto& term : allTerms)
     {
-        // If the term
-        // or if the term is longer than 12 characters, remove it from allTerms
-        // and don't add it to the inverted index.
-        if (term.first.length() > 12)
-        {
-            allTerms.erase(term.first);
-            continue;
-
+        /*
         // If the word accounts for more than 1% of the total words
         // in the corpus, skip it.
         int totalAprns = 0;
         for (auto& page : allTerms.at(term.first)) totalAprns += page.second;
         double fraction = (double)totalAprns/totalWordsInCorpus;
         if (fraction > 0.01) continue;
+        */
+        
+        // Calculate (increment) totalWords for each PageInfo object.
+        
 
         index->add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second);
     }
