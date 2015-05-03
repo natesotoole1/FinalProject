@@ -185,7 +185,7 @@ void Interface::runAVL(){
     }
     cout<< "Building AVL Tree" << endl;
     cout<< "Building..." << endl;
-    index = new IndexHandler(false);
+    handler = new IndexHandler(false);
     cout<< "AVL Tree Built" << endl;
     built = true;
 }
@@ -196,7 +196,7 @@ void Interface::runHash(){
     }
     cout<< "Building Hash Tree" << endl;
     cout<< "Building..." << endl;
-    index = new IndexHandler(true);
+    handler = new IndexHandler(true);
     cout<< "Hash Table Built" << endl;
     built = true;
 }
