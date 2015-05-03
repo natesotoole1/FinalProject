@@ -27,8 +27,10 @@ public:
 
     void run_queries(string query);
 
+    void clear_index();
+
 private:
-    IndexInterface index;
+    IndexInterface* index;
 };
 
 #endif // INDEXHANDLER_H

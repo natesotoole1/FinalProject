@@ -15,7 +15,7 @@ using namespace std;
 
 typedef unordered_map<int, int> pageMap;
 
-class HashTableInterface : public IndexInterface, public DocParser
+class HashTableInterface : public IndexInterface
 {
 public:
     HashTableInterface();

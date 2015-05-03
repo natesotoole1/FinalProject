@@ -20,7 +20,7 @@ typedef pair<int, double> resultPair;
 
 typedef unordered_map<int, double> relevancyMap;
 
-class QueryProcessor : public DocParser
+class QueryProcessor
 {
 public:
     QueryProcessor();

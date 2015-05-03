@@ -6,12 +6,11 @@
  **/
 #include "indexinterface.h"
 
-IndexInterface::IndexInterface()
+IndexInterface::IndexInterface() : parser(*(new DocParser(*this)))
 {
     totalPages = 0;
     totalWordsInCorpus = 0;
     infoForIDs = vector<PageInfo*>();
-    parser = new DocParser;
 }
 
 IndexInterface::~IndexInterface()
@@ -64,7 +63,7 @@ PageInfo* IndexInterface::info_for_pageID(int pageID)
 
 void IndexInterface::read_file(string filePath)
 {
-    parser->read_file(filePath);
+    parser.read_file(filePath);
 }
 
 double IndexInterface::calc_tdidf(int pageID, int freq, int spread)

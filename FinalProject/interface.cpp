@@ -7,24 +7,48 @@
 
 #include "interface.h"
 
-Interface::Interface()
-{
+//Interface::Interface()
+//{
 
-}
+//}
 
-Interface::Interface(IndexHandler*& theHandler)
+Interface::Interface(IndexHandler& theHandler) : handler(theHandler)
 {
-    handler = theHandler;
+    //handler = theHandler;
     built = false;
     mode = 0;
     endProgram = false;
     cout << "\nWelcome to KITESearch!\n" << endl;
+    choose_structure();
+}
+
+void Interface::choose_structure(){
+    string ds;
+    cout<< "To start please choose the data structure:"<<endl;
+    cout<< "HashTable or AVLTree" <<endl;
+    cout<< "Choice: ";
+    cin >> ds;
+    toLowerCase(ds);
+    cout << "Your choice was " << ds << endl;
+
+    while (!built){
+        if(ds.substr(0,3) == "avl"){
+            run_AVL();
+        }else if (ds.substr(0,4) == "hash"){
+            run_hash();
+        }else {
+            cout<< "sorry. I did not understand " << ds <<endl;
+            choose_structure();
+        }
+    }
+    cout << "Now that the " << dsBuilt  << " is built" << endl;
     set_mode();
 }
 
+
 void Interface::set_mode(){
     while(!endProgram){
-        cout<< "\nEnter the Mode" << endl;
+        cout<< "Enter the Mode" << endl;
         cout<< "=> Interactive" << endl;
         cout<< "=> Maintenance" << endl;
         cout << "Mode: ";
@@ -180,7 +204,7 @@ void Interface::search(){
     cin >> input;
     getline(cin, sQuery);
     sQuery = input +=  sQuery ;
-    handler->run_queries(sQuery);
+    handler.run_queries(sQuery);
     
     re_command();
 }
@@ -194,6 +218,7 @@ void Interface::run_AVL(){
     handler = new IndexHandler(false);
     cout<< "AVL Tree Built" << endl;
     built = true;
+    dsBuilt = "AVL Tree";
 }
 
 void Interface::run_hash(){
@@ -205,6 +230,7 @@ void Interface::run_hash(){
     handler = new IndexHandler(true);
     cout<< "Hash Table Built" << endl;
     built = true;
+    dsBuilt = "Hash Table";
 }
 void Interface::add_file_to_index(string path){
     
@@ -288,8 +314,11 @@ void Interface::re_command(){
 
 void Interface::clear_index(){
     if (built == true){
-        
+        handler.clear_index();
+        built = false;
     }
+    cout << "the index is empty" << endl;
+
 }
 
 

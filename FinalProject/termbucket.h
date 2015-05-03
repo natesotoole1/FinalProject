@@ -21,6 +21,7 @@ public:
     Term* find(string term);
     bool has_word(string term);
     void write_term_bucket(ofstream& persistence);
+    void clear();
 private:
     Term* root;
 };

@@ -67,3 +67,10 @@ void HashTableIndex::write_hti(ofstream &persistence)
        buckets[i].write_term_bucket(persistence);
     }
 }
+void HashTableIndex::clear_table(){
+    for(int i = 0; i < arrSize; i ++){
+        buckets[i].clear();
+
+    }
+    delete [] buckets;
+}

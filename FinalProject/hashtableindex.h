@@ -23,9 +23,11 @@ public:
     Term* find(string term);
     int hash_key(string key);
     void write_hti(ofstream& persistence);
+    void clear_table();
 private:
     int arrSize = 1024;
     TermBucket* buckets;
+
 };
 
 #endif // HASHTABLEINDEX_H

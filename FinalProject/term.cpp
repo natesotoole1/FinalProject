@@ -108,5 +108,5 @@ void Term::write_term(ofstream &persistence)
         persistence<<" "<<page.first<<" "<<page.second;
     }
     persistence<<endl;
-
 }
+

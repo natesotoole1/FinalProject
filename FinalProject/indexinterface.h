@@ -57,7 +57,7 @@ protected:
     // PageInfo will be passed by a pageID (int).
     vector<PageInfo*> infoForIDs;
 
-    DocParser* parser;
+    DocParser& parser;
 
     int totalPages;
     int totalWordsInCorpus;

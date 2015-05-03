@@ -18,8 +18,8 @@ class Interface
 {
 public:
 
-    Interface();
-    Interface(IndexHandler*& theHandler);
+//    Interface();
+    Interface(IndexHandler& theHandler);
 
     void command(string, string);
     void search();
@@ -35,6 +35,8 @@ public:
     void permissionDenied(string);
     void get_command();
     void re_command();
+    void choose_structure();
+
 
 private:
 
@@ -43,8 +45,9 @@ private:
     QueryProcessor currQuery;
     bool endSearch;
     bool endProgram;
+    string dsBuilt;
     string modeStr;
-    IndexHandler* handler;
+    IndexHandler& handler;
 };
 
 

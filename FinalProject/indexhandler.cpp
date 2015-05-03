@@ -18,8 +18,8 @@ IndexHandler::~IndexHandler()
 
 IndexHandler::IndexHandler(bool asHashTable)
 {
-    if (asHashTable) index = HashTableInterface();
-    else index = AVLTreeInterface();
+    if (asHashTable) index = new HashTableInterface();
+    else index = new AVLTreeInterface();
 }
 
 void IndexHandler::read_file(string filePath)
@@ -29,6 +29,9 @@ void IndexHandler::read_file(string filePath)
 
 void IndexHandler::run_queries(string query)
 {
-    QueryProcessor processor = QueryProcessor();
+    QueryProcessor processor = QueryProcessor(index);
     processor.initiate_query(query);
+}
+void IndexHandler::clear_index(){
+    index->clear();
 }

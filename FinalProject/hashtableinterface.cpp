@@ -36,5 +36,9 @@ Term *IndexInterface::find_term(string term)
 
 void IndexInterface::clear()
 {
-
+    for (int i=0; i<26; ++i)
+    {
+        letters[i].clear_table();
+    }
+    delete [] letters;
 }

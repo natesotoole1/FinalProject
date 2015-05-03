@@ -77,3 +77,16 @@ void TermBucket::write_term_bucket(ofstream &persistence)
         curr->write_term(persistence);
     }
 }
+
+void TermBucket::clear(){
+
+    if (!root) return;
+
+    Term* curr = root;
+    Term* old;
+    while(curr->get_next()){
+        old = curr;
+        curr = curr->get_next();
+        delete old;
+    }
+}

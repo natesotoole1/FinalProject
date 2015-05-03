@@ -1,9 +1,9 @@
 #include "docparser.h"
 
-DocParser::DocParser() : index(*(new IndexInterface))
+/*DocParser::DocParser()
 {
-    cout<<"this\n";
-}
+
+}*/
 
 DocParser::DocParser(IndexInterface& theIndex) : index(theIndex)
 {
