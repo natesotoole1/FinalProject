@@ -39,15 +39,12 @@ public:
 
     string clean_term(string term);
 
-    void add_appearance(string currTerm, int currID);
-
-    // HashTableIndex and AVLTreeIndex will handle new entries separately.
-    void index_document(IndexInterface* index, string filePath);
-
     // Determine which LetterTerm should handle the appearance.
     // Pass the first letter of the term.  Returns  0 if the term
     // is a number, 1 for 'a', 2 for 'b', and so forth.
     int index_for_letter(char letter);
+
+    void push_allTerms_to_ii();
 
     void read_page(xml_node<>* currNode, bool readText);
     void read_text(xml_node<>* currNode);

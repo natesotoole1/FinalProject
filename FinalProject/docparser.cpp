@@ -30,25 +30,6 @@ DocParser::~DocParser()
 
 }
 
-void DocParser::add_appearance(string currTerm, int currID)
-{
-    // Check if currID is already in currTerm's pageMap.
-    try
-    {
-        allTerms.at(currTerm).at(currID);
-    }
-
-    // This means currID wasn't already in the pageMap, so emplace it.
-    catch (const out_of_range& notInAllTerms)
-    {
-        allTerms.at(currTerm).insert(make_pair(currID, 1));
-        return;
-    }
-
-    // At this point, currID was already in the pageMap,
-    // so increase the frequency by 1.
-    allTerms.at(currTerm).at(currID)++;
-}
 
 string DocParser::clean_term(string term)
 {
@@ -61,71 +42,6 @@ string DocParser::clean_term(string term)
     return term;
 }
 
-void DocParser::index_document(IndexInterface* index, string filePath)
-{
-    // Use RapidXML's "parse" function to make all data
-    // accessible via nodes and values.
-    file<> theFile(filePath.c_str());
-    xml_document<> theDoc;
-    theDoc.parse<0>(theFile.data());
-
-    // Find the first node with name 'mediawiki'.
-    xml_node<>* currNode = theDoc.first_node();
-
-    // Go to 'siteinfo'.
-    currNode = currNode->first_node();
-
-    // Go to the first 'page'.
-    currNode = currNode->next_sibling();
-
-    init_info_at_page(currNode, index);
-
-
-    // Index the remaining pages in the file.
-    //int count = 1;
-    while (currNode->next_sibling())
-    {
-        currNode = currNode->next_sibling();
-        init_info_at_page(currNode, index);
-        //++count;
-        //if (count == 10000) break;
-    }
-
-    // Iterate through allTerms and create a new Term object
-    // using the data from each value.
-    /*for (auto& value : allTerms)
-    {
-        cout<<value.first<<": ";
-        for (auto val : allTerms.at(value.first))
-        {
-            cout<<val.second<<"@"<<val.first<<" ";
-        }
-        cout<<endl;
-    }*/
-
-    // By this point, allTerms contains all the info for
-    // the inverted index.  Add each term to the inverted index.
-
-    int totalWordsInCorpus = index->get_total_words_in_corpus();
-
-    for (auto& term : allTerms)
-    {
-        // If the word is longer than 12 characters, skip it.
-        if (term.first.length() > 12) continue;
-
-        // If the word accounts for more than 1% of the total words
-        // in the corpus, skip it.
-        int totalAprns = 0;
-        for (auto& page : allTerms.at(term.first)) totalAprns += page.second;
-        double fraction = (double)totalAprns/totalWordsInCorpus;
-        if (fraction > 0.01) continue;
-
-        Term* aTerm = new Term(term.first, term.second);
-        index->add_term_to_ii(index_for_letter(term.first.front()), aTerm);
-    }
-
-
-}
 
 int DocParser::index_for_letter(char letter)
 {
@@ -183,6 +99,7 @@ void DocParser::read_page(xml_node<>* currNode, bool readText)
 
 void DocParser::read_text(xml_node<>* currNode)
 {
+    int currID = index->get_totalPages()
     currContent = currNode->value();
 
     // Replace all non-letters with whitespace char.
@@ -195,18 +112,16 @@ void DocParser::read_text(xml_node<>* currNode)
 
     istringstream stream(currContent);
 
-    int totalWordsOnPage = 0;
-
     while (stream >> currWord)
     {
         // Loads whatever characters are between each pair of whitespaces,
         // so clean it.
         currWord = clean_term(currWord);
 
-        // If the currTerm a stop word, forego adding it to allTerms.
-        if (is_stop_word(currWord)) continue;
-
-        ++totalWordsOnPage;
+        // If the currTerm a stop word, or it's longer than 12
+        // characters, forego adding it to allTerms.
+        if ((is_stop_word(currWord))
+                || (currWord.length() > 12)) continue;
 
         // See if currTerm is already in allTerms;
         try
@@ -221,14 +136,12 @@ void DocParser::read_text(xml_node<>* currNode)
             pMap.emplace(make_pair(currID, 1));
             allTerms.emplace(make_pair(currWord, pMap));
             continue;
-
         }
 
         // This point will only be reached if
         // the term is already in allTerms.
-        add_appearance(currWord, currID);
+        allTerms.at(currTerm).at(currID)++;
     }
-    index->info_for_pageID(currID)->set_totalWords(totalWordsOnPage);
 }
 
 void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
@@ -243,6 +156,31 @@ void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
         read_page(currNode, readText);
         //++count;
         //if (count == 10000) break;
+    }
+}
+
+void DocParser::push_allTerms_to_ii()
+{
+    int totalWordsInCorpus = index->get_totalWordsInCorpus();
+
+    for (auto& term : allTerms)
+    {
+        // If the term
+        // or if the term is longer than 12 characters, remove it from allTerms
+        // and don't add it to the inverted index.
+        if (term.first.length() > 12)
+        {
+            allTerms.erase(term.first);
+            continue;
+
+        // If the word accounts for more than 1% of the total words
+        // in the corpus, skip it.
+        int totalAprns = 0;
+        for (auto& page : allTerms.at(term.first)) totalAprns += page.second;
+        double fraction = (double)totalAprns/totalWordsInCorpus;
+        if (fraction > 0.01) continue;
+
+        index->add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second););
     }
 }
 
@@ -271,6 +209,8 @@ void DocParser::read_file(string filePath)
     }
 
     init_file_page_infos(currNode, true);
+
+
 }
 
 bool DocParser::is_stop_word(string term)

@@ -48,8 +48,8 @@ public:
     int index_for_letter(char letter);
     PageInfo* info_for_pageID(int pageID);
 
-    int get_total_words_in_corpus();
-    int get_total_pages();
+    int get_totalWordsInCorpus();
+    int get_totalPages();
 
 protected:
     // Only used for HashTableIndex.
@@ -61,6 +61,7 @@ protected:
     DocParser* parser;
 
     int totalPages;
+    int totalWordsInCorpus;
 };
 
 #endif // INDEXINTERFACE_H

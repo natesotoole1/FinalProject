@@ -3,6 +3,7 @@
 IndexInterface::IndexInterface()
 {
     totalPages = 0;
+    totalWordsInCorpus = 0;
     infoForIDs = vector<PageInfo*>();
     parser = new DocParser(this);
 }
@@ -114,7 +115,6 @@ void IndexInterface::read_persistence_file(termMap& allTerms)
                 ifs >> word2;
             }
             allTerms.emplace(make_pair(word2, pageAprns));
-            add_term_to_ii(index_for_letter(name.front()), new Term(name, pageAprns));
         }
     }
 }
@@ -135,9 +135,11 @@ void IndexInterface::write_persistence_file()
     persistence.close();
 }
 
-int IndexInterface::get_total_words_in_corpus()
+int IndexInterface::get_totalWordsInCorpus()
 {
-    int total = 0;
-    for (int i=0; i<infoForIDs.size(); ++i) total += infoForIDs.at(i)->get_totalWords();
-    return total;
+    if (totalWordsInCorpus == 0)
+    {
+    for (int i=0; i<infoForIDs.size(); ++i) totalWordsInCorpus += infoForIDs.at(i)->get_totalWords();
+    }
+    return totalWordsInCorpus;
 }
