@@ -30,12 +30,13 @@ void QueryProcessor::display_best_five_results(IndexInterface* index)
           && (input.compare("no") != 0))
     {
         cout<<"Invalid command\n";
-        cout<<"Would you like to read the text of one of the results?\n";
+        cout<<"Would you like to read the text of (one of) the result(s)?\n";
         cin >> input;
     }
     if (input.compare("no") == 0) return;
     else
     {
+        if (numResults == 1) index->display_page_content(sortedResults.at(0).first);
         cout<<"Which document?  Enter a rank #\n";
         cin>>input;
         int numInput = stoi(input);
@@ -47,7 +48,7 @@ void QueryProcessor::display_best_five_results(IndexInterface* index)
             cin >> input;
             numInput = stoi(input);
         }
-        index->display_page_content(numInput);
+        index->display_page_content(sortedResults.at(numInput-1).first);
     }
 }
 
@@ -210,18 +211,22 @@ void QueryProcessor::initiate_query(IndexInterface* index, string query)
 
 void QueryProcessor::sort_results()
 {
-    while (results.size() != 0 && sortedResults.size() < 6)
+    // To find the top results, some
+    relevancyMap resultsToSort = results;
+
+    while (resultsToSort.size() != 0 && sortedResults.size() < 6)
     {
         int maxKey = 0;
+
         // Make sure that key is in the results.
         bool isInResults = false;
         while (!isInResults)
         {
             try
             {
-                results.at(maxKey);
+                resultsToSort.at(maxKey);
             }
-            catch (const out_of_range& notInResults)
+            catch (const out_of_range& notInResultsToSort)
             {
                 ++maxKey;
                 continue;
@@ -233,11 +238,11 @@ void QueryProcessor::sort_results()
 
         // Find the maximum TD/IDF in results and emplace it
         // in sortedResults.
-        for (auto& result : results)
+        for (auto& result : resultsToSort)
         {
             if (result.second > results.at(maxKey)) maxKey = result.first;
         }
-        sortedResults.push_back(make_pair(maxKey, results.at(maxKey)));
-        results.erase(maxKey);
+        sortedResults.push_back(make_pair(maxKey, resultsToSort.at(maxKey)));
+        resultsToSort.erase(maxKey);
     }
 }
