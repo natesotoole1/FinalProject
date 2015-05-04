@@ -101,7 +101,6 @@ void Term::set_next(Term* theNext)
 
 void Term::write_term(ofstream &persistence)
 {
-
     persistence<<"! "<<name;
     for (auto& page : pageAprns)
     {

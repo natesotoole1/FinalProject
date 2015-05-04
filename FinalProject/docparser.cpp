@@ -161,14 +161,15 @@ void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
 {
     read_page(currNode, readText);
     // Index the remaining pages in the file.
-    //int count = 1;
+
+    int count = 1;
     while (currNode->next_sibling())
     {
 
         currNode = currNode->next_sibling();
         read_page(currNode, readText);
-        //++count;
-        //if (count == 10000) break;
+        ++count;
+        if (count == 2) break;
     }
 }
 

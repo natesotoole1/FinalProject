@@ -1,6 +1,1738 @@
+! ua 204 1 193 1
+! ub 2865 1 1190 1
+! uc 158 2 40 1
+! ud 280 6 199 1 166 1
+! ue 204 1 288 1 198 9 193 2 160 4
+! ug 2510 1 1477 1
+! uf 3265 4 2403 1 796 4
+! uh 496 1 427 1 242 1 404 1 371 4 205 1 193 1
+! ui 496 1 204 3 202 1 193 3
+! uj 405 2 221 1
+! uk 477 1 437 1 272 1 157 1 135 1 252 1 471 2 494 2 397 1 213 1 251 1 9 1 336 1 116 1 490 1 7 1 337 3
+! ul 216 2
+! um 498 15 398 2 495 1 499 1 444 1 282 1 371 1 496 2 56 1
+! uo 204 1 193 4
+! ur 272 1 142 1
+! ut 404 1 142 1
+! uu 444 1 404 1 204 1 193 1
+! uv 142 1
+! uw 4754 4 1749 1 1497 1 3252 1 1503 1 1458 2 1713 1 1405 6 1710 2
+! ux 4884 1 2905 1 3541 1 1261 1
+! uy 4697 44 1882 1 4831 3 2451 3 1261 1
+! uz 272 1
+! uca 3192 1
+! uda 4489 1 1190 1
+! uab 604 1
+! ubc 3534 1 2865 1
+! ufa 2393 2
+! uga 2652 2 4369 1 2840 1 3433 1 3203 1 3412 1 4958 1 4291 2 3266 1 2669 13 2632 1 1906 21 3350 1 1650 2
+! uae 4714 16 4693 4
+! ucc 3921 1 3480 2 2865 1
+! ucd 3620 1
+! uha 4432 2
+! uja 939 1
+! ude 1178 2 967 2
+! ula 4831 1 1371 1
+! uka 4432 2
+! ufc 4694 1
+! uce 4748 1
+! uma 3499 2 3361 1 590 1
+! ucf 4903 1
+! udf 4693 1 2905 1
+! udg 2960 1
+! uee 4369 1
+! uid 4056 8 3041 8 1574 4 1573 6
+! umb 1002 1
+! una 435 1 405 1 290 3 168 5 283 1 142 11 280 1 242 4 429 3 199 3 254 4 56 4 166 1 256 2
+! ufe 2403 1
+! ubi 1431 1 583 3 4012 1 502 3
+! uhf 2952 31 2698 14 1928 1
+! umd 4859 1 1912 1 622 1
+! usa 444 1 251 1 20 1 56 1 463 1 252 6 406 2
+! uch 1274 7
+! unc 4693 1 1747 1
+! uhe 475 1
+! uai 2451 2
+! uci 205 1 204 3 203 1 192 1
+! ugh 205 1 204 1
+! usb 4835 15 4694 4 4693 42 4498 7 3398 1 4151 2 3944 5 3936 1 3861 3 3436 4 3403 1 2952 1 4351 2 1821 2 1576 7 3864 1 2379 2 1574 3
+! uif 4693 1
+! ume 1595 2
+! und 266 1 209 1 142 3
+! uva 254 1
+! upd 4694 1 1956 1
+! urb 406 1
+! udi 2214 1
+! uta 1107 1
+! ubl 1190 1
+! umg 4498 1
+! usd 4116 1 3241 1 4385 2 2865 1 2522 1
+! utc 473 15 273 7 414 13 421 4 398 133 304 1 397 32 256 3 453 1 420 1 223 40 441 6 416 15 393 5 366 8 463 2 460 10 409 2 221 11 493 4 396 12 392 7 489 2 390 4 192 4 389 1 486 2 142 44 339 2 328 3 306 1 297 15 491 44 488 1 291 1 388 1 290 1 88 3 285 25 241 4 235 6 138 1 216 28 111 6 308 2 402 33 499 29 208 38 408 5 14 6 56 117 253 7 153 9 444 56 206 8 189 1 386 1 481 5 190 11 187 4 384 2 89 1 186 26 171 6 368 3 271 6 274 2 177 21 175 9 367 1 173 18 165 33 163 9 113 25 160 49 381 4 90 11 240 2 43 5 136 1 133 2 330 34 427 65 236 1 424 1 120 12 214 2 411 6 458 25 167 37 84 3 375 13 135 11 108 4 399 2 40 25 428 37 146 3 340 1 152 2 132 6 282 40
+! uvb 2698 1
+! uya 2451 2
+! une 404 8 142 12 123 1
+! usc 2865 1
+! ulf 3701 1
+! uub 2585 1 2188 1
+! uhh 208 1
+! uog 1650 1
+! upg 173 1 56 1
+! uvc 2698 1 1181 1
+! uji 1134 1
 ! use 3 1
+! ure 193 1
+! ung 810 1
+! ufl 427 1
+! ugm 830 2
+! uhl 4858 1
+! uni 3024 1 1768 1 3171 2 4414 1 2229 3 4859 1 2227 1 581 1 1991 2 562 3 2865 2 1027 1 1758 1 2134 1 765 2 1329 1 890 1 1535 1 1650 2 810 2 3179 1 995 3 920 1 668 1
+! urg 495 1 398 1 251 1
+! usg 4737 1 3878 1 1186 1
+! utf 402 1 255 1 9 2
+! uve 1058 2
+! uhk 1199 1
+! uli 266 1
+! ute 4690 1 2698 1 2879 1 2139 1
+! umi 1279 5
+! uco 3192 1
+! udp 4873 1 2161 1 1149 1 4394 3 4116 5 1185 2
+! uen 4319 1
+! ueo 2451 2
+! uoi 193 1
+! uwe 3701 1
+! udo 3701 1
+! uhm 3057 1 1694 1
+! uim 3483 3 1749 1
+! ush 3023 5
+! ulm 2865 1
+! uml 142 3
+! umm 4096 1 2726 1 1259 1
+! uri 374 6 301 3
+! uti 3789 5 3351 1
+! ull 4690 1 1431 1
+! usi 266 1
+! uuh 2585 1 2188 1 1503 1
+! ufp 3320 1
+! ubs 963 1
+! umn 361 1 360 1 372 1 362 1 357 1
+! unm 3255 1
+! upm 4895 1 3449 1
+! uds 280 6 166 1
+! ucr 4859 1
+! uno 405 1 290 1 291 1 254 1 199 1 168 5
+! upn 2952 1 2698 1
+! usm 1720 1
+! utl 4871 2 2178 2
+! url 417 1 392 4 304 1 444 2 398 2 391 3 232 1 301 3 176 1 374 1 167 1 158 3 494 5 379 1 149 6 151 1 491 1 146 1 113 2 418 4 142 1
+! ulo 3019 1
+! uzi 4740 2
+! unn 1513 1
+! utk 4550 1 3939 1
+! uhr 4586 7 3887 17 997 4 2801 1 4427 1 2227 1 963 1 3729 13 825 9
+! ubt 229 1
+! uaw 3108 1
+! ucu 4200 1 592 1
+! udu 331 1
+! uft 277 1
+! uir 726 9
+! ukq 4693 1
+! ukr 890 1
+! upp 3945 1
+! uum 561 3
+! uvm 1329 2
+! uis 1509 1
+! urn 301 3 142 1
+! uht 1471 1
+! uit 4754 4 2545 1 1816 1 1772 2 1782 1 1459 6
+! umr 1190 1
+! uso 4391 1 2985 1 4239 1 3499 1 1624 2 1064 1
+! usp 4874 1 3499 1 1560 4
+! uto 4432 2
+! uwm 4903 2 3893 1
+! uro 4831 1 2106 1
+! uay 2451 2
+! utp 2767 4
+! uuo 2585 1 2188 1
+! uup 2585 1 2188 1
+! ult 4063 1 799 1
+! ups 352 1
+! uwo 223 1
+! ulu 4831 1
+! unt 495 1
+! urs 4958 1 4689 1
+! usr 56 1
+! utr 2214 1 934 2
+! upt 3913 1
+! uzo 4831 1
+! unu 1257 4
+! uuq 2585 1 2188 1
+! uss 398 1 251 3 157 2
+! uou 142 1
+! uur 1713 19
+! uus 2585 1 2188 1
+! uvr 797 1 796 2
+! ulw 1306 2
+! ust 450 1 402 1 288 1 224 4 166 11 254 3 199 1 198 1 190 7
+! uru 473 1
+! utu 2340 2
+! uut 2585 1 2188 1
+! usu 4162 1 3207 1
+! usw 2782 1 2447 1
+! uuu 2585 1 2188 1
+! uyu 2451 2
+! utx 2954 1 2947 1 2717 1
+! usz 1274 7
+! ufca 4694 3
+! ucha 3192 1
+! urba 406 1
+! urea 365 1 34 2 32 4 12 7
+! usda 3339 1 3152 3 2715 1 2361 2 2196 2 2201 1 2197 1 2180 1 4196 1 3598 1 2724 4 654 1 2172 1 2195 1 2167 1 2052 3 2050 1 1727 1 2023 5 2198 1 1186 4
+! ukha 1803 2
+! umfa 2782 1
+! uaic 4697 1
+! ucla 4026 2 3759 1 3739 1 3868 1 3483 3 3615 1 2770 1 2523 1
+! umia 1279 2
+! usad 135 1
+! uscc 2865 1
+! uela 3192 1
+! urfa 3024 2
+! unia 736 2
+! udid 2560 1
+! urad 3105 7 2560 5 2027 2 1964 2
+! ulla 3701 1
+! unde 1256 2
+! unib 2314 1
+! uria 2897 2
+! uddi 3363 11
+! uenc 4673 11
+! uhci 1576 1
+! ulna 2558 1
+! used 473 4 494 2 379 1 371 1 285 1
+! unic 148 1
+! udig 4737 2
+! usag 398 1 428 1 266 3 50 1 285 3 379 1 473 2 494 1 241 1 402 1 441 1 303 1 142 1 282 1 47 1 232 1 373 1 166 5 51 1 396 1 223 1 123 1 499 1 113 1 160 2
+! uric 3789 4 1159 2
+! uska 4958 1
+! utah 1663 1 1307 1 2879 3 1064 1 2875 2 1038 1 708 1 1308 1 703 8 655 1
+! upma 2226 2
+! ucsb 739 1
+! udel 3815 1
+! ukra 2560 1
+! undi 2327 1 4648 1 2323 2 1884 2
+! unif 244 2
+! usna 2560 2 2330 1
+! uvic 3944 1 1181 1
+! uhhh 1324 1
+! uick 1521 1
+! ucsc 4993 1
+! urch 4391 1
+! uang 898 1
+! ubgk 142 1
+! uwic 3593 1
+! urbi 583 1 502 2
+! ufel 2561 1
+! ukan 2865 1
+! utmb 464 1
+! unal 2323 1
+! unam 4010 1 4312 1 3437 5 2862 2 562 1
+! ufsc 2865 1
+! ucsd 4365 1 1284 1 1186 1 1101 1
+! umbl 504 1
+! usci 3098 1 2016 1
+! ubar 2865 4
+! ufen 1736 1
+! ugli 398 1 162 1 406 1 285 1 160 1 84 1
+! uncl 198 2
+! unta 2726 1
+! ural 3638 1 1059 1
+! udni 890 1
+! ulan 4873 4
+! unua 402 1
+! ugen 330 2
+! usal 3991 1
+! uasg 285 1
+! ucas 3275 1
+! ugar 3025 1
+! ushi 1521 1
+! utsa 3023 1 1186 1
+! usta 405 1
+! uiuc 4647 1 2652 2 2573 1
+! ulli 3701 1
+! umwa 3108 6
+! ucho 3192 1 1274 2
+! ucri 3015 1
+! uego 888 1
+! unsd 1059 1
+! umen 971 1
+! usel 1730 1
+! urbo 406 5
+! undo 417 1 491 1 392 1 135 1 223 1 176 1
+! uwsa 4903 1
+! uber 3589 1
+! ulph 3063 2
+! uski 4958 1
+! utap 3062 1
+! umbr 4495 1
+! ufer 2106 6 1200 7
+! ular 2726 1
+! uswa 3108 1
+! uelo 450 1
+! urue 3449 1
+! util 484 1 149 1 465 2 431 1 266 1 496 1 54 1 123 1 131 1 453 2 49 2 329 1 306 1 7 1 331 1 216 1 18 1 282 2 52 1 12 1
+! uucp 4350 9 1573 1
+! ulin 970 1
+! usar 142 2 56 1
+! uzbo 3592 1
+! ualr 2583 1
+! udon 4251 8 2490 2
+! ummm 56 1
+! urbs 3351 1
+! urin 258 2 226 1 12 1
+! ulti 2403 1 2312 1 2024 1
+! ucmp 38 2
+! utim 3041 3
+! uduk 4637 2
+! uniq 1576 1 1573 5
+! unti 4688 1 3041 1 1526 1
+! urat 465 1 464 1
+! urri 359 1 358 1
+! uzza 2865 1
+! user 424 1 460 14 476 2 190 14 481 7 340 1 422 2 375 26 444 88 491 78 297 24 473 26 427 153 380 1 489 2 486 2 195 1 392 10 298 2 395 1 457 1 451 1 428 82 381 14 421 7 441 10 397 49 419 4 416 29 463 2 415 9 409 4 307 1 306 1 400 7 497 2 300 1 206 10 399 2 493 8 299 2 396 21 390 5 293 1 388 2 367 1 320 1 417 11 361 1 458 37 338 2 241 9 337 1 304 3 401 2 499 39 302 1 402 46 488 2 291 3 197 1 290 3 487 1 484 9 90 21 287 17 267 2 253 11 56 188 420 1 223 84 418 7 221 21 413 2 19 3 216 42 18 2 215 1 398 223 201 1 393 9 196 1 192 5 389 9 386 1 189 1 277 1 180 4 374 1 177 42 274 3 471 11 273 11 176 7 175 15 372 1 272 1 173 33 271 11 174 3 368 3 171 16 172 2 366 19 169 4 167 80 262 1 459 2 362 1 165 63 360 1 163 14 357 1 160 105 453 3 256 4 159 1 153 18 343 4 146 3 330 39 133 4 115 3 432 26 235 12 138 1 188 1 385 1 485 1 91 2 88 5 285 47 234 16 40 52 137 1 240 2 43 8 187 7 384 3 131 1 84 7 149 4 152 14 55 1 142 2110 339 5 48 5 145 1 51 1 46 3 410 2 16 2 113 66 45 2 89 2 283 1 186 30 42 10 139 1 85 1 282 46 135 30 132 9 329 11 182 1 20 1 414 29 411 12 214 5 17 2 111 6 308 2 14 12 408 6 120 23 208 76 11 1 108 6 158 9 255 1 136 2 13 4 10 3 151 1 157 14 150 1
+! uwsg 3864 1
+! ucsm 2865 1
+! uczi 1329 1
+! uuml 2106 1 2897 1 1422 3 1058 5 1000 2
+! ulav 4162 2
+! ufjt 3920 1
+! undu 383 1
+! uoft 3062 1
+! uomo 4391 1
+! usko 4831 1
+! uusi 4831 2 1267 1
+! uter 979 1
+! uses 467 2 445 1 438 2 142 1 494 1 241 1 366 1 437 2
+! ulft 3001 4
+! uarr 3718 2 1916 1 1000 2
+! umop 4449 2
+! unev 2865 1 709 1
+! uret 3789 13
+! urdu 477 1
+! uyer 824 2
+! unis 827 1 765 1
+! usgs 4737 1 1186 2
+! umum 834 1
+! unit 475 1 431 1 276 6 411 1 404 1 260 1 248 1 342 3 192 2 239 1 123 1 57 4 402 1 120 2 116 2 445 1 142 1 95 2 330 3 242 2 58 5 83 5 36 1 352 1 211 1 121 3 27 1 359 1 30 2 21 1 444 1 94 2 282 2 329 1 251 1 298 2 6 1 227 1 20 1
+! upnp 4873 1
+! uruk 2340 7 2325 1
+! utmp 2905 1
+! uris 142 1
+! ufos 2669 1
+! unum 560 1 562 3 502 1
+! uint 4694 5
+! uyir 142 1
+! urls 392 1 142 2 113 2
+! uhnt 1256 1
+! uart 4350 1 3945 3 3864 1 4183 98 4351 2 4835 2 3944 4 4873 4 3861 2
+! unto 3025 5 2865 12 4062 1 2327 1 2323 2
+! ulos 3615 1
+! univ 4697 2 4648 2 3053 1 1040 1
+! ubus 561 1
+! uxnq 4693 1
+! usor 3743 2
+! urey 3901 2 1120 2
+! upto 331 1
+! utro 1366 1
+! unix 484 1 449 5 321 1 56 1 397 1 265 4 18 2 282 1 142 7
+! uovo 2490 3 1944 1
+! utor 3351 1
+! ultr 4831 1
+! urot 3025 1
+! ussr 398 4 252 1 251 2 249 2
+! uxor 498 1
+! umts 4151 1 1910 1
+! uiru 592 1
+! unus 499 1 427 1 47 1 113 1 56 2 397 1 177 1 167 1
+! ustr 3944 2 654 2
+! usur 3023 1
+! uzzl 721 2
+! uazu 1591 1
+! usus 3351 2
+! usqu 1431 1 584 1 4012 1 502 2
+! upsw 1916 1
+! unacc 4066 1 3453 1
+! ulead 4033 2
+! ulica 890 1
+! uemac 4323 1
+! udana 2323 1
+! uwaga 892 2
+! utica 3026 5 3025 1 4038 2 3003 1
+! ufana 142 3
+! unced 3320 2
+! unaid 4897 1 4583 1 509 2
+! udara 1134 1
+! uggla 4690 1
+! undef 47 2
+! usage 307 1 285 1 276 5
+! useag 1574 1
+! usaid 2016 3
+! unbak 1663 2 1435 2
+! unbal 4697 24 4648 1 2824 1
+! ungef 1513 1 997 2 967 2
+! undid 493 1 135 1
+! unabl 398 1 248 1 223 1 282 1 251 2 180 1
+! uncal 3331 1 1636 1
+! unhid 1574 3
+! unsad 4748 1
+! umich 2865 1 2864 1 1912 1 1186 1 703 1
+! ummah 2865 1
+! unban 419 1
+! uncle 242 1 221 9 56 1
+! unsaf 285 1
+! usabl 352 2 202 2 162 1 56 1 54 1 186 1 226 1 149 1 392 1 40 1
+! utila 402 1
+! uwmfb 4377 1
+! ulpia 3026 1
+! umbra 4999 8 502 1
+! uquad 4694 3
+! ulang 1371 2 833 3 830 1
+! umbel 2473 3
+! unarc 4693 1
+! unend 3024 1 2323 1
+! ugric 1059 5
+! urban 406 1 246 1 217 1
+! ujjal 2403 1
+! umiej 1279 1
+! ungod 3780 1
+! uzbek 4152 1 1059 2 621 1
+! ukhra 4958 1
+! untag 444 1 491 1 56 1 10 1
+! urbem 3529 1 3351 1
+! unifi 221 2 123 1 37 1 169 1 84 3 282 1 142 1 16 1
+! ucirc 1000 2 814 1 808 2
+! ubico 3673 2
+! umami 2018 1
+! umbil 3121 1
+! umesc 3646 1 1256 1
+! uniod 2018 1
+! utile 3757 1
+! ulula 2897 1
+! usava 4065 1
+! uchar 2381 2
+! uipei 204 2
+! usted 435 2 166 7 254 2 224 4 288 3 198 4
+! udder 2323 1
+! umiem 1279 1
+! uncas 3275 2
+! unman 3117 1 2319 1
+! unnam 281 1 7 1
+! upsid 404 1 229 1
+! unita 502 1
+! urine 3789 7
+! unseg 229 3
+! usail 3864 1
+! ustic 193 1
+! uclpg 3012 1
+! unico 4175 2
+! unido 164 1
+! upcas 3275 1
+! uptak 359 1 358 1
+! usmle 4155 1
+! uvula 1503 1
+! unfil 480 1 29 1 6 2
+! ungar 4688 1
+! ulgar 2935 1
+! urate 465 1
+! uides 4151 1
+! undat 4619 2
+! unlik 428 1 373 1 252 1 427 1 438 2 284 1 445 1 169 1 123 1 176 2 199 1 475 2 7 1 265 1 385 1 443 1 6 2
+! uphil 221 1 56 1
+! urboj 406 1
+! utexa 1186 5
+! updat 499 1 482 1 431 1 398 2 329 1 465 1 396 3 151 1 339 5 484 1 162 1 444 1 491 1 169 1 157 1 298 2 167 2 26 1 305 1 56 1 150 1 380 1 138 1 223 2 131 1 88 1 135 1 113 1
+! untam 2443 1
+! usuna 2560 1
+! unari 318 1 301 2 266 2 207 1
+! ulein 3004 1 2233 1 970 5
+! ulcer 2369 1
 ! using 0 1
+! undue 4508 1
+! ulong 4813 4 4716 4 4715 10 4714 1 4694 16
+! ultra 364 1 111 1
+! unite 444 2 398 2 248 3 336 3 252 2 373 1 366 1 251 6 249 1 157 2 173 2 246 3 434 2 158 2 56 1 383 1 245 1 164 3 417 1 142 2 27 1
+! unlog 160 1
+! unord 4430 2 3328 1 4696 1 3266 1 1771 1
+! upupa 2897 1
+! usual 479 1 318 1 453 2 310 2 475 2 480 3 447 1 202 1 484 1 392 1 369 1 473 1 358 1 402 1 399 2 496 4 211 3 391 2 389 2 366 1 380 2 427 6 373 5 329 2 282 1 379 4 254 2 157 2 207 3 301 1 495 1 288 1 284 1 230 1 183 1 280 1 374 1 277 3 266 4 326 1 229 4 227 1 127 1 224 1 6 1 491 1 200 1 29 1 223 1 320 1 176 1 467 1 152 1 359 3 165 3 142 2 131 2 166 1 167 1 458 1 267 2 173 2 314 1 120 1 56 3 444 3 256 1 115 1 406 1 49 3 194 1 47 1 241 1 149 1 57 4 231 2 181 3 278 1 43 1 158 2 40 2 123 1 54 1 7 4 315 1 121 1
+! utili 883 1
+! usein 4831 1
+! unrel 427 1 379 1 211 1 201 1 113 1 107 1 7 1 56 2 6 1
+! umeri 2340 1
+! uiowa 223 1
+! unfer 3025 2 2136 1
+! ulink 3266 3
+! umask 2905 1 3041 7 1576 1 1574 10 1573 2
+! uneth 4582 2 3799 1
+! unmar 1307 1
+! upcom 427 1 216 1 165 1
+! urope 4152 1
+! usund 2634 1
+! uuuhh 223 1
+! uberm 4969 2
+! udpat 4653 1
+! uncom 4169 1 3171 1 1406 1
+! uhler 2874 1
+! unask 2323 4 1882 2
+! uhren 2919 1
+! uluva 2560 2
+! undon 491 1
+! untap 113 1
+! unwel 703 1
+! usask 2865 1
+! usher 4688 1 2340 1 2319 2 1802 1 2327 2 736 1
+! uword 4694 3
+! uudet 4831 2
+! uteri 504 1
+! uther 659 2 658 1
+! upenn 309 7 16 1
+! unarm 2323 2 1879 2
+! urpmi 3563 1 3541 1
+! ujwaq 4748 1
+! ultre 4831 1
+! unisi 417 1 265 1
+! uniti 404 1 251 1 40 3
+! untar 4533 1 4694 1 3524 1
+! unten 3663 1 2246 1 2070 1
+! uruki 2340 1
+! uzmvb 1186 1
+! uandu 2378 1
+! unapp 1089 1
+! ugrav 1000 1
 ! ultim 3 1
+! undul 107 1 226 1 96 1 359 1 94 3
+! unlaw 4570 3 2940 1 2781 1 3098 1 703 1
+! untim 249 1
+! unalt 150 2
+! upjet 4408 1
+! union 493 1 207 9 252 4 249 9 214 1 246 2 211 1 303 6 123 1 297 2 251 4 121 1 47 7
+! unfit 3900 1 2327 1 708 1 736 1 703 1 4038 1 1310 1 650 1
+! unuse 56 1
+! unrat 666 1
+! ubyte 4694 3
+! unpav 2875 1
+! upper 399 1 278 3 447 1 285 1 428 1 336 3 474 1 359 1 266 1 46 1 253 1 184 5 207 1 157 1 226 1 160 1 158 2 223 2 52 2 417 2 49 3 99 1
+! ukfsn 2671 1
+! unser 4319 2 2609 2 2246 1 1736 1 1890 1 1513 5 1677 1 2782 2 1022 1
+! unwil 248 1
+! uptim 4553 2 2862 2
+! ungul 4770 1
+! unhul 2297 1
+! unrip 2730 2 2095 2
+! unsav 1830 3
+! usato 4065 1
+! utern 2474 1 1513 1
+! uxori 498 1
+! unrol 604 1
+! unter 4478 1 3331 1 2782 1 2232 2 1815 1 2262 1 810 1 1514 4 1192 1 1513 3 918 2
+! unnit 4600 1
+! unset 1576 1 1504 1
+! usuer 2425 1
+! upset 253 1 165 1 373 1 186 2 56 3 221 1
+! upses 4557 2
+! utter 397 1
+! unlit 2291 1
+! undot 3453 1
+! uncov 4392 1 4671 1 3054 1 3284 1 4582 1 3087 1 3055 1 3354 1 2179 1 1420 1 2548 1 3014 1 3061 1 2882 1 2883 1 1669 1 2327 2 2875 1 2323 1 573 1 1922 1 3379 1 1439 1 1186 1 2865 2 1394 1 796 3 4180 1 1114 2 1459 1 1822 1 601 1
+! unkey 1627 1
+! usuri 4790 3 3023 1
+! uacut 1000 2
+! uturi 2677 1
+! usono 406 3
+! unwav 2327 3 2323 5 593 1
+! ubiqu 2322 2 2816 1 1431 1
+! umzug 3775 1 3201 1
+! unbox 2319 2
+! uncur 2200 1 2197 4
+! unzip 223 1
+! upris 4790 2 574 2 4775 1 573 1 593 1 3673 1 2698 1
+! upton 2882 1
+! ussir 809 1
+! unwax 2248 1
+! unqiu 165 1
+! usart 4183 1
+! unequ 104 1
+! uncut 3299 1 1648 1
+! unsex 2360 1
+! untuk 1177 2 3723 1 898 1 840 3 830 2
+! uperu 2560 1
+! unwis 4300 1 3112 1 2327 3 2173 1 2783 1 2323 1 1883 1
+! ukiyo 4761 1
+! uszip 3363 2
+! unwit 4604 1 3241 1 735 1
+! ureru 1300 1
+! unnot 2755 1 1130 1 4279 1 1059 2
+! upriv 736 1
 ! uniqu 3 1
+! utbut 1290 1
+! unxit 582 1
+! ukriy 1190 3
+! ununs 3274 1
+! uspto 4384 2
+! utiqu 4012 1 3026 1
+! uarts 4873 1 4183 6 4350 1 3945 3 3944 1
+! unius 584 1 562 3
+! unmov 2323 4 1884 2
+! utrum 4012 1
+! usurp 4582 2 4119 3 4584 1 1361 1 2323 4 1763 1 722 1 2779 1 3059 1 650 3
+! utpot 4012 1
+! uyuyi 142 1
+! unstr 3220 1
+! urtym 3574 1
+! unsur 499 1 427 2 398 1 491 1 251 1
+! uhuru 4860 1
+! untru 373 1 83 1
+! untyp 3967 1 3778 2
+! ulyss 829 2 709 3 708 8
+! ursus 2274 5
+! unusu 427 1 221 1 113 1 200 1 330 1 165 2 50 1
+! unidad 4242 1
+! unlead 3042 3
+! uganda 4771 1 3551 2 765 1
+! unread 428 1 266 1 192 1
+! uddina 2560 1
+! unneed 397 1 167 1 51 1
+! unific 243 2
+! useabl 444 1
+! unflag 427 1
+! umieci 1279 1
+! unload 3257 1 3213 1 3003 1 2944 2 4634 1 3171 1 2341 1
+! uralai 3186 1
+! uralic 1059 1
+! ursida 2274 2 2265 1 2130 1
+! uyanga 1992 1
+! unsafe 246 1
+! unpaid 593 1
+! urbane 241 4
+! ufdlhf 142 1
+! uncial 3024 2
+! undata 2897 1
+! upgrad 484 1 421 1 267 1 235 2
+! upload 418 8 366 4 180 1 157 3 392 1 16 3 419 1 398 6 304 1 190 3 284 1 444 17 491 2 375 1 422 2 241 4 216 1 173 11 158 28 174 1 145 2 427 6 329 2 223 1 177 3 10 2 56 12 142 10 40 1
+! uremia 3789 1
+! uselib 4715 20
+! unbend 3220 1
+! ubiera 4239 1
+! uchera 2561 1
+! umbrag 2956 1
+! univac 485 1
+! unpack 267 1
+! upheld 3541 1 1740 2 2323 5 733 1
+! upland 2897 1
+! urgenc 4696 2 4648 1 4582 2 2323 1 1190 1 2900 1 1059 1
+! ustede 435 1 288 2 198 3
+! unican 3449 2
+! ungend 2231 1
+! umgang 1027 1
+! unbind 3998 1
+! unfail 2327 1 2323 1
+! unicod 301 2 477 2 402 2 282 1 255 1
+! unname 3449 1 1493 1 1308 1
+! uracil 934 2
+! usabil 2616 1 2530 1
+! utilic 4195 2
+! uncase 3275 1
+! upside 2989 1 2865 1 1595 6
+! unscal 3865 1
+! ulrich 4790 2
+! unbear 4582 1 4116 1
+! unbold 3716 1
+! unreal 4184 5 3045 1 2295 1 2327 5 2323 5 3024 1 1884 2
+! unseal 2652 1
+! unsich 4879 1
+! umsgid 1296 1
+! uidaho 1398 1
+! upscal 3757 1 708 1
+! ultima 3059 2 502 1
+! unceas 2323 1
+! uneduc 221 1
+! unfear 3017 1
+! united 158 2
+! unlike 445 2 373 1 404 1 266 1 36 1 267 1 221 1 160 1 298 1 6 1 224 3 158 1 181 1
+! unshak 2327 6 2323 9 1880 2
+! update 398 1 375 2 339 1 232 4 201 1
+! usuabl 2152 1
+! utlend 2635 1
+! ungain 4229 1 1307 1
+! unhind 2498 1 3343 2 2804 2 4180 1 2596 1 2323 2
+! usecas 4828 2
+! unbeat 265 1
+! umbral 4999 1
+! umiemi 1279 1
+! undeni 4648 2 2210 1
+! unfold 3023 2 2977 1 2327 27 4673 1 3231 1 2934 3 2323 16 3059 1 2883 1 1985 4 1741 2 4648 5 1447 1 1492 1
+! ungetc 1107 1
+! uschen 4869 2
+! useita 4831 1
+! userid 176 1
+! uttara 2323 2
+! unbond 29 1
+! upbeat 4582 1 1848 1
+! unpeel 2561 1
+! utopia 4790 1 4749 1 1310 1 4775 3 4632 3 1837 1 1312 2
+! unalik 4583 1
+! ueliem 194 1
+! untidi 3350 2 2327 1
+! unkind 2512 2 2327 1 3979 1 504 1
+! ubbish 2320 1
+! ubject 1583 1
+! ullman 4365 1 3817 1 3777 1
+! ulpian 3026 1 3021 1
+! uneasi 4714 1 4432 1 3296 1
+! unheat 2972 1
+! usedin 4715 1
+! usemod 2320 2
+! utinam 4012 1
+! uphold 3758 1 4648 1 2327 2 3772 1 3541 2 2325 1 2323 27 2214 4 709 1
+! ucdavi 3739 1
+! unbias 398 3 152 1
+! ungkap 2726 1
+! unwean 2089 1
+! uncite 4694 1
+! uniram 229 1
+! unvoic 193 8
+! upkeep 3185 2 2804 1
+! urchin 231 1 229 2
+! usando 4817 1 4576 1 4199 1
+! usemap 2754 1
+! utrike 4690 1
+! unimod 3858 2
+! unlock 4062 2 4884 7 1573 1 2772 1 2956 1 4958 1 1591 1 4748 1 3920 1 2875 1 3317 1 2602 1 3687 2 728 1
+! unfair 444 1 174 1 416 1 398 1 415 1 175 1
+! uridin 934 1
+! ugrave 1000 1
+! unplan 4556 1
+! unseen 1762 2 2323 4 1741 2 2327 3 4648 1 4583 1 1492 1
+! uptime 4553 1
+! upward 83 1
+! ussira 805 2
+! unreli 398 1
+! ukrain 249 1
+! unforc 3727 2 2323 1
+! unanim 428 1
+! upheav 2881 1
+! uhleri 2874 1
+! unhamp 4648 1
+! unripe 4756 1
+! unsere 1677 1
+! unwind 342 1
+! unrank 3127 1 2290 1 2263 1 2133 1 2271 1 2206 1 2275 1 2272 1 2274 1 2251 1 2135 1 2273 1 2174 1 2289 1 2169 1 2265 1
+! ummath 4958 7
+! unmerg 3495 1
+! untold 4416 1 616 1 2323 1 573 1
+! ubound 4215 2
+! unclip 4408 1
+! unedit 402 1 338 1
+! unharm 2096 1 571 1
+! unhelp 411 1 396 1 282 1
+! unholi 3231 1
+! univoc 4584 1
+! unmark 4890 1 4583 2 4063 1 2875 1 4072 1 4688 1 1391 2 1270 1 1389 2 604 1 504 1
+! unoxid 3067 1
+! upaiti 2326 2
+! ursula 3701 1
+! usinng 2905 1
+! utsnam 4694 1
+! unshar 26 3 25 1
+! unesco 2865 1 2327 1 1186 2
+! ukulel 3110 1
+! urnalo 4831 1
+! ungarn 3026 1
+! uncoat 3289 2
+! unseat 1447 3
+! unearn 1307 1 1311 1 1306 1
+! unveil 2341 2 4557 2 2327 1 2879 2 2319 2
+! unawar 408 1 398 1 396 1 266 1
+! unduli 2327 2 2323 1
+! unpair 123 1 29 1 25 1
+! unwash 2515 1 2360 1 1935 1
+! urolog 2015 1 1186 3
+! uferin 2106 6
+! uniaxi 4696 1
+! unlink 48 3
+! unsign 481 1 181 3 49 6 398 1 266 7 473 9 186 3 48 8 208 4 47 10 267 9 175 1 428 3 153 1 397 3 52 4
+! uneven 467 2
+! ungern 4546 1
+! unopen 4847 1 4368 1 1928 1
+! unskil 4634 1 1384 1 728 1
+! uprise 4790 1
+! usuari 223 1
+! usampl 47 1
+! unquam 1431 1
+! undocu 4655 1 3557 1 4323 1 4279 1 2984 1 2881 1 2518 1
+! usbmgr 1576 1
+! uncook 200 2
+! unphyc 4697 1
+! uncure 2257 2
+! underp 2106 1
+! ungrat 4673 1
+! unisgn 3041 1
+! unistd 4884 6 4394 2 4350 1
+! untill 1797 1
+! uplift 4583 1 2323 3 2327 1 572 1
+! uproar 2871 1 2323 3 1879 2
+! uterin 1160 1 1159 1
+! useful 255 1 284 1 49 1 307 1 142 2 477 1 48 1
+! unitar 4697 1
+! ukrdis 4696 1
+! unhook 1447 4
+! usenet 241 3 293 6 233 5
+! uffizi 4775 1
+! undoon 3350 1
+! unimpl 4715 1
+! unique 4653 8
+! utliti 1573 1
+! uvular 4746 1 1503 5
+! upniti 2323 1
+! urutan 838 1
+! umpaso 1058 1
+! unargu 3480 1
+! unfilt 329 1
+! unityb 4583 1
+! unplug 4873 1 3945 1 2765 1 2616 1
+! utsura 4432 2
+! ugarit 3026 2 3014 9 3025 14 3020 8 3145 3 3002 3 3149 1 1059 1
+! unsalt 4767 1 2463 1 2909 1 1666 1 2051 3 1746 1 1669 2 2619 1 1409 1
+! uncaus 4138 1
+! urgent 4696 15 3230 1 2875 1 2952 1 2327 1 2323 1 2311 2 861 1
+! unwrap 2179 1 1642 1
+! unprim 58 1
+! ureter 3789 3
+! unmelt 1638 1
+! unfret 4171 1
+! usersh 3171 2
+! ultimo 4063 1 2952 2
+! unborn 4648 1 2323 3 4572 1 1882 2 1884 4 709 1
+! uncarv 2865 1
+! uncoop 3541 1
+! useast 1424 1
+! utilis 142 1
+! unsung 4975 4
+! ulcorn 3001 2
+! unform 1423 1
+! urobor 4648 5
+! unruli 3091 1 3011 1
+! unsmok 2200 1 2197 1 1921 1
+! unsure 1490 1
+! urcorn 3001 2
+! urethr 3789 2
+! unbolt 4408 4
+! unplay 3316 1 3241 1 2930 1
+! uncurl 3333 1
+! uncrit 3125 1
+! ungraz 2875 1
+! unison 292 1
+! unpars 2680 2
+! unstat 1059 1
+! unixes 3437 1
+! unwant 207 1
+! ulster 2784 1 3387 1 2057 2 570 1
+! unfett 4673 1
+! upstat 4603 1
+! untitl 3042 1
+! umlaut 157 2
+! unboot 1782 1
+! unless 184 1 253 2 342 1 56 2 444 2 150 2 398 5 267 1 173 2 175 1 221 3 266 1 427 4 330 1 142 2 285 1 216 1 402 1 208 1 193 1 40 2 428 1 186 1 157 1 481 2 152 1 120 3 496 1 108 2 202 1 123 1 149 3 431 4 49 1 135 1 223 1 417 1 458 2 176 1 366 1 413 1 84 1 181 1 241 1 47 1 282 1 6 2 57 1
+! unsent 4394 1
+! unstuf 2179 3
+! underw 287 1
+! unwarr 249 1
+! uexkul 4648 1
+! unblur 4710 1
+! usator 1589 1
+! uttter 3196 1
+! unknot 3220 1
+! upshot 4582 1
+! ushist 575 1
+! uyghur 3149 2 3057 1
+! unnerv 2052 1
+! unkown 304 1
+! unlist 1425 2
+! unrest 249 1 248 1
+! untest 4907 1 4693 2 3849 1 3790 1 2210 1
+! utrumn 584 1
+! uranus 4895 1 3480 1 1026 1
+! unvers 149 3
+! utiliz 3203 1 2843 2 2803 1 2804 1 934 1 2815 2 920 1
+! unsuit 145 1
+! unansw 3770 1 2161 1 4584 1 1259 1
+! unasur 2229 2
+! umiesz 1279 1
+! unknow 2835 1 2327 1 2878 1 2323 1 1311 1
+! unsolv 225 1 221 1
+! uterqu 4012 1
+! umontr 4570 1 4509 8
+! unport 423 1 220 1 151 1 149 4
+! uppitu 2226 2
+! umount 1576 1 2379 1 1574 7
+! uterus 226 1
+! upturn 3759 1 1307 1
+! unmout 1574 1
+! utmost 3849 1 3296 1 4038 1 3213 1 2323 3 2967 1 4697 1 4789 1 2805 1 2327 2 4505 1 2015 1
+! unphys 2078 1
+! unhurt 3023 1
+! unsort 4279 2 4215 5 2388 1 1591 2 1316 2 642 1
+! unquot 2881 2 1573 1
+! unprov 4138 2 2977 1
+! unjust 4038 1 2325 1
+! ubuntu 4715 1 4693 1 4533 1 4694 1 3996 1 3402 3 3563 1 3541 5 3399 2 1560 1 2503 2 4791 2 3457 1 3936 1 4074 3 1015 2 2379 2 1316 1
+! urumus 2340 1
+! undecid 3091 1 1281 2 759 1
+! unreach 1307 1
+! upamana 2323 3
+! upgrade 3371 2
+! undecan 123 1 122 1
+! ubicado 4175 1
+! uncheck 4851 1 4693 3 4388 6 3557 2 3371 2 3011 1
+! unlabel 2224 1
+! unmanag 165 1
+! urodela 226 1
+! unnneed 282 1
+! unchang 472 2 210 1 244 1 211 3 57 1 189 1 123 1 58 1
+! upfield 916 2
+! unifici 1311 1
+! upasana 2323 5
+! unbreak 3602 4 4300 1 3055 1 1636 1 574 1
+! unheard 249 1
+! unimelb 1322 1
+! uregina 330 1
+! ukraina 890 1
+! unviabl 2164 1 2150 1
+! upupida 2897 1
+! uberpag 4372 1
+! uncharg 365 2 35 1 29 3 21 1
+! unethic 4584 2
+! unhandl 1106 1
+! uselang 221 1
+! unmesha 2323 1
+! unchain 1872 1
+! ukemail 142 1
+! ukraine 4696 2
+! uuencod 3041 1
+! unilang 4609 2 3589 1
+! unmatch 3350 1 1447 1
+! unclear 494 1 90 1 398 1 216 1 297 1 157 1
+! unescap 4993 1 4873 1
+! unspeci 4770 1
+! unyield 4648 1 2323 2 1880 2
+! userpag 427 1 56 1
+! unwield 1899 1
+! unblock 427 1 419 3 221 1 165 1
+! unhoard 4038 1
+! unalloc 4715 1
+! undefin 458 2 260 4 120 1 472 3 186 2 318 1 148 2 207 1 47 1
+! unalien 3098 1 650 1
+! unstack 342 1
+! usbdevf 1574 2
+! unstabl 398 1 384 2 180 1 165 2 176 1 113 1 129 1 29 1 271 3 6 1
+! unbecom 1306 1
+! unbridl 573 1
+! uttamam 2323 1
+! unleash 4648 1 2835 1
+! uncomfi 3017 1
+! uential 4673 1
+! uncircl 604 3
+! undivid 4648 2 2323 1
+! undrain 3284 1 1420 1
+! unmangl 3057 1
+! unreact 475 1
+! unwatch 4983 1 4982 1 4981 1 4980 1 4979 1 4748 1
+! usbrndi 4693 1
+! unigram 1554 1
+! umsehen 1777 1 972 2
+! uncanni 2882 1 1865 1
+! unicamp 3755 1 3751 2
+! unavail 361 1 360 1 372 1 362 1 357 1
+! umbauen 3775 1
+! unavoid 298 1
+! uncleav 2323 1 1884 2
+! unelect 2787 1 593 1
+! unscath 848 1
+! untaken 4279 1
+! urethra 3789 23 1160 1
+! ussirai 805 1
+! userweb 1027 1
+! usbwifi 142 1
+! unmanli 2323 2 1884 2
+! unfaith 1308 1
+! umayyad 3246 1 990 1
+! unattch 2323 1
+! uncreat 4671 1 3432 1 2323 1
+! unlucki 4693 1 3350 1 2325 1
+! unpleas 200 1
+! unrefin 242 1
+! usernam 417 2 427 2 416 4 415 3 414 1 413 4 113 1 389 1 444 1 375 1 374 1 142 1 165 1 285 1 152 2
+! utopian 246 1
+! untangl 3269 1
+! underli 358 1 210 1
+! unpalat 359 1
+! ucallin 427 2
+! ungreas 2179 1 1338 2
+! unweari 2323 1 1883 1
+! unmingl 4063 1
+! uparati 2323 2
+! urinari 3789 28 3788 1 1160 1
+! uselibs 4715 3
+! useragr 1186 1
+! usualli 472 1 427 1 151 1 496 1 484 1 438 1 277 1 211 1 444 1 422 1 278 1 371 3 6 2
+! undelet 422 3 157 2 176 5 221 3 177 5 178 1 145 2 160 2
+! urnigin 2340 2
+! umbrosa 2874 1
+! undergo 355 1 102 3 248 1 28 1 6 5 211 1
+! unhappi 406 1 204 1
+! unlearn 427 1
+! updraft 2340 1
+! urandom 3041 1
+! upseeri 4831 1
+! unequal 1138 1
+! umleqwa 3554 1
+! unitari 4697 9 4648 4 1026 1 4680 2 920 2
+! unravel 4707 2 3221 1 3023 1 4648 1 2865 1 1114 1
+! unrelat 3480 1 2164 1
+! unrival 2323 1 1884 2
+! untrain 3617 1 3794 1 703 1 3310 1 1361 1 2443 1 728 1
+! urbanis 3149 1 1577 1
+! urbicum 2897 1
+! utrecht 2341 1
+! uitouch 4356 1
+! unpract 2327 1
+! unbound 2932 1 4696 1 2327 23 2323 25 2392 5 4648 1 2669 10 1140 1 2644 6 3345 4 2632 8 1504 3 3331 1 2365 4 4063 1 2522 6 2680 1 1740 2 2933 1 2128 2 2753 4 2523 4 568 1 504 1
+! ubicart 56 1
+! unearth 3018 3 2340 1 2882 2 4180 1 3014 1 3054 1 722 1
+! unexcav 2865 1
+! univari 2054 1 2053 1
+! unstain 4368 1 2323 1
+! untouch 252 1
+! utiliza 3499 1 3024 1
+! unthink 4755 1 2875 1 4038 1 2323 1 1884 2
+! unfound 3021 2 3578 1 573 1
+! unorder 184 1
+! unoften 3023 2
+! uncapit 2152 1
+! unchart 3900 1 3450 1
+! uncivil 175 1
+! unident 2287 3
+! unpolar 4382 2
+! untreat 3789 1 3620 1 2136 1 2443 1 728 1
+! undebur 4563 1
+! undulat 4690 1
+! ultimat 244 1 207 1 223 1 98 1
+! unalter 3900 1
+! uniniti 278 1
+! unmarri 3101 1 2233 2 1547 1 970 1 569 1
+! unright 2327 2 2323 4 1883 1 1740 2
+! unshift 3041 5
+! upshift 4634 1
+! utensil 142 3
+! utiliti 336 1 131 1 484 2 49 1
+! unworld 1844 1
+! unadorn 3266 1 3282 1 3057 1 2220 1
+! undesir 249 1 160 1 7 1
+! unregul 1128 1 571 1
+! unsight 2323 1 682 1
+! unterdr 4159 1
+! uprawni 427 1
+! upright 158 29
+! uptight 1847 1
+! uyhklug 142 1
+! usuario 142 1
+! unsubdu 2323 1 1879 2
+! undotwa 563 1
+! uncompl 4616 1 2989 1
+! unscent 2443 1
+! upstair 4180 1
+! unicorn 3687 2
+! uniform 498 1 398 1 418 1 374 1 358 1 301 3 142 1
+! unstuck 3957 1 1425 1
+! unusual 428 1 330 1
+! unsound 1038 1 502 1
+! uncoars 2879 1
+! undeton 589 1
+! unround 405 5
+! unappet 2200 1
+! undoubt 282 1 107 1
+! unevalu 4911 1
+! unlimit 277 1 218 1 150 1
+! unwound 3017 1 1128 1
+! uranium 3977 2 4051 1 3568 2 739 1 4052 1 3513 5 2952 4 3558 3 3512 2 2881 2 2585 1 2403 2
+! urbaniz 733 1
+! uropygi 3153 2
+! unhesit 4582 1 3053 1
+! upsilon 4583 1 2599 4 3145 1 1180 1 965 3
+! utrient 1114 1
+! ugliest 4372 7
+! unaspir 3794 2
+! unsecur 3171 1
+! uievent 4356 5
+! uintmax 2381 2
+! umrzfzc 3615 1
+! uncolor 4231 1 4230 2
+! undaunt 3023 1
+! unequip 4582 1
+! unfavor 229 1 211 2 453 2 248 1 123 1
+! uroboro 4648 1
+! ursulin 709 2
+! useless 491 1 398 1 402 1 392 2 142 1
+! utilito 3192 1
+! unendur 3020 1
+! unscrew 4408 3 1538 1 1533 1 1445 2 1531 3 1486 4 1447 1
+! urbanus 1948 3
+! upamshu 2323 1
+! uncouth 242 1
+! undrunk 4649 1
+! uncastr 3025 1
+! unfocus 3759 2
+! unlless 4408 1
+! usrobot 4693 1
+! uhrzeit 997 1 825 2
+! undress 4673 2
+! unexpir 2952 1
+! unsplit 2171 1
+! userbox 137 1
+! unsettl 3462 1 2956 1 510 1
+! untoast 1638 1
+! uruguay 223 1 166 1 254 4 164 4
+! upeseru 2917 3 2652 2 2916 1 2560 1 1595 2 1419 2
+! ussiron 805 1
+! unxisti 582 1
+! ubiquit 298 1
+! underst 4634 1
+! underus 2313 1
+! uninvit 4649 1 3605 2 2881 1
+! unjusti 4673 1
+! unremov 1573 1
+! upstart 3059 1 572 1
+! upstrok 2935 1
+! ursinum 2047 1 2046 1
+! univers 499 3 249 2 447 1 428 1 230 2 398 30 396 1 120 1 167 3 342 1 303 7 397 1 284 1 186 1 374 1 113 1 207 15 231 1 184 1 406 1 218 1 453 2 172 1 370 1 41 1 88 1 142 4 27 1 285 2 50 2 282 2 329 1 47 3 93 3 132 1 40 1 177 2 224 3 83 8 9 2 56 1 244 1 16 1 12 2 482 1
+! unstrip 4715 1
+! undilut 1404 1
+! uiifylu 142 1
+! unforun 1197 1
+! unpopul 1311 1
+! ucfirst 3041 3
+! unconqu 2865 1
+! undhiyu 2560 2 1958 2
+! unevolv 2327 1
 ! unknown 3 1
+! untruth 4668 1 2500 1
+! upholst 3059 1 1307 1
+! ussirez 805 1
+! uncount 285 1
+! unnatur 278 1
+! unexpos 3663 1 2698 2
+! unsatur 363 2 263 1 123 2
+! unquest 4673 2 4038 1
+! unoppos 3495 1 1802 2
+! uncross 3759 2 604 2
+! ungroup 1621 1
+! untukmu 840 1
+! usscout 3110 3
+! uhrturm 825 3
+! uninsur 2015 2
+! unmount 1576 2 1574 10
+! uzhunnu 2560 1
+! ursinus 2274 1
+! uparrow 3475 9
+! unswerv 4673 1 2323 1
+! unclutt 3053 1
+! uintptr 4715 3 4694 1
+! unfortu 4673 1
+! untwist 2767 1
+! unbleach 3006 2
+! updatedb 1576 2
+! unbalanc 4051 2 3627 1 2327 1 1307 1 694 2
+! urgencia 1548 1
+! unpreced 249 1
+! unbelief 4668 1
+! underbak 1667 1
+! uchicago 1085 1 753 1
+! unacuoca 3598 2
+! unthread 4563 2
+! unabridg 4180 1 3053 2 733 1
+! unoffici 321 1 193 1
+! uncancel 4696 1
+! unbranch 229 1 123 3
+! umbrella 394 1 142 1
+! upanisad 3023 2
+! uncodifi 2787 1
+! unsteadi 2323 7 1884 4 1880 2
+! unspecif 453 1
+! unshield 2767 1 2698 2
+! unaffili 829 1
+! unificar 4827 1
+! unattach 3759 1 2323 22 1883 3 1358 1
+! unsearch 4038 1
+! userimag 444 2 366 1 173 2
+! uokalani 733 3
+! urlencod 241 1
+! usbdebug 4694 1
+! unmodifi 150 1
+! undeciph 3020 2 3149 1 1554 1
+! ucalgari 93 1 9 1
+! unflinch 3254 1
+! unaffect 4583 1 2857 1 2327 1 3328 1 2841 1 596 1 2323 15 1292 1 824 7 724 1
+! undeclar 1914 1
+! univercd 3864 1
+! userland 2944 9
+! underbar 1262 1
+! unfriend 4634 1 3759 1 3091 1 3025 1
+! unwieldi 303 1 56 1
+! unshaken 3023 1 2323 4 1884 4
+! username 3171 1
+! usgenweb 1820 2
+! unimagin 2875 1 2842 1
+! userspac 4604 1 1718 1 3495 3 1585 1
+! uploader 427 1 158 1
+! unicamer 2788 2 593 1
+! uncombin 4053 2
+! unencumb 2211 1
+! unexpand 1576 1 1573 4
+! unreleas 1626 1
+! unquench 4063 1 2323 1
+! undersid 1721 1 1486 3 1447 1 1157 1
+! uneasili 722 1
+! upporika 4831 1
+! uthappam 2560 2
+! unobtain 2327 1
+! unregelm 3565 2
+! ultimate 2327 2 1591 1
+! umeboshi 1595 2
+! umgebung 1513 3
+! unattend 4557 1 4556 1 3230 1 1349 1
+! undertak 398 3 56 2 499 1 54 1
+! unenforc 4508 1
+! unintend 56 1
+! unleaven 258 1
+! uppercas 405 1 49 2 48 1 47 2 157 1 52 1
+! unrecogn 4715 1 4756 1 3696 1 3042 1 2164 1
+! unassail 2890 1
+! unverifi 4748 1 3063 1 2767 1 2210 3
+! uddharet 2323 1
+! unaccept 416 1 253 1 415 1 160 1 49 1
+! unambigu 191 1 202 1 177 1 7 1
+! unburden 4975 1
+! unconsci 201 1
+! unhultha 1807 1
+! undetect 4697 2 3345 1
+! userdict 4279 3
+! urochord 229 3 226 1
+! unselect 4693 1 3349 1
+! unaccess 2824 1
+! unbeliev 223 1
+! undogmat 3455 1
+! unemphas 1053 1
+! unfulfil 2327 9 2323 1 1306 1
+! usuallli 3082 1
+! upstream 482 1
+! undirect 447 1
+! unattain 398 1
+! underdon 3357 1
+! unemphat 4062 1
+! unrepair 4756 1
+! unwelcom 173 1
+! usertalk 428 1
+! unforese 3078 1 524 1
+! unrealis 2327 2
+! unbroken 244 1
+! unlicens 366 1
+! undersel 4066 1
+! ultravnc 4791 3
+! unfinish 4648 1 3098 1 2158 6 1059 2
+! unorigin 2890 1
+! unprejud 3025 1
+! unzipfil 4715 1
+! usefulli 2327 1
+! untradit 1087 1
+! underlin 4730 1 2246 1 4754 1 4648 1 3735 1 4388 1 2881 1 4606 1 3906 1 3768 2 2076 26 3371 1 3982 2 3999 1 2688 2 2077 9 1748 2 2735 2 993 3 2732 3 3480 1 1459 2 2164 1 743 1 1777 1 1500 1 1200 1 1000 4 956 1 3416 1 3181 1 825 1 3927 1 1768 1 963 1 4463 1 985 2 1458 2
+! undermin 4649 1 4138 1 2323 4 4673 1 1307 1 2327 2 2211 1 1306 1
+! uncletim 3220 1
+! unmistak 3350 1 2327 1
+! unassign 4693 1 3620 1
+! uncondit 1797 1 1836 1 1311 1 1106 2 739 2
+! undergon 244 1
+! unfasten 3023 1
+! unilater 253 1 177 1 160 1 56 1
+! unoffens 56 1
+! unprepar 4856 1 3921 1
+! userinfo 2687 1
+! unfathom 2323 12 2327 3 1882 2
+! unweight 4365 1
+! unterweg 1796 1
+! unoccupi 916 1
+! uksodwcn 3615 1
+! ulitiarn 2207 2
+! unexpect 472 1 243 1 173 1
+! underpin 3900 1 2949 1 2772 1 913 1 4688 1 4138 1
+! uninstal 1782 1 1576 1
+! unspoken 1806 1 3759 1 574 1
+! unstrain 2327 2 2323 3
+! usatoday 4760 1
+! unschool 570 1
+! ultranet 453 2
+! unconjug 289 1 8 1
+! underful 4954 1
+! unfertil 229 2
+! unglamor 3059 1
+! unintegr 2327 1
+! unshadow 2323 1
+! utilizan 3024 1
+! unground 4696 1
+! unreason 417 1
+! urogenit 2130 2 1162 1
+! usbmodul 1576 1
+! undigest 226 1
+! untermin 4694 1
+! unseason 2179 2
+! unformat 52 2 48 2
+! urartuan 2340 1
+! ustensil 3607 2
+! unstring 3220 1
+! underwat 56 1
+! uninform 1412 1 573 1
+! unnskyld 2666 2 2635 1
+! uthersrg 2163 1 2108 1
+! utilitza 142 1
+! utilizar 4252 1 4239 1 3499 1 3024 1 1526 2
+! undismay 2323 1 1880 2
+! ununbium 2585 1
+! urquaart 4583 1
+! uncommon 398 1 329 1 266 1 142 1
+! ubiquiti 2490 1
+! unrepres 4790 1
+! untransl 2878 1 934 1
+! uzhundhu 2560 1
+! universi 810 1 583 1
+! unprovem 2323 1
+! unreview 427 1
+! untuknya 840 1
+! undiscov 2205 1
+! ugliness 4668 1
+! unworthi 2323 4 1884 2 2327 2 1307 1 650 1
+! undercut 4454 2
+! unforgiv 1311 1
+! urbanext 2652 2
+! underton 3650 1 1306 1
+! unflavor 4014 1 3311 1
+! unregist 417 1 282 1
+! usrquota 1574 3
+! utiliton 4749 4
+! unproven 2952 1
+! ultrason 3303 1
+! uncovent 3772 1
+! undeserv 1307 2
+! unintent 398 1
+! unsought 2323 1 1884 2
+! underway 398 1 56 1
+! uncensor 413 1
+! ulterior 2327 1
+! unguento 582 1
+! uninspir 4707 1 593 1
+! unmethyl 1139 1
+! unmolest 1974 1
+! unobserv 2890 1
+! unpartit 2379 2
+! unitless 3808 1
+! ursprung 4916 1
+! unauthor 177 1
+! unescort 787 1
+! unperson 404 1
+! uvgroovi 4523 2
+! unrequir 4693 1
+! userlist 4638 1
+! unionway 3057 1
+! ubicumqu 4012 1
+! ufkuzfku 142 1
+! unfocuss 4649 2
+! unionist 2788 1 709 1
+! uncultiv 3019 2
+! unprovok 739 1
+! unexplor 2875 1
+! underpow 3213 2
+! unresist 2323 2 1879 2
+! unresolv 135 1 491 1 56 1
+! unfavour 2327 5 4784 1 1144 1
+! unemploy 251 1 249 1
+! unintuit 4060 1 3699 1 1114 1 1106 1
+! ussiront 805 1
+! uluburun 3020 1
+! undertow 242 1
+! uninvolv 4604 1 2323 49
+! utoronto 3751 1 3062 7 3012 7 3061 2 3149 1 2889 1 2865 1
+! unstress 4038 2 1503 4 2441 3 4391 2 3192 2 1058 4 943 1 724 1
+! unimport 447 1 373 1 249 1 25 2
+! ubiquitu 4715 1
+! unfortun 427 1 396 1 291 1 249 2 282 1 230 1 253 1 265 2 173 1 248 1 160 1 158 1 56 2 263 1 148 1 458 2 113 1 453 1 177 1 499 2 9 1 398 4 7 1
+! undisput 249 2
+! unobtrus 3966 1 3441 1
+! uncultur 2327 1
+! unintrus 428 1
+! ubstitut 3036 1
+! umibouzu 3483 1
+! uninstru 4147 1
+! usmanabad 4958 1
+! usepackag 142 3
+! undefined 4550 2
+! undeniabl 4648 1
+! underbrac 4430 9 856 4
+! utilizaba 3024 1
+! upanishad 3023 2 2323 19 2340 1 2327 7 2326 2 1741 1
+! usercheck 427 8
+! utilizada 4238 1 3499 1
+! underhand 1308 1 1307 1
+! undergrad 4397 1 3212 1 3366 1 2889 1 2844 2 2523 1
+! umberella 3437 2
+! unspecifi 3716 1 1306 1 3183 1 2578 1 4525 1 1040 1 825 1
+! umaczenia 142 1
+! ullipaaya 2560 1
+! undignifi 3317 1 1560 1
+! unclarifi 2909 1
+! uniramian 229 1
+! ushmanain 2865 1
+! uttamauja 2323 1 1879 2
+! uudelleen 4831 1
+! ukrainian 307 2 249 2
+! undersand 4523 1
+! undertand 563 1
+! unqualifi 160 1
+! uninhabit 2875 1
+! uudestaan 4831 2
+! unhealthi 211 1
+! uninscrib 3025 1 3002 1
+! unitarian 703 1
+! umfassend 1513 1
+! underdamp 4602 1 2607 5 2600 1 2593 6 2569 1
+! uitspraak 1503 1 1459 1
+! urushalem 3021 1
+! usertrack 4312 1
+! uninflect 495 2
+! unpredict 50 1
+! uwinnipeg 1504 4
+! unilingua 4152 1 621 1
+! unabbrevi 3345 16
+! unidirect 3145 1
+! uchermann 4869 2
+! unblemish 4368 1 2514 1
+! uncertain 216 1 389 1 204 1 108 1
+! ungrammat 427 2
+! unanticip 4619 1 4688 1 1628 1 1511 1 555 1
+! utilizado 3499 4 3024 3
+! unbedingt 1514 1
+! unconcern 2323 3
+! unidiomat 2609 1
+! unwilling 1866 1
+! usembassi 2865 1
+! uskalikko 4831 1
+! unitarili 4648 1
+! unconnect 167 1
+! unexplain 165 1 26 1
+! unconceiv 4755 1
+! unconvinc 2323 1
+! undercook 3299 1 2587 1 4800 1 2050 1 2490 1 3757 1 2360 1 4219 1 3339 1 2049 1
+! underdocu 3296 1
+! underwear 482 1
+! undiscern 2323 1 1884 2
+! unsatisfi 4688 1 3028 1 2327 3
+! unsharpen 2817 1
+! undefinit 944 6
+! unpipelin 4748 1
+! underbart 4689 1
+! unsprezec 1257 1
+! upperpric 2392 10
+! uncoordin 4616 1
+! usingthre 127 1
+! undersign 651 2
+! unstretch 3955 1
+! unproject 3372 1
+! unpublish 398 1
+! unsolicit 1424 2 1307 1 1306 1
+! ursulamin 4046 3
+! userlogin 417 2 158 1
+! uitroepen 1458 1
+! umsetzbar 1736 1
+! unannounc 1308 1 973 1
+! unattract 158 2
+! unconfirm 3530 1 2210 2
+! unjustifi 4616 1 4279 1 2327 1
+! unsweeten 1949 1 1746 1
+! unspartan 2956 1
+! upmanship 3441 1
+! umpteenth 1822 1
+! understan 1050 1
+! undevelop 3483 1 2323 2 2090 1 2627 1 1681 1 2327 4 2052 1 1372 2 1130 1 918 5
+! utilities 4715 1
+! ullamcorp 3844 2 3843 2 3841 2 3842 2 3837 2
+! underwood 4648 1 736 1
+! usaddress 2669 9
+! umplement 3416 1
+! unsuccess 4673 1 2781 1 3831 1 4884 1 4653 1 3450 1 1259 1 2616 1 593 1 3790 1 1306 1 708 1 829 1 1308 1 709 1 4790 2 1685 2 574 1
+! uncivilis 3023 1
+! usbdriver 4694 1
+! ululation 4668 1
+! unprotect 419 1 398 2 160 2 157 2
+! unsustain 3772 1 703 1
+! underscor 418 1 266 2 267 1 47 1
+! unadulter 4697 1 3145 1
+! unrealist 4673 1 4116 1 2881 1
+! uddipappu 2560 1
+! ultilizar 4245 1
+! undervalu 3010 2
+! upplevels 4690 1
+! unfurnish 3920 1
+! uncompens 3098 1
+! unpopular 265 1 223 1
+! unsuspect 1321 1
+! unionvill 3651 1
+! undertook 56 1
+! undisturb 282 1
+! unprocess 1419 1
+! unproduct 4604 1 3478 1 2890 1
+! unwarrant 650 1
+! urlexpans 4463 1
+! uwaterloo 4791 1 2477 1 2599 1 1629 1
+! understat 204 1
+! undueness 4668 1
+! unscrupil 2161 1
+! unthought 2327 1
+! unconquer 3023 1
+! unforgett 3024 1
+! ullipundu 2560 1
+! urogallus 2897 1
+! ultimatum 1307 1 1306 2 1308 1 703 1
+! umphokoqo 3554 1
+! uncommiss 4063 1
+! unconvent 2222 1
+! unwritten 444 1 397 1 193 2
+! uncomfort 3053 1 3780 2 3757 1 1106 1 4422 1 995 1 1869 1 2881 2 650 1 709 1 1867 1 1868 1
+! uncontrol 3882 1 3078 1 2445 1 4760 1 2164 1 4584 1 2464 1
+! unitsquar 3001 1
+! ushistori 1494 2 827 2
+! umngqusho 3554 1
+! unclutter 3110 1
+! unexploit 2529 1
+! unfortuat 2161 1
+! unregistr 3495 1
+! unrepress 4648 1
+! uncontest 142 15
+! universit 2232 1 1777 1 4065 1 1500 1 4162 1 2227 1 1490 1 995 1 810 1 799 2
+! unpasteur 1437 1
+! userstori 4828 1
+! unsophist 4619 1
+! unununium 2585 1
+! unsymmetr 6 1
+! unrespons 417 1 249 1
+! unsurpass 4765 1 4697 1 3026 1
+! usergroup 2315 2
+! unexpress 1847 1
+! ununtrium 2585 1
+! unscrupul 2327 1
+! uppermost 3117 1 946 1
+! unsurpris 4421 1 3059 1 1773 1 2577 1 2572 1 1747 1
+! userinput 3266 1
+! unencrypt 3840 1 1773 1
+! universiy 4392 1
+! undistort 4180 1 2323 1
+! ustulatus 2897 1
+! umgesetzt 3775 1
+! unsupport 1585 1 3026 1 4279 3 3454 1 4694 1 2340 1
+! unbreakabl 3602 1 1621 2
+! unchangabl 3334 3
+! unaffected 2323 1
+! unspeakabl 4582 1
+! unusedimag 56 1
+! upperalpha 3266 2
+! undischarg 1802 1
+! unapproach 3025 1
+! unfamiliar 444 1 208 1 222 1 167 1 216 2 282 1 265 1 56 1
+! unparallel 4066 1 3289 1 3025 1 4752 1 4582 1 3002 1
+! unfriendli 3759 2
+! uitnodigen 1772 3
+! unidentifi 1311 1
+! underneath 274 1 190 1 158 1
+! umgebungen 1513 5
+! uninfluenc 3759 1
+! urdhvareta 2323 1
+! undertaken 4693 1 722 1 3884 1 2865 1 3716 1 703 1 3061 2 2323 4 2340 1 1900 3 2327 2 721 1 1628 1
+! utiliserai 3712 1
+! udhayavani 4648 2
+! uncountabl 3889 1
+! unintellig 3023 1 1871 1
 ! understand 3 3
+! usermessag 4604 1 4463 1
+! unmaintain 398 1 167 1
+! unscientif 3021 1 4897 1 2334 1 3022 1 2890 1 2805 1 1120 1
+! undergradu 331 1 177 5 398 1 93 7 40 2
+! unforeseen 4673 1 2875 1 2817 1
+! unrefriger 1471 2
+! unecessari 4523 1 1639 1
+! undemocrat 2783 1
+! unpremedit 3759 1
+! unceremoni 1492 1
+! underneith 167 1
+! universali 4583 3
+! unsanitari 735 1 728 1 709 1 589 1
+! usehostlib 4715 6
+! urlconnect 3363 1
+! underlight 4032 1
+! unhydrogen 200 1
+! urolithias 3789 1
+! utilizando 1108 1
+! usemodwiki 389 2
+! umqombothi 3554 1
+! underwhelm 4748 1
+! uzbekistan 4021 2 1428 1 765 1
+! underclass 4775 2 571 1
+! undetermin 3181 1 1417 1
+! unionetask 4715 1
+! unconjugat 4011 1
+! unapologet 1308 1
+! unmanifest 2327 43 2323 35 1884 6 1741 1 1740 4
+! unnanifest 2327 1
+! upperroman 3266 1
+! unconscion 4508 1
+! unterricht 1736 1
+! usbasixeth 4693 1
+! usergoogol 2258 1
+! utilitybas 4716 5 4694 3
+! underpaint 4225 1
+! unrestrain 616 1
+! unmagnetis 2695 1
+! untranslat 4582 1
+! underworld 2879 1 3530 1 3025 2 2875 1 736 1
+! unterhosen 2106 3
+! understuff 4132 1
+! underestim 249 1
+! unchristen 4648 1
+! understood 356 1 370 1 260 1 135 1 285 1 263 1 175 1 120 1 83 2 132 1 57 1
+! uniformiti 4668 2
+! unconfigur 1782 2
+! umwandelst 2396 1
+! unencapsul 4688 1
+! unrecogniz 3872 1
+! upholsteri 3597 1
+! ultrasound 2698 1
+! usbpegasus 4693 1
+! ultrafiltr 3789 1
+! unpronounc 754 1 724 1
+! uncompetit 211 2
+! uunrrjsshi 4377 1
+! unsystemat 1076 1
+! unrestrict 149 1 139 1
+! uhuruonlin 4860 4
+! universiti 4884 1
+! utopianvis 477 1
+! utilitiess 987 1 884 1
+! unbestimmt 825 1
+! uploadtext 1406 1
+! univeristi 4660 1
+! unaccustom 3462 1 3016 1 1503 1
+! ununhexium 2585 1
+! unitvector 3107 2 2465 1 2456 1
+! ununoctium 2585 1
+! uninterest 123 1
+! unquestion 4066 1 4063 1 3057 1 4752 1 3025 1 2882 1 4072 1 2323 1 1560 1
+! unfortunat 155 1
+! uncompress 3203 1 3020 2
+! unattribut 2956 1
+! unorthodox 2890 1 1514 1 4958 1 2538 1 1203 1
+! unineterst 4587 1
+! unobstruct 1311 1
+! userlogout 417 1
+! usestartup 4715 5
+! uinaicaidai 592 1
+! upnracchaia 2323 1
+! uninterupt 4557 1 2590 1
+! unstructur 265 1
+! universidad 280 1 224 2
+! unendlichen 4696 2
+! urochordata 229 2 226 2
+! underachiev 2644 1 1867 1
+! uncorrected 4673 25
+! ubuntupedia 4074 3
+! unnessecari 935 1
+! undertaking 4668 1
+! utilitarian 4862 1 2877 1 2207 1 3763 1 2175 1 4672 2 4749 5 4584 10 911 2 3760 24 3650 3
+! unproblemat 4649 1
+! unnecessari 427 1 408 1 223 1 398 3 266 3 216 1 181 1 158 1 142 2 120 1
+! unenlighten 2323 3
+! unnecesarri 1955 1
+! undisciplin 2327 1 2323 4 1880 2 1106 1
+! unicellular 4648 9 1144 5 2130 1 1145 1 1140 1
+! umgekehrten 142 1
+! useciecolor 4279 2
+! uncircumcis 3789 1
+! uninitialis 4694 1
+! uncertainti 428 1 56 1 154 3 99 1 249 1 40 2 25 2
+! uncleanness 4668 1
+! unparenthes 2573 1
+! unusedtempl 1038 1
+! underground 160 1
+! undertermin 1251 1
+! unmanipulat 2890 1
+! unconstrain 3495 1 2190 1
+! unicodetest 4449 1
+! ununquadium 2585 1
+! ultraviolet 200 1
+! undergroung 223 1
+! unsentiment 2881 1
+! unsubstanti 4697 2 2804 1 1059 1
+! ufqehtqzfpg 3592 1
+! uppskriftir 4917 1
+! uncopyright 3541 1
+! upperextrem 2557 1
+! utilisateur 214 1 476 2 56 2
+! uncompromis 2323 1
+! universitet 4690 1
+! unambiguous 4669 2
+! ununpentium 2585 1
+! unconscious 4648 1 3759 1
+! underreport 3350 1
+! unpasteuris 3302 1
+! ununseptium 2585 1
+! unconstruct 1747 1
+! unbeknownst 2772 1 1307 1
+! untaggedimag 444 1
+! unconstitut 4509 1 678 1 647 2 740 1 641 3 709 1 574 1
+! usconstitut 593 1
+! unterbrechen 1513 1
+! unacknowledg 1311 1 733 1 650 1
+! ultimadesign 3065 2
+! unimportance 4668 1
+! uzbekscholar 1059 6
+! underthehood 4377 1
+! unneccessari 3273 1
+! ulkopuolella 4831 1
+! unecessarili 1639 1
+! umgebungsnam 1513 2
+! undifferenti 229 1
+! unimolecular 28 1 6 2
+! unterrichten 2782 1
+! usecasetempl 4828 1
+! underdevelop 248 1
+! unidirectori 2644 1
+! unconsciosli 2210 1
+! uniformement 3807 1
+! underjustifi 4605 1
+! unterteilung 1736 1
+! unconformiti 4668 1
+! untimeliness 4668 1
+! ubfellowship 2865 1
+! universitesi 4697 2
+! unprofession 282 1
+! universiteit 1772 7
+! undernourish 3620 1
+! undistinguis 1773 1
+! underexploit 4752 1
+! unsavoriness 4668 1
+! unguiculatus 2874 1
+! unctuousness 4668 1
+! usaddresstyp 2669 5
+! underexposur 4034 1
