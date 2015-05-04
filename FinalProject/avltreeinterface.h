@@ -12,20 +12,23 @@
 using namespace std;
 typedef unordered_map<int, int> pageMap;
 
-class AVLTreeInterface : public IndexInterface
+/*! \brief
+ * AVL Tree Interface implements 26 different AVLTreeIndex's.
+ */
+class AVLTreeInterface : public IndexInterface ///< inherits virtual functions from IndexInterface
 {
 public:
-    AVLTreeInterface();
-    ~AVLTreeInterface();
+    AVLTreeInterface();///< constructor
+    ~AVLTreeInterface();///< destructor
     
-    void add_term_to_ii(int letterIndex, Term* term);
-    void clear();
-    Term* find_term(string term);
-    void write_persistence_files();
+    void add_term_to_ii(int letterIndex, Term* term);///< adds term to the each individual avlTrees
+    void clear(); ///< clears avlTrees
+    Term* find_term(string term);///<searches each avlTrees for word and than returns term
+    void write_persistence_files(); ///< creates the persistance index
 
 private:
-    AVLTreeIndex* avlTrees;
-    const int numLetters = 26;
+    AVLTreeIndex* avlTrees; ///< creates 26 AVLTreeIndex's
+    const int numLetters = 26; ///< amount of AVL Trees
 };
 
 #endif // AVLTREEINTERFACE_H

@@ -5,6 +5,9 @@
  **/
 #include "avltreeinterface.h"
 
+/*! \brief
+ * AVLTreeInterface creates 26 different AVL Trees.
+ */
 //creates 26 avl trees
 AVLTreeInterface::AVLTreeInterface()
 {
