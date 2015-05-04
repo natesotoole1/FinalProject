@@ -39,6 +39,7 @@ public:
     DocParser(IndexInterface& theIndex);
 
     string clean_term(string term);
+    void clear();
 
     // Determine which LetterTerm should handle the appearance.
     // Pass the first letter of the term.  Returns  0 if the term

@@ -47,4 +47,5 @@ void IndexInterface::clear()
         letters[i].clear_table();
     }
     delete [] letters;
+    parser.clear();
 }

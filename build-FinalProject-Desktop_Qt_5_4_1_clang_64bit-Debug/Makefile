@@ -577,6 +577,7 @@ main.o: ../FinalProject/main.cpp ../FinalProject/indexhandler.h \
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h \
 		../FinalProject/term.h \
 		../FinalProject/avltreeindex.h \
 		../FinalProject/hashtableindex.h \
@@ -593,6 +594,7 @@ indexinterface.o: ../FinalProject/indexinterface.cpp ../FinalProject/indexinterf
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h \
 		../FinalProject/term.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexinterface.o ../FinalProject/indexinterface.cpp
 
@@ -603,7 +605,8 @@ term.o: ../FinalProject/term.cpp ../FinalProject/term.h \
 		../FinalProject/rapidxml_print.hpp \
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
-		../FinalProject/porter2_stemmer.h
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o term.o ../FinalProject/term.cpp
 
 termbucket.o: ../FinalProject/termbucket.cpp ../FinalProject/termbucket.h \
@@ -614,7 +617,8 @@ termbucket.o: ../FinalProject/termbucket.cpp ../FinalProject/termbucket.h \
 		../FinalProject/rapidxml_print.hpp \
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
-		../FinalProject/porter2_stemmer.h
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o termbucket.o ../FinalProject/termbucket.cpp
 
 porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_stemmer.h
@@ -631,6 +635,7 @@ avltreeindex.o: ../FinalProject/avltreeindex.cpp ../FinalProject/avltreeindex.h 
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h \
 		../FinalProject/term.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o avltreeindex.o ../FinalProject/avltreeindex.cpp
 
@@ -645,6 +650,7 @@ avltreeinterface.o: ../FinalProject/avltreeinterface.cpp ../FinalProject/avltree
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h \
 		../FinalProject/termbucket.h \
 		../FinalProject/hashtableinterface.h \
 		../FinalProject/queryprocessor.h \
@@ -658,7 +664,8 @@ docparser.o: ../FinalProject/docparser.cpp ../FinalProject/docparser.h \
 		../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h \
 		../FinalProject/term.h \
-		../FinalProject/porter2_stemmer.h
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o docparser.o ../FinalProject/docparser.cpp
 
 indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h \
@@ -670,6 +677,7 @@ indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h 
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h \
 		../FinalProject/term.h \
 		../FinalProject/avltreeindex.h \
 		../FinalProject/hashtableindex.h \
@@ -686,7 +694,8 @@ queryprocessor.o: ../FinalProject/queryprocessor.cpp ../FinalProject/queryproces
 		../FinalProject/indexinterface.h \
 		../FinalProject/pageinfo.h \
 		../FinalProject/term.h \
-		../FinalProject/porter2_stemmer.h
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o queryprocessor.o ../FinalProject/queryprocessor.cpp
 
 hashtableindex.o: ../FinalProject/hashtableindex.cpp ../FinalProject/hashtableindex.h \
@@ -698,6 +707,7 @@ hashtableindex.o: ../FinalProject/hashtableindex.cpp ../FinalProject/hashtablein
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h \
 		../FinalProject/termbucket.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashtableindex.o ../FinalProject/hashtableindex.cpp
 
@@ -710,6 +720,7 @@ hashtableinterface.o: ../FinalProject/hashtableinterface.cpp ../FinalProject/has
 		../FinalProject/pageinfo.h \
 		../FinalProject/term.h \
 		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h \
 		../FinalProject/hashtableindex.h \
 		../FinalProject/termbucket.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashtableinterface.o ../FinalProject/hashtableinterface.cpp
@@ -724,6 +735,7 @@ interface.o: ../FinalProject/interface.cpp ../FinalProject/interface.h \
 		../FinalProject/rapidxml_utils.hpp \
 		../FinalProject/pageinfo.h \
 		../FinalProject/porter2_stemmer.h \
+		../FinalProject/timer.h \
 		../FinalProject/term.h \
 		../FinalProject/avltreeindex.h \
 		../FinalProject/hashtableindex.h \

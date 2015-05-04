@@ -48,7 +48,7 @@ public:
     void incr_total_words_on_page(int currID, int incr);
     void read_file(string filePath);
     void read_persistence_files(termMap& allTerms);
-    void *read_pers_file(void* threadArgs);
+    void read_pers_file(int index, termMap& allTerms);
 
     virtual void add_term_to_ii(int letterIndex, Term* term);
     virtual void clear();

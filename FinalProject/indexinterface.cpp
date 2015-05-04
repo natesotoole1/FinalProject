@@ -10,7 +10,6 @@ struct threadArgData;
 
 IndexInterface::IndexInterface() : parser(*(new DocParser(*this)))
 {
-    totalPages = 0;
     totalWordsInCorpus = 0;
     infoForIDs = vector<PageInfo*>();
 }
@@ -22,7 +21,6 @@ IndexInterface::~IndexInterface()
 
 void IndexInterface::append_page_info(PageInfo* currInfo)
 {
-    ++totalPages;
     infoForIDs.push_back(currInfo);
 }
 
@@ -83,16 +81,25 @@ double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
 
 void IndexInterface::incr_total_words_on_page(int currID, int incr)
 {
+    try
+    {
+        infoForIDs.at(currID);
+    }
+    catch (out_of_range& notInPageInfos)
+    {
+        return;
+    }
     infoForIDs.at(currID)->incr_totalWords(incr);
 }
 
-void *IndexInterface::read_pers_file(void *threadArgs)
-{
+void IndexInterface::read_pers_file(int index, termMap &allTerms)
+{   /*
     struct threadArgData* args;
 
-    args = (struct threadArgData *) threadArgs;
+    args = (struct threadArgData *) index;
     int index = args->index;
     termMap allTerms = args->allTerms;
+    */
 
     ifstream ifs;
     string ext = ".txt";
@@ -133,33 +140,48 @@ void *IndexInterface::read_pers_file(void *threadArgs)
         }
     }
     ifs.close();
-
-    pthread_exit(NULL);
 }
 
 void IndexInterface::read_persistence_files(termMap& allTerms)
 {
-    pthread_t threads[26];
-    vector<threadArgData> td[26] td;
+    //    pthread_t threads[26];
+    //    threadArgData td[26];
+    //    int rc;
+    //    rc = pthread_create(&threads[i], NULL, read_pers_file, (void *)&td[i]);
 
-    int rc;
+    vector<thread> letterThreads;
+
 
     for (int i=0; i<26; ++i)
     {
-
-        rc = pthread_create(&threads[i], NULL, read_pers_file, (void *)&td[i]);
+        read_pers_file(i, allTerms);
     }
+    /*
+        letterThreads.push_back(thread([i, ref(allTerms)]()
+        {
+            auto lambda = [this]()
+            {
+                lamba->read_pers_file(i, ref(allTerms));
+            }
+        }
+
+    }));
+    for_each(letterThreads.begin(), letterThreads.end(), [](thread& t)
+    {
+        t.join();
+    });
+    */
 }
 
 int IndexInterface::get_totalPages(){
-    return totalPages;
+    return infoForIDs.size();
 }
 
 int IndexInterface::get_totalWordsInCorpus()
 {
     if (totalWordsInCorpus == 0)
     {
-    for (int i=0; i<infoForIDs.size(); ++i) totalWordsInCorpus += infoForIDs.at(i)->get_totalWords();
+        for (int i=0; i<infoForIDs.size(); ++i) totalWordsInCorpus += infoForIDs.at(i)->get_totalWords();
     }
     return totalWordsInCorpus;
 }

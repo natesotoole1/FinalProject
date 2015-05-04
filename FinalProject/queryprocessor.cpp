@@ -26,7 +26,11 @@ void QueryProcessor::display_best_five_results()
 {
     int max;
     int numResults = sortedResults.size();
-    if (numResults == 0) return;
+    if (numResults == 0)
+    {
+        cout<<"Sorry, there were no results for your query.\n";
+        return;
+    }
     if (numResults < 5) max = numResults;
     else max = 5;
 
@@ -34,7 +38,7 @@ void QueryProcessor::display_best_five_results()
     {
         index->display_result(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second);
     }
-    cout<<"Would you like to read the text of one of the results?  Yes or no\n";
+    cout<<"Would you like to read the text of one of the results?\n\t=> Yes\n\t=> No\n";
     string input;
     cin >> input;
     transform(input.begin(), input.end(), input.begin(), ::tolower);

@@ -12,6 +12,7 @@
 
 #include "indexhandler.h"
 #include "queryprocessor.h"
+#include "timer.h"
 
 using namespace std;
 
@@ -49,9 +50,5 @@ private:
     string dsBuilt, modeStr, cmd, asr;
     IndexHandler handler;
 };
-
-
-
-
 
 #endif // INTERFACE_H

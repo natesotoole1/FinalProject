@@ -28,6 +28,8 @@ void AVLTreeInterface::clear()
     for(int i = 0; i < numLetters; i++){
         avlTrees[i].clearTree();
     }
+    delete [] avlTrees;
+    parser.clear();
 }
 //searches for terms
 Term *AVLTreeInterface::find_term(string w)

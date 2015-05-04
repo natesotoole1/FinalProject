@@ -121,6 +121,7 @@ void Interface::command(string cmd, string asr){
                             cout<<"Please provide the file path\n";
                             cin >> asr;
                             add_file_to_index(asr);
+                            asr.clear();
                             re_command();
                         }
                     }
@@ -147,6 +148,7 @@ void Interface::command(string cmd, string asr){
                             cout<<"Please provide the file path\n";
                             cin >> asr;
                             add_file_to_index(asr);
+                            asr.clear();
                             re_command();
                         }
                     }
@@ -162,6 +164,9 @@ void Interface::command(string cmd, string asr){
                     permissionDenied(cmd);
                 }else if(cmd == "quit"){
                     quit();
+                } else {
+                    cout<<"I did not understand that command";
+                    run_interactive();
                 }
             }else if (mode == 2){
                 if(cmd == "clearindex"){
@@ -176,7 +181,6 @@ void Interface::command(string cmd, string asr){
                     if (path != "back"){
                         cout << "File Path = "<< path <<endl;
                         add_file_to_index(path);
-                        cout<<"file added"<<endl;
                         re_command();
                     }else{
                         run_maintenance();
@@ -195,7 +199,7 @@ void Interface::command(string cmd, string asr){
                     quit();
                 }else{
                     cout<<"I did not understand that command" << endl;
-                    run_interactive();
+                    run_maintenance();
                 }
             }
         }else if (asr == "no"){
@@ -251,6 +255,7 @@ void Interface::search(){
 }
 
 void Interface::run_AVL(){
+    Timer t = Timer("avl");
     if(built == true){
         clear_index();
     }
@@ -261,9 +266,11 @@ void Interface::run_AVL(){
     cout<< "AVL Tree Built" << endl;
     built = true;
     dsBuilt = "AVL Tree";
+    t.~Timer();
 }
 
 void Interface::run_hash(){
+    Timer t = Timer("hash");
     if(built == true){
         clear_index();
     }
@@ -274,9 +281,17 @@ void Interface::run_hash(){
     cout<< "Hash Table Built" << endl;
     built = true;
     dsBuilt = "Hash Table";
+    t.~Timer();
 }
 void Interface::add_file_to_index(string path){
-    handler.read_file(path);
+    ifstream isInBuildDirectory(path);
+    if (isInBuildDirectory)
+    {
+        handler.read_file(path);
+        cout<<"File added.\n"<<endl;
+
+    }
+    else cout<<"File not found for the provided path.\n";
 }
 void Interface::permissionDenied(string w){
     string asr = "";

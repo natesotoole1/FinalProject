@@ -40,6 +40,11 @@ string DocParser::clean_term(string term)
     return term;
 }
 
+void DocParser::clear()
+{
+    allTerms.erase(allTerms.begin(), allTerms.end());
+    stopWords.erase(stopWords.begin(), stopWords.end());
+}
 
 int DocParser::index_for_letter(char letter)
 {
@@ -136,17 +141,18 @@ void DocParser::read_text(xml_node<>* currNode)
             continue;
         }
 
-        // This point will only be reached if
-        // the term is already in allTerms.
+        // See if this word has already appeared on this pageID.
         try
         {
             allTerms.at(currWord).at(currID);
         }
         catch (const out_of_range& notInPageMap)
         {
+            // If not, emplace it in allTerms.
             allTerms.at(currWord).emplace(make_pair(currID, 1));
             continue;
         }
+        // If so, increment this term's pageID's frequency by 1.
         allTerms.at(currWord).at(currID)++;
     }
 }
@@ -210,7 +216,7 @@ void DocParser::read_file(string filePath)
 
     if (filePath.compare("WikiBooks.xml") == 0)
     {
-        init_file_page_infos(currNode, false);
+        init_file_page_infos(currNode, /*change back to false*/ true);
         index.read_persistence_files(allTerms);
     }
     else init_file_page_infos(currNode, true);
