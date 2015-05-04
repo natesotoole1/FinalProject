@@ -162,7 +162,7 @@ void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
     read_page(currNode, readText);
     // Index the remaining pages in the file.
 
-    int count = 1;
+    count = 1;
     while (currNode->next_sibling())
     {
 
@@ -187,7 +187,7 @@ void DocParser::push_allTerms_to_ii()
         */
 
         // Calculate (increment) totalWords for each PageInfo object.
-        for (auto & page : term.second)
+        for (auto& page : term.second)
         {
             index.incr_total_words_on_page(page.first, page.second);
         }
@@ -218,9 +218,10 @@ void DocParser::read_file(string filePath)
     if (filePath.compare("WikiBooks.xml") == 0)
     {
         init_file_page_infos(currNode, /*change back to false*/ true);
-        index.read_persistence_files(allTerms);
+        //index.read_persistence_files(allTerms);
     }
     else init_file_page_infos(currNode, true);
+
     push_allTerms_to_ii();
 }
 

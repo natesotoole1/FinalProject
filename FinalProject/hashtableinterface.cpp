@@ -24,9 +24,10 @@ void IndexInterface::write_persistence_files()
         ofstream persistence;
         string ext = ".txt";
         string filePath = to_string(i) + ext;
-        persistence.open(filePath, ofstream::out | ofstream::trunc);
+        persistence.open(filePath);
         letters[i].write_hti(persistence);
         persistence.close();
+
     }
 }
 

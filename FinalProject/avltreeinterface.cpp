@@ -45,7 +45,7 @@ void AVLTreeInterface::write_persistence_files()
         ofstream persistence;
         string ext = ".txt";
         string filePath = to_string(i) + ext;
-        persistence.open(filePath, ofstream::out | ofstream::trunc);
+        persistence.open(filePath);
         avlTrees[i].createPersistence(0, persistence);
         persistence.close();
     }

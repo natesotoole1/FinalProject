@@ -16,9 +16,8 @@ Interface::Interface()
 
 void Interface::choose_structure(){
     string ds;
-    cout<< "To start please choose the data structure:"<<endl;
-    cout<< "HashTable or AVLTree" <<endl;
-    cout<< "Choice: ";
+    cout<< "Choose a data structure to store WikiBooks information:\n";
+    cout<< "=>\tHashTable\n=>\tAVLTree\n";
     cin >> ds;
     ds = toLowerCase(ds);
     cout << "Your choice was " << ds << endl;
@@ -255,7 +254,7 @@ void Interface::search(){
 }
 
 void Interface::run_AVL(){
-    Timer t = Timer("avl");
+    Timer t = Timer("AVL Tree");
     if(built == true){
         clear_index();
     }
@@ -270,11 +269,11 @@ void Interface::run_AVL(){
 }
 
 void Interface::run_hash(){
-    Timer t = Timer("hash");
+    Timer t = Timer("Hash Table");
     if(built == true){
         clear_index();
     }
-    cout<< "Building Hash Tree" << endl;
+    cout<< "Building Hash Table" << endl;
     cout<< "Building..." << endl;
     handler = IndexHandler(true);
     handler.read_file(wikiPath);
@@ -375,8 +374,8 @@ void Interface::clear_index(){
         built = false;
     }
     cout <<"The Index has been emptied\n" << endl;
-    dsBuilt = "";
-
+    dsBuilt.clear();
+    choose_structure();
 }
 
 

@@ -24,7 +24,7 @@ public:
     ~Term();
 
     Term(string theName);
-    Term(string theName, pageMap theAprns);
+    Term(string theName, pageMap& theAprns);
 
     void add_pageAprn(int freq, int pageID);
 

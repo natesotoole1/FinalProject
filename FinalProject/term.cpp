@@ -25,7 +25,7 @@ Term::Term(string theName)
     spread = 0;
 }
 
-Term::Term(string theName, pageMap theAprns)
+Term::Term(string theName, pageMap &theAprns)
 {
     totalFreq = 0;
     next = NULL;

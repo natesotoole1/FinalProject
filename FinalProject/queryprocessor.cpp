@@ -38,7 +38,7 @@ void QueryProcessor::display_best_five_results()
     {
         index->display_result(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second);
     }
-    cout<<"Would you like to read the text of one of the results?\n\t=> Yes\n\t=> No\n";
+    cout<<"Would you like to read the text of one of the results?\n=>\tYes\n=>\tNo\n";
     string input;
     cin >> input;
     transform(input.begin(), input.end(), input.begin(), ::tolower);
