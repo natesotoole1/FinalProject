@@ -30,7 +30,7 @@ string DocParser::clean_term(string term)
     Porter2Stemmer::stem(term);
 
     // Remove all uppercase letter from term.
-    Porter2Stemmer::trim(term);
+    transform(term.begin(), term.end(), term.begin(), ::tolower);
 
     return term;
 }
@@ -144,14 +144,10 @@ void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
     read_page(currNode, readText);
     // Index the remaining pages in the file.
 
-    count = 1;
     while (currNode->next_sibling())
     {
-        //cout<<count<<endl;
         currNode = currNode->next_sibling();
         read_page(currNode, readText);
-        //++count;
-        //if (count == 1000) break;
     }
 }
 

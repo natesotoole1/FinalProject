@@ -11,28 +11,24 @@
 
 using namespace std;
 /*! \brief
- * AVL Node implementation for the AVL Tree structure.
+ * Connects Interface and IndexInterface.  Will construct either a HashTableIndex
+ * or AVLTreeIndex and mediate between user commands and stored info.
  */
 class IndexHandler
 {
 public:
     IndexHandler();
     ~IndexHandler();
-    IndexHandler(bool asHashTable);
+    IndexHandler(bool asHashTable); ///< Lets the user choose between data structures.
 
+    void read_file(string filePath); ///< Reads info for a given filePath.
 
+    void run_queries(string query); ///< Call run_queries in IndexInterface.
 
-    // Inits all PageInfo objects from the current file.  Since the persistence
-    // file has already been written, if the filePath is "WikiBooks.xml", it will
-    // instead load data for each term from the persistence file.
-    void read_file(string filePath);
-
-    void run_queries(string query);
-
-    void clear_index();
+    void clear_index(); ///< Deallocate data members.
 
 private:
-    IndexInterface* index;
+    IndexInterface* index; /// The inverted file index.
 };
 
 #endif // INDEXHANDLER_H

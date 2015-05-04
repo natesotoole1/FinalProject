@@ -15,14 +15,14 @@ using namespace std;
 
 typedef unordered_map<int, int> pageMap;
 /*! \brief
- * HashTableInterface creates hash table index's
+ * Holds 26 HashTableIndexes, one for each letter of the alphabet.
+ * Inherits from IndexInterface.
  */
 class HashTableInterface : public IndexInterface
 {
 public:
     HashTableInterface();
     ~HashTableInterface();
-
 };
 
 #endif // HASHTABLEINTERFACE_H

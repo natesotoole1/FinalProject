@@ -20,7 +20,10 @@ typedef pair<int, double> resultPair;
 
 typedef unordered_map<int, double> relevancyMap;
 /*! \brief
- * gets the queries for each search created in Interface
+ * Holds a relevancyMap (unordered_map_map<int, double>) that stores the total TD/IDF values
+ * that a pageID has for the current query.  Keywords AND and OR will find the intersection and
+ * union of potential results, respectively.  Control is passed to IndexInterface to print the PageInfo
+ * for the best 15 (or less) results.
  */
 class QueryProcessor
 {
@@ -29,25 +32,21 @@ public:
     ~QueryProcessor();
     QueryProcessor(IndexInterface &theIndex);
 
-    void answer_query(istringstream& query, bool intersection);
+    void answer_query(istringstream& query, bool intersection); ///< Start writing to "results".
 
-    void display_best_fifteen_results();
+    void display_best_fifteen_results(); ///< Display results in descending order of summed TD/IDF value.
 
+    void initiate_query(string query); ///< Get input from the user.
 
+    void init_relev_map(Term* term); ///< Fill "results" with an initial candidate set.
+    void intersection_incr_relev_map(Term* term); ///< Explained in QueryProcessor.cpp.
+    void union_incr_relev_map(Term* term); ///< Explained in QueryProcessor.cpp.
 
-    void initiate_query(string query);
-
-    void init_relev_map(Term* term);
-    void intersection_incr_relev_map(Term* term);
-    void union_incr_relev_map(Term* term);
-
-    void sort_results();
-
-    // write this
+    void sort_results(); /// Sort results in descending order of TD/IDF value.
 
 private:
-    relevancyMap results;
-    vector<resultPair> sortedResults;
+    relevancyMap results; ///< A relevancyMap holding total TD/IDF values for pageIDs regarding the whole query.
+    vector<resultPair> sortedResults; ///< To copy in finding the instersection
 
     IndexInterface& index;
 };

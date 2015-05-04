@@ -17,8 +17,8 @@ typedef unordered_map<int, double> tdidfMap;
 
 class IndexInterface;
 /*! \brief
- * Term creates the terms for the persistent index
- * creates a page map of aprns to get relevancy
+ * The heart of the inverted file index.  Each Term object has a name and pageMap,
+ * holding the pageIDs it's appeared on and the frequency for each page.
  */
 class Term
 {
@@ -26,15 +26,12 @@ public:
     Term();
     ~Term();
 
-    Term(string theName);
-    Term(string theName, pageMap& theAprns);
-
-    void add_pageAprn(int freq, int pageID);
+    Term(string theName, pageMap& theAprns); ///< The only constructor called.
 
 
-    void init_spread_and_totalFreq();
-    void init_tdidfs(IndexInterface& index);
-    void incrm_aprn_for_pageID(int currID);
+    void init_spread_and_totalFreq(); ///< The only Terms that will need spread and totalFreq are result candidates.
+    void init_tdidfs(IndexInterface& index); ///< Calculate TD/IDF values for each document.
+    void incrm_aprn_for_pageID(int currID); ///< Increase a pageID's frequency by 1.  Handles out_of_range exceptions.
 
     pageMap get_pageAprns();
     string get_name();
@@ -45,25 +42,24 @@ public:
 
     void set_next(Term* theNext);
 
-    void write_term(ofstream& persistence);
+    void write_term(ofstream& persistence); ///< Write Term's info to the persistence index.
 
 
 private:
-    // Holds the IDs of pages on which it appeared.
-    pageMap pageAprns;
+    pageMap pageAprns; ///< Holds the IDs of pages on which it appeared.
+
 
     string name;
 
-    // For the linked list functionality of each TermBucket.
-    // Only used in HashTableIndex.
-    Term* next;
 
-    // The number of unique documents on which the term has appeared.
-    int spread;
+    Term* next; ///< For the linked list functionality of each TermBucket. Only used in HashTableIndex.
 
-    tdidfMap tdidfs;
 
-    int totalFreq;
+    int spread; ///< The number of unique documents on which the term has appeared.
+
+    tdidfMap tdidfs; ///< Only calculated for result candidates.
+
+    int totalFreq; ///< The total number of times it's appeared int the corpus.
 };
 
 #endif // TERM_H

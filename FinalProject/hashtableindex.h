@@ -13,8 +13,8 @@ using namespace std;
 
 typedef unordered_map<int, int> pageMap;
 /*! \brief
- * Hash Table Index implementation for the hash table data structure.
- * connects to term buckets and creates a 1024 of them
+ * Holds 1024 TermBuckets.  Hashes strings to map to Term* values.
+ * Handles collisions with chaining.
  */
 class HashTableIndex
 {
@@ -22,14 +22,14 @@ public:
     HashTableIndex();
     ~HashTableIndex();
 
-    void add_term_to_ht_index(Term* term);
-    Term* find(string term);
-    int hash_key(string key);
-    void write_hti(ofstream& persistence);
-    void clear_table();
+    void add_term_to_ht_index(Term* term); ///< Call add_term_to_bucket at the hashed bucket.
+    Term* find(string term); ///< Return Term* (matching the passed string) from the inverted index.  Return NULL if none is found.
+    int hash_key(string key); ///< Custom hash function.  Specifics in hashtableindex.cpp.
+    void write_hti(ofstream& persistence); ///< Call write_term_bucket for the hashed bucket.
+    void clear_table(); ///< Deallocate data members.
 private:
-    const int arrSize = 1024;
-    TermBucket* buckets;
+    const int arrSize = 1024; ///< The chosen number of buckets.
+    TermBucket* buckets; ///< One bucket for each letter of the alphabet.
 
 };
 

@@ -5,14 +5,15 @@
 
 using namespace std;
 /*! \brief
- * AVL Node implementation for the AVL Tree structure.
+ *  In the inverted index, pages are assigned integer IDs to improve performance.
+ *  PageInfo objects hold the data corresponding with said IDs.
  */
 class PageInfo
 {
 public:
     PageInfo();
     ~PageInfo();
-    PageInfo(string theContent, string theContributor, string theTimestamp, string theTitle);
+    PageInfo(string theContent, string theContributor, string theTimestamp, string theTitle); ///< The only constructor ever called.
 
     // Getters.
     string get_content();
@@ -26,9 +27,9 @@ public:
     void set_contributor(string theInfo);
     void set_timestamp(string theTimestamp);
     void set_title(string theTitle);
-
-    void incr_totalWords(int incr);
     void set_totalWords(int theTotal);
+
+    void incr_totalWords(int incr); ///< Increment totalWords by a given value.
 private:
     string content;
     string contributorNameOrIP;

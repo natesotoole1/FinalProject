@@ -18,32 +18,10 @@ Term::~Term()
 
 }
 
-Term::Term(string theName)
-{
-    name = theName;
-    totalFreq = 0;
-    spread = 0;
-}
-
 Term::Term(string theName, pageMap &theAprns)
+    : totalFreq(0), spread(0), next(NULL), name(theName), pageAprns(theAprns)
 {
-    totalFreq = 0;
-    spread = 0;
-    next = NULL;
-    name = theName;
-    pageAprns = theAprns;
-    /*
-    for (auto& aprn : theAprns)
-    {
-        // First is the pageID, second is the frequency.
-        pageAprns.emplace(make_pair(aprn.first, aprn.second));
-    }
-    */
-}
 
-void Term::add_pageAprn(int freq, int pageID)
-{
-    pageAprns.emplace(make_pair(pageID, freq));
 }
 
 void Term::incrm_aprn_for_pageID(int currID)

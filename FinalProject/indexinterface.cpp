@@ -35,7 +35,7 @@ void IndexInterface::display_result(int rank, int pageID, double tdidf)
 
 void IndexInterface::display_page_content(int pageID)
 {
-    cout<<"Here is the text\n";
+    cout<<"Text displayed below:\n=======================\n";
     cout<<infoForIDs.at(pageID)->get_content()<<endl;
 }
 
@@ -67,6 +67,16 @@ void IndexInterface::read_file(string filePath)
 
 double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
 {
+    // In case the persistence index grew through read_file.
+    try
+    {
+        infoForIDs.at(pageID);
+    }
+    catch (out_of_range& notInPageIDs)
+    {
+        return 0;
+    }
+
     // Calculate TF value.
     int totalWords = infoForIDs.at(pageID)->get_totalWords();
     double tf = (double)freq/totalWords;

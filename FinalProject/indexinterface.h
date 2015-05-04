@@ -24,18 +24,14 @@ class Term;
 
 typedef unordered_map<int, int> pageMap;
 typedef unordered_map<string, pageMap> termMap;
-/*! \brief
- * AVL Node implementation for the AVL Tree structure.
- */
-struct threadArgData
-{
-    int index;
-    termMap& allTerms;
-};
 
 using namespace std;
 /*! \brief
- * AVL Node implementation for the AVL Tree structure.
+ * The inverted file index.  Two derived classes, HashTableInterface and AVLTreeInterface,
+ * store the inverted file index as a hash table and AVL tree, respectively.
+ * Also holds totalWordsInCorpus for TD/IDF calculation.
+ * All virtual functions in this header implemented in HashTableInterface.cpp.
+ * AVLTreeInterface redefines said virtual functions.
  */
 class IndexInterface
 {
@@ -44,23 +40,22 @@ public:
     IndexInterface();
     ~IndexInterface();
 
-    //void add_term_to_persistence(Term* term);
-    void append_page_info(PageInfo* currInfo);
-    double calc_tdidf(int pageID, int freq, int spread);
-    void display_result(int rank, int pageID, double tdidf);
-    void display_page_content(int pageID);
-    void incr_total_words_on_page(int currID, int incr);
-    void read_file(string filePath);
-    void read_persistence_files();
-    void read_pers_file(int index);
+    void append_page_info(PageInfo* currInfo); ///< Each time the DocParser finds info for a new page, push it back to infoForIDs.
+    double calc_tdidf(int pageID, int freq, int spread); ///< Each Term has a TD/IDF value for each page.  Calculate those as doubles.
+    void display_result(int rank, int pageID, double tdidf); ///< cout the top results found my QueryProcessor.
+    void display_page_content(int pageID); ///< Access infoForIDs for a pageID.  cout its title.
+    void incr_total_words_on_page(int currID, int incr); /// Increase a totalWords for a pageID.
+    void read_file(string filePath); ///< Pass control to the parser.
+    void read_persistence_files(); ///< When the program launches or when the inverted index is cleared, read the inverted index in from the persistence files.
+    void read_pers_file(int index); ///< Read a single persistence file.
 
-    virtual void add_term_to_ii(int letterIndex, Term *term);
-    virtual void clear();
+    virtual void add_term_to_ii(int letterIndex, Term *term); /// Add a term to the inverted index.
+    virtual void clear(); ///< Deallocate data members.
 
-    virtual Term* find_term(string term);
-    virtual void write_persistence_files();
+    virtual Term* find_term(string term); ///< Find the Term* in the inverted index for a string.  Retun NULL if there is no such Term*.
+    virtual void write_persistence_files(); ///< Output persistence files.
 
-    int index_for_letter(char letter);
+    int index_for_letter(char letter); ///< Determine which AVLTreeIndex or HashTableIndex should handle the appearance. Returns  0 if the term is a number, 1 for 'a', 2 for 'b', and so forth.
     PageInfo* info_for_pageID(int pageID);
 
     int get_totalWordsInCorpus();

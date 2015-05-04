@@ -32,40 +32,35 @@ typedef unordered_map<int, int> pageMap;
 typedef unordered_map<string, string> stopWordMap;
 typedef unordered_map<string, pageMap> termMap;
 /*! \brief
- * Uses rapidxml to parse throught the wikiDump
+ * Handles the text of files, primarily that of WikiBooks.xml.
+ * Uses RapidXML libraries.
+ * Initiates PageInfo objects for a file and stores them to the inverted index.
  */
 class DocParser
 {
 public:
     ~DocParser();
-    DocParser(IndexInterface& theIndex);
+    DocParser(IndexInterface& theIndex); ///< Default constructor never called; must take a reference to the inverted file intdex.
 
-    string clean_term(string term);
-    void clear();
+    string clean_term(string term); ///< Stem the terms then makes all letters lowercase.
+    void clear(); ///< Deallocate data members.
 
-    // Determine which LetterTerm should handle the appearance.
-    // Pass the first letter of the term.  Returns  0 if the term
-    // is a number, 1 for 'a', 2 for 'b', and so forth.
-    int index_for_letter(char letter);
+    //
+    int index_for_letter(char letter); ///< Determine which AVLTreeIndex or HashTableIndex should handle the appearance. Returns  0 if the term is a number, 1 for 'a', 2 for 'b', and so forth.
 
-    void read_page(xml_node<>* currNode, bool readText);
-    void read_text(xml_node<>* currNode);
+    void read_page(xml_node<>* currNode, bool readText); ///< Makes a new PageInfo object from a page.  Will or will not fetch term appearances from the text after using it as a PageInfo constructor parameter.
+    void read_text(xml_node<>* currNode); ///< Get all page appearances from the current page's text.  Pass this info to the inverted index.
 
-    void init_file_page_infos(xml_node<>* currNode, bool readText);
+    void init_file_page_infos(xml_node<>* currNode, bool readText); ///< Call read_page for each page.
 
-    void read_file(string filePath);
+    void read_file(string filePath); ///< Get to the right node (assuming it's the same structure as WikiBooks.xml, then call init_file_page_infos.
 
-    bool is_stop_word(string term);
+    bool is_stop_word(string term); ///< Checks the stopWordMap; returns true if the passed string is in stopWords.
 
 private:
-    // termMap allTerms;
+    IndexInterface& index; ///< The inverted file index.
 
-    IndexInterface& index;
-
-    stopWordMap stopWords;
-
-    int count = 0;
-    // trivial
+    stopWordMap stopWords; ///< Words to effectively ignore in the inverted file index.
 
     string currWord;
     string currContent;
