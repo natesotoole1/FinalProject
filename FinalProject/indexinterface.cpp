@@ -93,7 +93,7 @@ void IndexInterface::incr_total_words_on_page(int currID, int incr)
 
 void IndexInterface::read_pers_file(int index)
 {
-    cout<<index<<endl;
+    cout<<"("<<index+1<<"/26)...\n";
 
     ifstream ifs;
     string filePath = to_string(index) + ext;
@@ -137,6 +137,7 @@ void IndexInterface::read_pers_file(int index)
 
 void IndexInterface::read_persistence_files()
 {
+    cout<<"Reading persistence documents...\n";
     for (int i=0; i<26; ++i) read_pers_file(i);
 }
 

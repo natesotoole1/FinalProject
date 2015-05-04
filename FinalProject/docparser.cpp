@@ -1,10 +1,5 @@
 #include "docparser.h"
 
-/*DocParser::DocParser()
-{
-
-}*/
-
 DocParser::DocParser(IndexInterface& theIndex) : index(theIndex)
 {
     // Add all stop words to stopWords.
@@ -179,9 +174,8 @@ void DocParser::read_file(string filePath)
 
     if (filePath.compare("WikiBooks.xml") == 0)
     {
-        cout<<"Init page info...\n";
+        cout<<"Initializing info for corpus pages...\n";
         init_file_page_infos(currNode, false);
-        cout<<"Read pers files...\n";
         index.read_persistence_files();
     }
     else

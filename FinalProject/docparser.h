@@ -32,10 +32,9 @@ typedef unordered_map<int, int> pageMap;
 typedef unordered_map<string, string> stopWordMap;
 typedef unordered_map<string, pageMap> termMap;
 
-class DocParser // : public IndexInterface
+class DocParser
 {
 public:
-    //DocParser();
     ~DocParser();
     DocParser(IndexInterface& theIndex);
 
