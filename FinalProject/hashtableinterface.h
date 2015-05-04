@@ -14,7 +14,9 @@
 using namespace std;
 
 typedef unordered_map<int, int> pageMap;
-
+/*! \brief
+ * HashTableInterface creates hash table index's
+ */
 class HashTableInterface : public IndexInterface
 {
 public:

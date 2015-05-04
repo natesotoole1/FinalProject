@@ -27,9 +27,8 @@ void IndexInterface::append_page_info(PageInfo* currInfo)
 void IndexInterface::display_result(int rank, int pageID, double tdidf)
 {
     PageInfo* resultInfo = infoForIDs.at(pageID);
-    cout<<"Result rank #"<<rank<<": \n";
+    cout<<"#"<<rank<<": \""<<resultInfo->get_title()<<"\"\n";
     cout<<"\tTotal TDF/IDF value: "<<tdidf<<endl;
-    cout<<"\tPage name: "<<resultInfo->get_title()<<endl;
     cout<<"\tTimestamp: "<<resultInfo->get_timestamp()<<endl;
     cout<<"\tContributor name or IP Address: "<<resultInfo->get_contributor()<<endl;
 }
@@ -92,26 +91,18 @@ void IndexInterface::incr_total_words_on_page(int currID, int incr)
     infoForIDs.at(currID)->incr_totalWords(incr);
 }
 
-void IndexInterface::read_pers_file(int index, termMap &allTerms)
-{   /*
-    struct threadArgData* args;
-
-    args = (struct threadArgData *) index;
-    int index = args->index;
-    termMap allTerms = args->allTerms;
-    */
+void IndexInterface::read_pers_file(int index)
+{
+    cout<<"("<<index+1<<"/26)...\n";
 
     ifstream ifs;
-    string ext = ".txt";
     string filePath = to_string(index) + ext;
     ifs.open(filePath);
 
     // Load two words at a time.
-    string word1;
-    string word2;
+    string word1, word2;
 
-    ifs >> word1;
-    ifs >> word2;
+    ifs >> word1 >> word2;
 
     while (!ifs.eof())
     {
@@ -122,55 +113,32 @@ void IndexInterface::read_pers_file(int index, termMap &allTerms)
             pageMap pageAprns;
             string name = word2;
 
-            ifs >> word1;
-            ifs >> word2;
+            ifs >> word1 >> word2;
 
             // For each subsequent pageID-frequency pair, add that to pageAprns
             // and increment that pageID's totalWords.
             while ((word1.compare("!") != 0) && (!ifs.eof()))
             {
+
                 int num1 = stoi(word1);
                 int num2 = stoi(word2);
 
                 pageAprns.emplace(make_pair(num1, num2));
-                ifs >> word1;
-                ifs >> word2;
+
+                // Increment the totalWords for currID by the freq.
+                incr_total_words_on_page(num1, num2);
+                ifs >> word1 >> word2;
             }
-            allTerms.emplace(make_pair(name, pageAprns));
+            add_term_to_ii(index, new Term(name, pageAprns));
         }
     }
     ifs.close();
 }
 
-void IndexInterface::read_persistence_files(termMap& allTerms)
+void IndexInterface::read_persistence_files()
 {
-    //    pthread_t threads[26];
-    //    threadArgData td[26];
-    //    int rc;
-    //    rc = pthread_create(&threads[i], NULL, read_pers_file, (void *)&td[i]);
-
-    vector<thread> letterThreads;
-
-
-    for (int i=0; i<26; ++i)
-    {
-        read_pers_file(i, allTerms);
-    }
-    /*
-        letterThreads.push_back(thread([i, ref(allTerms)]()
-        {
-            auto lambda = [this]()
-            {
-                lamba->read_pers_file(i, ref(allTerms));
-            }
-        }
-
-    }));
-    for_each(letterThreads.begin(), letterThreads.end(), [](thread& t)
-    {
-        t.join();
-    });
-    */
+    cout<<"Reading persistence documents...\n";
+    for (int i=0; i<26; ++i) read_pers_file(i);
 }
 
 int IndexInterface::get_totalPages(){

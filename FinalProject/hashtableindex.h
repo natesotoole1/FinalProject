@@ -12,7 +12,10 @@
 using namespace std;
 
 typedef unordered_map<int, int> pageMap;
-
+/*! \brief
+ * Hash Table Index implementation for the hash table data structure.
+ * connects to term buckets and creates a 1024 of them
+ */
 class HashTableIndex
 {
 public:
@@ -25,7 +28,7 @@ public:
     void write_hti(ofstream& persistence);
     void clear_table();
 private:
-    int arrSize = 1024;
+    const int arrSize = 1024;
     TermBucket* buckets;
 
 };

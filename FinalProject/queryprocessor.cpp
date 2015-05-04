@@ -7,22 +7,22 @@
 
 #include "queryprocessor.h"
 
-QueryProcessor::QueryProcessor()
+/*QueryProcessor::QueryProcessor()
 {
-    sortedResults = vector<resultPair>();
-}
+
+}*/
 
 QueryProcessor::~QueryProcessor()
 {
 
 }
 
-QueryProcessor::QueryProcessor(IndexInterface*& theIndex)
+QueryProcessor::QueryProcessor(IndexInterface& theIndex) : index(theIndex)
 {
-    index = theIndex;
+    sortedResults = vector<resultPair>();
 }
 
-void QueryProcessor::display_best_five_results()
+void QueryProcessor::display_best_fifteen_results()
 {
     int max;
     int numResults = sortedResults.size();
@@ -31,12 +31,13 @@ void QueryProcessor::display_best_five_results()
         cout<<"Sorry, there were no results for your query.\n";
         return;
     }
-    if (numResults < 5) max = numResults;
-    else max = 5;
+    if (numResults < 15) max = numResults;
+    else max = 15;
 
+    cout<<"Results\n";
     for (int i=1; i<=max; ++i)
     {
-        index->display_result(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second);
+        index.display_result(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second);
     }
     cout<<"Would you like to read the text of one of the results?\n=>\tYes\n=>\tNo\n";
     string input;
@@ -53,10 +54,10 @@ void QueryProcessor::display_best_five_results()
     else
     {
         if (numResults == 1){
-            index->display_page_content(sortedResults.at(0).first);
+            index.display_page_content(sortedResults.at(0).first);
             return;
         }
-        cout<<"Which document?  Enter a rank #\n";
+        cout<<"Which document?  Enter a rank #:\n";
         cin>>input;
         int numInput = stoi(input);
         while (!((numInput > 0)
@@ -67,7 +68,7 @@ void QueryProcessor::display_best_five_results()
             cin >> input;
             numInput = stoi(input);
         }
-        index->display_page_content(sortedResults.at(numInput-1).first);
+        index.display_page_content(sortedResults.at(numInput-1).first);
     }
 }
 
@@ -102,7 +103,7 @@ void QueryProcessor::intersection_incr_relev_map(Term* term)
         // If it is, add the two TD/IDF values together and emplace the
         // new value in the intersection relevancyMap.
         double tdidf = results.at(page.first);
-        tdidf += index->calc_tdidf(page.first, page.second, term->get_spread());
+        tdidf += index.calc_tdidf(page.first, page.second, term->get_spread());
         intersection.emplace(make_pair(page.first, tdidf));
     }
     results = intersection;
@@ -143,7 +144,7 @@ void QueryProcessor::answer_query(istringstream& query, bool intersection)
     // Put the first queried term into results.
     query >> currTerm;
     Porter2Stemmer::stem(currTerm);
-    Term* foundTerm = index->find_term(currTerm);
+    Term* foundTerm = index.find_term(currTerm);
     if (!foundTerm) cout<<"The term \""<<currTerm<<"\" never appeared in the corpus\n";
     else
     {
@@ -159,7 +160,7 @@ void QueryProcessor::answer_query(istringstream& query, bool intersection)
             query >> currTerm;
             Porter2Stemmer::stem(currTerm);
 
-            foundTerm = index->find_term(currTerm);
+            foundTerm = index.find_term(currTerm);
             if (!foundTerm) cout<<"The term \""<<currTerm<<"\" never appeared in the corpus\n";
             else
             {
@@ -185,7 +186,7 @@ void QueryProcessor::answer_query(istringstream& query, bool intersection)
         {
             // Find the intersection of the words, adding together the TD/IDF
             // values so far and the TD/IDF values for this term.
-            foundTerm = index->find_term(currTerm);
+            foundTerm = index.find_term(currTerm);
             if (!foundTerm) cout<<"The term \""<<currTerm<<"\" never appeared in the corpus\n";
             else
             {
@@ -196,7 +197,7 @@ void QueryProcessor::answer_query(istringstream& query, bool intersection)
         }
     }
     sort_results();
-    display_best_five_results();
+    display_best_fifteen_results();
 }
 
 void QueryProcessor::initiate_query(string query)

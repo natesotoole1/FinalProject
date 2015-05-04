@@ -32,7 +32,9 @@
 
 #include <vector>
 #include <string>
-
+/*! \brief
+ * AVL Node implementation for the AVL Tree structure.
+ */
 namespace Porter2Stemmer
 {
     void stem(std::string & word);

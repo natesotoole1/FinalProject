@@ -16,7 +16,10 @@ typedef unordered_map<int, int> pageMap;
 typedef unordered_map<int, double> tdidfMap;
 
 class IndexInterface;
-
+/*! \brief
+ * Term creates the terms for the persistent index
+ * creates a page map of aprns to get relevancy
+ */
 class Term
 {
 public:
@@ -30,7 +33,8 @@ public:
 
 
     void init_spread_and_totalFreq();
-    void init_tdidfs(IndexInterface* index);
+    void init_tdidfs(IndexInterface& index);
+    void incrm_aprn_for_pageID(int currID);
 
     pageMap get_pageAprns();
     string get_name();

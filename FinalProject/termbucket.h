@@ -10,7 +10,9 @@
 using namespace std;
 
 typedef unordered_map<int, int> pageMap;
-
+/*! \brief
+ * linked list of Term objects
+ */
 class TermBucket
 {
 public:

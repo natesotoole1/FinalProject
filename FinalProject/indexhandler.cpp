@@ -29,7 +29,7 @@ void IndexHandler::read_file(string filePath)
 
 void IndexHandler::run_queries(string query)
 {
-    QueryProcessor processor = QueryProcessor(index);
+    QueryProcessor processor = QueryProcessor(*index);
     processor.initiate_query(query);
 }
 void IndexHandler::clear_index(){

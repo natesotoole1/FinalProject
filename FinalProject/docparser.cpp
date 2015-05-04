@@ -1,10 +1,5 @@
 #include "docparser.h"
 
-/*DocParser::DocParser()
-{
-
-}*/
-
 DocParser::DocParser(IndexInterface& theIndex) : index(theIndex)
 {
     // Add all stop words to stopWords.
@@ -42,7 +37,6 @@ string DocParser::clean_term(string term)
 
 void DocParser::clear()
 {
-    allTerms.erase(allTerms.begin(), allTerms.end());
     stopWords.erase(stopWords.begin(), stopWords.end());
 }
 
@@ -93,7 +87,7 @@ void DocParser::read_page(xml_node<>* currNode, bool readText)
     // Having found all info for this page, push back a new
     // PageInfo object to the index's infoForIDs.
     index.append_page_info(new PageInfo(
-                                currContent, currContributorNameOrIP, currTimestamp, currTitle));
+                               currContent, currContributorNameOrIP, currTimestamp, currTitle));
 
     // If text should be read (i.e. it's a new file),
     // call read_text.
@@ -117,6 +111,9 @@ void DocParser::read_text(xml_node<>* currNode)
 
     while (stream >> currWord)
     {
+        // Increment the totalWords for currID.
+        index.incr_total_words_on_page(currID, 1);
+
         // Loads whatever characters are between each pair of whitespaces,
         // so clean it.
         currWord = clean_term(currWord);
@@ -126,34 +123,19 @@ void DocParser::read_text(xml_node<>* currNode)
         if ((is_stop_word(currWord))
                 || (currWord.length() > 12)) continue;
 
-        // See if currTerm is already in allTerms;
-        try
+        found = index.find_term(currWord);
+
+        // If the word isn't already in the index, push back a new Term with 1 pageAprn at (currID, 1);
+
+        if (!found)
         {
-            allTerms.at(currWord);
+            pageMap aprn;
+            aprn.emplace(make_pair(currID, 1));
+            index.add_term_to_ii(index_for_letter(currWord.front()), new Term(currWord, aprn));
         }
 
-        // This means the term wasn't already in allTerms, so emplace it.
-        catch (const out_of_range& notInAllTerms)
-        {
-            pageMap pMap;
-            pMap.emplace(make_pair(currID, 1));
-            allTerms.emplace(make_pair(currWord, pMap));
-            continue;
-        }
-
-        // See if this word has already appeared on this pageID.
-        try
-        {
-            allTerms.at(currWord).at(currID);
-        }
-        catch (const out_of_range& notInPageMap)
-        {
-            // If not, emplace it in allTerms.
-            allTerms.at(currWord).emplace(make_pair(currID, 1));
-            continue;
-        }
-        // If so, increment this term's pageID's frequency by 1.
-        allTerms.at(currWord).at(currID)++;
+        // Otherwise, increment that Term's freq by 1 for that doc if it has appeared there.
+        else found->incrm_aprn_for_pageID(currID);
     }
 }
 
@@ -165,37 +147,12 @@ void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
     count = 1;
     while (currNode->next_sibling())
     {
-
+        //cout<<count<<endl;
         currNode = currNode->next_sibling();
         read_page(currNode, readText);
-        ++count;
-        if (count == 2) break;
+        //++count;
+        //if (count == 1000) break;
     }
-}
-
-void DocParser::push_allTerms_to_ii()
-{
-    for (auto& term : allTerms)
-    {
-        /*
-        // If the word accounts for more than 1% of the total words
-        // in the corpus, skip it.
-        int totalAprns = 0;
-        for (auto& page : allTerms.at(term.first)) totalAprns += page.second;
-        double fraction = (double)totalAprns/totalWordsInCorpus;
-        if (fraction > 0.01) continue;
-        */
-
-        // Calculate (increment) totalWords for each PageInfo object.
-        for (auto& page : term.second)
-        {
-            index.incr_total_words_on_page(page.first, page.second);
-        }
-
-
-        index.add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second));
-    }
-    index.write_persistence_files();
 }
 
 void DocParser::read_file(string filePath)
@@ -217,12 +174,15 @@ void DocParser::read_file(string filePath)
 
     if (filePath.compare("WikiBooks.xml") == 0)
     {
-        init_file_page_infos(currNode, /*change back to false*/ true);
-        //index.read_persistence_files(allTerms);
+        cout<<"Initializing info for corpus pages...\n";
+        init_file_page_infos(currNode, false);
+        index.read_persistence_files();
     }
-    else init_file_page_infos(currNode, true);
-
-    push_allTerms_to_ii();
+    else
+    {
+        init_file_page_infos(currNode, true);
+        index.write_persistence_files();
+    }
 }
 
 bool DocParser::is_stop_word(string term)

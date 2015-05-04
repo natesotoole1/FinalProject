@@ -10,7 +10,9 @@
 #include <vector>
 
 using namespace std;
-
+/*! \brief
+ * AVL Node implementation for the AVL Tree structure.
+ */
 class IndexHandler
 {
 public:

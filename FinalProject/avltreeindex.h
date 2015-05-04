@@ -25,12 +25,6 @@ struct AVL_Node
     struct AVL_Node *right; ///< right child
     int height; ///< height of tree
     
-    //   AVL_Node(Term* value, AVL_Node *lt, AVL_Node *rt){
-    //       data = value;
-    //       left = lt;
-    //       right = rt;
-    //       height = 0;
-    //   }
 };
 
 /*! \brief

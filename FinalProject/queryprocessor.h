@@ -19,17 +19,19 @@ using namespace std;
 typedef pair<int, double> resultPair;
 
 typedef unordered_map<int, double> relevancyMap;
-
+/*! \brief
+ * gets the queries for each search created in Interface
+ */
 class QueryProcessor
 {
 public:
-    QueryProcessor();
+    //QueryProcessor();
     ~QueryProcessor();
-    QueryProcessor(IndexInterface*& theIndex);
+    QueryProcessor(IndexInterface &theIndex);
 
     void answer_query(istringstream& query, bool intersection);
 
-    void display_best_five_results();
+    void display_best_fifteen_results();
 
 
 
@@ -47,7 +49,7 @@ private:
     relevancyMap results;
     vector<resultPair> sortedResults;
 
-    IndexInterface* index;
+    IndexInterface& index;
 };
 
 #endif // QUERYPROCESSOR_H
