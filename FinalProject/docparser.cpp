@@ -93,7 +93,7 @@ void DocParser::read_page(xml_node<>* currNode, bool readText)
     // Having found all info for this page, push back a new
     // PageInfo object to the index's infoForIDs.
     index.append_page_info(new PageInfo(
-                                currContent, currContributorNameOrIP, currTimestamp, currTitle));
+                               currContent, currContributorNameOrIP, currTimestamp, currTitle));
 
     // If text should be read (i.e. it's a new file),
     // call read_text.
@@ -165,11 +165,11 @@ void DocParser::init_file_page_infos(xml_node<> *currNode, bool readText)
     count = 1;
     while (currNode->next_sibling())
     {
-
+        //cout<<count<<endl;
         currNode = currNode->next_sibling();
         read_page(currNode, readText);
-        ++count;
-        if (count == 2) break;
+        //++count;
+        //if (count == 1000) break;
     }
 }
 
@@ -193,9 +193,9 @@ void DocParser::push_allTerms_to_ii()
         }
 
 
+        cout<<"Pushing: "<<term.first<<endl;
         index.add_term_to_ii(index_for_letter(term.first.front()), new Term(term.first, term.second));
     }
-    index.write_persistence_files();
 }
 
 void DocParser::read_file(string filePath)
@@ -217,12 +217,18 @@ void DocParser::read_file(string filePath)
 
     if (filePath.compare("WikiBooks.xml") == 0)
     {
-        init_file_page_infos(currNode, /*change back to false*/ true);
-        //index.read_persistence_files(allTerms);
+        cout<<"Init page info...\n";
+        init_file_page_infos(currNode, false);
+        cout<<"Read pers files...\n";
+        index.read_persistence_files(allTerms);
     }
-    else init_file_page_infos(currNode, true);
-
+    else
+    {
+        init_file_page_infos(currNode, true);
+        index.write_persistence_files();
+    }
     push_allTerms_to_ii();
+
 }
 
 bool DocParser::is_stop_word(string term)

@@ -30,7 +30,7 @@ public:
 
 
     void init_spread_and_totalFreq();
-    void init_tdidfs(IndexInterface* index);
+    void init_tdidfs(IndexInterface& index);
 
     pageMap get_pageAprns();
     string get_name();

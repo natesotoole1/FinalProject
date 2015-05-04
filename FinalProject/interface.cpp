@@ -383,6 +383,7 @@ void Interface::quit(){
     cout<<"Thank you very much for using KITESearch!" << endl;
     clear_index();
     exit(1);
+    exit(1);
 }
 
 string Interface::toLowerCase(string w){

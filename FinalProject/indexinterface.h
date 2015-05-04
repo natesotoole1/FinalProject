@@ -50,7 +50,7 @@ public:
     void read_persistence_files(termMap& allTerms);
     void read_pers_file(int index, termMap& allTerms);
 
-    virtual void add_term_to_ii(int letterIndex, Term* term);
+    virtual void add_term_to_ii(int letterIndex, Term *term);
     virtual void clear();
 
     virtual Term* find_term(string term);

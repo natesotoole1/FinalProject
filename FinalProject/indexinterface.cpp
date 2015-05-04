@@ -101,6 +101,8 @@ void IndexInterface::read_pers_file(int index, termMap &allTerms)
     termMap allTerms = args->allTerms;
     */
 
+    cout<<index<<endl;
+
     ifstream ifs;
     string ext = ".txt";
     string filePath = to_string(index) + ext;
@@ -129,6 +131,7 @@ void IndexInterface::read_pers_file(int index, termMap &allTerms)
             // and increment that pageID's totalWords.
             while ((word1.compare("!") != 0) && (!ifs.eof()))
             {
+
                 int num1 = stoi(word1);
                 int num2 = stoi(word2);
 
@@ -149,13 +152,10 @@ void IndexInterface::read_persistence_files(termMap& allTerms)
     //    int rc;
     //    rc = pthread_create(&threads[i], NULL, read_pers_file, (void *)&td[i]);
 
-    vector<thread> letterThreads;
+    //vector<thread> letterThreads;
 
 
-    for (int i=0; i<26; ++i)
-    {
-        read_pers_file(i, allTerms);
-    }
+    for (int i=0; i<26; ++i) read_pers_file(i, allTerms);
     /*
         letterThreads.push_back(thread([i, ref(allTerms)]()
         {

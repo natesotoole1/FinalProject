@@ -28,13 +28,17 @@ Term::Term(string theName)
 Term::Term(string theName, pageMap &theAprns)
 {
     totalFreq = 0;
+    spread = 0;
     next = NULL;
     name = theName;
+    pageAprns = theAprns;
+    /*
     for (auto& aprn : theAprns)
     {
         // First is the pageID, second is the frequency.
         pageAprns.emplace(make_pair(aprn.first, aprn.second));
     }
+    */
 }
 
 void Term::add_pageAprn(int freq, int pageID)
@@ -53,13 +57,13 @@ void Term::init_spread_and_totalFreq()
 
 }
 
-void Term::init_tdidfs(IndexInterface *index)
+void Term::init_tdidfs(IndexInterface &index)
 {
     init_spread_and_totalFreq();
     for (auto& page : pageAprns)
     {
         // First = pageID, second = freq.
-        double tdidf = index->calc_tdidf(page.first, page.second, spread);
+        double tdidf = index.calc_tdidf(page.first, page.second, spread);
         tdidfs.emplace(make_pair(page.first, tdidf));
     }
 }

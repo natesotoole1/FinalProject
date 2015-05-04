@@ -44,7 +44,6 @@ private:
     const string wikiPath;
     int mode;
     bool built;
-    QueryProcessor currQuery;
     bool endSearch;
     bool endProgram;
     string dsBuilt, modeStr, cmd, asr;

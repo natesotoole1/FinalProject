@@ -31,7 +31,7 @@ void IndexInterface::write_persistence_files()
     }
 }
 
-void IndexInterface::add_term_to_ii(int letterIndex, Term *term)
+void IndexInterface::add_term_to_ii(int letterIndex, Term* term)
 {
     letters[letterIndex].add_term_to_ht_index(term);
 }
