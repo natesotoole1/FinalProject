@@ -46,6 +46,23 @@ void Term::add_pageAprn(int freq, int pageID)
     pageAprns.emplace(make_pair(pageID, freq));
 }
 
+void Term::incrm_aprn_for_pageID(int currID)
+{
+    // If the term has already appeared at currID,
+    // increment that frequency by 1.  Otherwise,
+    // emplace a new pageAprn (currID, 1).
+    try
+    {
+        pageAprns.at(currID);
+    }
+    catch (out_of_range& notInPageAprns)
+    {
+        pageAprns.emplace(make_pair(currID, 1));
+        return;
+    }
+    pageAprns.at(currID)++;
+}
+
 void Term::init_spread_and_totalFreq()
 {
     spread = pageAprns.size();

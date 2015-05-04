@@ -47,8 +47,8 @@ public:
     void display_page_content(int pageID);
     void incr_total_words_on_page(int currID, int incr);
     void read_file(string filePath);
-    void read_persistence_files(termMap& allTerms);
-    void read_pers_file(int index, termMap& allTerms);
+    void read_persistence_files();
+    void read_pers_file(int index);
 
     virtual void add_term_to_ii(int letterIndex, Term *term);
     virtual void clear();
@@ -63,6 +63,7 @@ public:
     int get_totalPages();
 
 protected:
+    const string ext = ".txt";
 
     // Only used for HashTableIndex.
     HashTableIndex* letters;

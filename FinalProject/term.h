@@ -31,6 +31,7 @@ public:
 
     void init_spread_and_totalFreq();
     void init_tdidfs(IndexInterface& index);
+    void incrm_aprn_for_pageID(int currID);
 
     pageMap get_pageAprns();
     string get_name();

@@ -34,6 +34,7 @@ void QueryProcessor::display_best_fifteen_results()
     if (numResults < 15) max = numResults;
     else max = 15;
 
+    cout<<"Results\n";
     for (int i=1; i<=max; ++i)
     {
         index.display_result(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second);
@@ -56,7 +57,7 @@ void QueryProcessor::display_best_fifteen_results()
             index.display_page_content(sortedResults.at(0).first);
             return;
         }
-        cout<<"Which document?  Enter a rank #\n";
+        cout<<"Which document?  Enter a rank #:\n";
         cin>>input;
         int numInput = stoi(input);
         while (!((numInput > 0)

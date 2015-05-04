@@ -265,7 +265,6 @@ void Interface::run_AVL(){
     cout<< "AVL Tree Built" << endl;
     built = true;
     dsBuilt = "AVL Tree";
-    t.~Timer();
 }
 
 void Interface::run_hash(){
@@ -280,7 +279,6 @@ void Interface::run_hash(){
     cout<< "Hash Table Built" << endl;
     built = true;
     dsBuilt = "Hash Table";
-    t.~Timer();
 }
 void Interface::add_file_to_index(string path){
     ifstream isInBuildDirectory(path);

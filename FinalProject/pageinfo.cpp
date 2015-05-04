@@ -16,12 +16,9 @@ PageInfo::~PageInfo()
 }
 
 PageInfo::PageInfo(string theContent, string theContributor, string theTimestamp, string theTitle)
+    : totalWords(0), content(theContent), contributorNameOrIP(theContributor), timestamp(theTimestamp), title(theTitle)
 {
-    totalWords = 0;
-    content = theContent;
-    contributorNameOrIP = theContributor;
-    timestamp = theTimestamp;
-    title = theTitle;
+
 }
 
 string PageInfo::get_content()

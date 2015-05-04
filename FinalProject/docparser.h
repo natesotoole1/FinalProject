@@ -23,6 +23,7 @@
 #include "timer.h"
 
 class IndexInterface;
+class Term;
 
 using namespace rapidxml;
 using namespace std;
@@ -46,8 +47,6 @@ public:
     // is a number, 1 for 'a', 2 for 'b', and so forth.
     int index_for_letter(char letter);
 
-    void push_allTerms_to_ii();
-
     void read_page(xml_node<>* currNode, bool readText);
     void read_text(xml_node<>* currNode);
 
@@ -58,7 +57,7 @@ public:
     bool is_stop_word(string term);
 
 private:
-    termMap allTerms;
+    // termMap allTerms;
 
     IndexInterface& index;
 
@@ -72,6 +71,7 @@ private:
     string currContributorNameOrIP;
     string currTimestamp;
     string currTitle;
+    Term* found;
 };
 
 inline int is_not_alpha(char c)

@@ -25,7 +25,7 @@ public:
     void write_hti(ofstream& persistence);
     void clear_table();
 private:
-    int arrSize = 1024;
+    const int arrSize = 1024;
     TermBucket* buckets;
 
 };
