@@ -68,12 +68,13 @@
     <member refid="class_index_interface_1a3d784385e028557312ef15d59574f9ed" kind="function"><name>display_page_content</name></member>
     <member refid="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" kind="function"><name>incr_total_words_on_page</name></member>
     <member refid="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" kind="function"><name>read_file</name></member>
-    <member refid="class_index_interface_1aa6ef58f8b651083175b684b9428a90c5" kind="function"><name>read_persistence_files</name></member>
-    <member refid="class_index_interface_1adcba07c90cd34ab0ce7bee340d09ed07" kind="function"><name>read_pers_file</name></member>
+    <member refid="class_index_interface_1aebcf89c2fd27b815b697c8e9d29e0c3a" kind="function"><name>read_persistence_files</name></member>
+    <member refid="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" kind="function"><name>read_pers_file</name></member>
     <member refid="class_index_interface_1a9a7539d9c7a48bf4d4fbe43961c0547f" kind="function"><name>index_for_letter</name></member>
     <member refid="class_index_interface_1a2af7d88c3b2701be9164ba9f4a3bddb3" kind="function"><name>info_for_pageID</name></member>
     <member refid="class_index_interface_1a8a0132ad6e84c4340061496c615f581c" kind="function"><name>get_totalWordsInCorpus</name></member>
     <member refid="class_index_interface_1af9edc24ac00bdf2c0e06384f890a1d8a" kind="function"><name>get_totalPages</name></member>
+    <member refid="class_index_interface_1acd76893126e9fd5dc63cb4ea8f56265c" kind="variable"><name>ext</name></member>
     <member refid="class_index_interface_1a8511509bb58da989f705ba75fd5dde2d" kind="variable"><name>letters</name></member>
     <member refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kind="variable"><name>infoForIDs</name></member>
     <member refid="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" kind="variable"><name>parser</name></member>
@@ -81,7 +82,6 @@
     <member refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" kind="variable"><name>totalWordsInCorpus</name></member>
   </compound>
   <compound refid="class_doc_parser" kind="class"><name>DocParser</name>
-    <member refid="class_doc_parser_1a1a014fc55f8a205c97250f1ce8ecc8d8" kind="variable"><name>allTerms</name></member>
     <member refid="class_doc_parser_1ad0e840d5c92edbe2c8f28406a5c3f008" kind="variable"><name>index</name></member>
     <member refid="class_doc_parser_1a089705924f6a28afb59064526b4b7f4f" kind="variable"><name>stopWords</name></member>
     <member refid="class_doc_parser_1ace9019a4f9ede433886adaa0656e6e3b" kind="variable"><name>count</name></member>
@@ -90,12 +90,12 @@
     <member refid="class_doc_parser_1acf0aedb227a48a682d1ff238d1d6614d" kind="variable"><name>currContributorNameOrIP</name></member>
     <member refid="class_doc_parser_1a642bcf2a542abd6b386c1445e937e4cd" kind="variable"><name>currTimestamp</name></member>
     <member refid="class_doc_parser_1a8348dc55e8aa858bbc5becc02d4e53bf" kind="variable"><name>currTitle</name></member>
+    <member refid="class_doc_parser_1adb6f140f5f0972129201a0f7fe4be541" kind="variable"><name>found</name></member>
     <member refid="class_doc_parser_1a637fc4d565eaf2927ee9b88bbe23e3cb" kind="function"><name>~DocParser</name></member>
     <member refid="class_doc_parser_1a086f00e54fca8038c85c0e235948d75a" kind="function"><name>DocParser</name></member>
     <member refid="class_doc_parser_1a1b127af53e8af16f393b64f46c307d3a" kind="function"><name>clean_term</name></member>
     <member refid="class_doc_parser_1ad92d1a6da7d413abd27ee18a6ed20a30" kind="function"><name>clear</name></member>
     <member refid="class_doc_parser_1a7addc81ac337c2688bb9e9d8197db2fc" kind="function"><name>index_for_letter</name></member>
-    <member refid="class_doc_parser_1ac5fbdbda41119634a1357112f158110c" kind="function"><name>push_allTerms_to_ii</name></member>
     <member refid="class_doc_parser_1a48cd3949baca573b9be0b4ba24b9c79d" kind="function"><name>read_page</name></member>
     <member refid="class_doc_parser_1af28153ebf0ee2fe97c2942c04c915adc" kind="function"><name>read_text</name></member>
     <member refid="class_doc_parser_1ad7b5809e4efd3e2bae781c1cb491ab29" kind="function"><name>init_file_page_infos</name></member>
@@ -111,7 +111,7 @@
     <member refid="classrapidxml_1_1file_1a20191d167c6e00a88a44ca9a3a54e1c5" kind="function"><name>size</name></member>
   </compound>
   <compound refid="class_hash_table_index" kind="class"><name>HashTableIndex</name>
-    <member refid="class_hash_table_index_1a7253d4d2a147715df75217f1731245e9" kind="variable"><name>arrSize</name></member>
+    <member refid="class_hash_table_index_1a1b302265c4ce75eb039d82bacd1f4bfd" kind="variable"><name>arrSize</name></member>
     <member refid="class_hash_table_index_1a7737d10bb5720666b0bff86376a82a11" kind="variable"><name>buckets</name></member>
     <member refid="class_hash_table_index_1a13c1c8deae84226c8bef382adf103b53" kind="function"><name>HashTableIndex</name></member>
     <member refid="class_hash_table_index_1af4d2eeae8263c353f91140cb2583fb58" kind="function"><name>~HashTableIndex</name></member>
@@ -130,8 +130,8 @@
     <member refid="class_index_interface_1a3d784385e028557312ef15d59574f9ed" kind="function"><name>display_page_content</name></member>
     <member refid="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" kind="function"><name>incr_total_words_on_page</name></member>
     <member refid="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" kind="function"><name>read_file</name></member>
-    <member refid="class_index_interface_1aa6ef58f8b651083175b684b9428a90c5" kind="function"><name>read_persistence_files</name></member>
-    <member refid="class_index_interface_1adcba07c90cd34ab0ce7bee340d09ed07" kind="function"><name>read_pers_file</name></member>
+    <member refid="class_index_interface_1aebcf89c2fd27b815b697c8e9d29e0c3a" kind="function"><name>read_persistence_files</name></member>
+    <member refid="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" kind="function"><name>read_pers_file</name></member>
     <member refid="class_index_interface_1aa83b7083d107869e3519c5862bc71d0a" kind="function"><name>add_term_to_ii</name></member>
     <member refid="class_index_interface_1ad7b88501f360ccfad0c1ee08d793ca25" kind="function"><name>clear</name></member>
     <member refid="class_index_interface_1a851f0396f0b390cc9aa8cde270afffc9" kind="function"><name>find_term</name></member>
@@ -140,6 +140,7 @@
     <member refid="class_index_interface_1a2af7d88c3b2701be9164ba9f4a3bddb3" kind="function"><name>info_for_pageID</name></member>
     <member refid="class_index_interface_1a8a0132ad6e84c4340061496c615f581c" kind="function"><name>get_totalWordsInCorpus</name></member>
     <member refid="class_index_interface_1af9edc24ac00bdf2c0e06384f890a1d8a" kind="function"><name>get_totalPages</name></member>
+    <member refid="class_index_interface_1acd76893126e9fd5dc63cb4ea8f56265c" kind="variable"><name>ext</name></member>
     <member refid="class_index_interface_1a8511509bb58da989f705ba75fd5dde2d" kind="variable"><name>letters</name></member>
     <member refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kind="variable"><name>infoForIDs</name></member>
     <member refid="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" kind="variable"><name>parser</name></member>
@@ -159,6 +160,7 @@
     <member refid="class_index_handler_1a417830272cfc725f6966c7a0a0ceae1d" kind="function"><name>clear_index</name></member>
   </compound>
   <compound refid="class_index_interface" kind="class"><name>IndexInterface</name>
+    <member refid="class_index_interface_1acd76893126e9fd5dc63cb4ea8f56265c" kind="variable"><name>ext</name></member>
     <member refid="class_index_interface_1a8511509bb58da989f705ba75fd5dde2d" kind="variable"><name>letters</name></member>
     <member refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kind="variable"><name>infoForIDs</name></member>
     <member refid="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" kind="variable"><name>parser</name></member>
@@ -172,8 +174,8 @@
     <member refid="class_index_interface_1a3d784385e028557312ef15d59574f9ed" kind="function"><name>display_page_content</name></member>
     <member refid="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" kind="function"><name>incr_total_words_on_page</name></member>
     <member refid="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" kind="function"><name>read_file</name></member>
-    <member refid="class_index_interface_1aa6ef58f8b651083175b684b9428a90c5" kind="function"><name>read_persistence_files</name></member>
-    <member refid="class_index_interface_1adcba07c90cd34ab0ce7bee340d09ed07" kind="function"><name>read_pers_file</name></member>
+    <member refid="class_index_interface_1aebcf89c2fd27b815b697c8e9d29e0c3a" kind="function"><name>read_persistence_files</name></member>
+    <member refid="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" kind="function"><name>read_pers_file</name></member>
     <member refid="class_index_interface_1aa83b7083d107869e3519c5862bc71d0a" kind="function"><name>add_term_to_ii</name></member>
     <member refid="class_index_interface_1ad7b88501f360ccfad0c1ee08d793ca25" kind="function"><name>clear</name></member>
     <member refid="class_index_interface_1a851f0396f0b390cc9aa8cde270afffc9" kind="function"><name>find_term</name></member>
@@ -187,7 +189,6 @@
     <member refid="class_interface_1a2dca5f7e2ddb5d7bf82c9eaf8f3a17eb" kind="variable"><name>wikiPath</name></member>
     <member refid="class_interface_1a272ffd81b79f689429ef27b6e8345fcf" kind="variable"><name>mode</name></member>
     <member refid="class_interface_1abd6ccab6c911d4beaaa8531036a92413" kind="variable"><name>built</name></member>
-    <member refid="class_interface_1af9d9a123bf2233b924da24d94e20adb7" kind="variable"><name>currQuery</name></member>
     <member refid="class_interface_1acd8a62dd37c5774058cbaee915b0d9fe" kind="variable"><name>endSearch</name></member>
     <member refid="class_interface_1a81680e55e0deb21de6e1c7d802ccf2b8" kind="variable"><name>endProgram</name></member>
     <member refid="class_interface_1a913b1344fae6395837321a94cc9f05dc" kind="variable"><name>dsBuilt</name></member>
@@ -196,21 +197,21 @@
     <member refid="class_interface_1a6dd99aca069dbc1054642d4c855b2c42" kind="variable"><name>asr</name></member>
     <member refid="class_interface_1a596b02db00f1f13e0955444504c3752c" kind="variable"><name>handler</name></member>
     <member refid="class_interface_1a4406d74c75bdfe150bf72be1f1cda8b1" kind="function"><name>Interface</name></member>
+    <member refid="class_interface_1a182ad83393eb72b7db55f0e65d4a0ad6" kind="function"><name>choose_structure</name></member>
+    <member refid="class_interface_1a2c7d25d68192d1dd451be039922b2b46" kind="function"><name>set_mode</name></member>
+    <member refid="class_interface_1ac7d71f89f09c5367e9d998291526acfc" kind="function"><name>get_command</name></member>
+    <member refid="class_interface_1ae2e80336e351baf5c266bd85bb4f9281" kind="function"><name>re_command</name></member>
     <member refid="class_interface_1aa1d2750e9c624107fcde02b8d69eb69a" kind="function"><name>command</name></member>
     <member refid="class_interface_1a043b8fe5fb3a2ca4603c7592d8c7d0e2" kind="function"><name>search</name></member>
     <member refid="class_interface_1a57532e2ede5d40e3595427f4129517b9" kind="function"><name>run_AVL</name></member>
     <member refid="class_interface_1a53dd2dc9fcb214f40b4031f7854cffe3" kind="function"><name>run_hash</name></member>
     <member refid="class_interface_1a7384173d1857ae65156b58913ec31d1c" kind="function"><name>run_maintenance</name></member>
-    <member refid="class_interface_1a2c7d25d68192d1dd451be039922b2b46" kind="function"><name>set_mode</name></member>
     <member refid="class_interface_1abf4ac54601aad5f8cb929a7649a8b935" kind="function"><name>add_file_to_index</name></member>
     <member refid="class_interface_1a19dbc4e711b5341ca2f81de689c6d5ee" kind="function"><name>clear_index</name></member>
     <member refid="class_interface_1ab1c8e554ab1de3e19c4bcd09682b701a" kind="function"><name>toLowerCase</name></member>
     <member refid="class_interface_1a48828fb2f7d1ce9cc3fe8f8bcf1a87b7" kind="function"><name>run_interactive</name></member>
     <member refid="class_interface_1a7ba995236d529ab0aee1229eb94b793d" kind="function"><name>quit</name></member>
     <member refid="class_interface_1a3c7464353b37ffe8962db67c421fe30a" kind="function"><name>permissionDenied</name></member>
-    <member refid="class_interface_1ac7d71f89f09c5367e9d998291526acfc" kind="function"><name>get_command</name></member>
-    <member refid="class_interface_1ae2e80336e351baf5c266bd85bb4f9281" kind="function"><name>re_command</name></member>
-    <member refid="class_interface_1a182ad83393eb72b7db55f0e65d4a0ad6" kind="function"><name>choose_structure</name></member>
     <member refid="class_interface_1a2bee39caa585218f975c1310093dd124" kind="function"><name>get_filePath</name></member>
   </compound>
   <compound refid="classrapidxml_1_1memory__pool" kind="class"><name>rapidxml::memory_pool</name>
@@ -285,12 +286,11 @@
   <compound refid="class_query_processor" kind="class"><name>QueryProcessor</name>
     <member refid="class_query_processor_1ab0f6ff6ab22675a201902135bab6809e" kind="variable"><name>results</name></member>
     <member refid="class_query_processor_1a443576fbb0c7749c7b69ccbd69f0eb58" kind="variable"><name>sortedResults</name></member>
-    <member refid="class_query_processor_1a985785cf6513ebedeb2b71c522675640" kind="variable"><name>index</name></member>
-    <member refid="class_query_processor_1a32a6760ff0aab51b38fb8eb236e2e140" kind="function"><name>QueryProcessor</name></member>
+    <member refid="class_query_processor_1af0fe42043ab2eb42da9f911d842fbed5" kind="variable"><name>index</name></member>
     <member refid="class_query_processor_1ac4bebae67b0c08004f26f55957428574" kind="function"><name>~QueryProcessor</name></member>
-    <member refid="class_query_processor_1a26a6c6dae98c83f91d66d85bf768448a" kind="function"><name>QueryProcessor</name></member>
+    <member refid="class_query_processor_1aadd890a58f45e11fc3eeaeb3ed34e7b4" kind="function"><name>QueryProcessor</name></member>
     <member refid="class_query_processor_1a95136769b295bc5a56d83a476260ed60" kind="function"><name>answer_query</name></member>
-    <member refid="class_query_processor_1ab84ed5b136aaeb24018a4eb013da3452" kind="function"><name>display_best_five_results</name></member>
+    <member refid="class_query_processor_1a3e93e0a00cd935ee71497623c8e6d4ad" kind="function"><name>display_best_fifteen_results</name></member>
     <member refid="class_query_processor_1ae59525962d93a0087fee0afd689ce1e3" kind="function"><name>initiate_query</name></member>
     <member refid="class_query_processor_1ae1f3fdd94b58ac3016ab04873145fec7" kind="function"><name>init_relev_map</name></member>
     <member refid="class_query_processor_1a29d1767fe229ea175488976673463dcb" kind="function"><name>intersection_incr_relev_map</name></member>
@@ -310,7 +310,8 @@
     <member refid="class_term_1ae97a04d16b87ac6bebe1057481f962c8" kind="function"><name>Term</name></member>
     <member refid="class_term_1a30b1bfc816bf5a495937476bf56fd567" kind="function"><name>add_pageAprn</name></member>
     <member refid="class_term_1a2cd7415c99700d9b038517207e1d2738" kind="function"><name>init_spread_and_totalFreq</name></member>
-    <member refid="class_term_1a9b3336df22649f7d1bef558c59209d3b" kind="function"><name>init_tdidfs</name></member>
+    <member refid="class_term_1a3a48a3273c4bb8755c4623efbf3ebf51" kind="function"><name>init_tdidfs</name></member>
+    <member refid="class_term_1a40b76759d6a08c027142527f86d85256" kind="function"><name>incrm_aprn_for_pageID</name></member>
     <member refid="class_term_1a3f33daab2cf50371f191c75656aabb66" kind="function"><name>get_pageAprns</name></member>
     <member refid="class_term_1aba11aacf87334a460aae98148699dc46" kind="function"><name>get_name</name></member>
     <member refid="class_term_1a94ed9995429f2c6fd6d0b9556cc61ff7" kind="function"><name>get_next</name></member>

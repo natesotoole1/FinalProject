@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="49" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="49" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="53" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_term_1a1ea7886ca15ad219ce8751bc30099483" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="51" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="51" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="55" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_term_1a32dadebc2046b21eb097d56795a977a4" prot="private" static="no" mutable="no">
         <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="55" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="55" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="59" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="58" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="58" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="62" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_term_1a8a6d9637da60e1200bb91b5108c601b5" prot="private" static="no" mutable="no">
         <type><ref refid="term_8h_1af4400159d8a0a2894541b3d38edabf6c" kindref="member">tdidfMap</ref></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="60" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="60" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="64" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="62" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="62" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="66" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="23" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="9" bodyend="14"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="26" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="9" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1af684aafab11ec6442aed0866b4973afc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="24" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="16" bodyend="19"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="27" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="16" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1aa67dd812957ad124bb6306960dd8709c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="26" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="21" bodyend="26"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="29" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="21" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1ae97a04d16b87ac6bebe1057481f962c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="27" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="28" bodyend="38"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="30" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="28" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1a30b1bfc816bf5a495937476bf56fd567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="29" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="40" bodyend="43"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="32" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="44" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1a2cd7415c99700d9b038517207e1d2738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -180,15 +180,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="32" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="45" bodyend="54"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="35" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="66" bodyend="75"/>
       </memberdef>
-      <memberdef kind="function" id="class_term_1a9b3336df22649f7d1bef558c59209d3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_term_1a3a48a3273c4bb8755c4623efbf3ebf51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Term::init_tdidfs</definition>
-        <argsstring>(IndexInterface *index)</argsstring>
+        <argsstring>(IndexInterface &amp;index)</argsstring>
         <name>init_tdidfs</name>
         <param>
-          <type><ref refid="class_index_interface" kindref="compound">IndexInterface</ref> *</type>
+          <type><ref refid="class_index_interface" kindref="compound">IndexInterface</ref> &amp;</type>
           <declname>index</declname>
         </param>
         <briefdescription>
@@ -197,7 +197,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="33" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="56" bodyend="65"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="36" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="77" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_term_1a40b76759d6a08c027142527f86d85256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Term::incrm_aprn_for_pageID</definition>
+        <argsstring>(int currID)</argsstring>
+        <name>incrm_aprn_for_pageID</name>
+        <param>
+          <type>int</type>
+          <declname>currID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="37" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="49" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1a3f33daab2cf50371f191c75656aabb66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref></type>
@@ -210,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="35" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="82" bodyend="85"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="39" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="103" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1aba11aacf87334a460aae98148699dc46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -223,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="36" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="87" bodyend="90"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="40" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="108" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1a94ed9995429f2c6fd6d0b9556cc61ff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
@@ -236,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="37" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="92" bodyend="95"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="41" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="113" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1a3b708fc85a3b272d67558600711aca05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -249,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="38" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="67" bodyend="70"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="42" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="88" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1a41a8474eb94c1e2e951d23fe164aecd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -262,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="39" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="77" bodyend="80"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="43" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="98" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1aae2effee196de73962a33d85aeca914c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -279,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="40" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="72" bodyend="75"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="44" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="93" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1a2f963514bfacc52e654c94793e25e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -296,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="42" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="97" bodyend="100"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="46" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="118" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="class_term_1ae0e0bd5c7411fa03aeb2c92464dd921b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -313,29 +330,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="44" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="102" bodyend="110"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="48" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.cpp" bodystart="123" bodyend="131"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para><ref refid="class_term" kindref="compound">Term</ref> creates the terms for the persistent index creates a page map of aprns to get relevancy. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="113">
+      <node id="111">
         <label>string</label>
       </node>
-      <node id="112">
+      <node id="110">
         <label>Term</label>
         <link refid="class_term"/>
-        <childnode refid="113" relation="usage">
+        <childnode refid="111" relation="usage">
           <edgelabel>name</edgelabel>
         </childnode>
-        <childnode refid="112" relation="usage">
+        <childnode refid="110" relation="usage">
           <edgelabel>next</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="21" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="20" bodyend="63"/>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="24" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="23" bodyend="67"/>
     <listofallmembers>
       <member refid="class_term_1a30b1bfc816bf5a495937476bf56fd567" prot="public" virt="non-virtual"><scope>Term</scope><name>add_pageAprn</name></member>
       <member refid="class_term_1aba11aacf87334a460aae98148699dc46" prot="public" virt="non-virtual"><scope>Term</scope><name>get_name</name></member>
@@ -344,8 +361,9 @@
       <member refid="class_term_1a3b708fc85a3b272d67558600711aca05" prot="public" virt="non-virtual"><scope>Term</scope><name>get_spread</name></member>
       <member refid="class_term_1aae2effee196de73962a33d85aeca914c" prot="public" virt="non-virtual"><scope>Term</scope><name>get_tdidf_for_page</name></member>
       <member refid="class_term_1a41a8474eb94c1e2e951d23fe164aecd6" prot="public" virt="non-virtual"><scope>Term</scope><name>get_totalFreq</name></member>
+      <member refid="class_term_1a40b76759d6a08c027142527f86d85256" prot="public" virt="non-virtual"><scope>Term</scope><name>incrm_aprn_for_pageID</name></member>
       <member refid="class_term_1a2cd7415c99700d9b038517207e1d2738" prot="public" virt="non-virtual"><scope>Term</scope><name>init_spread_and_totalFreq</name></member>
-      <member refid="class_term_1a9b3336df22649f7d1bef558c59209d3b" prot="public" virt="non-virtual"><scope>Term</scope><name>init_tdidfs</name></member>
+      <member refid="class_term_1a3a48a3273c4bb8755c4623efbf3ebf51" prot="public" virt="non-virtual"><scope>Term</scope><name>init_tdidfs</name></member>
       <member refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" prot="private" virt="non-virtual"><scope>Term</scope><name>name</name></member>
       <member refid="class_term_1a32dadebc2046b21eb097d56795a977a4" prot="private" virt="non-virtual"><scope>Term</scope><name>next</name></member>
       <member refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" prot="private" virt="non-virtual"><scope>Term</scope><name>pageAprns</name></member>

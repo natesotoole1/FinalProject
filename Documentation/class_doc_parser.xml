@@ -4,19 +4,6 @@
     <compoundname>DocParser</compoundname>
     <includes refid="docparser_8h" local="no">docparser.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_doc_parser_1a1a014fc55f8a205c97250f1ce8ecc8d8" prot="private" static="no" mutable="no">
-        <type><ref refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" kindref="member">termMap</ref></type>
-        <definition>termMap DocParser::allTerms</definition>
-        <argsstring></argsstring>
-        <name>allTerms</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="61" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="61" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="class_doc_parser_1ad0e840d5c92edbe2c8f28406a5c3f008" prot="private" static="no" mutable="no">
         <type><ref refid="class_index_interface" kindref="compound">IndexInterface</ref> &amp;</type>
         <definition>IndexInterface&amp; DocParser::index</definition>
@@ -122,6 +109,19 @@
         </inbodydescription>
         <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="74" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="74" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1adb6f140f5f0972129201a0f7fe4be541" prot="private" static="no" mutable="no">
+        <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
+        <definition>Term* DocParser::found</definition>
+        <argsstring></argsstring>
+        <name>found</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="75" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_doc_parser_1a637fc4d565eaf2927ee9b88bbe23e3cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="38" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="26" bodyend="29"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="40" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="21" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1a086f00e54fca8038c85c0e235948d75a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="39" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="8" bodyend="24"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="41" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="3" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1a1b127af53e8af16f393b64f46c307d3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="41" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="32" bodyend="41"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="43" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="27" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1ad92d1a6da7d413abd27ee18a6ed20a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="42" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="43" bodyend="47"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="44" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="38" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1a7addc81ac337c2688bb9e9d8197db2fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -199,20 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="47" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="49" bodyend="62"/>
-      </memberdef>
-      <memberdef kind="function" id="class_doc_parser_1ac5fbdbda41119634a1357112f158110c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DocParser::push_allTerms_to_ii</definition>
-        <argsstring>()</argsstring>
-        <name>push_allTerms_to_ii</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="49" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="176" bodyend="199"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="49" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="43" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1a48cd3949baca573b9be0b4ba24b9c79d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -233,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="51" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="64" bodyend="101"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="51" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="58" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1af28153ebf0ee2fe97c2942c04c915adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -250,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="52" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="103" bodyend="158"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="52" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="97" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1ad7b5809e4efd3e2bae781c1cb491ab29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -271,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="54" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="160" bodyend="174"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="54" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="142" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1a45860ee7fb0b956c4342cd4a815818de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -288,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="56" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="201" bodyend="226"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="56" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="158" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="class_doc_parser_1ad30c49de12ed45eaf2594c4718789c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -305,11 +292,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="58" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="228" bodyend="240"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="58" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="188" bodyend="200"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Uses rapidxml to parse throught the wikiDump. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
@@ -327,6 +314,9 @@
         </childnode>
         <childnode refid="30" relation="usage">
           <edgelabel>parser</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>ext</edgelabel>
         </childnode>
       </node>
       <node id="34">
@@ -369,11 +359,13 @@
           <edgelabel>currTitle</edgelabel>
           <edgelabel>currTimestamp</edgelabel>
         </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>found</edgelabel>
+        </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="35" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="34" bodyend="75"/>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="38" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="37" bodyend="76"/>
     <listofallmembers>
-      <member refid="class_doc_parser_1a1a014fc55f8a205c97250f1ce8ecc8d8" prot="private" virt="non-virtual"><scope>DocParser</scope><name>allTerms</name></member>
       <member refid="class_doc_parser_1a1b127af53e8af16f393b64f46c307d3a" prot="public" virt="non-virtual"><scope>DocParser</scope><name>clean_term</name></member>
       <member refid="class_doc_parser_1ad92d1a6da7d413abd27ee18a6ed20a30" prot="public" virt="non-virtual"><scope>DocParser</scope><name>clear</name></member>
       <member refid="class_doc_parser_1ace9019a4f9ede433886adaa0656e6e3b" prot="private" virt="non-virtual"><scope>DocParser</scope><name>count</name></member>
@@ -383,11 +375,11 @@
       <member refid="class_doc_parser_1a8348dc55e8aa858bbc5becc02d4e53bf" prot="private" virt="non-virtual"><scope>DocParser</scope><name>currTitle</name></member>
       <member refid="class_doc_parser_1a03b27a633885e614c94635eb2f66d404" prot="private" virt="non-virtual"><scope>DocParser</scope><name>currWord</name></member>
       <member refid="class_doc_parser_1a086f00e54fca8038c85c0e235948d75a" prot="public" virt="non-virtual"><scope>DocParser</scope><name>DocParser</name></member>
+      <member refid="class_doc_parser_1adb6f140f5f0972129201a0f7fe4be541" prot="private" virt="non-virtual"><scope>DocParser</scope><name>found</name></member>
       <member refid="class_doc_parser_1ad0e840d5c92edbe2c8f28406a5c3f008" prot="private" virt="non-virtual"><scope>DocParser</scope><name>index</name></member>
       <member refid="class_doc_parser_1a7addc81ac337c2688bb9e9d8197db2fc" prot="public" virt="non-virtual"><scope>DocParser</scope><name>index_for_letter</name></member>
       <member refid="class_doc_parser_1ad7b5809e4efd3e2bae781c1cb491ab29" prot="public" virt="non-virtual"><scope>DocParser</scope><name>init_file_page_infos</name></member>
       <member refid="class_doc_parser_1ad30c49de12ed45eaf2594c4718789c3e" prot="public" virt="non-virtual"><scope>DocParser</scope><name>is_stop_word</name></member>
-      <member refid="class_doc_parser_1ac5fbdbda41119634a1357112f158110c" prot="public" virt="non-virtual"><scope>DocParser</scope><name>push_allTerms_to_ii</name></member>
       <member refid="class_doc_parser_1a45860ee7fb0b956c4342cd4a815818de" prot="public" virt="non-virtual"><scope>DocParser</scope><name>read_file</name></member>
       <member refid="class_doc_parser_1a48cd3949baca573b9be0b4ba24b9c79d" prot="public" virt="non-virtual"><scope>DocParser</scope><name>read_page</name></member>
       <member refid="class_doc_parser_1af28153ebf0ee2fe97c2942c04c915adc" prot="public" virt="non-virtual"><scope>DocParser</scope><name>read_text</name></member>

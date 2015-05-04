@@ -98,6 +98,17 @@
 <linebreak/>
  This class derives from <computeroutput>std::exception</computeroutput> class. </para>    </detaileddescription>
     <inheritancegraph>
+      <node id="96">
+        <label>std::exception</label>
+      </node>
+      <node id="95">
+        <label>rapidxml::parse_error</label>
+        <link refid="classrapidxml_1_1parse__error"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="98">
         <label>std::exception</label>
       </node>
@@ -105,17 +116,6 @@
         <label>rapidxml::parse_error</label>
         <link refid="classrapidxml_1_1parse__error"/>
         <childnode refid="98" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="100">
-        <label>std::exception</label>
-      </node>
-      <node id="99">
-        <label>rapidxml::parse_error</label>
-        <link refid="classrapidxml_1_1parse__error"/>
-        <childnode refid="100" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

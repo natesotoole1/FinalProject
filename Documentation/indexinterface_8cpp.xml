@@ -253,164 +253,132 @@
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a7e4d5fe8c31cfc9aa02c2dd1d7e1d3aa" kindref="member">IndexInterface::display_result</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tdidf)</highlight></codeline>
 <codeline lineno="28"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_page_info" kindref="compound">PageInfo</ref>*<sp/>resultInfo<sp/>=<sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(pageID);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Result<sp/>rank<sp/>#&quot;</highlight><highlight class="normal">&lt;&lt;rank&lt;&lt;</highlight><highlight class="stringliteral">&quot;:<sp/>\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;#&quot;</highlight><highlight class="normal">&lt;&lt;rank&lt;&lt;</highlight><highlight class="stringliteral">&quot;:<sp/>\&quot;&quot;</highlight><highlight class="normal">&lt;&lt;resultInfo-&gt;<ref refid="class_page_info_1a0985d632ae64c913fe976bedccaf5d31" kindref="member">get_title</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;\&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;\tTotal<sp/>TDF/IDF<sp/>value:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;tdidf&lt;&lt;endl;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;\tPage<sp/>name:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;resultInfo-&gt;<ref refid="class_page_info_1a0985d632ae64c913fe976bedccaf5d31" kindref="member">get_title</ref>()&lt;&lt;endl;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;\tTimestamp:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;resultInfo-&gt;<ref refid="class_page_info_1ab2fa01ac638b965912b93fce36d4899a" kindref="member">get_timestamp</ref>()&lt;&lt;endl;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;\tContributor<sp/>name<sp/>or<sp/>IP<sp/>Address:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;resultInfo-&gt;<ref refid="class_page_info_1a6569fb1fd2a7efa4a6d144aa87c27912" kindref="member">get_contributor</ref>()&lt;&lt;endl;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a3d784385e028557312ef15d59574f9ed" kindref="member">IndexInterface::display_page_content</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Here<sp/>is<sp/>the<sp/>text\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;<ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(pageID)-&gt;get_content()&lt;&lt;endl;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;\tTimestamp:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;resultInfo-&gt;<ref refid="class_page_info_1ab2fa01ac638b965912b93fce36d4899a" kindref="member">get_timestamp</ref>()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;\tContributor<sp/>name<sp/>or<sp/>IP<sp/>Address:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;resultInfo-&gt;<ref refid="class_page_info_1a6569fb1fd2a7efa4a6d144aa87c27912" kindref="member">get_contributor</ref>()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a3d784385e028557312ef15d59574f9ed" kindref="member">IndexInterface::display_page_content</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Here<sp/>is<sp/>the<sp/>text\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;<ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(pageID)-&gt;get_content()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a9a7539d9c7a48bf4d4fbe43961c0547f" kindref="member">IndexInterface::index_for_letter</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letter)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>raw<sp/>ASCII<sp/>value<sp/>of<sp/>the<sp/>letter.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ascii<sp/>=<sp/>(int)letter;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>letter<sp/>is<sp/>uppercase,<sp/>get<sp/>the<sp/>lowercase<sp/>equivalent</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>by<sp/>increasing<sp/>its<sp/>ASCII<sp/>value<sp/>by<sp/>32.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ascii<sp/>&gt;<sp/>64<sp/>&amp;&amp;<sp/>ascii<sp/>&lt;<sp/>91)<sp/>ascii<sp/>+=<sp/>32;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a&apos;s<sp/>ASCII<sp/>value<sp/>is<sp/>97;<sp/>b&apos;s<sp/>is<sp/>98,<sp/>and<sp/>so<sp/>on...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>get<sp/>the<sp/>return<sp/>value,<sp/>subtract<sp/>96.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>ascii<sp/>-=<sp/>97;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ascii;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><ref refid="class_page_info" kindref="compound">PageInfo</ref>*<sp/><ref refid="class_index_interface_1a2af7d88c3b2701be9164ba9f4a3bddb3" kindref="member">IndexInterface::info_for_pageID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID)</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(pageID);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" kindref="member">IndexInterface::read_file</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filePath)</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" kindref="member">parser</ref>.<ref refid="class_doc_parser_1a45860ee7fb0b956c4342cd4a815818de" kindref="member">read_file</ref>(filePath);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a8195aee88cd593c2e6ca2e2c48cbd068" kindref="member">IndexInterface::calc_tdidf</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>freq,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spread)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>TF<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalWords<sp/>=<sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(pageID)-&gt;get_totalWords();</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tf<sp/>=<sp/>(double)freq/totalWords;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>IDF<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalDocsInCorpus<sp/>=<sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.size();</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>idf<sp/>=<sp/>log((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)totalDocsInCorpus/spread);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tf*idf;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" kindref="member">IndexInterface::incr_total_words_on_page</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currID,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>incr)</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(currID);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(out_of_range&amp;<sp/>notInPageInfos)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(currID)-&gt;incr_totalWords(incr);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1adcba07c90cd34ab0ce7bee340d09ed07" kindref="member">IndexInterface::read_pers_file</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structthread_arg_data_1a4e6f861158b648e1879aa43da7516102" kindref="member">index</ref>,<sp/><ref refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" kindref="member">termMap</ref><sp/>&amp;<ref refid="structthread_arg_data_1a2172136d6a60921ea13a6b0ceefd0585" kindref="member">allTerms</ref>)</highlight></codeline>
-<codeline lineno="96"><highlight class="normal">{<sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/>struct<sp/>threadArgData*<sp/>args;</highlight></codeline>
-<codeline lineno="98"><highlight class="comment"></highlight></codeline>
-<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/>args<sp/>=<sp/>(struct<sp/>threadArgData<sp/>*)<sp/>index;</highlight></codeline>
-<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/>int<sp/>index<sp/>=<sp/>args-&gt;index;</highlight></codeline>
-<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/>termMap<sp/>allTerms<sp/>=<sp/>args-&gt;allTerms;</highlight></codeline>
-<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>ifstream<sp/>ifs;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ext<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filePath<sp/>=<sp/>to_string(index)<sp/>+<sp/>ext;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>ifs.open(filePath);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>two<sp/>words<sp/>at<sp/>a<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>word1;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>word2;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word1;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word2;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a9a7539d9c7a48bf4d4fbe43961c0547f" kindref="member">IndexInterface::index_for_letter</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letter)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>raw<sp/>ASCII<sp/>value<sp/>of<sp/>the<sp/>letter.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ascii<sp/>=<sp/>(int)letter;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>letter<sp/>is<sp/>uppercase,<sp/>get<sp/>the<sp/>lowercase<sp/>equivalent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>by<sp/>increasing<sp/>its<sp/>ASCII<sp/>value<sp/>by<sp/>32.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ascii<sp/>&gt;<sp/>64<sp/>&amp;&amp;<sp/>ascii<sp/>&lt;<sp/>91)<sp/>ascii<sp/>+=<sp/>32;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a&apos;s<sp/>ASCII<sp/>value<sp/>is<sp/>97;<sp/>b&apos;s<sp/>is<sp/>98,<sp/>and<sp/>so<sp/>on...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>get<sp/>the<sp/>return<sp/>value,<sp/>subtract<sp/>96.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>ascii<sp/>-=<sp/>97;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ascii;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="class_page_info" kindref="compound">PageInfo</ref>*<sp/><ref refid="class_index_interface_1a2af7d88c3b2701be9164ba9f4a3bddb3" kindref="member">IndexInterface::info_for_pageID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(pageID);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" kindref="member">IndexInterface::read_file</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filePath)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" kindref="member">parser</ref>.<ref refid="class_doc_parser_1a45860ee7fb0b956c4342cd4a815818de" kindref="member">read_file</ref>(filePath);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a8195aee88cd593c2e6ca2e2c48cbd068" kindref="member">IndexInterface::calc_tdidf</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>freq,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spread)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>TF<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalWords<sp/>=<sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(pageID)-&gt;get_totalWords();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tf<sp/>=<sp/>(double)freq/totalWords;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>IDF<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalDocsInCorpus<sp/>=<sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.size();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>idf<sp/>=<sp/>log((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)totalDocsInCorpus/spread);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tf*idf;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" kindref="member">IndexInterface::incr_total_words_on_page</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currID,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>incr)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(currID);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(out_of_range&amp;<sp/>notInPageInfos)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(currID)-&gt;incr_totalWords(incr);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" kindref="member">IndexInterface::read_pers_file</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structthread_arg_data_1a4e6f861158b648e1879aa43da7516102" kindref="member">index</ref>)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;(&quot;</highlight><highlight class="normal">&lt;&lt;index+1&lt;&lt;</highlight><highlight class="stringliteral">&quot;/26)...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>ifstream<sp/>ifs;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filePath<sp/>=<sp/>to_string(index)<sp/>+<sp/><ref refid="class_index_interface_1acd76893126e9fd5dc63cb4ea8f56265c" kindref="member">ext</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>ifs.open(filePath);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>two<sp/>words<sp/>at<sp/>a<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>word1,<sp/>word2;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word1<sp/>&gt;&gt;<sp/>word2;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!ifs.eof())</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>each<sp/>new<sp/>term,<sp/>extract<sp/>two<sp/>words<sp/>at<sp/>a<sp/>time<sp/>until</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>another<sp/>exclamation<sp/>point<sp/>is<sp/>reached.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(word1.compare(</highlight><highlight class="stringliteral">&quot;!&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref><sp/>pageAprns;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>word2;</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!ifs.eof())</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>each<sp/>new<sp/>term,<sp/>extract<sp/>two<sp/>words<sp/>at<sp/>a<sp/>time<sp/>until</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>another<sp/>exclamation<sp/>point<sp/>is<sp/>reached.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(word1.compare(</highlight><highlight class="stringliteral">&quot;!&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref><sp/>pageAprns;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>word2;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word1;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word2;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word1<sp/>&gt;&gt;<sp/>word2;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>each<sp/>subsequent<sp/>pageID-frequency<sp/>pair,<sp/>add<sp/>that<sp/>to<sp/>pageAprns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>increment<sp/>that<sp/>pageID&apos;s<sp/>totalWords.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((word1.compare(</highlight><highlight class="stringliteral">&quot;!&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>&amp;&amp;<sp/>(!ifs.eof()))</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num1<sp/>=<sp/>stoi(word1);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num2<sp/>=<sp/>stoi(word2);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pageAprns.emplace(make_pair(num1,<sp/>num2));</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>each<sp/>subsequent<sp/>pageID-frequency<sp/>pair,<sp/>add<sp/>that<sp/>to<sp/>pageAprns</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>increment<sp/>that<sp/>pageID&apos;s<sp/>totalWords.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((word1.compare(</highlight><highlight class="stringliteral">&quot;!&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>&amp;&amp;<sp/>(!ifs.eof()))</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num1<sp/>=<sp/>stoi(word1);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num2<sp/>=<sp/>stoi(word2);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pageAprns.emplace(make_pair(num1,<sp/>num2));</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word1;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word2;</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allTerms.emplace(make_pair(name,<sp/>pageAprns));</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>ifs.close();</highlight></codeline>
-<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1aa6ef58f8b651083175b684b9428a90c5" kindref="member">IndexInterface::read_persistence_files</ref>(<ref refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" kindref="member">termMap</ref>&amp;<sp/>allTerms)</highlight></codeline>
-<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>pthread_t<sp/>threads[26];</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>threadArgData<sp/>td[26];</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>int<sp/>rc;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>rc<sp/>=<sp/>pthread_create(&amp;threads[i],<sp/>NULL,<sp/>read_pers_file,<sp/>(void<sp/>*)&amp;td[i]);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;thread&gt;<sp/>letterThreads;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;26;<sp/>++i)</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1adcba07c90cd34ab0ce7bee340d09ed07" kindref="member">read_pers_file</ref>(i,<sp/>allTerms);</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>letterThreads.push_back(thread([i,<sp/>ref(allTerms)]()</highlight></codeline>
-<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>lambda<sp/>=<sp/>[this]()</highlight></codeline>
-<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lamba-&gt;read_pers_file(i,<sp/>ref(allTerms));</highlight></codeline>
-<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="167"><highlight class="comment"></highlight></codeline>
-<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/>}));</highlight></codeline>
-<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/>for_each(letterThreads.begin(),<sp/>letterThreads.end(),<sp/>[](thread&amp;<sp/>t)</highlight></codeline>
-<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t.join();</highlight></codeline>
-<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/>});</highlight></codeline>
-<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1af9edc24ac00bdf2c0e06384f890a1d8a" kindref="member">IndexInterface::get_totalPages</ref>(){</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.size();</highlight></codeline>
-<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"></highlight></codeline>
-<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a8a0132ad6e84c4340061496c615f581c" kindref="member">IndexInterface::get_totalWordsInCorpus</ref>()</highlight></codeline>
-<codeline lineno="181"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" kindref="member">totalWordsInCorpus</ref><sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.size();<sp/>++i)<sp/><ref refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" kindref="member">totalWordsInCorpus</ref><sp/>+=<sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(i)-&gt;get_totalWords();</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" kindref="member">totalWordsInCorpus</ref>;</highlight></codeline>
-<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>the<sp/>totalWords<sp/>for<sp/>currID<sp/>by<sp/>the<sp/>freq.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" kindref="member">incr_total_words_on_page</ref>(num1,<sp/>num2);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ifs<sp/>&gt;&gt;<sp/>word1<sp/>&gt;&gt;<sp/>word2;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_index_interface_1aa83b7083d107869e3519c5862bc71d0a" kindref="member">add_term_to_ii</ref>(index,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_term" kindref="compound">Term</ref>(name,<sp/>pageAprns));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>ifs.close();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1aebcf89c2fd27b815b697c8e9d29e0c3a" kindref="member">IndexInterface::read_persistence_files</ref>()</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Reading<sp/>persistence<sp/>documents...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;26;<sp/>++i)<sp/><ref refid="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" kindref="member">read_pers_file</ref>(i);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1af9edc24ac00bdf2c0e06384f890a1d8a" kindref="member">IndexInterface::get_totalPages</ref>(){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.size();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1a8a0132ad6e84c4340061496c615f581c" kindref="member">IndexInterface::get_totalWordsInCorpus</ref>()</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" kindref="member">totalWordsInCorpus</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.size();<sp/>++i)<sp/><ref refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" kindref="member">totalWordsInCorpus</ref><sp/>+=<sp/><ref refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" kindref="member">infoForIDs</ref>.at(i)-&gt;get_totalWords();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" kindref="member">totalWordsInCorpus</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp"/>
   </compounddef>

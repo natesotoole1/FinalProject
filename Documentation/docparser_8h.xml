@@ -416,7 +416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="30" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="30" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="31" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="docparser_8h_1aa63707b94c556a8d9df334f564b61b0b" prot="public" static="no">
         <type>unordered_map&lt; string, string &gt;</type>
@@ -429,7 +429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="31" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="31" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="32" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="docparser_8h_1a9b942645c404d380838be4078b0199d9" prot="public" static="no">
         <type>unordered_map&lt; string, <ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref> &gt;</type>
@@ -442,7 +442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="32" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="32" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="33" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -461,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="77" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="77" bodyend="80"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="78" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="78" bodyend="81"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -494,30 +494,27 @@
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_index_interface" kindref="compound">IndexInterface</ref>;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerapidxml" kindref="compound">rapidxml</ref>;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="docparser_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unordered_map&lt;int,<sp/>int&gt;<sp/><ref refid="docparser_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref>;</highlight></codeline>
-<codeline lineno="31" refid="docparser_8h_1aa63707b94c556a8d9df334f564b61b0b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unordered_map&lt;string,<sp/>string&gt;<sp/><ref refid="docparser_8h_1aa63707b94c556a8d9df334f564b61b0b" kindref="member">stopWordMap</ref>;</highlight></codeline>
-<codeline lineno="32" refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unordered_map&lt;string,<sp/>pageMap&gt;<sp/><ref refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" kindref="member">termMap</ref>;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="class_doc_parser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_doc_parser" kindref="compound">DocParser</ref><sp/></highlight><highlight class="comment">//<sp/>:<sp/>public<sp/>IndexInterface</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DocParser();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_doc_parser" kindref="compound">DocParser</ref>();</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_doc_parser" kindref="compound">DocParser</ref>(<ref refid="class_index_interface" kindref="compound">IndexInterface</ref>&amp;<sp/>theIndex);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>clean_term(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>term);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>which<sp/>LetterTerm<sp/>should<sp/>handle<sp/>the<sp/>appearance.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>the<sp/>first<sp/>letter<sp/>of<sp/>the<sp/>term.<sp/><sp/>Returns<sp/><sp/>0<sp/>if<sp/>the<sp/>term</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>a<sp/>number,<sp/>1<sp/>for<sp/>&apos;a&apos;,<sp/>2<sp/>for<sp/>&apos;b&apos;,<sp/>and<sp/>so<sp/>forth.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index_for_letter(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letter);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>push_allTerms_to_ii();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_term" kindref="compound">Term</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerapidxml" kindref="compound">rapidxml</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="docparser_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unordered_map&lt;int,<sp/>int&gt;<sp/><ref refid="docparser_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref>;</highlight></codeline>
+<codeline lineno="32" refid="docparser_8h_1aa63707b94c556a8d9df334f564b61b0b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unordered_map&lt;string,<sp/>string&gt;<sp/><ref refid="docparser_8h_1aa63707b94c556a8d9df334f564b61b0b" kindref="member">stopWordMap</ref>;</highlight></codeline>
+<codeline lineno="33" refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unordered_map&lt;string,<sp/>pageMap&gt;<sp/><ref refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" kindref="member">termMap</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_doc_parser" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_doc_parser" kindref="compound">DocParser</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_doc_parser" kindref="compound">DocParser</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_doc_parser" kindref="compound">DocParser</ref>(<ref refid="class_index_interface" kindref="compound">IndexInterface</ref>&amp;<sp/>theIndex);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>clean_term(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>term);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>which<sp/>LetterTerm<sp/>should<sp/>handle<sp/>the<sp/>appearance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>the<sp/>first<sp/>letter<sp/>of<sp/>the<sp/>term.<sp/><sp/>Returns<sp/><sp/>0<sp/>if<sp/>the<sp/>term</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>a<sp/>number,<sp/>1<sp/>for<sp/>&apos;a&apos;,<sp/>2<sp/>for<sp/>&apos;b&apos;,<sp/>and<sp/>so<sp/>forth.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index_for_letter(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letter);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_page(<ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node&lt;&gt;</ref>*<sp/>currNode,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>readText);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_text(<ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node&lt;&gt;</ref>*<sp/>currNode);</highlight></codeline>
@@ -529,7 +526,7 @@
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_stop_word(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>term);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="61" refid="class_doc_parser_1a1a014fc55f8a205c97250f1ce8ecc8d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" kindref="member">termMap</ref><sp/><ref refid="class_doc_parser_1a1a014fc55f8a205c97250f1ce8ecc8d8" kindref="member">allTerms</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>termMap<sp/>allTerms;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
 <codeline lineno="63" refid="class_doc_parser_1ad0e840d5c92edbe2c8f28406a5c3f008" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_index_interface" kindref="compound">IndexInterface</ref>&amp;<sp/><ref refid="class_doc_parser_1ad0e840d5c92edbe2c8f28406a5c3f008" kindref="member">index</ref>;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
@@ -543,14 +540,15 @@
 <codeline lineno="72" refid="class_doc_parser_1acf0aedb227a48a682d1ff238d1d6614d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_doc_parser_1acf0aedb227a48a682d1ff238d1d6614d" kindref="member">currContributorNameOrIP</ref>;</highlight></codeline>
 <codeline lineno="73" refid="class_doc_parser_1a642bcf2a542abd6b386c1445e937e4cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_doc_parser_1a642bcf2a542abd6b386c1445e937e4cd" kindref="member">currTimestamp</ref>;</highlight></codeline>
 <codeline lineno="74" refid="class_doc_parser_1a8348dc55e8aa858bbc5becc02d4e53bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_doc_parser_1a8348dc55e8aa858bbc5becc02d4e53bf" kindref="member">currTitle</ref>;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77" refid="docparser_8h_1ac7fad9cbc31a9f84be7a06624781f335" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="docparser_8h_1ac7fad9cbc31a9f84be7a06624781f335" kindref="member">is_not_alpha</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c)</highlight></codeline>
-<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!isalpha(c);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>DOCPARSER_H</highlight></codeline>
+<codeline lineno="75" refid="class_doc_parser_1adb6f140f5f0972129201a0f7fe4be541" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term" kindref="compound">Term</ref>*<sp/><ref refid="class_doc_parser_1adb6f140f5f0972129201a0f7fe4be541" kindref="member">found</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="docparser_8h_1ac7fad9cbc31a9f84be7a06624781f335" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="docparser_8h_1ac7fad9cbc31a9f84be7a06624781f335" kindref="member">is_not_alpha</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!isalpha(c);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>DOCPARSER_H</highlight></codeline>
     </programlisting>
     <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h"/>
   </compounddef>

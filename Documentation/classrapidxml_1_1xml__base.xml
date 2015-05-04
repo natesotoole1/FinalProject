@@ -327,25 +327,25 @@
 </parameterlist>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="138">
+      <node id="136">
         <label>rapidxml::xml_document&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__document"/>
-        <childnode refid="137" relation="public-inheritance">
+        <childnode refid="135" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="136">
+      <node id="134">
         <label>rapidxml::xml_attribute&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__attribute"/>
-        <childnode refid="135" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="137">
-        <label>rapidxml::xml_node&lt; Ch &gt;</label>
-        <link refid="classrapidxml_1_1xml__node"/>
-        <childnode refid="135" relation="public-inheritance">
+        <childnode refid="133" relation="public-inheritance">
         </childnode>
       </node>
       <node id="135">
+        <label>rapidxml::xml_node&lt; Ch &gt;</label>
+        <link refid="classrapidxml_1_1xml__node"/>
+        <childnode refid="133" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="133">
         <label>rapidxml::xml_base&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__base"/>
       </node>

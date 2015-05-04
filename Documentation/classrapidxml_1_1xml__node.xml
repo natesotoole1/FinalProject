@@ -1121,31 +1121,31 @@
 </parameterlist>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="150">
+      <node id="148">
         <label>rapidxml::xml_document&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__document"/>
-        <childnode refid="148" relation="public-inheritance">
+        <childnode refid="146" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="148">
+      <node id="146">
         <label>rapidxml::xml_node&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__node"/>
-        <childnode refid="149" relation="public-inheritance">
+        <childnode refid="147" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="149">
+      <node id="147">
         <label>rapidxml::xml_base&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__base"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="151">
+      <node id="149">
         <label>rapidxml::xml_node&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__node"/>
-        <childnode refid="152" relation="public-inheritance">
+        <childnode refid="150" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="152">
+      <node id="150">
         <label>rapidxml::xml_base&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__base"/>
       </node>

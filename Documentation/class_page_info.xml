@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="31" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="31" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="33" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_page_info_1ab82a31135a4d68130b132fcf0503b317" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="32" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="32" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="34" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_page_info_1a10e7ce551d454c4bf3ca50c4cad5496b" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="33" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="33" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="35" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_page_info_1adc9cfe7cc103f083fab4f3575eb073e1" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="34" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="34" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="36" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_page_info_1aca7e985b3d5879e5bbe030b63a523393" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="35" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="35" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="37" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="11" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="8" bodyend="11"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="13" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="8" bodyend="11"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1a45259793eed3f830dadecfde0e970ec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="12" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="13" bodyend="16"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="14" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="13" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1aa98a49dd45fdea434a27e4892dbdf032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="13" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="18" bodyend="25"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="15" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="18" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1a61bd04fcecb67f3fac9833cd4a0e432b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="16" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="27" bodyend="30"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="18" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="24" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1a6569fb1fd2a7efa4a6d144aa87c27912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="17" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="32" bodyend="35"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="19" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="29" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1ab2fa01ac638b965912b93fce36d4899a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="18" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="37" bodyend="40"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="20" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="34" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1a0985d632ae64c913fe976bedccaf5d31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="19" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="42" bodyend="45"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="21" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1a40938f3d2f1c81079abcbe8051143d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="20" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="47" bodyend="50"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="22" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="44" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1afaf6005be3e5fa629619038a96fbd1af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="23" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="52" bodyend="55"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="25" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="49" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1afb03f9cd31ec6e6f500393cd5c7e1037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="24" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="57" bodyend="60"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="26" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="54" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1ad8f8aada94adc772c9739f5dcb3223a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="25" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="62" bodyend="65"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="27" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="59" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1a0808f61697bbeca2d717d9b55b233ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="26" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="72" bodyend="75"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="28" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="69" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1a43de865e72ac2fc61f124e2acee9da4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="28" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="67" bodyend="70"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="30" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="64" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="class_page_info_1adcd293f9d6bdc291f7f28663e7151c45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -291,21 +291,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="29" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="77" bodyend="80"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="31" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.cpp" bodystart="74" bodyend="77"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>AVL Node implementation for the AVL Tree structure. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="96">
+      <node id="94">
         <label>string</label>
       </node>
-      <node id="95">
+      <node id="93">
         <label>PageInfo</label>
         <link refid="class_page_info"/>
-        <childnode refid="96" relation="usage">
+        <childnode refid="94" relation="usage">
           <edgelabel>title</edgelabel>
           <edgelabel>contributorNameOrIP</edgelabel>
           <edgelabel>content</edgelabel>
@@ -313,7 +313,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="9" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="8" bodyend="36"/>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" line="11" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h" bodystart="10" bodyend="38"/>
     <listofallmembers>
       <member refid="class_page_info_1a41470b013a300fe2ba52c7caae33e7b3" prot="private" virt="non-virtual"><scope>PageInfo</scope><name>content</name></member>
       <member refid="class_page_info_1ab82a31135a4d68130b132fcf0503b317" prot="private" virt="non-virtual"><scope>PageInfo</scope><name>contributorNameOrIP</name></member>

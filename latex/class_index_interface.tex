@@ -2,6 +2,11 @@
 \label{class_index_interface}\index{Index\+Interface@{Index\+Interface}}
 
 
+A\+V\+L Node implementation for the A\+V\+L Tree structure.  
+
+
+
+
 {\ttfamily \#include $<$indexinterface.\+h$>$}
 
 Inheritance diagram for Index\+Interface\+:\begin{figure}[H]
@@ -29,9 +34,9 @@ void \hyperlink{class_index_interface_a5734b1488a787d47984bf97ffa5aff8d}{incr\+\
 \item 
 void \hyperlink{class_index_interface_a229f1eb93f38d85d78e64e579c46c98a}{read\+\_\+file} (string file\+Path)
 \item 
-void \hyperlink{class_index_interface_aa6ef58f8b651083175b684b9428a90c5}{read\+\_\+persistence\+\_\+files} (\hyperlink{docparser_8h_a9b942645c404d380838be4078b0199d9}{term\+Map} \&all\+Terms)
+void \hyperlink{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}{read\+\_\+persistence\+\_\+files} ()
 \item 
-void \hyperlink{class_index_interface_adcba07c90cd34ab0ce7bee340d09ed07}{read\+\_\+pers\+\_\+file} (int index, \hyperlink{docparser_8h_a9b942645c404d380838be4078b0199d9}{term\+Map} \&all\+Terms)
+void \hyperlink{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}{read\+\_\+pers\+\_\+file} (int index)
 \item 
 virtual void \hyperlink{class_index_interface_aa83b7083d107869e3519c5862bc71d0a}{add\+\_\+term\+\_\+to\+\_\+ii} (int letter\+Index, \hyperlink{class_term}{Term} $\ast$term)
 \item 
@@ -52,6 +57,8 @@ int \hyperlink{class_index_interface_af9edc24ac00bdf2c0e06384f890a1d8a}{get\+\_\
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
+const string \hyperlink{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}{ext} = \char`\"{}.txt\char`\"{}
+\item 
 \hyperlink{class_hash_table_index}{Hash\+Table\+Index} $\ast$ \hyperlink{class_index_interface_a8511509bb58da989f705ba75fd5dde2d}{letters}
 \item 
 vector$<$ \hyperlink{class_page_info}{Page\+Info} $\ast$ $>$ \hyperlink{class_index_interface_a8400a62750faa69ff35308ff731d9ee5}{info\+For\+I\+Ds}
@@ -63,6 +70,9 @@ int \hyperlink{class_index_interface_a2df695d2b504f2e53a0bfdd6bfee31da}{total\+P
 int \hyperlink{class_index_interface_ab607b430e78528cdb8bb79ba4afa91d2}{total\+Words\+In\+Corpus}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+A\+V\+L Node implementation for the A\+V\+L Tree structure. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_index_interface_a7b1e7eae7faa652d2f63efeecf0ca2de}{}\index{Index\+Interface@{Index\+Interface}!Index\+Interface@{Index\+Interface}}
@@ -191,21 +201,20 @@ Reimplemented in \hyperlink{class_a_v_l_tree_interface_a35ee941b125e65cf0b5783a6
 \item[{string}]{file\+Path}
 \end{DoxyParamCaption}
 )}\label{class_index_interface_a229f1eb93f38d85d78e64e579c46c98a}
-\hypertarget{class_index_interface_adcba07c90cd34ab0ce7bee340d09ed07}{}\index{Index\+Interface@{Index\+Interface}!read\+\_\+pers\+\_\+file@{read\+\_\+pers\+\_\+file}}
+\hypertarget{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}{}\index{Index\+Interface@{Index\+Interface}!read\+\_\+pers\+\_\+file@{read\+\_\+pers\+\_\+file}}
 \index{read\+\_\+pers\+\_\+file@{read\+\_\+pers\+\_\+file}!Index\+Interface@{Index\+Interface}}
 \subsubsection[{read\+\_\+pers\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::read\+\_\+pers\+\_\+file (
 \begin{DoxyParamCaption}
-\item[{int}]{index, }
-\item[{{\bf term\+Map} \&}]{all\+Terms}
+\item[{int}]{index}
 \end{DoxyParamCaption}
-)}\label{class_index_interface_adcba07c90cd34ab0ce7bee340d09ed07}
-\hypertarget{class_index_interface_aa6ef58f8b651083175b684b9428a90c5}{}\index{Index\+Interface@{Index\+Interface}!read\+\_\+persistence\+\_\+files@{read\+\_\+persistence\+\_\+files}}
+)}\label{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}
+\hypertarget{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}{}\index{Index\+Interface@{Index\+Interface}!read\+\_\+persistence\+\_\+files@{read\+\_\+persistence\+\_\+files}}
 \index{read\+\_\+persistence\+\_\+files@{read\+\_\+persistence\+\_\+files}!Index\+Interface@{Index\+Interface}}
 \subsubsection[{read\+\_\+persistence\+\_\+files}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::read\+\_\+persistence\+\_\+files (
 \begin{DoxyParamCaption}
-\item[{{\bf term\+Map} \&}]{all\+Terms}
+{}
 \end{DoxyParamCaption}
-)}\label{class_index_interface_aa6ef58f8b651083175b684b9428a90c5}
+)}\label{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}
 \hypertarget{class_index_interface_a0b4ec5fcc32c08959cffad3a3141dd4e}{}\index{Index\+Interface@{Index\+Interface}!write\+\_\+persistence\+\_\+files@{write\+\_\+persistence\+\_\+files}}
 \index{write\+\_\+persistence\+\_\+files@{write\+\_\+persistence\+\_\+files}!Index\+Interface@{Index\+Interface}}
 \subsubsection[{write\+\_\+persistence\+\_\+files}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::write\+\_\+persistence\+\_\+files (
@@ -220,6 +229,9 @@ Reimplemented in \hyperlink{class_a_v_l_tree_interface_abd7f70746611a3982dc07a1b
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}{}\index{Index\+Interface@{Index\+Interface}!ext@{ext}}
+\index{ext@{ext}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{ext}]{\setlength{\rightskip}{0pt plus 5cm}const string Index\+Interface\+::ext = \char`\"{}.txt\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}
 \hypertarget{class_index_interface_a8400a62750faa69ff35308ff731d9ee5}{}\index{Index\+Interface@{Index\+Interface}!info\+For\+I\+Ds@{info\+For\+I\+Ds}}
 \index{info\+For\+I\+Ds@{info\+For\+I\+Ds}!Index\+Interface@{Index\+Interface}}
 \subsubsection[{info\+For\+I\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Page\+Info}$\ast$$>$ Index\+Interface\+::info\+For\+I\+Ds\hspace{0.3cm}{\ttfamily [protected]}}\label{class_index_interface_a8400a62750faa69ff35308ff731d9ee5}

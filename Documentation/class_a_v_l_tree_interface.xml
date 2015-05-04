@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="44" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="22" bodyend="25"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="48" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="22" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1a8195aee88cd593c2e6ca2e2c48cbd068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="45" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="69" bodyend="80"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="49" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="68" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1a7e4d5fe8c31cfc9aa02c2dd1d7e1d3aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="46" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="27" bodyend="35"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="50" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="27" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1a3d784385e028557312ef15d59574f9ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -210,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="47" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="37" bodyend="41"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="51" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="36" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="48" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="82" bodyend="93"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="52" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="81" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -248,45 +248,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="49" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="64" bodyend="67"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="53" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="63" bodyend="66"/>
       </memberdef>
-      <memberdef kind="function" id="class_index_interface_1aa6ef58f8b651083175b684b9428a90c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_index_interface_1aebcf89c2fd27b815b697c8e9d29e0c3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void IndexInterface::read_persistence_files</definition>
-        <argsstring>(termMap &amp;allTerms)</argsstring>
+        <argsstring>()</argsstring>
         <name>read_persistence_files</name>
-        <param>
-          <type><ref refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" kindref="member">termMap</ref> &amp;</type>
-          <declname>allTerms</declname>
-        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="50" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="145" bodyend="174"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="54" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="138" bodyend="142"/>
       </memberdef>
-      <memberdef kind="function" id="class_index_interface_1adcba07c90cd34ab0ce7bee340d09ed07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void IndexInterface::read_pers_file</definition>
-        <argsstring>(int index, termMap &amp;allTerms)</argsstring>
+        <argsstring>(int index)</argsstring>
         <name>read_pers_file</name>
         <param>
           <type>int</type>
           <declname>index</declname>
         </param>
-        <param>
-          <type><ref refid="docparser_8h_1a9b942645c404d380838be4078b0199d9" kindref="member">termMap</ref> &amp;</type>
-          <declname>allTerms</declname>
-        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="51" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="95" bodyend="143"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="55" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="94" bodyend="136"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1a9a7539d9c7a48bf4d4fbe43961c0547f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -303,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="59" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="44" bodyend="57"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="63" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="43" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1a2af7d88c3b2701be9164ba9f4a3bddb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_page_info" kindref="compound">PageInfo</ref> *</type>
@@ -320,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="60" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="59" bodyend="62"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="64" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="58" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1a8a0132ad6e84c4340061496c615f581c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -333,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="62" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="180" bodyend="187"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="66" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="148" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="class_index_interface_1af9edc24ac00bdf2c0e06384f890a1d8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -346,10 +338,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="63" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="176" bodyend="178"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="67" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="144" bodyend="146"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_index_interface_1acd76893126e9fd5dc63cb4ea8f56265c" prot="protected" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string IndexInterface::ext</definition>
+        <argsstring></argsstring>
+        <name>ext</name>
+        <initializer>= &quot;.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="70" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="class_index_interface_1a8511509bb58da989f705ba75fd5dde2d" prot="protected" static="no" mutable="no">
         <type><ref refid="class_hash_table_index" kindref="compound">HashTableIndex</ref> *</type>
         <definition>HashTableIndex* IndexInterface::letters</definition>
@@ -361,7 +367,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="68" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="68" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="73" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" prot="protected" static="no" mutable="no">
         <type>vector&lt; <ref refid="class_page_info" kindref="compound">PageInfo</ref> * &gt;</type>
@@ -374,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="71" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="71" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="76" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" prot="protected" static="no" mutable="no">
         <type><ref refid="class_doc_parser" kindref="compound">DocParser</ref> &amp;</type>
@@ -387,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="73" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="73" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="78" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_index_interface_1a2df695d2b504f2e53a0bfdd6bfee31da" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -400,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="75" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="75" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="80" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -413,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="76" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="76" bodyend="-1"/>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="81" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -475,6 +481,9 @@
         <childnode refid="26" relation="usage">
           <edgelabel>parser</edgelabel>
         </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>ext</edgelabel>
+        </childnode>
       </node>
       <node id="23">
         <label>TermBucket</label>
@@ -516,6 +525,9 @@
           <edgelabel>currTitle</edgelabel>
           <edgelabel>currTimestamp</edgelabel>
         </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>found</edgelabel>
+        </childnode>
       </node>
     </collaborationgraph>
     <location file="/Users/NateOToole/FinalProject/FinalProject/avltreeinterface.h" line="19" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/avltreeinterface.h" bodystart="18" bodyend="32"/>
@@ -528,6 +540,7 @@
       <member refid="class_a_v_l_tree_interface_1a748ffc895fb64aab3e2afac287f80630" prot="public" virt="virtual"><scope>AVLTreeInterface</scope><name>clear</name></member>
       <member refid="class_index_interface_1a3d784385e028557312ef15d59574f9ed" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>display_page_content</name></member>
       <member refid="class_index_interface_1a7e4d5fe8c31cfc9aa02c2dd1d7e1d3aa" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>display_result</name></member>
+      <member refid="class_index_interface_1acd76893126e9fd5dc63cb4ea8f56265c" prot="protected" virt="non-virtual"><scope>AVLTreeInterface</scope><name>ext</name></member>
       <member refid="class_a_v_l_tree_interface_1a35ee941b125e65cf0b5783a687503d83" prot="public" virt="virtual"><scope>AVLTreeInterface</scope><name>find_term</name></member>
       <member refid="class_index_interface_1af9edc24ac00bdf2c0e06384f890a1d8a" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>get_totalPages</name></member>
       <member refid="class_index_interface_1a8a0132ad6e84c4340061496c615f581c" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>get_totalWordsInCorpus</name></member>
@@ -540,8 +553,8 @@
       <member refid="class_a_v_l_tree_interface_1a198b108f89bc4ef2eefae399c1b3b167" prot="private" virt="non-virtual"><scope>AVLTreeInterface</scope><name>numLetters</name></member>
       <member refid="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" prot="protected" virt="non-virtual"><scope>AVLTreeInterface</scope><name>parser</name></member>
       <member refid="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>read_file</name></member>
-      <member refid="class_index_interface_1adcba07c90cd34ab0ce7bee340d09ed07" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>read_pers_file</name></member>
-      <member refid="class_index_interface_1aa6ef58f8b651083175b684b9428a90c5" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>read_persistence_files</name></member>
+      <member refid="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>read_pers_file</name></member>
+      <member refid="class_index_interface_1aebcf89c2fd27b815b697c8e9d29e0c3a" prot="public" virt="non-virtual"><scope>AVLTreeInterface</scope><name>read_persistence_files</name></member>
       <member refid="class_index_interface_1a2df695d2b504f2e53a0bfdd6bfee31da" prot="protected" virt="non-virtual"><scope>AVLTreeInterface</scope><name>totalPages</name></member>
       <member refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" prot="protected" virt="non-virtual"><scope>AVLTreeInterface</scope><name>totalWordsInCorpus</name></member>
       <member refid="class_a_v_l_tree_interface_1abd7f70746611a3982dc07a1b1880e7b5" prot="public" virt="virtual"><scope>AVLTreeInterface</scope><name>write_persistence_files</name></member>

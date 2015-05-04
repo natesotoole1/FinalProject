@@ -42,9 +42,9 @@ void \hyperlink{class_index_interface_a5734b1488a787d47984bf97ffa5aff8d}{incr\+\
 \item 
 void \hyperlink{class_index_interface_a229f1eb93f38d85d78e64e579c46c98a}{read\+\_\+file} (string file\+Path)
 \item 
-void \hyperlink{class_index_interface_aa6ef58f8b651083175b684b9428a90c5}{read\+\_\+persistence\+\_\+files} (\hyperlink{docparser_8h_a9b942645c404d380838be4078b0199d9}{term\+Map} \&all\+Terms)
+void \hyperlink{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}{read\+\_\+persistence\+\_\+files} ()
 \item 
-void \hyperlink{class_index_interface_adcba07c90cd34ab0ce7bee340d09ed07}{read\+\_\+pers\+\_\+file} (int index, \hyperlink{docparser_8h_a9b942645c404d380838be4078b0199d9}{term\+Map} \&all\+Terms)
+void \hyperlink{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}{read\+\_\+pers\+\_\+file} (int index)
 \item 
 int \hyperlink{class_index_interface_a9a7539d9c7a48bf4d4fbe43961c0547f}{index\+\_\+for\+\_\+letter} (char letter)
 \item 
@@ -56,6 +56,8 @@ int \hyperlink{class_index_interface_af9edc24ac00bdf2c0e06384f890a1d8a}{get\+\_\
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
+\item 
+const string \hyperlink{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}{ext} = \char`\"{}.txt\char`\"{}
 \item 
 \hyperlink{class_hash_table_index}{Hash\+Table\+Index} $\ast$ \hyperlink{class_index_interface_a8511509bb58da989f705ba75fd5dde2d}{letters}
 \item 
@@ -228,21 +230,20 @@ Reimplemented from \hyperlink{class_index_interface_a851f0396f0b390cc9aa8cde270a
 \item[{string}]{file\+Path}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inherited]}}\label{class_index_interface_a229f1eb93f38d85d78e64e579c46c98a}
-\hypertarget{class_index_interface_adcba07c90cd34ab0ce7bee340d09ed07}{}\index{A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}!read\+\_\+pers\+\_\+file@{read\+\_\+pers\+\_\+file}}
+\hypertarget{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}{}\index{A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}!read\+\_\+pers\+\_\+file@{read\+\_\+pers\+\_\+file}}
 \index{read\+\_\+pers\+\_\+file@{read\+\_\+pers\+\_\+file}!A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}}
 \subsubsection[{read\+\_\+pers\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::read\+\_\+pers\+\_\+file (
 \begin{DoxyParamCaption}
-\item[{int}]{index, }
-\item[{{\bf term\+Map} \&}]{all\+Terms}
+\item[{int}]{index}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inherited]}}\label{class_index_interface_adcba07c90cd34ab0ce7bee340d09ed07}
-\hypertarget{class_index_interface_aa6ef58f8b651083175b684b9428a90c5}{}\index{A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}!read\+\_\+persistence\+\_\+files@{read\+\_\+persistence\+\_\+files}}
+)\hspace{0.3cm}{\ttfamily [inherited]}}\label{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}
+\hypertarget{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}{}\index{A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}!read\+\_\+persistence\+\_\+files@{read\+\_\+persistence\+\_\+files}}
 \index{read\+\_\+persistence\+\_\+files@{read\+\_\+persistence\+\_\+files}!A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}}
 \subsubsection[{read\+\_\+persistence\+\_\+files}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::read\+\_\+persistence\+\_\+files (
 \begin{DoxyParamCaption}
-\item[{{\bf term\+Map} \&}]{all\+Terms}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inherited]}}\label{class_index_interface_aa6ef58f8b651083175b684b9428a90c5}
+)\hspace{0.3cm}{\ttfamily [inherited]}}\label{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}
 \hypertarget{class_a_v_l_tree_interface_abd7f70746611a3982dc07a1b1880e7b5}{}\index{A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}!write\+\_\+persistence\+\_\+files@{write\+\_\+persistence\+\_\+files}}
 \index{write\+\_\+persistence\+\_\+files@{write\+\_\+persistence\+\_\+files}!A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}}
 \subsubsection[{write\+\_\+persistence\+\_\+files}]{\setlength{\rightskip}{0pt plus 5cm}void A\+V\+L\+Tree\+Interface\+::write\+\_\+persistence\+\_\+files (
@@ -268,6 +269,9 @@ Reimplemented from \hyperlink{class_index_interface_a0b4ec5fcc32c08959cffad3a314
 
 creates 26 \hyperlink{class_a_v_l_tree_index}{A\+V\+L\+Tree\+Index}\textquotesingle{}s 
 
+\hypertarget{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}{}\index{A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}!ext@{ext}}
+\index{ext@{ext}!A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}}
+\subsubsection[{ext}]{\setlength{\rightskip}{0pt plus 5cm}const string Index\+Interface\+::ext = \char`\"{}.txt\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}\label{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}
 \hypertarget{class_index_interface_a8400a62750faa69ff35308ff731d9ee5}{}\index{A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}!info\+For\+I\+Ds@{info\+For\+I\+Ds}}
 \index{info\+For\+I\+Ds@{info\+For\+I\+Ds}!A\+V\+L\+Tree\+Interface@{A\+V\+L\+Tree\+Interface}}
 \subsubsection[{info\+For\+I\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Page\+Info}$\ast$$>$ Index\+Interface\+::info\+For\+I\+Ds\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}\label{class_index_interface_a8400a62750faa69ff35308ff731d9ee5}

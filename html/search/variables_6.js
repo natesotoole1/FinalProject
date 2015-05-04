@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['index',['index',['../class_doc_parser.html#ad0e840d5c92edbe2c8f28406a5c3f008',1,'DocParser::index()'],['../class_index_handler.html#aa30663ff8e3b52b43ce35ebb2d12752c',1,'IndexHandler::index()'],['../structthread_arg_data.html#a4e6f861158b648e1879aa43da7516102',1,'threadArgData::index()'],['../class_query_processor.html#a985785cf6513ebedeb2b71c522675640',1,'QueryProcessor::index()']]],
-  ['infoforids',['infoForIDs',['../class_index_interface.html#a8400a62750faa69ff35308ff731d9ee5',1,'IndexInterface']]]
+  ['handler',['handler',['../class_interface.html#a596b02db00f1f13e0955444504c3752c',1,'Interface']]],
+  ['height',['height',['../struct_a_v_l___node.html#a802b8e700879b7489730140f5e1fd121',1,'AVL_Node']]]
 ];

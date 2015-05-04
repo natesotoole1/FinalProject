@@ -87,7 +87,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/NateOToole/FinalProject/FinalProject/avltreeindex.h" line="19" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/avltreeindex.h" bodystart="18" bodyend="34"/>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/avltreeindex.h" line="19" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/avltreeindex.h" bodystart="18" bodyend="28"/>
     <listofallmembers>
       <member refid="struct_a_v_l___node_1a6a9062cc45fa099a2c68763e1d52b894" prot="public" virt="non-virtual"><scope>AVL_Node</scope><name>data</name></member>
       <member refid="struct_a_v_l___node_1a802b8e700879b7489730140f5e1fd121" prot="public" virt="non-virtual"><scope>AVL_Node</scope><name>height</name></member>

@@ -254,87 +254,108 @@
 <codeline lineno="28"><highlight class="normal"><ref refid="class_term_1a6943005db5b7e5ca84afcb54a5862d42" kindref="member">Term::Term</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theName,<sp/><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref><sp/>&amp;theAprns)</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" kindref="member">totalFreq</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a32dadebc2046b21eb097d56795a977a4" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" kindref="member">name</ref><sp/>=<sp/>theName;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>aprn<sp/>:<sp/>theAprns)</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>is<sp/>the<sp/>pageID,<sp/>second<sp/>is<sp/>the<sp/>frequency.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>.emplace(make_pair(aprn.first,<sp/>aprn.second));</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a30b1bfc816bf5a495937476bf56fd567" kindref="member">Term::add_pageAprn</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>freq,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID)</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>.emplace(make_pair(pageID,<sp/>freq));</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a2cd7415c99700d9b038517207e1d2738" kindref="member">Term::init_spread_and_totalFreq</ref>()</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" kindref="member">spread</ref><sp/>=<sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>.size();</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" kindref="member">totalFreq</ref><sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>Just<sp/>in<sp/>case<sp/>this<sp/>gets<sp/>called<sp/>twice.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>aprn<sp/>:<sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>)</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" kindref="member">totalFreq</ref>+=aprn.second;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a9b3336df22649f7d1bef558c59209d3b" kindref="member">Term::init_tdidfs</ref>(<ref refid="class_index_interface" kindref="compound">IndexInterface</ref><sp/>*index)</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a2cd7415c99700d9b038517207e1d2738" kindref="member">init_spread_and_totalFreq</ref>();</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>page<sp/>:<sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>)</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>=<sp/>pageID,<sp/>second<sp/>=<sp/>freq.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tdidf<sp/>=<sp/>index-&gt;<ref refid="class_index_interface_1a8195aee88cd593c2e6ca2e2c48cbd068" kindref="member">calc_tdidf</ref>(page.first,<sp/>page.second,<sp/><ref refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" kindref="member">spread</ref>);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_term_1a8a6d9637da60e1200bb91b5108c601b5" kindref="member">tdidfs</ref>.emplace(make_pair(page.first,<sp/>tdidf));</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_term_1a3b708fc85a3b272d67558600711aca05" kindref="member">Term::get_spread</ref>()</highlight></codeline>
-<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" kindref="member">spread</ref>;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_term_1aae2effee196de73962a33d85aeca914c" kindref="member">Term::get_tdidf_for_page</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID)</highlight></codeline>
-<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a8a6d9637da60e1200bb91b5108c601b5" kindref="member">tdidfs</ref>.at(pageID);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" kindref="member">spread</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a32dadebc2046b21eb097d56795a977a4" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" kindref="member">name</ref><sp/>=<sp/>theName;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref><sp/>=<sp/>theAprns;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto&amp;<sp/>aprn<sp/>:<sp/>theAprns)</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>First<sp/>is<sp/>the<sp/>pageID,<sp/>second<sp/>is<sp/>the<sp/>frequency.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pageAprns.emplace(make_pair(aprn.first,<sp/>aprn.second));</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a30b1bfc816bf5a495937476bf56fd567" kindref="member">Term::add_pageAprn</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>freq,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>.emplace(make_pair(pageID,<sp/>freq));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a40b76759d6a08c027142527f86d85256" kindref="member">Term::incrm_aprn_for_pageID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currID)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>term<sp/>has<sp/>already<sp/>appeared<sp/>at<sp/>currID,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>increment<sp/>that<sp/>frequency<sp/>by<sp/>1.<sp/><sp/>Otherwise,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>emplace<sp/>a<sp/>new<sp/>pageAprn<sp/>(currID,<sp/>1).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>.at(currID);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(out_of_range&amp;<sp/>notInPageAprns)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>.emplace(make_pair(currID,<sp/>1));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>.at(currID)++;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a2cd7415c99700d9b038517207e1d2738" kindref="member">Term::init_spread_and_totalFreq</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" kindref="member">spread</ref><sp/>=<sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>.size();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" kindref="member">totalFreq</ref><sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>Just<sp/>in<sp/>case<sp/>this<sp/>gets<sp/>called<sp/>twice.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>aprn<sp/>:<sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" kindref="member">totalFreq</ref>+=aprn.second;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_term_1a41a8474eb94c1e2e951d23fe164aecd6" kindref="member">Term::get_totalFreq</ref>()</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a3a48a3273c4bb8755c4623efbf3ebf51" kindref="member">Term::init_tdidfs</ref>(<ref refid="class_index_interface" kindref="compound">IndexInterface</ref><sp/>&amp;index)</highlight></codeline>
 <codeline lineno="78"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" kindref="member">totalFreq</ref>;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref><sp/><ref refid="class_term_1a3f33daab2cf50371f191c75656aabb66" kindref="member">Term::get_pageAprns</ref>()</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_term_1aba11aacf87334a460aae98148699dc46" kindref="member">Term::get_name</ref>()</highlight></codeline>
-<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" kindref="member">name</ref>;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><ref refid="class_term" kindref="compound">Term</ref>*<sp/><ref refid="class_term_1a94ed9995429f2c6fd6d0b9556cc61ff7" kindref="member">Term::get_next</ref>()</highlight></codeline>
-<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a32dadebc2046b21eb097d56795a977a4" kindref="member">next</ref>;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a2f963514bfacc52e654c94793e25e3d4" kindref="member">Term::set_next</ref>(<ref refid="class_term" kindref="compound">Term</ref>*<sp/>theNext)</highlight></codeline>
-<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a32dadebc2046b21eb097d56795a977a4" kindref="member">next</ref><sp/>=<sp/>theNext;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1ae0e0bd5c7411fa03aeb2c92464dd921b" kindref="member">Term::write_term</ref>(ofstream<sp/>&amp;persistence)</highlight></codeline>
-<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>persistence&lt;&lt;</highlight><highlight class="stringliteral">&quot;!<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<ref refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" kindref="member">name</ref>;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>page<sp/>:<sp/>pageAprns)</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>persistence&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;page.first&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;page.second;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>persistence&lt;&lt;endl;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a2cd7415c99700d9b038517207e1d2738" kindref="member">init_spread_and_totalFreq</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>page<sp/>:<sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>=<sp/>pageID,<sp/>second<sp/>=<sp/>freq.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tdidf<sp/>=<sp/>index.<ref refid="class_index_interface_1a8195aee88cd593c2e6ca2e2c48cbd068" kindref="member">calc_tdidf</ref>(page.first,<sp/>page.second,<sp/><ref refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" kindref="member">spread</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_term_1a8a6d9637da60e1200bb91b5108c601b5" kindref="member">tdidfs</ref>.emplace(make_pair(page.first,<sp/>tdidf));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_term_1a3b708fc85a3b272d67558600711aca05" kindref="member">Term::get_spread</ref>()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" kindref="member">spread</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_term_1aae2effee196de73962a33d85aeca914c" kindref="member">Term::get_tdidf_for_page</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a8a6d9637da60e1200bb91b5108c601b5" kindref="member">tdidfs</ref>.at(pageID);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_term_1a41a8474eb94c1e2e951d23fe164aecd6" kindref="member">Term::get_totalFreq</ref>()</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" kindref="member">totalFreq</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref><sp/><ref refid="class_term_1a3f33daab2cf50371f191c75656aabb66" kindref="member">Term::get_pageAprns</ref>()</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_term_1aba11aacf87334a460aae98148699dc46" kindref="member">Term::get_name</ref>()</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="class_term" kindref="compound">Term</ref>*<sp/><ref refid="class_term_1a94ed9995429f2c6fd6d0b9556cc61ff7" kindref="member">Term::get_next</ref>()</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_term_1a32dadebc2046b21eb097d56795a977a4" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1a2f963514bfacc52e654c94793e25e3d4" kindref="member">Term::set_next</ref>(<ref refid="class_term" kindref="compound">Term</ref>*<sp/>theNext)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term_1a32dadebc2046b21eb097d56795a977a4" kindref="member">next</ref><sp/>=<sp/>theNext;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_term_1ae0e0bd5c7411fa03aeb2c92464dd921b" kindref="member">Term::write_term</ref>(ofstream<sp/>&amp;persistence)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>persistence&lt;&lt;</highlight><highlight class="stringliteral">&quot;!<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<ref refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>page<sp/>:<sp/>pageAprns)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>persistence&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;page.first&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;page.second;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>persistence&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/Users/NateOToole/FinalProject/FinalProject/term.cpp"/>
   </compounddef>

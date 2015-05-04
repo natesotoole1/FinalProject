@@ -487,6 +487,18 @@
 </parameterlist>
 </para>    </detaileddescription>
     <inheritancegraph>
+      <node id="129">
+        <label>rapidxml::xml_attribute&lt; Ch &gt;</label>
+        <link refid="classrapidxml_1_1xml__attribute"/>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>rapidxml::xml_base&lt; Ch &gt;</label>
+        <link refid="classrapidxml_1_1xml__base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="131">
         <label>rapidxml::xml_attribute&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__attribute"/>
@@ -494,18 +506,6 @@
         </childnode>
       </node>
       <node id="132">
-        <label>rapidxml::xml_base&lt; Ch &gt;</label>
-        <link refid="classrapidxml_1_1xml__base"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="133">
-        <label>rapidxml::xml_attribute&lt; Ch &gt;</label>
-        <link refid="classrapidxml_1_1xml__attribute"/>
-        <childnode refid="134" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="134">
         <label>rapidxml::xml_base&lt; Ch &gt;</label>
         <link refid="classrapidxml_1_1xml__base"/>
       </node>

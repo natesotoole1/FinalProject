@@ -22,10 +22,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo_Ghostbusters.0.JPG"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">KiteSearch
    &#160;<span id="projectnumber">FinalProject</span>
    </div>
+   <div id="projectbrief">WIkiBooks Search Engine</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +95,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Uses rapidxml to parse throught the wikiDump.  
+ <a href="class_doc_parser.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="docparser_8h_source.html">docparser.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -107,8 +112,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad92d1a6da7d413abd27ee18a6ed20a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7addc81ac337c2688bb9e9d8197db2fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#a7addc81ac337c2688bb9e9d8197db2fc">index_for_letter</a> (char letter)</td></tr>
 <tr class="separator:a7addc81ac337c2688bb9e9d8197db2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5fbdbda41119634a1357112f158110c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#ac5fbdbda41119634a1357112f158110c">push_allTerms_to_ii</a> ()</td></tr>
-<tr class="separator:ac5fbdbda41119634a1357112f158110c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48cd3949baca573b9be0b4ba24b9c79d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#a48cd3949baca573b9be0b4ba24b9c79d">read_page</a> (<a class="el" href="classrapidxml_1_1xml__node.html">xml_node</a>&lt;&gt; *currNode, bool readText)</td></tr>
 <tr class="separator:a48cd3949baca573b9be0b4ba24b9c79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af28153ebf0ee2fe97c2942c04c915adc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#af28153ebf0ee2fe97c2942c04c915adc">read_text</a> (<a class="el" href="classrapidxml_1_1xml__node.html">xml_node</a>&lt;&gt; *currNode)</td></tr>
@@ -122,8 +125,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1a014fc55f8a205c97250f1ce8ecc8d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="docparser_8h.html#a9b942645c404d380838be4078b0199d9">termMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#a1a014fc55f8a205c97250f1ce8ecc8d8">allTerms</a></td></tr>
-<tr class="separator:a1a014fc55f8a205c97250f1ce8ecc8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0e840d5c92edbe2c8f28406a5c3f008"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_index_interface.html">IndexInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#ad0e840d5c92edbe2c8f28406a5c3f008">index</a></td></tr>
 <tr class="separator:ad0e840d5c92edbe2c8f28406a5c3f008"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a089705924f6a28afb59064526b4b7f4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="docparser_8h.html#aa63707b94c556a8d9df334f564b61b0b">stopWordMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#a089705924f6a28afb59064526b4b7f4f">stopWords</a></td></tr>
@@ -140,8 +141,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a642bcf2a542abd6b386c1445e937e4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8348dc55e8aa858bbc5becc02d4e53bf"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#a8348dc55e8aa858bbc5becc02d4e53bf">currTitle</a></td></tr>
 <tr class="separator:a8348dc55e8aa858bbc5becc02d4e53bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6f140f5f0972129201a0f7fe4be541"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_term.html">Term</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doc_parser.html#adb6f140f5f0972129201a0f7fe4be541">found</a></td></tr>
+<tr class="separator:adb6f140f5f0972129201a0f7fe4be541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Uses rapidxml to parse throught the wikiDump. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a637fc4d565eaf2927ee9b88bbe23e3cb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -263,21 +268,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac5fbdbda41119634a1357112f158110c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DocParser::push_allTerms_to_ii </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a45860ee7fb0b956c4342cd4a815818de"></a>
 <div class="memitem">
 <div class="memproto">
@@ -337,26 +327,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a1a014fc55f8a205c97250f1ce8ecc8d8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="docparser_8h.html#a9b942645c404d380838be4078b0199d9">termMap</a> DocParser::allTerms</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="ace9019a4f9ede433886adaa0656e6e3b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -477,6 +447,26 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="adb6f140f5f0972129201a0f7fe4be541"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_term.html">Term</a>* DocParser::found</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad0e840d5c92edbe2c8f28406a5c3f008"></a>
 <div class="memitem">
 <div class="memproto">
@@ -524,7 +514,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 4 2015 02:20:39 for KiteSearch by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 4 2015 02:58:22 for KiteSearch by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

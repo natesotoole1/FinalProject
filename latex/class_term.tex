@@ -2,6 +2,11 @@
 \label{class_term}\index{Term@{Term}}
 
 
+\hyperlink{class_term}{Term} creates the terms for the persistent index creates a page map of aprns to get relevancy.  
+
+
+
+
 {\ttfamily \#include $<$term.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -19,7 +24,9 @@ void \hyperlink{class_term_a30b1bfc816bf5a495937476bf56fd567}{add\+\_\+page\+Apr
 \item 
 void \hyperlink{class_term_a2cd7415c99700d9b038517207e1d2738}{init\+\_\+spread\+\_\+and\+\_\+total\+Freq} ()
 \item 
-void \hyperlink{class_term_a9b3336df22649f7d1bef558c59209d3b}{init\+\_\+tdidfs} (\hyperlink{class_index_interface}{Index\+Interface} $\ast$index)
+void \hyperlink{class_term_a3a48a3273c4bb8755c4623efbf3ebf51}{init\+\_\+tdidfs} (\hyperlink{class_index_interface}{Index\+Interface} \&index)
+\item 
+void \hyperlink{class_term_a40b76759d6a08c027142527f86d85256}{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D} (int curr\+I\+D)
 \item 
 \hyperlink{avltreeinterface_8h_afdba5c4962a1c0abdda6ca3e414a9a45}{page\+Map} \hyperlink{class_term_a3f33daab2cf50371f191c75656aabb66}{get\+\_\+page\+Aprns} ()
 \item 
@@ -53,6 +60,9 @@ int \hyperlink{class_term_abb3f8b30ce0f7cb8a64b84084b822e43}{spread}
 int \hyperlink{class_term_a075587aedd4009c7c207dc3fdd5b33cd}{total\+Freq}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\hyperlink{class_term}{Term} creates the terms for the persistent index creates a page map of aprns to get relevancy. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_term_a6943005db5b7e5ca84afcb54a5862d42}{}\index{Term@{Term}!Term@{Term}}
@@ -137,6 +147,13 @@ int \hyperlink{class_term_a075587aedd4009c7c207dc3fdd5b33cd}{total\+Freq}
 {}
 \end{DoxyParamCaption}
 )}\label{class_term_a41a8474eb94c1e2e951d23fe164aecd6}
+\hypertarget{class_term_a40b76759d6a08c027142527f86d85256}{}\index{Term@{Term}!incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D@{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D}}
+\index{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D@{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D}!Term@{Term}}
+\subsubsection[{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D (
+\begin{DoxyParamCaption}
+\item[{int}]{curr\+I\+D}
+\end{DoxyParamCaption}
+)}\label{class_term_a40b76759d6a08c027142527f86d85256}
 \hypertarget{class_term_a2cd7415c99700d9b038517207e1d2738}{}\index{Term@{Term}!init\+\_\+spread\+\_\+and\+\_\+total\+Freq@{init\+\_\+spread\+\_\+and\+\_\+total\+Freq}}
 \index{init\+\_\+spread\+\_\+and\+\_\+total\+Freq@{init\+\_\+spread\+\_\+and\+\_\+total\+Freq}!Term@{Term}}
 \subsubsection[{init\+\_\+spread\+\_\+and\+\_\+total\+Freq}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::init\+\_\+spread\+\_\+and\+\_\+total\+Freq (
@@ -144,13 +161,13 @@ int \hyperlink{class_term_a075587aedd4009c7c207dc3fdd5b33cd}{total\+Freq}
 {}
 \end{DoxyParamCaption}
 )}\label{class_term_a2cd7415c99700d9b038517207e1d2738}
-\hypertarget{class_term_a9b3336df22649f7d1bef558c59209d3b}{}\index{Term@{Term}!init\+\_\+tdidfs@{init\+\_\+tdidfs}}
+\hypertarget{class_term_a3a48a3273c4bb8755c4623efbf3ebf51}{}\index{Term@{Term}!init\+\_\+tdidfs@{init\+\_\+tdidfs}}
 \index{init\+\_\+tdidfs@{init\+\_\+tdidfs}!Term@{Term}}
 \subsubsection[{init\+\_\+tdidfs}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::init\+\_\+tdidfs (
 \begin{DoxyParamCaption}
-\item[{{\bf Index\+Interface} $\ast$}]{index}
+\item[{{\bf Index\+Interface} \&}]{index}
 \end{DoxyParamCaption}
-)}\label{class_term_a9b3336df22649f7d1bef558c59209d3b}
+)}\label{class_term_a3a48a3273c4bb8755c4623efbf3ebf51}
 \hypertarget{class_term_a2f963514bfacc52e654c94793e25e3d4}{}\index{Term@{Term}!set\+\_\+next@{set\+\_\+next}}
 \index{set\+\_\+next@{set\+\_\+next}!Term@{Term}}
 \subsubsection[{set\+\_\+next}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::set\+\_\+next (

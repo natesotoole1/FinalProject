@@ -2,20 +2,23 @@
 \label{class_query_processor}\index{Query\+Processor@{Query\+Processor}}
 
 
+gets the queries for each search created in \hyperlink{class_interface}{Interface}  
+
+
+
+
 {\ttfamily \#include $<$queryprocessor.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_query_processor_a32a6760ff0aab51b38fb8eb236e2e140}{Query\+Processor} ()
-\item 
 \hyperlink{class_query_processor_ac4bebae67b0c08004f26f55957428574}{$\sim$\+Query\+Processor} ()
 \item 
-\hyperlink{class_query_processor_a26a6c6dae98c83f91d66d85bf768448a}{Query\+Processor} (\hyperlink{class_index_interface}{Index\+Interface} $\ast$\&the\+Index)
+\hyperlink{class_query_processor_aadd890a58f45e11fc3eeaeb3ed34e7b4}{Query\+Processor} (\hyperlink{class_index_interface}{Index\+Interface} \&the\+Index)
 \item 
 void \hyperlink{class_query_processor_a95136769b295bc5a56d83a476260ed60}{answer\+\_\+query} (istringstream \&query, bool intersection)
 \item 
-void \hyperlink{class_query_processor_ab84ed5b136aaeb24018a4eb013da3452}{display\+\_\+best\+\_\+five\+\_\+results} ()
+void \hyperlink{class_query_processor_a3e93e0a00cd935ee71497623c8e6d4ad}{display\+\_\+best\+\_\+fifteen\+\_\+results} ()
 \item 
 void \hyperlink{class_query_processor_ae59525962d93a0087fee0afd689ce1e3}{initiate\+\_\+query} (string query)
 \item 
@@ -34,18 +37,14 @@ void \hyperlink{class_query_processor_abb0fce31c633a5c0ae571f144f8f36f7}{sort\+\
 \item 
 vector$<$ \hyperlink{queryprocessor_8h_af6bb738cbffd79f25704719c38165579}{result\+Pair} $>$ \hyperlink{class_query_processor_a443576fbb0c7749c7b69ccbd69f0eb58}{sorted\+Results}
 \item 
-\hyperlink{class_index_interface}{Index\+Interface} $\ast$ \hyperlink{class_query_processor_a985785cf6513ebedeb2b71c522675640}{index}
+\hyperlink{class_index_interface}{Index\+Interface} \& \hyperlink{class_query_processor_af0fe42043ab2eb42da9f911d842fbed5}{index}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+gets the queries for each search created in \hyperlink{class_interface}{Interface} 
+
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_query_processor_a32a6760ff0aab51b38fb8eb236e2e140}{}\index{Query\+Processor@{Query\+Processor}!Query\+Processor@{Query\+Processor}}
-\index{Query\+Processor@{Query\+Processor}!Query\+Processor@{Query\+Processor}}
-\subsubsection[{Query\+Processor}]{\setlength{\rightskip}{0pt plus 5cm}Query\+Processor\+::\+Query\+Processor (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{class_query_processor_a32a6760ff0aab51b38fb8eb236e2e140}
 \hypertarget{class_query_processor_ac4bebae67b0c08004f26f55957428574}{}\index{Query\+Processor@{Query\+Processor}!````~Query\+Processor@{$\sim$\+Query\+Processor}}
 \index{````~Query\+Processor@{$\sim$\+Query\+Processor}!Query\+Processor@{Query\+Processor}}
 \subsubsection[{$\sim$\+Query\+Processor}]{\setlength{\rightskip}{0pt plus 5cm}Query\+Processor\+::$\sim$\+Query\+Processor (
@@ -53,13 +52,13 @@ vector$<$ \hyperlink{queryprocessor_8h_af6bb738cbffd79f25704719c38165579}{result
 {}
 \end{DoxyParamCaption}
 )}\label{class_query_processor_ac4bebae67b0c08004f26f55957428574}
-\hypertarget{class_query_processor_a26a6c6dae98c83f91d66d85bf768448a}{}\index{Query\+Processor@{Query\+Processor}!Query\+Processor@{Query\+Processor}}
+\hypertarget{class_query_processor_aadd890a58f45e11fc3eeaeb3ed34e7b4}{}\index{Query\+Processor@{Query\+Processor}!Query\+Processor@{Query\+Processor}}
 \index{Query\+Processor@{Query\+Processor}!Query\+Processor@{Query\+Processor}}
 \subsubsection[{Query\+Processor}]{\setlength{\rightskip}{0pt plus 5cm}Query\+Processor\+::\+Query\+Processor (
 \begin{DoxyParamCaption}
-\item[{{\bf Index\+Interface} $\ast$\&}]{the\+Index}
+\item[{{\bf Index\+Interface} \&}]{the\+Index}
 \end{DoxyParamCaption}
-)}\label{class_query_processor_a26a6c6dae98c83f91d66d85bf768448a}
+)}\label{class_query_processor_aadd890a58f45e11fc3eeaeb3ed34e7b4}
 
 
 \subsection{Member Function Documentation}
@@ -71,13 +70,13 @@ vector$<$ \hyperlink{queryprocessor_8h_af6bb738cbffd79f25704719c38165579}{result
 \item[{bool}]{intersection}
 \end{DoxyParamCaption}
 )}\label{class_query_processor_a95136769b295bc5a56d83a476260ed60}
-\hypertarget{class_query_processor_ab84ed5b136aaeb24018a4eb013da3452}{}\index{Query\+Processor@{Query\+Processor}!display\+\_\+best\+\_\+five\+\_\+results@{display\+\_\+best\+\_\+five\+\_\+results}}
-\index{display\+\_\+best\+\_\+five\+\_\+results@{display\+\_\+best\+\_\+five\+\_\+results}!Query\+Processor@{Query\+Processor}}
-\subsubsection[{display\+\_\+best\+\_\+five\+\_\+results}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::display\+\_\+best\+\_\+five\+\_\+results (
+\hypertarget{class_query_processor_a3e93e0a00cd935ee71497623c8e6d4ad}{}\index{Query\+Processor@{Query\+Processor}!display\+\_\+best\+\_\+fifteen\+\_\+results@{display\+\_\+best\+\_\+fifteen\+\_\+results}}
+\index{display\+\_\+best\+\_\+fifteen\+\_\+results@{display\+\_\+best\+\_\+fifteen\+\_\+results}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{display\+\_\+best\+\_\+fifteen\+\_\+results}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::display\+\_\+best\+\_\+fifteen\+\_\+results (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_query_processor_ab84ed5b136aaeb24018a4eb013da3452}
+)}\label{class_query_processor_a3e93e0a00cd935ee71497623c8e6d4ad}
 \hypertarget{class_query_processor_ae1f3fdd94b58ac3016ab04873145fec7}{}\index{Query\+Processor@{Query\+Processor}!init\+\_\+relev\+\_\+map@{init\+\_\+relev\+\_\+map}}
 \index{init\+\_\+relev\+\_\+map@{init\+\_\+relev\+\_\+map}!Query\+Processor@{Query\+Processor}}
 \subsubsection[{init\+\_\+relev\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::init\+\_\+relev\+\_\+map (
@@ -116,9 +115,9 @@ vector$<$ \hyperlink{queryprocessor_8h_af6bb738cbffd79f25704719c38165579}{result
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_query_processor_a985785cf6513ebedeb2b71c522675640}{}\index{Query\+Processor@{Query\+Processor}!index@{index}}
+\hypertarget{class_query_processor_af0fe42043ab2eb42da9f911d842fbed5}{}\index{Query\+Processor@{Query\+Processor}!index@{index}}
 \index{index@{index}!Query\+Processor@{Query\+Processor}}
-\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Index\+Interface}$\ast$ Query\+Processor\+::index\hspace{0.3cm}{\ttfamily [private]}}\label{class_query_processor_a985785cf6513ebedeb2b71c522675640}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Index\+Interface}\& Query\+Processor\+::index\hspace{0.3cm}{\ttfamily [private]}}\label{class_query_processor_af0fe42043ab2eb42da9f911d842fbed5}
 \hypertarget{class_query_processor_ab0f6ff6ab22675a201902135bab6809e}{}\index{Query\+Processor@{Query\+Processor}!results@{results}}
 \index{results@{results}!Query\+Processor@{Query\+Processor}}
 \subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf relevancy\+Map} Query\+Processor\+::results\hspace{0.3cm}{\ttfamily [private]}}\label{class_query_processor_ab0f6ff6ab22675a201902135bab6809e}

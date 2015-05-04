@@ -2,7 +2,8 @@ var searchData=
 [
   ['incr_5ftotal_5fwords_5fon_5fpage',['incr_total_words_on_page',['../class_index_interface.html#a5734b1488a787d47984bf97ffa5aff8d',1,'IndexInterface']]],
   ['incr_5ftotalwords',['incr_totalWords',['../class_page_info.html#a43de865e72ac2fc61f124e2acee9da4d',1,'PageInfo']]],
-  ['index',['index',['../class_doc_parser.html#ad0e840d5c92edbe2c8f28406a5c3f008',1,'DocParser::index()'],['../class_index_handler.html#aa30663ff8e3b52b43ce35ebb2d12752c',1,'IndexHandler::index()'],['../structthread_arg_data.html#a4e6f861158b648e1879aa43da7516102',1,'threadArgData::index()'],['../class_query_processor.html#a985785cf6513ebedeb2b71c522675640',1,'QueryProcessor::index()']]],
+  ['incrm_5faprn_5ffor_5fpageid',['incrm_aprn_for_pageID',['../class_term.html#a40b76759d6a08c027142527f86d85256',1,'Term']]],
+  ['index',['index',['../class_doc_parser.html#ad0e840d5c92edbe2c8f28406a5c3f008',1,'DocParser::index()'],['../class_index_handler.html#aa30663ff8e3b52b43ce35ebb2d12752c',1,'IndexHandler::index()'],['../structthread_arg_data.html#a4e6f861158b648e1879aa43da7516102',1,'threadArgData::index()'],['../class_query_processor.html#af0fe42043ab2eb42da9f911d842fbed5',1,'QueryProcessor::index()']]],
   ['index_5ffor_5fletter',['index_for_letter',['../class_doc_parser.html#a7addc81ac337c2688bb9e9d8197db2fc',1,'DocParser::index_for_letter()'],['../class_index_interface.html#a9a7539d9c7a48bf4d4fbe43961c0547f',1,'IndexInterface::index_for_letter()']]],
   ['indexhandler',['IndexHandler',['../class_index_handler.html',1,'IndexHandler'],['../class_index_handler.html#a27748387661142a2eb545be6f0499996',1,'IndexHandler::IndexHandler()'],['../class_index_handler.html#ae50be3bec7e5ad3ede66110535043e15',1,'IndexHandler::IndexHandler(bool asHashTable)']]],
   ['indexhandler_2ecpp',['indexhandler.cpp',['../indexhandler_8cpp.html',1,'']]],
@@ -16,7 +17,7 @@ var searchData=
   ['init_5ffile_5fpage_5finfos',['init_file_page_infos',['../class_doc_parser.html#ad7b5809e4efd3e2bae781c1cb491ab29',1,'DocParser']]],
   ['init_5frelev_5fmap',['init_relev_map',['../class_query_processor.html#ae1f3fdd94b58ac3016ab04873145fec7',1,'QueryProcessor']]],
   ['init_5fspread_5fand_5ftotalfreq',['init_spread_and_totalFreq',['../class_term.html#a2cd7415c99700d9b038517207e1d2738',1,'Term']]],
-  ['init_5ftdidfs',['init_tdidfs',['../class_term.html#a9b3336df22649f7d1bef558c59209d3b',1,'Term']]],
+  ['init_5ftdidfs',['init_tdidfs',['../class_term.html#a3a48a3273c4bb8755c4623efbf3ebf51',1,'Term']]],
   ['initiate_5fquery',['initiate_query',['../class_query_processor.html#ae59525962d93a0087fee0afd689ce1e3',1,'QueryProcessor']]],
   ['insert',['insert',['../class_a_v_l_tree_index.html#a0954e6e43e3742008bf18e71a8afc319',1,'AVLTreeIndex::insert(Term *)'],['../class_a_v_l_tree_index.html#a5891589c2c753ef4dbe902f35c9385c7',1,'AVLTreeIndex::insert(AVL_Node *&amp;, Term *)']]],
   ['insert_5fattribute',['insert_attribute',['../classrapidxml_1_1xml__node.html#a9fe659cdf4a5b3bbf5e8ffc98db5a84f',1,'rapidxml::xml_node']]],

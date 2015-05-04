@@ -22,10 +22,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo_Ghostbusters.0.JPG"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">KiteSearch
    &#160;<span id="projectnumber">FinalProject</span>
    </div>
+   <div id="projectbrief">WIkiBooks Search Engine</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +95,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Hash Table Index implementation for the hash table data structure. connects to term buckets and creates a 1024 of them.  
+ <a href="class_hash_table_index.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="hashtableindex_8h_source.html">hashtableindex.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -114,12 +119,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a7253d4d2a147715df75217f1731245e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table_index.html#a7253d4d2a147715df75217f1731245e9">arrSize</a> = 1024</td></tr>
-<tr class="separator:a7253d4d2a147715df75217f1731245e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b302265c4ce75eb039d82bacd1f4bfd"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table_index.html#a1b302265c4ce75eb039d82bacd1f4bfd">arrSize</a> = 1024</td></tr>
+<tr class="separator:a1b302265c4ce75eb039d82bacd1f4bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7737d10bb5720666b0bff86376a82a11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_term_bucket.html">TermBucket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table_index.html#a7737d10bb5720666b0bff86376a82a11">buckets</a></td></tr>
 <tr class="separator:a7737d10bb5720666b0bff86376a82a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Hash Table Index implementation for the hash table data structure. connects to term buckets and creates a 1024 of them. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a13c1c8deae84226c8bef382adf103b53"></a>
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +238,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a7253d4d2a147715df75217f1731245e9"></a>
+<a class="anchor" id="a1b302265c4ce75eb039d82bacd1f4bfd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -239,7 +246,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int HashTableIndex::arrSize = 1024</td>
+          <td class="memname">const int HashTableIndex::arrSize = 1024</td>
         </tr>
       </table>
   </td>
@@ -278,7 +285,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 4 2015 02:20:39 for KiteSearch by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 4 2015 02:58:22 for KiteSearch by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

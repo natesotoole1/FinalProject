@@ -20,6 +20,5 @@ var searchData=
   ['prepend_5fnode',['prepend_node',['../classrapidxml_1_1xml__node.html#ae86e92908c3eab40bbed8216e4f3f3cb',1,'rapidxml::xml_node']]],
   ['previous_5fattribute',['previous_attribute',['../classrapidxml_1_1xml__attribute.html#ae3547cc30b201fd6d7b98c04dda26f89',1,'rapidxml::xml_attribute']]],
   ['previous_5fsibling',['previous_sibling',['../classrapidxml_1_1xml__node.html#a001ece4e227eebbd6ad0ec7dacf1c00b',1,'rapidxml::xml_node']]],
-  ['print',['print',['../namespacerapidxml.html#a0fb0be6eba49fb2e2646d5a72a0dc355',1,'rapidxml::print(OutIt out, const xml_node&lt; Ch &gt; &amp;node, int flags=0)'],['../namespacerapidxml.html#a0d2e114d5dd85e13c23b8dab600720fe',1,'rapidxml::print(std::basic_ostream&lt; Ch &gt; &amp;out, const xml_node&lt; Ch &gt; &amp;node, int flags=0)']]],
-  ['push_5fallterms_5fto_5fii',['push_allTerms_to_ii',['../class_doc_parser.html#ac5fbdbda41119634a1357112f158110c',1,'DocParser']]]
+  ['print',['print',['../namespacerapidxml.html#a0fb0be6eba49fb2e2646d5a72a0dc355',1,'rapidxml::print(OutIt out, const xml_node&lt; Ch &gt; &amp;node, int flags=0)'],['../namespacerapidxml.html#a0d2e114d5dd85e13c23b8dab600720fe',1,'rapidxml::print(std::basic_ostream&lt; Ch &gt; &amp;out, const xml_node&lt; Ch &gt; &amp;node, int flags=0)']]]
 ];

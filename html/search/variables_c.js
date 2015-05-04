@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['sortedresults',['sortedResults',['../class_query_processor.html#a443576fbb0c7749c7b69ccbd69f0eb58',1,'QueryProcessor']]],
-  ['spread',['spread',['../class_term.html#abb3f8b30ce0f7cb8a64b84084b822e43',1,'Term']]],
-  ['start',['start',['../class_timer.html#a4afa1d4272a81f139af97a6d521079d4',1,'Timer']]],
-  ['stopwords',['stopWords',['../class_doc_parser.html#a089705924f6a28afb59064526b4b7f4f',1,'DocParser']]]
+  ['results',['results',['../class_query_processor.html#ab0f6ff6ab22675a201902135bab6809e',1,'QueryProcessor']]],
+  ['right',['right',['../struct_a_v_l___node.html#af0d0c4d5eaf62a9141711d1a10e3ba11',1,'AVL_Node']]],
+  ['root',['root',['../class_a_v_l_tree_index.html#a52ca65742f9d92bee094e7c038739f74',1,'AVLTreeIndex::root()'],['../class_term_bucket.html#afffcce881e1d712ca56bc535d9c9dc0f',1,'TermBucket::root()']]]
 ];

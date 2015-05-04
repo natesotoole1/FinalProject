@@ -21,7 +21,6 @@ var searchData=
   ['createpersistence',['createPersistence',['../class_a_v_l_tree_index.html#a43269725295571c3cd41075e7dfc1c24',1,'AVLTreeIndex::createPersistence(int, ofstream &amp;)'],['../class_a_v_l_tree_index.html#a9e82ee4cbd75a1a21d4151d188c77d75',1,'AVLTreeIndex::createPersistence(AVL_Node *&amp;, int, ofstream &amp;)']]],
   ['currcontent',['currContent',['../class_doc_parser.html#aaf8b70c4ddd9637f3e700f42a88fb641',1,'DocParser']]],
   ['currcontributornameorip',['currContributorNameOrIP',['../class_doc_parser.html#acf0aedb227a48a682d1ff238d1d6614d',1,'DocParser']]],
-  ['currquery',['currQuery',['../class_interface.html#af9d9a123bf2233b924da24d94e20adb7',1,'Interface']]],
   ['currtimestamp',['currTimestamp',['../class_doc_parser.html#a642bcf2a542abd6b386c1445e937e4cd',1,'DocParser']]],
   ['currtitle',['currTitle',['../class_doc_parser.html#a8348dc55e8aa858bbc5becc02d4e53bf',1,'DocParser']]],
   ['currword',['currWord',['../class_doc_parser.html#a03b27a633885e614c94635eb2f66d404',1,'DocParser']]]

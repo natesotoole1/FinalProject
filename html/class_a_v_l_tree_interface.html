@@ -22,10 +22,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo_Ghostbusters.0.JPG"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">KiteSearch
    &#160;<span id="projectnumber">FinalProject</span>
    </div>
+   <div id="projectbrief">WIkiBooks Search Engine</div>
   </td>
  </tr>
  </tbody>
@@ -94,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>AVL Tree <a class="el" href="class_interface.html">Interface</a> implements 26 different <a class="el" href="class_a_v_l_tree_index.html" title="AVLTreeIndex.h has AVL Trees public and private classes in them. ">AVLTreeIndex</a>'s.  
+<p>AVL Tree <a class="el" href="class_interface.html" title="Interface is the User Interface. ">Interface</a> implements 26 different <a class="el" href="class_a_v_l_tree_index.html" title="AVLTreeIndex.h has AVL Trees public and private classes in them. ">AVLTreeIndex</a>'s.  
  <a href="class_a_v_l_tree_interface.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="avltreeinterface_8h_source.html">avltreeinterface.h</a>&gt;</code></p>
@@ -104,7 +106,7 @@ Inheritance diagram for AVLTreeInterface:</div>
  <div class="center">
   <img src="class_a_v_l_tree_interface.png" usemap="#AVLTreeInterface_map" alt=""/>
   <map id="AVLTreeInterface_map" name="AVLTreeInterface_map">
-<area href="class_index_interface.html" alt="IndexInterface" shape="rect" coords="0,0,113,24"/>
+<area href="class_index_interface.html" title="AVL Node implementation for the AVL Tree structure. " alt="IndexInterface" shape="rect" coords="0,0,113,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -140,10 +142,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5734b1488a787d47984bf97ffa5aff8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a229f1eb93f38d85d78e64e579c46c98a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#a229f1eb93f38d85d78e64e579c46c98a">read_file</a> (string filePath)</td></tr>
 <tr class="separator:a229f1eb93f38d85d78e64e579c46c98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6ef58f8b651083175b684b9428a90c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#aa6ef58f8b651083175b684b9428a90c5">read_persistence_files</a> (<a class="el" href="docparser_8h.html#a9b942645c404d380838be4078b0199d9">termMap</a> &amp;allTerms)</td></tr>
-<tr class="separator:aa6ef58f8b651083175b684b9428a90c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcba07c90cd34ab0ce7bee340d09ed07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#adcba07c90cd34ab0ce7bee340d09ed07">read_pers_file</a> (int index, <a class="el" href="docparser_8h.html#a9b942645c404d380838be4078b0199d9">termMap</a> &amp;allTerms)</td></tr>
-<tr class="separator:adcba07c90cd34ab0ce7bee340d09ed07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcf89c2fd27b815b697c8e9d29e0c3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#aebcf89c2fd27b815b697c8e9d29e0c3a">read_persistence_files</a> ()</td></tr>
+<tr class="separator:aebcf89c2fd27b815b697c8e9d29e0c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca6250b71da3983ca31afdf3ee6dd88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#a0ca6250b71da3983ca31afdf3ee6dd88">read_pers_file</a> (int index)</td></tr>
+<tr class="separator:a0ca6250b71da3983ca31afdf3ee6dd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7539d9c7a48bf4d4fbe43961c0547f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#a9a7539d9c7a48bf4d4fbe43961c0547f">index_for_letter</a> (char letter)</td></tr>
 <tr class="separator:a9a7539d9c7a48bf4d4fbe43961c0547f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2af7d88c3b2701be9164ba9f4a3bddb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_page_info.html">PageInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#a2af7d88c3b2701be9164ba9f4a3bddb3">info_for_pageID</a> (int pageID)</td></tr>
@@ -155,6 +157,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:acd76893126e9fd5dc63cb4ea8f56265c"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#acd76893126e9fd5dc63cb4ea8f56265c">ext</a> = &quot;.txt&quot;</td></tr>
+<tr class="separator:acd76893126e9fd5dc63cb4ea8f56265c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8511509bb58da989f705ba75fd5dde2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hash_table_index.html">HashTableIndex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#a8511509bb58da989f705ba75fd5dde2d">letters</a></td></tr>
 <tr class="separator:a8511509bb58da989f705ba75fd5dde2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8400a62750faa69ff35308ff731d9ee5"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_page_info.html">PageInfo</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index_interface.html#a8400a62750faa69ff35308ff731d9ee5">infoForIDs</a></td></tr>
@@ -176,8 +180,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a198b108f89bc4ef2eefae399c1b3b167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>AVL Tree <a class="el" href="class_interface.html">Interface</a> implements 26 different <a class="el" href="class_a_v_l_tree_index.html" title="AVLTreeIndex.h has AVL Trees public and private classes in them. ">AVLTreeIndex</a>'s. </p>
-<p>&lt; inherits virtual functions from <a class="el" href="class_index_interface.html">IndexInterface</a> </p>
+<div class="textblock"><p>AVL Tree <a class="el" href="class_interface.html" title="Interface is the User Interface. ">Interface</a> implements 26 different <a class="el" href="class_a_v_l_tree_index.html" title="AVLTreeIndex.h has AVL Trees public and private classes in them. ">AVLTreeIndex</a>'s. </p>
+<p>&lt; inherits virtual functions from <a class="el" href="class_index_interface.html" title="AVL Node implementation for the AVL Tree structure. ">IndexInterface</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abaec1061e3c1982382aeda27495af568"></a>
 <div class="memitem">
@@ -588,7 +592,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adcba07c90cd34ab0ce7bee340d09ed07"></a>
+<a class="anchor" id="a0ca6250b71da3983ca31afdf3ee6dd88"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -599,18 +603,8 @@ Private Attributes</h2></td></tr>
           <td class="memname">void IndexInterface::read_pers_file </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>index</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="docparser_8h.html#a9b942645c404d380838be4078b0199d9">termMap</a> &amp;&#160;</td>
-          <td class="paramname"><em>allTerms</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -622,7 +616,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa6ef58f8b651083175b684b9428a90c5"></a>
+<a class="anchor" id="aebcf89c2fd27b815b697c8e9d29e0c3a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -632,8 +626,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void IndexInterface::read_persistence_files </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="docparser_8h.html#a9b942645c404d380838be4078b0199d9">termMap</a> &amp;&#160;</td>
-          <td class="paramname"><em>allTerms</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -693,6 +686,26 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>creates 26 <a class="el" href="class_a_v_l_tree_index.html" title="AVLTreeIndex.h has AVL Trees public and private classes in them. ">AVLTreeIndex</a>'s </p>
+
+</div>
+</div>
+<a class="anchor" id="acd76893126e9fd5dc63cb4ea8f56265c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string IndexInterface::ext = &quot;.txt&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -825,7 +838,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 4 2015 02:20:39 for KiteSearch by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 4 2015 02:58:22 for KiteSearch by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
